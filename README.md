@@ -1,0 +1,116 @@
+# 🌍 World Explorer
+
+An interactive map for learning **countries, capitals, flags, facts and figures**
+with kids. Pick a continent on the left, browse the country tiles, click one to
+open its full profile, or jump into the **Quiz** to test what you've learned.
+
+Built as a static **Vite + React + TypeScript** site — it runs locally and
+deploys to GitHub Pages with no backend.
+
+## Features
+
+- **Explore by continent** — sidebar with all six continents and country counts.
+- **Country tiles** — flag, name, capital and a small country outline; click for details.
+- **Rich detail panel** — capital, population, GDP, per-person income, land &
+  total area, density, median age, births per day, peace index, ISO/phone code,
+  and **2–4 "Known for" facts** written for children.
+- **Quiz mode** — five games: *capital*, *country by flag*, *country by outline*,
+  *population* and *continent*, scoped to any continent, 10 questions with scoring.
+- **Search** by country or capital name.
+- **Shareable links** — the URL hash tracks the open continent/country
+  (e.g. `#/explore/europe/FR`).
+- **Offline-friendly** — flags use the bundled `flag-icons` SVG set, not emoji.
+
+## Run locally
+
+Requires Node 22+.
+
+```bash
+npm install
+npm run dev        # http://localhost:5173
+```
+
+Build and preview the production bundle:
+
+```bash
+npm run build
+npm run preview
+```
+
+> Note: because it's a bundled app, opening `dist/index.html` directly from the
+> file system won't work (browsers block module scripts over `file://`).
+> Use `npm run dev`, `npm run preview`, or host the `dist/` folder.
+
+## The data
+
+All figures come from `data.xlsx` (population 2025, GDP 2023, areas, peace index,
+etc.). A Python script cleans and joins the sheets into the JSON the app reads:
+
+```bash
+npm run data       # = python3 scripts/build_data.py
+```
+
+`scripts/build_data.py`:
+
+- filters to the **195 UN states** (193 members + observers),
+- **fixes the source's continent bug** (it labels every Caribbean state as
+  "Oceania") by deriving the continent from the correct sub-region,
+- normalises messy numbers and percentages,
+- joins the auxiliary sheets (births/day, fertility, median age, peace index,
+  total area) by country name,
+- merges the hand-written facts, and
+- writes `src/data/countries.json`.
+
+### Country shapes
+
+The tile outlines come from `src/data/shapes.json` (ISO-2 → SVG path), generated
+from Natural Earth data by `scripts/build_shapes.mjs`:
+
+```bash
+npm run shapes     # = node scripts/build_shapes.mjs
+```
+
+It covers 194/195 countries; Tuvalu is too small to render at this map
+resolution and simply shows no outline.
+
+### Editing the facts
+
+The "Known for" facts live in **`src/data/facts.json`**, keyed by 2-letter ISO
+code (e.g. `"FR": ["Home to the Eiffel Tower…", …]`). Edit the text there and
+re-run `npm run data` to regenerate `countries.json`.
+
+### Data coverage caveats
+
+- **Births per day** is only published for the top ~100 countries, so it shows
+  for 99/195 and is hidden (—) for the rest.
+- **Peace index (GPI 2024)** covers 160/195; small states are omitted in the
+  source.
+- **Country outlines** cover 194/195 (Tuvalu is too small at this resolution).
+
+## Deploy to GitHub Pages
+
+1. Push this folder to a GitHub repo (default branch `main`).
+2. In **Settings → Pages**, set **Source = GitHub Actions**.
+3. The included workflow (`.github/workflows/deploy.yml`) builds and publishes
+   on every push.
+
+The Vite `base` is set to `./` (relative) and routing is hash-based, so the site
+works under any project sub-path (`https://<user>.github.io/<repo>/`) without
+extra configuration.
+
+## Project structure
+
+```
+data.xlsx                 source spreadsheet
+scripts/
+  build_data.py           data pipeline (xlsx -> countries.json)
+  build_shapes.mjs        country outlines (TopoJSON -> shapes.json)
+src/
+  data/
+    facts.json            editable "Known for" facts (by ISO code)
+    countries.json        generated app data — do not edit by hand
+    shapes.json           generated country outlines — do not edit by hand
+  components/             Sidebar, CountryCard, CountryDetail, CountryShape, Quiz, Flag
+  lib/                    continents meta + number formatting
+  App.tsx                 layout, search, tabs, hash routing
+```
