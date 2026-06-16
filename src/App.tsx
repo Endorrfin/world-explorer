@@ -5,6 +5,7 @@ import { CONTINENT_ORDER } from "./lib/continents";
 import { Sidebar, type ContinentFilter } from "./components/Sidebar";
 import { CountryCard } from "./components/CountryCard";
 import { CountryDetail } from "./components/CountryDetail";
+import { WorldMap } from "./components/WorldMap";
 import { Quiz } from "./components/Quiz";
 
 const COUNTRIES = (rawData as unknown as Country[]);
@@ -21,19 +22,22 @@ interface HashState {
 
 function parseHash(): HashState {
   const h = window.location.hash.replace(/^#\/?/, "");
-  const [tab, contSlug, iso] = h.split("/");
+  const [tab, a, b] = h.split("/");
   if (tab === "quiz") return { tab: "quiz", continent: "All", iso: null };
-  const continent = contSlug ? continentBySlug(contSlug) ?? "All" : "All";
-  return {
-    tab: "explore",
-    continent,
-    iso: iso ? iso.toUpperCase() : null,
-  };
+  if (tab === "map")
+    return { tab: "map", continent: "All", iso: a ? a.toUpperCase() : null };
+  if (tab === "explore") {
+    const continent = a ? continentBySlug(a) ?? "All" : "All";
+    return { tab: "explore", continent, iso: b ? b.toUpperCase() : null };
+  }
+  return { tab: "map", continent: "All", iso: null }; // default landing
 }
 
 function writeHash(s: HashState) {
   let h = `#/${s.tab}`;
-  if (s.tab === "explore") {
+  if (s.tab === "map") {
+    if (s.iso) h += `/${s.iso}`;
+  } else if (s.tab === "explore") {
     h += `/${slug(s.continent)}`;
     if (s.iso) h += `/${s.iso}`;
   }
@@ -104,6 +108,13 @@ export default function App() {
 
         <nav className="tabs" aria-label="Sections">
           <button
+            className={`tab${tab === "map" ? " tab--active" : ""}`}
+            onClick={() => setTab("map")}
+            type="button"
+          >
+            Map
+          </button>
+          <button
             className={`tab${tab === "explore" ? " tab--active" : ""}`}
             onClick={() => setTab("explore")}
             type="button"
@@ -136,7 +147,18 @@ export default function App() {
         )}
       </header>
 
-      {tab === "explore" ? (
+      {tab === "map" && (
+        <div className={`maplayout${selected ? " maplayout--detail-open" : ""}`}>
+          <WorldMap
+            countries={COUNTRIES}
+            selectedIso={selectedIso}
+            onSelect={(iso) => setSelectedIso(iso)}
+          />
+          <CountryDetail country={selected} onClose={() => setSelectedIso(null)} />
+        </div>
+      )}
+
+      {tab === "explore" && (
         <div className={`layout${selected ? " layout--detail-open" : ""}`}>
           <Sidebar
             counts={counts}
@@ -174,7 +196,9 @@ export default function App() {
 
           <CountryDetail country={selected} onClose={() => setSelectedIso(null)} />
         </div>
-      ) : (
+      )}
+
+      {tab === "quiz" && (
         <div className="quiz-wrap">
           <Quiz countries={COUNTRIES} />
         </div>

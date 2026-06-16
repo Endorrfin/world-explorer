@@ -21,6 +21,7 @@ npm run build      # tsc typecheck + Vite production build → dist/
 npm run preview    # serve the production build locally
 npm run data       # regenerate src/data/countries.json from data.xlsx (Python + openpyxl)
 npm run shapes     # regenerate src/data/shapes.json (country outlines) from Natural Earth
+npm run worldmap   # regenerate src/data/worldmap.json (single-projection clickable map)
 ```
 
 Deploy is automatic: push to `main`, and `.github/workflows/deploy.yml` runs
@@ -29,8 +30,9 @@ set to **GitHub Actions** (Settings → Pages).
 
 ## Architecture
 
-- **Single-page app** with hash routing: `#/explore/<continent>/<ISO2>` and `#/quiz`.
-  No router library — routing is a small custom layer in `src/App.tsx`.
+- **Single-page app** with hash routing: `#/map/<ISO2>`, `#/explore/<continent>/<ISO2>`,
+  and `#/quiz` (Map is the default landing tab). No router library — routing is a small
+  custom layer in `src/App.tsx`.
 - **All data is static JSON** imported at build time. The app fetches nothing at runtime,
   so it works offline and under any sub-path.
 - **Layout:** top bar (brand, Explore/Quiz tabs, search) → sidebar (continents) →
@@ -45,16 +47,19 @@ data.xlsx                     source spreadsheet (the origin of all figures)
 scripts/
   build_data.py               data pipeline: xlsx → countries.json (cleans, fixes, joins, merges facts)
   build_shapes.mjs            country outlines: world-atlas TopoJSON → shapes.json
+  build_worldmap.mjs          single-projection clickable map: TopoJSON → worldmap.json
 src/
   data/
     facts.json                EDITABLE "Known for" facts, keyed by ISO-2
     countries.json            GENERATED app data — do not hand-edit
     shapes.json               GENERATED country outlines — do not hand-edit
+    worldmap.json             GENERATED single-projection map (paths + continent boxes)
   components/
     Sidebar.tsx               continent list with counts
     CountryCard.tsx           tile: flag + name + capital + outline
     CountryDetail.tsx         detail panel (Identity / People / Economy / Land / Known for)
     CountryShape.tsx          renders an SVG silhouette from shapes.json
+    WorldMap.tsx              clickable geoEqualEarth world map (colour-by-continent + zoom)
     Quiz.tsx                  5-mode quiz with scoring
     Flag.tsx                  flag-icons wrapper
   lib/
@@ -108,6 +113,9 @@ App imports countries.json + shapes.json (static)
   (capital / flag / continent), GitHub Pages deploy workflow.
 - **v1.1** — country outlines on tiles and in the detail header; two more quiz modes
   (population, shape); capital footnote/Nauru fixes; published to GitHub Pages.
+- **v1.2** — responsive mobile layout + non-truncated wrapping tiles; a real **clickable
+  world map** tab (geoEqualEarth single projection, colour-by-continent, continent zoom,
+  click → detail panel), now the default landing tab.
 
 ## Possible improvements (roadmap)
 
@@ -118,8 +126,8 @@ App imports countries.json + shapes.json (static)
   and capitals ("Sri Jayawardenapura Kotte") are currently truncated; let them wrap or
   use roomier tiles.
 - **Dark-mode toggle** and a **larger-text mode** for younger readers.
-- **A real geographic map view** — a clickable SVG world map (zoom to continent → click a
-  country), complementing the current list/cards. This was the original "map" idea.
+- **Map polish** — the clickable world map exists; next: markers/labels for tiny island
+  states that are hard to tap at world scale, smooth animated zoom, and optional pan.
 
 ### Content / data
 - Add fields kids enjoy: **languages, currency, time zone, calling code already shown,

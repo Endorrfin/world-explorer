@@ -37,4 +37,4 @@ export type Continent =
   | "South America"
   | "Oceania";
 
-export type Tab = "explore" | "quiz";
+export type Tab = "map" | "explore" | "quiz";

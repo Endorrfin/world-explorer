@@ -1,3 +1,12 @@
+
+SCRIPTS:
+  cd world-map
+  npm install
+  npm run dev
+  npm run worldmap
+
+
+
 Працюй із директорією: /Users/vk/i-data/src/children/world-map
 
 Задача - побудувати інтерактивну карту для вивчення із дітьми країни, їхніх столиць, прапорів, площі, особливостей країн.

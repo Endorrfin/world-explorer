@@ -603,10 +603,82 @@ body {
   justify-content: center;
 }
 
+/* ------------------------------------------------------------- world map */
+.maplayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  flex: 1;
+  min-height: 0;
+}
+.wmap {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 16px 20px 24px;
+  overflow: auto;
+}
+.wmap__zooms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.wmap__zoom {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 6px 13px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+}
+.wmap__zoom:hover {
+  background: var(--bg);
+}
+.wmap__zoom--on {
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+.wmap__frame {
+  background: #e8f1fb;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px;
+}
+.wmap__svg {
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 220px);
+  display: block;
+}
+.wmap__land path {
+  fill: #d7dde6;
+  stroke: #ffffff;
+  stroke-width: 0.5;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+}
+.wmap__country {
+  cursor: pointer;
+  transition: fill-opacity 0.12s;
+  outline: none;
+}
+.wmap__country:hover {
+  filter: brightness(0.9);
+}
+.wmap__country:focus-visible {
+  stroke: var(--text);
+  stroke-width: 1.4;
+}
+
 /* ------------------------------------------------------------- responsive */
 @media (max-width: 1080px) {
   .layout {
     grid-template-columns: 200px minmax(0, 1fr);
+  }
+  .maplayout {
+    grid-template-columns: 1fr;
   }
   /* detail panel becomes a sliding overlay */
   .detail {
@@ -620,7 +692,8 @@ body {
     transform: translateX(100%);
     transition: transform 0.2s ease;
   }
-  .layout--detail-open .detail {
+  .layout--detail-open .detail,
+  .maplayout--detail-open .detail {
     transform: translateX(0);
   }
   .detail--empty {
@@ -673,6 +746,12 @@ body {
   /* hybrid: full-width list rows on phones */
   .grid {
     grid-template-columns: 1fr;
+  }
+  .wmap {
+    padding: 12px 12px 20px;
+  }
+  .wmap__svg {
+    max-height: 60vh;
   }
   .quiz-wrap {
     padding: 18px 12px 48px;

@@ -7,6 +7,7 @@
   "scripts": {
     "data": "python3 scripts/build_data.py",
     "shapes": "node scripts/build_shapes.mjs",
+    "worldmap": "node scripts/build_worldmap.mjs",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
