@@ -145,7 +145,8 @@ App imports countries.json + shapes.json (static)
   open, not bundled).
 - **v1.8** — clickable **Ukraine regions map** (amCharts admin-1 oblast geometry via
   `build_ukraine_regions.mjs` → `ukraine_regions.json`) is the Ukraine tab's entry: click an
-  oblast → drill into that region's settlements tree, with a "back to map" return. Each
+  oblast → drill into that region's settlements tree (or a "🌳 All settlements" toggle opens
+  the whole country-wide tree). Each
   oblast is linked to its EN **and** UA tree index (the two data files are alphabetised
   differently); Kyiv City & Sevastopol map onto Kyiv / Crimea.
 

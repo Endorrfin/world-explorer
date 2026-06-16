@@ -48,6 +48,8 @@ const T = {
     found: "found",
     mapHint: "Click a region to explore its settlements",
     back: "← Regions map",
+    fullTree: "🌳 All settlements",
+    toMap: "🗺️ Regions map",
   },
   ua: {
     title: "Населені пункти України",
@@ -61,6 +63,8 @@ const T = {
     found: "знайдено",
     mapHint: "Натисни область, щоб переглянути її населені пункти",
     back: "← До карти областей",
+    fullTree: "🌳 Усі населені пункти",
+    toMap: "🗺️ Карта областей",
   },
 };
 
@@ -95,6 +99,7 @@ export function UkraineTab() {
   const [expanded, setExpanded] = useState<Set<number>>(new Set());
   const [regionId, setRegionId] = useState<string | null>(null);
   const [hoverId, setHoverId] = useState<string | null>(null);
+  const [mode, setMode] = useState<"map" | "tree">("map");
 
   useEffect(() => {
     if (cache[lang]) {
@@ -134,12 +139,13 @@ export function UkraineTab() {
   // the subtree to show: a selected region (drill-down), else the whole country
   const treeRoot = useMemo(() => {
     if (!data) return null;
+    if (mode === "tree") return data.root;
     if (!regionId) return data.root;
     const r = REGIONS.regions.find((x) => x.id === regionId);
     if (!r) return data.root;
     const idx = lang === "ua" ? r.iu : r.ie;
     return data.root.children?.[idx] ?? data.root;
-  }, [data, regionId, lang]);
+  }, [data, mode, regionId, lang]);
 
   // when the shown subtree changes, expand just its root
   useEffect(() => {
@@ -173,9 +179,13 @@ export function UkraineTab() {
     });
 
   const baseDepth = treeRoot?.depth ?? 0;
-  const showMap = !results && !regionId;
-  const showTree = !results && !!regionId;
+  const showMap = !results && mode === "map" && !regionId;
+  const showTree = !results && (mode === "tree" || (mode === "map" && !!regionId));
   const hoverRegion = hoverId ? REGIONS.regions.find((r) => r.id === hoverId) : null;
+  const collapseAll = () => data && treeRoot && setExpanded(new Set([treeRoot.id]));
+  const legendItems = LEVEL_LABELS[lang]
+    .map((l, i) => ({ l, i }))
+    .filter((x) => x.i >= baseDepth);
 
   return (
     <div className="uk">
@@ -208,10 +218,32 @@ export function UkraineTab() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-        {showTree && (
+        {showMap && (
+          <button type="button" className="btn" onClick={() => setMode("tree")}>
+            {t.fullTree}
+          </button>
+        )}
+        {!results && mode === "map" && regionId && (
           <button type="button" className="btn" onClick={() => setRegionId(null)}>
             {t.back}
           </button>
+        )}
+        {!results && mode === "tree" && (
+          <>
+            <button
+              type="button"
+              className="btn"
+              onClick={() => {
+                setMode("map");
+                setRegionId(null);
+              }}
+            >
+              {t.toMap}
+            </button>
+            <button type="button" className="btn" onClick={collapseAll}>
+              {t.collapse}
+            </button>
+          </>
         )}
       </div>
 
@@ -280,10 +312,10 @@ export function UkraineTab() {
       {data && showTree && treeRoot && (
         <>
           <div className="uk__legend">
-            {LEVEL_LABELS[lang].slice(1).map((l, i) => (
-              <span key={i} className="uk__leg">
-                <span className="uk__dot" style={{ background: LEVEL_COLORS[i + 1] }} />
-                {l}
+            {legendItems.map((x) => (
+              <span key={x.i} className="uk__leg">
+                <span className="uk__dot" style={{ background: LEVEL_COLORS[x.i] }} />
+                {x.l}
               </span>
             ))}
           </div>
