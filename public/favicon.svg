@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <clipPath id="globe"><circle cx="32" cy="32" r="29"/></clipPath>
+  </defs>
+  <!-- ocean -->
+  <circle cx="32" cy="32" r="29" fill="#3b6fd4"/>
+  <g clip-path="url(#globe)">
+    <!-- continents (simple, bold blobs so they read at 16px) -->
+    <path d="M9 24c4-5 13-6 16-1 2 4-2 7 0 11 2 5-5 9-10 7-6-3-10-12-6-17z" fill="#46b65f"/>
+    <path d="M36 10c7-1 12 4 10 10 3 3 1 8-3 9-6 2-9-4-9-9-4-3-3-9 2-10z" fill="#46b65f"/>
+    <path d="M40 35c6-2 12 3 10 9-2 7-11 8-14 3-3-4 0-10 4-12z" fill="#46b65f"/>
+    <path d="M15 44c5-2 9 3 6 7-3 5-11 2-10-3 1-2 2-3 4-4z" fill="#46b65f"/>
+    <!-- grid lines -->
+    <g fill="none" stroke="#ffffff" stroke-opacity="0.38" stroke-width="1.6">
+      <line x1="3" y1="32" x2="61" y2="32"/>
+      <ellipse cx="32" cy="32" rx="13" ry="29"/>
+      <path d="M5 21c14 7 40 7 54 0"/>
+      <path d="M5 43c14-7 40-7 54 0"/>
+    </g>
+  </g>
+  <!-- rim -->
+  <circle cx="32" cy="32" r="29" fill="none" stroke="#2c569f" stroke-width="2.5"/>
+</svg>
