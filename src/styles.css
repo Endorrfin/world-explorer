@@ -1044,6 +1044,42 @@ body {
   border-bottom: 1px solid var(--border);
   background: var(--surface-2);
 }
+.uk__map {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #eef4fb;
+  padding: 10px 10px 4px;
+}
+.uk__maphdr {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+  min-height: 24px;
+  margin-bottom: 4px;
+}
+.uk__mapsvg {
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 290px);
+  display: block;
+}
+.uk__region {
+  fill: #cdddf1;
+  stroke: #ffffff;
+  stroke-width: 0.8;
+  vector-effect: non-scaling-stroke;
+  cursor: pointer;
+  transition: fill 0.12s;
+  outline: none;
+}
+.uk__region:hover {
+  fill: #f3c14e;
+}
+.uk__region:focus-visible {
+  fill: #f3c14e;
+  stroke: var(--text);
+}
 
 /* ------------------------------------------------------------- responsive */
 @media (max-width: 1080px) {

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import regionsData from "../data/ukraine_regions.json";
 
 type Lang = "ua" | "en";
 
@@ -14,12 +15,19 @@ interface Prepared {
   root: UNode;
   leaves: { name: string; path: string; pop: number }[];
 }
-
 interface RawNode {
   name: string;
   value?: string | number;
   children?: RawNode[];
 }
+interface Region {
+  id: string;
+  name: string;
+  ie: number;
+  iu: number;
+  d: string;
+}
+const REGIONS = regionsData as { w: number; h: number; regions: Region[] };
 
 const LEVEL_COLORS = ["#2c3e50", "#3498db", "#e74c3c", "#f39c12", "#27ae60"];
 const LEVEL_LABELS: Record<Lang, string[]> = {
@@ -30,7 +38,7 @@ const LEVEL_LABELS: Record<Lang, string[]> = {
 const T = {
   en: {
     title: "Populated places of Ukraine",
-    sub: "Region → District → Hromada → Settlement · population, 2001 census",
+    sub: "Click a region → District → Hromada → Settlement · population, 2001 census",
     search: "Search a settlement…",
     collapse: "Collapse all",
     loading: "Loading…",
@@ -38,10 +46,12 @@ const T = {
     pop: "Population 2001",
     count: "Count",
     found: "found",
+    mapHint: "Click a region to explore its settlements",
+    back: "← Regions map",
   },
   ua: {
     title: "Населені пункти України",
-    sub: "Область → Район → Громада → Населений пункт · населення за переписом 2001",
+    sub: "Натисни область → Район → Громада → Населений пункт · населення за переписом 2001",
     search: "Пошук населеного пункту…",
     collapse: "Згорнути все",
     loading: "Завантаження…",
@@ -49,6 +59,8 @@ const T = {
     pop: "Населення 2001",
     count: "К-сть",
     found: "знайдено",
+    mapHint: "Натисни область, щоб переглянути її населені пункти",
+    back: "← До карти областей",
   },
 };
 
@@ -72,7 +84,6 @@ function prepare(raw: RawNode): Prepared {
   return { root: walk(raw, 0, []), leaves };
 }
 
-// module-level cache so switching away and back doesn't refetch
 const cache: Partial<Record<Lang, Prepared>> = {};
 
 export function UkraineTab() {
@@ -82,11 +93,12 @@ export function UkraineTab() {
   const [error, setError] = useState(false);
   const [query, setQuery] = useState("");
   const [expanded, setExpanded] = useState<Set<number>>(new Set());
+  const [regionId, setRegionId] = useState<string | null>(null);
+  const [hoverId, setHoverId] = useState<string | null>(null);
 
   useEffect(() => {
     if (cache[lang]) {
       setData(cache[lang]!);
-      setExpanded(new Set([cache[lang]!.root.id]));
       return;
     }
     let cancelled = false;
@@ -101,7 +113,6 @@ export function UkraineTab() {
         const p = prepare(raw);
         cache[lang] = p;
         setData(p);
-        setExpanded(new Set([p.root.id]));
         setLoading(false);
       })
       .catch(() => {
@@ -117,17 +128,34 @@ export function UkraineTab() {
 
   const t = T[lang];
   const fmt = (n: number) => n.toLocaleString(lang === "ua" ? "uk-UA" : "en-US");
+  const regionName = (r: Region) =>
+    lang === "ua" && data ? data.root.children?.[r.iu]?.name ?? r.name : r.name;
+
+  // the subtree to show: a selected region (drill-down), else the whole country
+  const treeRoot = useMemo(() => {
+    if (!data) return null;
+    if (!regionId) return data.root;
+    const r = REGIONS.regions.find((x) => x.id === regionId);
+    if (!r) return data.root;
+    const idx = lang === "ua" ? r.iu : r.ie;
+    return data.root.children?.[idx] ?? data.root;
+  }, [data, regionId, lang]);
+
+  // when the shown subtree changes, expand just its root
+  useEffect(() => {
+    if (treeRoot) setExpanded(new Set([treeRoot.id]));
+  }, [treeRoot]);
 
   const rows = useMemo(() => {
-    if (!data) return [];
+    if (!treeRoot) return [];
     const out: UNode[] = [];
     const rec = (n: UNode) => {
       out.push(n);
       if (expanded.has(n.id) && n.children) n.children.forEach(rec);
     };
-    rec(data.root);
+    rec(treeRoot);
     return out;
-  }, [data, expanded]);
+  }, [treeRoot, expanded]);
 
   const results = useMemo(() => {
     if (!data) return null;
@@ -143,7 +171,11 @@ export function UkraineTab() {
       else n.add(id);
       return n;
     });
-  const collapseAll = () => data && setExpanded(new Set([data.root.id]));
+
+  const baseDepth = treeRoot?.depth ?? 0;
+  const showMap = !results && !regionId;
+  const showTree = !results && !!regionId;
+  const hoverRegion = hoverId ? REGIONS.regions.find((r) => r.id === hoverId) : null;
 
   return (
     <div className="uk">
@@ -176,25 +208,17 @@ export function UkraineTab() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-        {!results && (
-          <button type="button" className="btn" onClick={collapseAll}>
-            {t.collapse}
+        {showTree && (
+          <button type="button" className="btn" onClick={() => setRegionId(null)}>
+            {t.back}
           </button>
         )}
-      </div>
-
-      <div className="uk__legend">
-        {LEVEL_LABELS[lang].map((l, i) => (
-          <span key={i} className="uk__leg">
-            <span className="uk__dot" style={{ background: LEVEL_COLORS[i] }} />
-            {l}
-          </span>
-        ))}
       </div>
 
       {loading && <p className="uk__msg">{t.loading}</p>}
       {error && <p className="uk__msg">{t.error}</p>}
 
+      {/* search results (any view) */}
       {data && results && (
         <div className="uk__tree">
           <div className="uk__rescount">
@@ -204,7 +228,9 @@ export function UkraineTab() {
           {results.map((r, i) => (
             <div key={i} className="uk__row">
               <span className="uk__namewrap">
-                <span className="uk__dot" style={{ background: LEVEL_COLORS[4] }} />
+                <span className="uk__leaf" aria-hidden>
+                  <i style={{ background: LEVEL_COLORS[4] }} />
+                </span>
                 <span className="uk__name">{r.name}</span>
                 <span className="uk__path">{r.path}</span>
               </span>
@@ -215,48 +241,94 @@ export function UkraineTab() {
         </div>
       )}
 
-      {data && !results && (
-        <div className="uk__tree">
-          <div className="uk__cols">
-            <span className="uk__namewrap uk__colname" />
-            <span className="uk__pop uk__colh">{t.pop}</span>
-            <span className="uk__cnt uk__colh">{t.count}</span>
-          </div>
-          {rows.map((n) => {
-            const hasCh = !!n.children;
-            const isExp = expanded.has(n.id);
-            const color = LEVEL_COLORS[Math.min(n.depth, 4)];
-            return (
-              <div key={n.id} className="uk__row">
-                <span className="uk__namewrap" style={{ paddingLeft: n.depth * 18 }}>
-                  {hasCh ? (
-                    <button
-                      type="button"
-                      className="uk__toggle"
-                      style={{ color, borderColor: color }}
-                      onClick={() => toggle(n.id)}
-                      aria-label={isExp ? "collapse" : "expand"}
-                    >
-                      {isExp ? "−" : "+"}
-                    </button>
-                  ) : (
-                    <span className="uk__leaf" aria-hidden>
-                      <i style={{ background: color }} />
-                    </span>
-                  )}
-                  <span
-                    className="uk__name"
-                    style={{ color, fontWeight: hasCh ? 600 : 400 }}
-                  >
-                    {n.name}
-                  </span>
-                </span>
-                <span className="uk__pop">{n.pop ? fmt(n.pop) : "—"}</span>
-                <span className="uk__cnt">{hasCh ? fmt(n.count) : "—"}</span>
-              </div>
-            );
-          })}
+      {/* regions map (entry) */}
+      {showMap && (
+        <div className="uk__map">
+          <div className="uk__maphdr">{hoverRegion ? regionName(hoverRegion) : t.mapHint}</div>
+          <svg
+            className="uk__mapsvg"
+            viewBox={`0 0 ${REGIONS.w} ${REGIONS.h}`}
+            role="img"
+            aria-label="Map of Ukraine's regions"
+          >
+            {REGIONS.regions.map((r) => (
+              <path
+                key={r.id}
+                d={r.d}
+                className="uk__region"
+                tabIndex={0}
+                role="button"
+                aria-label={r.name}
+                onClick={() => setRegionId(r.id)}
+                onMouseEnter={() => setHoverId(r.id)}
+                onMouseLeave={() => setHoverId(null)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setRegionId(r.id);
+                  }
+                }}
+              >
+                <title>{r.name}</title>
+              </path>
+            ))}
+          </svg>
         </div>
+      )}
+
+      {/* drilled-in region tree */}
+      {data && showTree && treeRoot && (
+        <>
+          <div className="uk__legend">
+            {LEVEL_LABELS[lang].slice(1).map((l, i) => (
+              <span key={i} className="uk__leg">
+                <span className="uk__dot" style={{ background: LEVEL_COLORS[i + 1] }} />
+                {l}
+              </span>
+            ))}
+          </div>
+          <div className="uk__tree">
+            <div className="uk__cols">
+              <span className="uk__namewrap" />
+              <span className="uk__pop uk__colh">{t.pop}</span>
+              <span className="uk__cnt uk__colh">{t.count}</span>
+            </div>
+            {rows.map((n) => {
+              const hasCh = !!n.children;
+              const isExp = expanded.has(n.id);
+              const color = LEVEL_COLORS[Math.min(n.depth, 4)];
+              return (
+                <div key={n.id} className="uk__row">
+                  <span
+                    className="uk__namewrap"
+                    style={{ paddingLeft: (n.depth - baseDepth) * 18 }}
+                  >
+                    {hasCh ? (
+                      <button
+                        type="button"
+                        className="uk__toggle"
+                        style={{ color, borderColor: color }}
+                        onClick={() => toggle(n.id)}
+                        aria-label={isExp ? "collapse" : "expand"}
+                      >
+                        {isExp ? "−" : "+"}
+                      </button>
+                    ) : (
+                      <span className="uk__leaf" aria-hidden>
+                        <i style={{ background: color }} />
+                      </span>
+                    )}
+                    <span className="uk__name" style={{ color, fontWeight: hasCh ? 600 : 400 }}>
+                      {n.name}
+                    </span>
+                  </span>
+                  <span className="uk__pop">{n.pop ? fmt(n.pop) : "—"}</span>
+                  <span className="uk__cnt">{hasCh ? fmt(n.count) : "—"}</span>
+                </div>
+              );
+            })}
+          </div>
+        </>
       )}
     </div>
   );

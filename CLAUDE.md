@@ -23,6 +23,7 @@ npm run data       # regenerate src/data/countries.json from data.xlsx (Python +
 npm run shapes     # regenerate src/data/shapes.json (country outlines) from Natural Earth
 npm run worldmap   # regenerate src/data/worldmap.json (single-projection clickable map)
 npm run neighbors  # regenerate src/data/neighbors.json (land borders) from world-countries
+npm run uaregions  # regenerate src/data/ukraine_regions.json (oblast map) — needs amcharts5-geodata
 ```
 
 Deploy is automatic: push to `main`, and `.github/workflows/deploy.yml` runs
@@ -52,6 +53,7 @@ scripts/
   build_shapes.mjs            country outlines: world-atlas TopoJSON → shapes.json
   build_worldmap.mjs          single-projection clickable map: TopoJSON → worldmap.json
   build_neighbors.mjs         land-border lists: world-countries → neighbors.json
+  build_ukraine_regions.mjs   Ukraine oblast map: amCharts geodata → ukraine_regions.json
 src/
   data/
     facts.json                EDITABLE "Known for" facts, keyed by ISO-2
@@ -59,6 +61,7 @@ src/
     shapes.json               GENERATED country outlines — do not hand-edit
     worldmap.json             GENERATED single-projection map (paths + continent boxes)
     neighbors.json            GENERATED land-border lists (merged into countries.json)
+    ukraine_regions.json      GENERATED clickable oblast map (paths + EN/UA tree links)
   components/
     Sidebar.tsx               continent list with counts
     CountryCard.tsx           tile: flag + name + capital + outline
@@ -139,8 +142,12 @@ App imports countries.json + shapes.json (static)
 - **v1.7** — **Ukraine** tab: a lazy-loaded, collapsible **settlements tree**
   (Region → District → Hromada → Settlement, 29,582 places, 2001-census population) with an
   **EN/UA toggle** and settlement search. Data lives in `public/ukraine_*.json` (loaded on
-  open, not bundled). A clickable 25-oblast **regions map** (drilling into each region's
-  tree) is the next step.
+  open, not bundled).
+- **v1.8** — clickable **Ukraine regions map** (amCharts admin-1 oblast geometry via
+  `build_ukraine_regions.mjs` → `ukraine_regions.json`) is the Ukraine tab's entry: click an
+  oblast → drill into that region's settlements tree, with a "back to map" return. Each
+  oblast is linked to its EN **and** UA tree index (the two data files are alphabetised
+  differently); Kyiv City & Sevastopol map onto Kyiv / Crimea.
 
 ## Possible improvements (roadmap)
 

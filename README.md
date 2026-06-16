@@ -62,6 +62,11 @@ has three tabs — **Map**, **Explore** and **Quiz** — that share one country 
 11. **Shareable deep links.** The URL hash tracks the open tab / continent / country
     (e.g. `#/map/FR`, `#/explore/europe/FR`, `#/quiz`), so links restore the same view.
 
+12. **Ukraine in depth.** A dedicated **Ukraine** tab with an **EN/UA toggle**: a clickable
+    map of the 25 regions (oblasts) drills into a collapsible Region → District → Hromada →
+    Settlement tree (29,582 places, 2001-census population) with settlement search. The large
+    data loads only when the tab is opened.
+
 ### Run locally
 
 Requires Node 22+.
@@ -170,6 +175,11 @@ GitHub Pages без сервера. Має три вкладки — **Map**, **
 11. **Посилання, якими можна ділитися.** Хеш URL зберігає відкриту вкладку / континент /
     країну (напр. `#/map/FR`, `#/explore/europe/FR`, `#/quiz`) — посилання відновлює той
     самий вигляд.
+
+12. **Україна детально.** Окрема вкладка **Ukraine** з перемикачем **EN/UA**: клікабельна
+    карта 25 областей провалюється в згорнуте дерево Область → Район → Громада → Населений
+    пункт (29 582 пункти, перепис 2001) з пошуком. Великі дані вантажаться лише при відкритті
+    вкладки.
 
 ### Запуск локально
 
