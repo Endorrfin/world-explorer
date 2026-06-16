@@ -63,6 +63,8 @@ export function WorldMap({
   const pointers = useRef<Map<number, { x: number; y: number }>>(new Map());
   const panLast = useRef<{ x: number; y: number } | null>(null);
   const pinchPrev = useRef<number | null>(null);
+  const downPos = useRef<{ x: number; y: number } | null>(null);
+  const dragged = useRef(false);
   const mounted = useRef(false);
 
   const stopAnim = () => {
@@ -148,13 +150,21 @@ export function WorldMap({
   }, [userPoint, zoomAt]);
 
   const onPointerDown = (e: React.PointerEvent<SVGSVGElement>) => {
-    svgRef.current?.setPointerCapture(e.pointerId);
+    // NOTE: do NOT capture the pointer here, or a plain click on a country path
+    // never fires. Capture only starts once an actual drag begins (see move).
     pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
-    if (pointers.current.size === 1) panLast.current = { x: e.clientX, y: e.clientY };
-    else if (pointers.current.size === 2) {
+    if (pointers.current.size === 1) {
+      downPos.current = { x: e.clientX, y: e.clientY };
+      panLast.current = { x: e.clientX, y: e.clientY };
+      dragged.current = false;
+    } else if (pointers.current.size === 2) {
       const p = [...pointers.current.values()];
       pinchPrev.current = Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y);
       panLast.current = null;
+      dragged.current = true;
+      stopAnim();
+      setActive(null);
+      svgRef.current?.setPointerCapture(e.pointerId);
     }
   };
 
@@ -162,13 +172,19 @@ export function WorldMap({
     if (!pointers.current.has(e.pointerId)) return;
     pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
     if (pointers.current.size === 1 && panLast.current) {
+      if (!dragged.current) {
+        const d0 = downPos.current;
+        const moved = d0 ? Math.hypot(e.clientX - d0.x, e.clientY - d0.y) : 0;
+        if (moved < 4) return; // still a click, not a drag
+        dragged.current = true;
+        stopAnim();
+        setActive(null);
+        svgRef.current?.setPointerCapture(e.pointerId);
+      }
       const ctm = svgRef.current?.getScreenCTM();
       if (!ctm) return;
       const dx = (e.clientX - panLast.current.x) / ctm.a;
       const dy = (e.clientY - panLast.current.y) / ctm.d;
-      if (dx === 0 && dy === 0) return;
-      stopAnim();
-      setActive(null);
       panLast.current = { x: e.clientX, y: e.clientY };
       setVb((prev) => clampPos([prev[0] - dx, prev[1] - dy, prev[2], prev[3]]));
     } else if (pointers.current.size === 2) {
@@ -222,7 +238,9 @@ export function WorldMap({
             tabIndex={0}
             role="button"
             aria-label={country.name}
-            onClick={() => onSelect(iso)}
+            onClick={() => {
+              if (!dragged.current) onSelect(iso);
+            }}
             onKeyDown={(e) => {
               if (e.key === "Enter" || e.key === " ") {
                 e.preventDefault();
@@ -304,7 +322,9 @@ export function WorldMap({
                     tabIndex={0}
                     role="button"
                     aria-label={country.name}
-                    onClick={() => onSelect(iso)}
+                    onClick={() => {
+              if (!dragged.current) onSelect(iso);
+            }}
                     onKeyDown={(e) => {
                       if (e.key === "Enter" || e.key === " ") {
                         e.preventDefault();
