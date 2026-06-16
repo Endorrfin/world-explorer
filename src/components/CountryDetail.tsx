@@ -36,9 +36,11 @@ function Stat({
 export function CountryDetail({
   country,
   onClose,
+  onLocate,
 }: {
   country: Country | null;
   onClose: () => void;
+  onLocate?: () => void;
 }) {
   if (!country) {
     return (
@@ -80,6 +82,11 @@ export function CountryDetail({
           <p className="detail__capital">
             <span aria-hidden>🏛️</span> Capital: <b>{country.capital}</b>
           </p>
+          {onLocate && (
+            <button type="button" className="detail__locate" onClick={onLocate}>
+              🔍 Locate on map
+            </button>
+          )}
         </div>
         <CountryShape
           iso2={country.iso2}

@@ -671,6 +671,48 @@ body {
   stroke: var(--text);
   stroke-width: 1.4;
 }
+.wmap__marker {
+  cursor: pointer;
+}
+.wmap__marker:hover {
+  filter: brightness(0.88);
+}
+.wmap__halo {
+  pointer-events: none;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: wmapHalo 1.6s ease-out infinite;
+}
+@keyframes wmapHalo {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+.detail__locate {
+  margin-top: 8px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--primary);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+.detail__locate:hover {
+  background: var(--primary-tint);
+  border-color: var(--primary);
+}
+@media (prefers-reduced-motion: reduce) {
+  .wmap__halo {
+    animation: none;
+  }
+}
 
 /* ------------------------------------------------------------- responsive */
 @media (max-width: 1080px) {

@@ -116,6 +116,10 @@ App imports countries.json + shapes.json (static)
 - **v1.2** — responsive mobile layout + non-truncated wrapping tiles; a real **clickable
   world map** tab (geoEqualEarth single projection, colour-by-continent, continent zoom,
   click → detail panel), now the default landing tab.
+- **v1.3** — map polish: **animated (eased) zoom**, **clickable markers** for 31 tiny
+  island/micro states (incl. Tuvalu, which has no shape at this resolution), a **"Locate
+  on map"** button (Explore → Map) that flies to the country's continent and **pulses**
+  it, plus projected centroids for all 195 (`cen` in worldmap.json).
 
 ## Possible improvements (roadmap)
 
@@ -126,8 +130,9 @@ App imports countries.json + shapes.json (static)
   and capitals ("Sri Jayawardenapura Kotte") are currently truncated; let them wrap or
   use roomier tiles.
 - **Dark-mode toggle** and a **larger-text mode** for younger readers.
-- **Map polish** — the clickable world map exists; next: markers/labels for tiny island
-  states that are hard to tap at world scale, smooth animated zoom, and optional pan.
+- **Map polish (remaining)** — free **pan + wheel/pinch zoom** (drag-to-pan), **double-click
+  / double-tap to zoom**, and optional **on-map country labels**. (Animated zoom, island
+  markers and the locate-pulse landed in v1.3.)
 
 ### Content / data
 - Add fields kids enjoy: **languages, currency, time zone, calling code already shown,
@@ -137,6 +142,8 @@ App imports countries.json + shapes.json (static)
 - Fill the **coverage gaps** (births/day, peace index) from a more complete source.
 
 ### Quiz
+- **"Where in the world?" mode** — show a country name; the child clicks it on the world
+  map (reuses the locate-pulse + markers from v1.3). Ties the Map and Quiz together.
 - **High scores / streaks** saved in `localStorage`; per-continent progress.
 - **Difficulty levels**, optional **timer**, and **hints**.
 - More modes: currency, language, "which country is bigger" (area), flag → capital.

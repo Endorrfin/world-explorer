@@ -194,7 +194,11 @@ export default function App() {
             )}
           </main>
 
-          <CountryDetail country={selected} onClose={() => setSelectedIso(null)} />
+          <CountryDetail
+            country={selected}
+            onClose={() => setSelectedIso(null)}
+            onLocate={() => setTab("map")}
+          />
         </div>
       )}
 

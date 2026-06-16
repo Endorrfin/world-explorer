@@ -2,8 +2,14 @@
 SCRIPTS:
   cd world-map
   npm install
-  npm run dev
-  npm run worldmap
+  npm run dev: для запуску застосунку locally
+  npm run build: продакшн-білд
+
+
+  npm run worldmap: разова команда генерації даних
+  npm run data — перегенерувати countries.json з data.xlsx
+  npm run shapes — перегенерувати контури shapes.json
+  npm run worldmap — перегенерувати мапу worldmap.json
 
 
 
