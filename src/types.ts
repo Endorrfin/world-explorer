@@ -2,10 +2,12 @@ export interface Country {
   iso2: string;
   iso3: string;
   name: string;
+  nameUk: string;
   flag: string; // emoji fallback
   continent: Continent;
   subregion: string;
   capital: string;
+  capitalUk: string;
   callingCode: number | null;
   // people
   population: number;

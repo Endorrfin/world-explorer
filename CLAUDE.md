@@ -54,6 +54,7 @@ scripts/
   build_worldmap.mjs          single-projection clickable map: TopoJSON → worldmap.json
   build_neighbors.mjs         land-border lists: world-countries → neighbors.json
   build_ukraine_regions.mjs   Ukraine oblast map: amCharts geodata → ukraine_regions.json
+  build_names_uk.mjs          Ukrainian country names: i18n-iso-countries → names_uk.json
 src/
   data/
     facts.json                EDITABLE "Known for" facts, keyed by ISO-2
@@ -62,6 +63,8 @@ src/
     worldmap.json             GENERATED single-projection map (paths + continent boxes)
     neighbors.json            GENERATED land-border lists (merged into countries.json)
     ukraine_regions.json      GENERATED clickable oblast map (paths + EN/UA tree links)
+    names_uk.json             Ukrainian country names (merged into countries.json)
+    capitals_uk.json          EDITABLE Ukrainian capitals (merged into countries.json)
   components/
     Sidebar.tsx               continent list with counts
     CountryCard.tsx           tile: flag + name + capital + outline
@@ -155,6 +158,10 @@ App imports countries.json + shapes.json (static)
   (`src/lib/i18n.ts` — `uk` is type-checked against `en`), and locale-aware number formatting.
   The Ukraine tab follows the global toggle. Country **names, capitals and "Known for" facts
   are still English** (Phase 2 = names + capitals, Phase 3 = facts).
+- **v1.10** — **Phase 2 i18n**: country **names and capitals** now switch with the language
+  (`nameUk` from `i18n-iso-countries` + overrides, `capitalUk` hand-curated, both merged into
+  `countries.json`). Shown on tiles, the detail panel, map tooltips, the quiz (options +
+  prompts) and search (matches both languages). Only the 630 "Known for" facts remain English.
 
 ## Possible improvements (roadmap)
 
@@ -190,8 +197,7 @@ App imports countries.json + shapes.json (static)
 - **PWA**: installable + offline service worker — ideal for tablets in classrooms.
 - **Accessibility**: full keyboard navigation, visible focus rings, ARIA labels,
   `prefers-reduced-motion`, contrast audit.
-- **i18n (remaining)**: the UI is bilingual (v1.9). Next: translate country **names +
-  capitals** (Phase 2 — `i18n-iso-countries` has a `uk` locale for names; capitals need a
-  curated list) and the **630 "Known for" facts** (Phase 3). Add `nameUk`/`capitalUk` to
-  `countries.json` and a `facts_uk.json`.
+- **i18n (remaining)**: UI + country names + capitals are bilingual (v1.9–v1.10). Last piece
+  is **Phase 3** — translate the **630 "Known for" facts** (add `src/data/facts_uk.json`, a
+  `factsUk` field merged in `build_data.py`, and show it via a `displayFacts(lang, c)` helper).
 - **Pronunciation audio** (TTS) for country and capital names.

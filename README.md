@@ -67,6 +67,10 @@ has three tabs — **Map**, **Explore** and **Quiz** — that share one country 
     Settlement tree (29,582 places, 2001-census population) with settlement search. The large
     data loads only when the tab is opened.
 
+13. **Bilingual (English / Ukrainian).** A global EN/UA toggle (auto-detected from the
+    browser, saved): the whole interface, continent names, country **names and capitals**, and
+    number formatting switch language. (The "Known for" facts are still English.)
+
 ### Run locally
 
 Requires Node 22+.
@@ -180,6 +184,10 @@ GitHub Pages без сервера. Має три вкладки — **Map**, **
     карта 25 областей провалюється в згорнуте дерево Область → Район → Громада → Населений
     пункт (29 582 пункти, перепис 2001) з пошуком. Великі дані вантажаться лише при відкритті
     вкладки.
+
+13. **Двомовність (English / Українська).** Глобальний перемикач EN/UA (визначається за
+    браузером і зберігається): увесь інтерфейс, назви континентів, **назви країн і столиці**
+    та формат чисел змінюють мову. (Факти «Known for» поки англійською.)
 
 ### Запуск локально
 

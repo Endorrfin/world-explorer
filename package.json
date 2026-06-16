@@ -10,6 +10,7 @@
     "worldmap": "node scripts/build_worldmap.mjs",
     "neighbors": "node scripts/build_neighbors.mjs",
     "uaregions": "node scripts/build_ukraine_regions.mjs",
+    "namesuk": "node scripts/build_names_uk.mjs",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"

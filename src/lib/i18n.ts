@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import type { Continent } from "../types";
+import type { Continent, Country } from "../types";
 
 export type Lang = "en" | "uk";
 
@@ -220,6 +220,11 @@ export function translate(lang: Lang, key: StringKey, params?: Record<string, st
 export function continentLabel(lang: Lang, c: Continent): string {
   return translate(lang, `cont.${c}` as StringKey);
 }
+
+/** Country name / capital in the current language (data: Phase 2). */
+export const displayName = (lang: Lang, c: Country): string => (lang === "uk" ? c.nameUk : c.name);
+export const displayCapital = (lang: Lang, c: Country): string =>
+  lang === "uk" ? c.capitalUk : c.capital;
 
 export const localeOf = (lang: Lang) => (lang === "uk" ? "uk-UA" : "en-US");
 

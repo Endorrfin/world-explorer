@@ -89,7 +89,12 @@ export default function App() {
       const inScope = continent === "All" || c.continent === continent;
       if (!inScope) return false;
       if (!q) return true;
-      return c.name.toLowerCase().includes(q) || c.capital.toLowerCase().includes(q);
+      return (
+        c.name.toLowerCase().includes(q) ||
+        c.capital.toLowerCase().includes(q) ||
+        c.nameUk.toLowerCase().includes(q) ||
+        c.capitalUk.toLowerCase().includes(q)
+      );
     });
   }, [continent, query]);
 

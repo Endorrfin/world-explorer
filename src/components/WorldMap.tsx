@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import mapData from "../data/worldmap.json";
 import type { Continent, Country } from "../types";
 import { CONTINENTS, continentMeta } from "../lib/continents";
-import { continentLabel, useLang, useT } from "../lib/i18n";
+import { continentLabel, displayName, useLang, useT } from "../lib/i18n";
 
 interface MapData {
   w: number;
@@ -262,7 +262,7 @@ export function WorldMap({
             vectorEffect="non-scaling-stroke"
             tabIndex={0}
             role="button"
-            aria-label={country.name}
+            aria-label={displayName(lang, country)}
             onClick={() => {
               if (!dragged.current) onSelect(iso);
             }}
@@ -273,11 +273,11 @@ export function WorldMap({
               }
             }}
           >
-            <title>{country.name}</title>
+            <title>{displayName(lang, country)}</title>
           </path>
         );
       }),
-    [byIso, selectedIso, onSelect, feedback]
+    [byIso, selectedIso, onSelect, feedback, lang]
   );
 
   const markerR = vb[2] * 0.0045;
@@ -366,7 +366,7 @@ export function WorldMap({
                     vectorEffect="non-scaling-stroke"
                     tabIndex={0}
                     role="button"
-                    aria-label={country.name}
+                    aria-label={displayName(lang, country)}
                     onClick={() => {
               if (!dragged.current) onSelect(iso);
             }}
@@ -377,7 +377,7 @@ export function WorldMap({
                       }
                     }}
                   >
-                    <title>{country.name}</title>
+                    <title>{displayName(lang, country)}</title>
                   </circle>
                 );
               })}

@@ -2,7 +2,15 @@ import { useMemo, useState } from "react";
 import type { Continent, Country } from "../types";
 import { CONTINENT_ORDER, CONTINENTS } from "../lib/continents";
 import { int } from "../lib/format";
-import { continentLabel, useLang, useT, type StringKey } from "../lib/i18n";
+import {
+  continentLabel,
+  displayCapital,
+  displayName,
+  useLang,
+  useT,
+  type Lang,
+  type StringKey,
+} from "../lib/i18n";
 import { Flag } from "./Flag";
 import { CountryShape, hasShape } from "./CountryShape";
 import { FindGame } from "./FindGame";
@@ -38,20 +46,20 @@ function sampleUnique(pool: string[], exclude: string, n: number): string[] {
   return out;
 }
 
-function buildRound(countries: Country[], mode: Mode, scope: Scope): Question[] {
+function buildRound(countries: Country[], mode: Mode, scope: Scope, lang: Lang): Question[] {
   const base = scope === "All" ? countries : countries.filter((c) => c.continent === scope);
   const targetPool = mode === "shape" ? base.filter((c) => hasShape(c.iso2)) : base;
   const targets = shuffle(targetPool).slice(0, Math.min(ROUND, targetPool.length));
 
   return targets.map((country) => {
     if (mode === "capital") {
-      const answer = country.capital;
-      const distractors = sampleUnique(base.map((c) => c.capital), answer, 3);
+      const answer = displayCapital(lang, country);
+      const distractors = sampleUnique(base.map((c) => displayCapital(lang, c)), answer, 3);
       return { country, answer, options: shuffle([answer, ...distractors]) };
     }
     if (mode === "flag" || mode === "shape") {
-      const answer = country.name;
-      const distractors = sampleUnique(base.map((c) => c.name), answer, 3);
+      const answer = displayName(lang, country);
+      const distractors = sampleUnique(base.map((c) => displayName(lang, c)), answer, 3);
       return { country, answer, options: shuffle([answer, ...distractors]) };
     }
     if (mode === "population") {
@@ -84,7 +92,7 @@ export function Quiz({ countries }: { countries: Country[] }) {
       setPlayWhere(true);
       return;
     }
-    setRound(buildRound(countries, mode, scope));
+    setRound(buildRound(countries, mode, scope, lang));
     setIdx(0);
     setScore(0);
     setPicked(null);
@@ -212,10 +220,10 @@ export function Quiz({ countries }: { countries: Country[] }) {
             <Flag iso2={q.country.iso2} className="quiz__prompt-flag" />
             <span className="quiz__prompt-text">
               {mode === "capital"
-                ? t("quiz.askCapital", { x: q.country.name })
+                ? t("quiz.askCapital", { x: displayName(lang, q.country) })
                 : mode === "population"
-                ? t("quiz.askPopulation", { x: q.country.name })
-                : t("quiz.askContinent", { x: q.country.name })}
+                ? t("quiz.askPopulation", { x: displayName(lang, q.country) })
+                : t("quiz.askContinent", { x: displayName(lang, q.country) })}
             </span>
           </>
         )}

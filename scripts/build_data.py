@@ -20,6 +20,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 XLSX = os.path.join(ROOT, "data.xlsx")
 FACTS = os.path.join(ROOT, "src", "data", "facts.json")
 NEIGHBORS = os.path.join(ROOT, "src", "data", "neighbors.json")
+NAMES_UK = os.path.join(ROOT, "src", "data", "names_uk.json")
+CAPITALS_UK = os.path.join(ROOT, "src", "data", "capitals_uk.json")
 OUT = os.path.join(ROOT, "src", "data", "countries.json")
 
 # ---------------------------------------------------------------- helpers
@@ -140,6 +142,16 @@ if os.path.exists(NEIGHBORS):
     with open(NEIGHBORS, encoding="utf-8") as f:
         neighbors = json.load(f)
 
+names_uk = {}
+if os.path.exists(NAMES_UK):
+    with open(NAMES_UK, encoding="utf-8") as f:
+        names_uk = json.load(f)
+
+capitals_uk = {}
+if os.path.exists(CAPITALS_UK):
+    with open(CAPITALS_UK, encoding="utf-8") as f:
+        capitals_uk = json.load(f)
+
 # ---------------------------------------------------------------- build
 countries = []
 main = rows_of("Сountries")   # NB: sheet title uses a Cyrillic 'С'
@@ -159,10 +171,12 @@ for r in main:
         "iso2": iso2,
         "iso3": r[3],
         "name": name,
+        "nameUk": names_uk.get(iso2, name),
         "flag": r[6],                              # emoji fallback
         "continent": cont,
         "subregion": sub,
         "capital": clean_capital(iso2, r[8]),
+        "capitalUk": capitals_uk.get(iso2, clean_capital(iso2, r[8])),
         "callingCode": to_int(r[5]),
         # people
         "population": to_int(r[9]),

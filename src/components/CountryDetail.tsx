@@ -1,6 +1,6 @@
 import type { Country } from "../types";
 import { continentMeta } from "../lib/continents";
-import { continentLabel, useLang, useT } from "../lib/i18n";
+import { continentLabel, displayCapital, displayName, useLang, useT } from "../lib/i18n";
 import { Flag } from "./Flag";
 import { CountryShape } from "./CountryShape";
 import {
@@ -76,13 +76,13 @@ export function CountryDetail({
       <header className="detail__head" style={{ background: meta.tint }}>
         <Flag iso2={country.iso2} className="detail__flag" />
         <div className="detail__titles">
-          <h2 className="detail__name">{country.name}</h2>
+          <h2 className="detail__name">{displayName(lang, country)}</h2>
           <p className="detail__sub">
             <span className="detail__continent-dot" style={{ background: meta.color }} />
             {continentLabel(lang, country.continent)} · {country.subregion}
           </p>
           <p className="detail__capital">
-            <span aria-hidden>🏛️</span> {t("detail.capital")}: <b>{country.capital}</b>
+            <span aria-hidden>🏛️</span> {t("detail.capital")}: <b>{displayCapital(lang, country)}</b>
           </p>
           {onLocate && (
             <button type="button" className="detail__locate" onClick={onLocate}>
@@ -177,7 +177,7 @@ export function CountryDetail({
                 onClick={() => onSelectNeighbor?.(n.iso2)}
               >
                 <Flag iso2={n.iso2} className="neighbor__flag" />
-                <span className="neighbor__name">{n.name}</span>
+                <span className="neighbor__name">{displayName(lang, n)}</span>
               </button>
             ))}
           </div>

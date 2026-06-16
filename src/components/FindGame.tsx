@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import type { Continent, Country } from "../types";
-import { continentLabel, useLang, useT, type StringKey } from "../lib/i18n";
+import { continentLabel, displayName, useLang, useT, type StringKey } from "../lib/i18n";
 import { Flag } from "./Flag";
 import { WorldMap } from "./WorldMap";
 
@@ -98,7 +98,7 @@ export function FindGame({
         <div className="find__prompt">
           <span className="find__label">{t("find.label")}</span>
           <Flag iso2={target.iso2} className="find__flag" />
-          <span className="find__name">{target.name}</span>
+          <span className="find__name">{displayName(lang, target)}</span>
           <span className="find__cont">{continentLabel(lang, target.continent)}</span>
         </div>
         <div className="find__meta">
@@ -125,14 +125,17 @@ export function FindGame({
             <span className={`find__verdict ${correct ? "find__verdict--ok" : "find__verdict--no"}`}>
               {correct
                 ? t("find.correct")
-                : t("find.wrong", { x: pickedCountry?.name ?? t("find.sea"), t: target.name })}
+                : t("find.wrong", {
+                    x: pickedCountry ? displayName(lang, pickedCountry) : t("find.sea"),
+                    t: displayName(lang, target),
+                  })}
             </span>
             <button type="button" className="btn btn--primary" onClick={next}>
               {idx + 1 === round.length ? t("quiz.results") : t("quiz.next")}
             </button>
           </>
         ) : (
-          <span className="find__hint2">{t("find.hint", { x: target.name })}</span>
+          <span className="find__hint2">{t("find.hint", { x: displayName(lang, target) })}</span>
         )}
       </div>
     </div>
