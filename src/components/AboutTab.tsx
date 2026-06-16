@@ -10,7 +10,11 @@ interface Content {
   intro: string;
   sections: Section[];
   footer: string;
+  contactPrompt: string; // CHANGED: feedback/contact block
+  contactLabel: string;
 }
+
+const EMAIL = "krupka.ua@gmail.com"; // CHANGED: contact address
 
 const EN: Content = {
   title: "About World Explorer",
@@ -60,6 +64,8 @@ const EN: Content = {
   ],
   footer:
     "Data from public sources (population 2025, GDP 2023). Flags: flag-icons. Country outlines & world map: Natural Earth. Ukraine oblasts: amCharts geodata. Settlement figures: 2001 census.",
+  contactPrompt: "Spotted a mistake, or have an idea to make it better? I'd love to hear from you.",
+  contactLabel: "Write",
 };
 
 const UK: Content = {
@@ -85,7 +91,7 @@ const UK: Content = {
     {
       icon: "🎯",
       title: "Квіз — шість ігор",
-      body: "Вгадай столицю, країну за прапором, країну за контуром, населення, континент і «Де у світі?». Обери регіон і зіграй раунд із підрахунком очок та миттєвим зелено-червоним фідбеком.",
+      body: "Вгадай столицю, країну за прапором, країну за контуром, населення, континент і «Де у світі?». Обери регіон і зіграй раунд із підрахунком балів та миттєвим зелено-червоним зворотним зв'язком.",
     },
     {
       icon: "🌍",
@@ -110,6 +116,8 @@ const UK: Content = {
   ],
   footer:
     "Дані з відкритих джерел (населення 2025, ВВП 2023). Прапори: flag-icons. Контури країн і карта світу: Natural Earth. Області України: геодані amCharts. Населення пунктів: перепис 2001 року.",
+  contactPrompt: "Знайшли неточність або маєте ідею, як зробити краще? Буду радий почути.",
+  contactLabel: "Написати",
 };
 
 export function AboutTab() {
@@ -129,6 +137,13 @@ export function AboutTab() {
           </section>
         ))}
       </div>
+      <p className="about__contact">
+        <span aria-hidden>✉️</span> {c.contactPrompt}{" "}
+        <b>{c.contactLabel}:</b>{" "}
+        <a className="about__email" href={`mailto:${EMAIL}`}>
+          {EMAIL}
+        </a>
+      </p>
       <p className="about__footer">{c.footer}</p>
     </div>
   );
