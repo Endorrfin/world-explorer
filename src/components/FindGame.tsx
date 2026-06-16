@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import type { Continent, Country } from "../types";
+import { continentLabel, useLang, useT, type StringKey } from "../lib/i18n";
 import { Flag } from "./Flag";
 import { WorldMap } from "./WorldMap";
 
@@ -15,6 +16,9 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
+const cheerKey = (pct: number): StringKey =>
+  pct === 100 ? "cheer.perfect" : pct >= 70 ? "cheer.great" : pct >= 40 ? "cheer.nice" : "cheer.keep";
+
 /**
  * "Where in the world?" — the child reads a country name and clicks it on the
  * real map. Reuses <WorldMap> in game mode (feedback colours + forced markers).
@@ -28,6 +32,8 @@ export function FindGame({
   scope: Scope;
   onExit: () => void;
 }) {
+  const t = useT();
+  const { lang } = useLang();
   const pool = useMemo(
     () => (scope === "All" ? countries : countries.filter((c) => c.continent === scope)),
     [countries, scope]
@@ -45,23 +51,20 @@ export function FindGame({
     setPicked(null);
   };
 
-  // ---- results ----
   if (idx >= round.length) {
     const pct = Math.round((score / round.length) * 100);
-    const cheer =
-      pct === 100 ? "Perfect! 🏆" : pct >= 70 ? "Great job! 🎉" : pct >= 40 ? "Nice try! 👍" : "Keep exploring! 💪";
     return (
       <div className="find find--result">
-        <h2 className="quiz__title">{cheer}</h2>
+        <h2 className="quiz__title">{t(cheerKey(pct))}</h2>
         <p className="quiz__score-big">
           {score} / {round.length}
         </p>
         <div className="quiz__result-actions">
           <button type="button" className="btn btn--primary" onClick={restart}>
-            Play again
+            {t("quiz.playAgain")}
           </button>
           <button type="button" className="btn" onClick={onExit}>
-            Change game
+            {t("quiz.changeGame")}
           </button>
         </div>
       </div>
@@ -93,16 +96,16 @@ export function FindGame({
     <div className="find">
       <div className="find__bar">
         <div className="find__prompt">
-          <span className="find__label">Find on the map:</span>
+          <span className="find__label">{t("find.label")}</span>
           <Flag iso2={target.iso2} className="find__flag" />
           <span className="find__name">{target.name}</span>
-          <span className="find__cont">{target.continent}</span>
+          <span className="find__cont">{continentLabel(lang, target.continent)}</span>
         </div>
         <div className="find__meta">
           <span>
             {idx + 1} / {round.length}
           </span>
-          <span className="find__score">Score {score}</span>
+          <span className="find__score">{t("quiz.score", { s: score })}</span>
         </div>
       </div>
 
@@ -121,17 +124,15 @@ export function FindGame({
           <>
             <span className={`find__verdict ${correct ? "find__verdict--ok" : "find__verdict--no"}`}>
               {correct
-                ? "Correct! 🎉"
-                : `Not quite — you picked ${pickedCountry?.name ?? "the sea"}. ${target.name} is in green.`}
+                ? t("find.correct")
+                : t("find.wrong", { x: pickedCountry?.name ?? t("find.sea"), t: target.name })}
             </span>
             <button type="button" className="btn btn--primary" onClick={next}>
-              {idx + 1 === round.length ? "See results →" : "Next →"}
+              {idx + 1 === round.length ? t("quiz.results") : t("quiz.next")}
             </button>
           </>
         ) : (
-          <span className="find__hint2">
-            Tap <b>{target.name}</b> on the map. Zoom in if it's tiny.
-          </span>
+          <span className="find__hint2">{t("find.hint", { x: target.name })}</span>
         )}
       </div>
     </div>

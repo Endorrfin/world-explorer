@@ -1,5 +1,6 @@
 import { CONTINENTS, continentMeta } from "../lib/continents";
 import type { Continent } from "../types";
+import { continentLabel, useLang, useT } from "../lib/i18n";
 
 export type ContinentFilter = Continent | "All";
 
@@ -14,9 +15,11 @@ export function Sidebar({
   selected: ContinentFilter;
   onSelect: (c: ContinentFilter) => void;
 }) {
+  const t = useT();
+  const { lang } = useLang();
   return (
     <nav className="sidebar" aria-label="Continents">
-      <h2 className="sidebar__title">Continents</h2>
+      <h2 className="sidebar__title">{t("sidebar.continents")}</h2>
 
       <button
         type="button"
@@ -26,7 +29,7 @@ export function Sidebar({
         <span className="continent__icon" aria-hidden>
           🌍
         </span>
-        <span className="continent__name">All countries</span>
+        <span className="continent__name">{t("sidebar.all")}</span>
         <span className="continent__count">{total}</span>
       </button>
 
@@ -48,7 +51,7 @@ export function Sidebar({
             <span className="continent__icon" aria-hidden>
               {c.emoji}
             </span>
-            <span className="continent__name">{c.name}</span>
+            <span className="continent__name">{continentLabel(lang, c.name)}</span>
             <span
               className="continent__count"
               style={{ background: meta.color }}

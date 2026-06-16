@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import mapData from "../data/worldmap.json";
 import type { Continent, Country } from "../types";
 import { CONTINENTS, continentMeta } from "../lib/continents";
+import { continentLabel, useLang, useT } from "../lib/i18n";
 
 interface MapData {
   w: number;
@@ -66,6 +67,8 @@ export function WorldMap({
   showNeighbors?: boolean;
 }) {
   const byIso = useMemo(() => new Map(countries.map((c) => [c.iso2, c])), [countries]);
+  const t = useT();
+  const { lang } = useLang();
 
   const neighborSet = useMemo(() => {
     if (!showNeighbors || !selectedIso) return new Set<string>();
@@ -290,7 +293,7 @@ export function WorldMap({
           className={`wmap__zoom${active === "World" ? " wmap__zoom--on" : ""}`}
           onClick={() => flyTo(WORLD, "World")}
         >
-          🌍 World
+          {t("map.world")}
         </button>
         {CONTINENTS.map((c) => (
           <button
@@ -300,7 +303,7 @@ export function WorldMap({
             style={active === c.name ? { borderColor: c.color, background: c.tint } : undefined}
             onClick={() => flyTo(continentBox(c.name), c.name)}
           >
-            {c.emoji} {c.name}
+            {c.emoji} {continentLabel(lang, c.name)}
           </button>
         ))}
       </div>
@@ -396,7 +399,7 @@ export function WorldMap({
         </svg>
       </div>
 
-      <p className="wmap__hint">Drag to pan · scroll or pinch to zoom · double-click to zoom in</p>
+      <p className="wmap__hint">{t("map.hint")}</p>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import regionsData from "../data/ukraine_regions.json";
+import { useLang } from "../lib/i18n";
 
 type Lang = "ua" | "en";
 
@@ -91,7 +92,8 @@ function prepare(raw: RawNode): Prepared {
 const cache: Partial<Record<Lang, Prepared>> = {};
 
 export function UkraineTab() {
-  const [lang, setLang] = useState<Lang>("ua");
+  const { lang: gLang } = useLang();
+  const lang: Lang = gLang === "uk" ? "ua" : "en";
   const [data, setData] = useState<Prepared | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -191,22 +193,6 @@ export function UkraineTab() {
     <div className="uk">
       <div className="uk__bar">
         <h2 className="uk__title">🇺🇦 {t.title}</h2>
-        <div className="uk__lang" role="group" aria-label="Language">
-          <button
-            type="button"
-            className={`uk__langbtn${lang === "en" ? " uk__langbtn--on" : ""}`}
-            onClick={() => setLang("en")}
-          >
-            EN
-          </button>
-          <button
-            type="button"
-            className={`uk__langbtn${lang === "ua" ? " uk__langbtn--on" : ""}`}
-            onClick={() => setLang("ua")}
-          >
-            UA
-          </button>
-        </div>
       </div>
       <p className="uk__sub">{t.sub}</p>
 

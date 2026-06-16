@@ -74,7 +74,8 @@ src/
     Flag.tsx                  flag-icons wrapper
   lib/
     continents.ts             continent metadata (order, accent colour, emoji)
-    format.ts                 number/currency/percent formatters (null → "—")
+    format.ts                 number/currency/percent formatters (null → "—", locale-aware)
+    i18n.ts                   UI strings (EN/UK), language context, locale helpers
   App.tsx                     layout, search, tabs, hash routing
   styles.css                  all styling (clean & neutral theme + responsive rules)
 ```
@@ -149,6 +150,11 @@ App imports countries.json + shapes.json (static)
   the whole country-wide tree). Each
   oblast is linked to its EN **and** UA tree index (the two data files are alphabetised
   differently); Kyiv City & Sevastopol map onto Kyiv / Crimea.
+- **v1.9** — **bilingual UI (English / Ukrainian)**: a global EN/UA toggle in the top bar
+  (browser-detected default, saved to `localStorage`), a lightweight typed i18n module
+  (`src/lib/i18n.ts` — `uk` is type-checked against `en`), and locale-aware number formatting.
+  The Ukraine tab follows the global toggle. Country **names, capitals and "Known for" facts
+  are still English** (Phase 2 = names + capitals, Phase 3 = facts).
 
 ## Possible improvements (roadmap)
 
@@ -184,5 +190,8 @@ App imports countries.json + shapes.json (static)
 - **PWA**: installable + offline service worker — ideal for tablets in classrooms.
 - **Accessibility**: full keyboard navigation, visible focus rings, ARIA labels,
   `prefers-reduced-motion`, contrast audit.
-- **i18n**: optional Ukrainian/English UI toggle (content stays English by request).
+- **i18n (remaining)**: the UI is bilingual (v1.9). Next: translate country **names +
+  capitals** (Phase 2 — `i18n-iso-countries` has a `uk` locale for names; capitals need a
+  curated list) and the **630 "Known for" facts** (Phase 3). Add `nameUk`/`capitalUk` to
+  `countries.json` and a `facts_uk.json`.
 - **Pronunciation audio** (TTS) for country and capital names.
