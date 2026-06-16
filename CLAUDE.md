@@ -32,11 +32,11 @@ set to **GitHub Actions** (Settings → Pages).
 ## Architecture
 
 - **Single-page app** with hash routing: `#/map/<ISO2>`, `#/explore/<continent>/<ISO2>`,
-  and `#/quiz` (Map is the default landing tab). No router library — routing is a small
+  `#/quiz` and `#/ukraine` (Map is the default landing tab). No router library — routing is a small
   custom layer in `src/App.tsx`.
 - **All data is static JSON** imported at build time. The app fetches nothing at runtime,
   so it works offline and under any sub-path.
-- **Layout:** top bar (brand, Map/Explore/Quiz tabs, search). Explore shows a sidebar
+- **Layout:** top bar (brand, Map/Explore/Quiz/Ukraine tabs, search). Explore shows a sidebar
   (continents) → grid of country tiles → detail panel; Map and Quiz are separate tabs that
   share the same detail panel.
 - **`vite base` is `'./'`** (relative) + hash routing, so the site works under any
@@ -46,6 +46,7 @@ set to **GitHub Actions** (Settings → Pages).
 
 ```
 data.xlsx                     source spreadsheet (the origin of all figures)
+public/ukraine_{eng,ua}.json  Ukraine settlement hierarchy (lazy-loaded at runtime)
 scripts/
   build_data.py               data pipeline: xlsx → countries.json (cleans, fixes, joins, merges facts)
   build_shapes.mjs            country outlines: world-atlas TopoJSON → shapes.json
@@ -66,6 +67,7 @@ src/
     WorldMap.tsx              clickable geoEqualEarth world map (pan/zoom, markers); reused by the game
     FindGame.tsx              "Where in the world?" game — click the country on the map
     Quiz.tsx                  6-mode quiz (incl. the map game) with scoring
+    UkraineTab.tsx            Ukraine settlements tree (EN/UA toggle, lazy-loaded)
     Flag.tsx                  flag-icons wrapper
   lib/
     continents.ts             continent metadata (order, accent colour, emoji)
@@ -134,6 +136,11 @@ App imports countries.json + shapes.json (static)
 - **v1.6** — **neighbour highlighting**: selecting a country outlines its land neighbours on
   the map (`showNeighbors`) and lists them (clickable) in the detail panel. Borders come from
   `world-countries` via `build_neighbors.mjs`; islands show "no land borders".
+- **v1.7** — **Ukraine** tab: a lazy-loaded, collapsible **settlements tree**
+  (Region → District → Hromada → Settlement, 29,582 places, 2001-census population) with an
+  **EN/UA toggle** and settlement search. Data lives in `public/ukraine_*.json` (loaded on
+  open, not bundled). A clickable 25-oblast **regions map** (drilling into each region's
+  tree) is the next step.
 
 ## Possible improvements (roadmap)
 
