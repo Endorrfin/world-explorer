@@ -19,6 +19,7 @@ import openpyxl
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 XLSX = os.path.join(ROOT, "data.xlsx")
 FACTS = os.path.join(ROOT, "src", "data", "facts.json")
+FACTS_UK = os.path.join(ROOT, "src", "data", "facts_uk.json")  # CHANGED: Phase 3 UA facts
 NEIGHBORS = os.path.join(ROOT, "src", "data", "neighbors.json")
 NAMES_UK = os.path.join(ROOT, "src", "data", "names_uk.json")
 CAPITALS_UK = os.path.join(ROOT, "src", "data", "capitals_uk.json")
@@ -137,6 +138,11 @@ if os.path.exists(FACTS):
     with open(FACTS, encoding="utf-8") as f:
         facts = json.load(f)
 
+facts_uk = {}  # CHANGED: Phase 3 — Ukrainian "Known for" facts, keyed by ISO-2
+if os.path.exists(FACTS_UK):
+    with open(FACTS_UK, encoding="utf-8") as f:
+        facts_uk = json.load(f)
+
 neighbors = {}
 if os.path.exists(NEIGHBORS):
     with open(NEIGHBORS, encoding="utf-8") as f:
@@ -198,6 +204,7 @@ for r in main:
         "peaceIndex": num(gpi_row[4]) if gpi_row else None,        # GPI 2024 (lower = safer)
         # content
         "knownFor": facts.get(iso2, []),
+        "factsUk": facts_uk.get(iso2, []),        # CHANGED: Phase 3 UA facts
         "neighbors": neighbors.get(iso2, []),
     })
 
@@ -217,6 +224,7 @@ for c in countries:
 have_births = sum(1 for c in countries if c["birthsPerDay"] is not None)
 have_gpi = sum(1 for c in countries if c["peaceIndex"] is not None)
 have_facts = sum(1 for c in countries if c["knownFor"])
+have_facts_uk = sum(1 for c in countries if c["factsUk"])  # CHANGED: Phase 3 coverage
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
 with open(OUT, "w", encoding="utf-8") as f:
@@ -224,4 +232,4 @@ with open(OUT, "w", encoding="utf-8") as f:
 
 print(f"wrote {len(countries)} countries -> {os.path.relpath(OUT, ROOT)}")
 print("by continent:", dict(sorted(by_cont.items())))
-print(f"coverage: births/day={have_births}/195  peaceIndex={have_gpi}/195  knownFor={have_facts}/195")
+print(f"coverage: births/day={have_births}/195  peaceIndex={have_gpi}/195  knownFor={have_facts}/195  factsUk={have_facts_uk}/195")

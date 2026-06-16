@@ -67,6 +67,9 @@ export function CountryDetail({
   const pk = peaceBandKey(country.peaceIndex);
   const peaceStr = pk ? `${peaceValue(country.peaceIndex)} · ${t(PEACE_KEY[pk])}` : "—";
 
+  // CHANGED: Phase 3 — show UA facts when language is Ukrainian, fall back to EN if missing
+  const facts = lang === "uk" && country.factsUk.length > 0 ? country.factsUk : country.knownFor;
+
   return (
     <aside className="detail">
       <button type="button" className="detail__close" onClick={onClose} aria-label="Close">
@@ -99,11 +102,11 @@ export function CountryDetail({
         />
       </header>
 
-      {country.knownFor.length > 0 && (
+      {facts.length > 0 && (
         <section className="detail__section">
           <h3 className="detail__section-title">{t("detail.knownFor")}</h3>
           <ul className="known">
-            {country.knownFor.map((f, i) => (
+            {facts.map((f, i) => (
               <li key={i} className="known__item">
                 {f}
               </li>

@@ -17,6 +17,7 @@ import { CountryDetail } from "./components/CountryDetail";
 import { WorldMap } from "./components/WorldMap";
 import { Quiz } from "./components/Quiz";
 import { UkraineTab } from "./components/UkraineTab";
+import { AboutTab } from "./components/AboutTab";
 
 const COUNTRIES = rawData as unknown as Country[];
 
@@ -35,6 +36,7 @@ function parseHash(): HashState {
   const [tab, a, b] = h.split("/");
   if (tab === "quiz") return { tab: "quiz", continent: "All", iso: null };
   if (tab === "ukraine") return { tab: "ukraine", continent: "All", iso: null };
+  if (tab === "about") return { tab: "about", continent: "All", iso: null };
   if (tab === "map") return { tab: "map", continent: "All", iso: a ? a.toUpperCase() : null };
   if (tab === "explore") {
     const continent = a ? continentBySlug(a) ?? "All" : "All";
@@ -164,6 +166,13 @@ export default function App() {
             >
               🇺🇦 {t("tab.ukraine")}
             </button>
+            <button
+              className={`tab${tab === "about" ? " tab--active" : ""}`}
+              onClick={() => setTab("about")}
+              type="button"
+            >
+              {t("tab.about")}
+            </button>
           </nav>
 
           {tab === "explore" && (
@@ -276,6 +285,12 @@ export default function App() {
         {tab === "ukraine" && (
           <div className="uk-wrap">
             <UkraineTab />
+          </div>
+        )}
+
+        {tab === "about" && (
+          <div className="about-wrap">
+            <AboutTab />
           </div>
         )}
       </div>

@@ -29,6 +29,11 @@
    "Most of it is covered by the Sahara Desert",
    "Known for ancient Roman ruins like Timgad"
   ],
+  "factsUk": [
+   "Найбільша за площею країна Африки",
+   "Більшу частину вкриває пустеля Сахара",
+   "Відома давньоримськими руїнами, як-от Тімгад"
+  ],
   "neighbors": [
    "LY",
    "MA",
@@ -68,6 +73,11 @@
    "The Kwanza is both its river and its money",
    "Rich in oil and diamonds"
   ],
+  "factsUk": [
+   "Має гігантських чорних антилоп, яких більше ніде немає",
+   "Кванза — це і річка, і її гроші",
+   "Багата на нафту й алмази"
+  ],
   "neighbors": [
    "CD",
    "CG",
@@ -104,6 +114,11 @@
    "Birthplace of the Vodun (voodoo) religion",
    "Home to the stilt village of Ganvié on a lake",
    "Once the powerful Kingdom of Dahomey"
+  ],
+  "factsUk": [
+   "Батьківщина релігії вуду (водун)",
+   "На озері стоїть пальове село Ганв'є",
+   "Колись могутнє королівство Дагомея"
   ],
   "neighbors": [
    "BF",
@@ -143,6 +158,12 @@
    "Much of it is the Kalahari Desert",
    "One of the world's top diamond producers"
   ],
+  "factsUk": [
+   "Тут величезні стада слонів",
+   "Дельта Окаванго — відомий рай для дикої природи",
+   "Більшу частину займає пустеля Калахарі",
+   "Один із найбільших видобувачів алмазів у світі"
+  ],
   "neighbors": [
    "NA",
    "ZA",
@@ -179,6 +200,11 @@
    "Its name means 'Land of Honest People'",
    "Famous for masks and the FESPACO film festival",
    "Most people farm cotton and millet"
+  ],
+  "factsUk": [
+   "Її назва означає «Земля чесних людей»",
+   "Відома масками й кінофестивалем FESPACO",
+   "Більшість людей вирощує бавовну й просо"
   ],
   "neighbors": [
    "BJ",
@@ -219,6 +245,11 @@
    "Famous for energetic royal drumming traditions",
    "One of the world's biggest producers of coffee for its size"
   ],
+  "factsUk": [
+   "Тут одне з джерел річки Ніл",
+   "Відома енергійними королівськими барабанами",
+   "Як на свій розмір — один із найбільших виробників кави"
+  ],
   "neighbors": [
    "CD",
    "RW",
@@ -255,6 +286,11 @@
    "Birthplace of soulful 'morna' music",
    "Famous for the singer Cesária Évora"
   ],
+  "factsUk": [
+   "Група з десяти островів в Атлантичному океані",
+   "Батьківщина душевної музики «морна»",
+   "Відома співачкою Сезарією Еворою"
+  ],
   "neighbors": []
  },
  {
@@ -286,6 +322,11 @@
    "Called 'Africa in miniature' for its variety",
    "Mount Cameroon is an active volcano",
    "Strong football (soccer) nation, the Indomitable Lions"
+  ],
+  "factsUk": [
+   "Звана «Африкою в мініатюрі» за різноманіття",
+   "Гора Камерун — діючий вулкан",
+   "Сильна футбольна нація — «Незламні леви»"
   ],
   "neighbors": [
    "CF",
@@ -326,6 +367,11 @@
    "Rich in diamonds and gold",
    "One of the least densely populated countries"
   ],
+  "factsUk": [
+   "Вкрита лісами, де живуть лісові слони й горили",
+   "Багата на алмази й золото",
+   "Одна з найменш заселених країн"
+  ],
   "neighbors": [
    "CD",
    "CG",
@@ -364,6 +410,11 @@
    "Named after huge Lake Chad",
    "Home to the Ennedi Plateau with rock arches",
    "The Sahara covers its northern half"
+  ],
+  "factsUk": [
+   "Названа на честь великого озера Чад",
+   "Тут плато Еннеді з кам'яними арками",
+   "Сахара вкриває її північну половину"
   ],
   "neighbors": [
    "CF",
@@ -404,6 +455,11 @@
    "Called the 'Perfumed Isles' for its ylang-ylang flowers",
    "Home to the rare living-fossil coelacanth fish"
   ],
+  "factsUk": [
+   "Група вулканічних островів в Індійському океані",
+   "Звані «Запашними островами» через квіти іланг-ілангу",
+   "Тут живе рідкісна риба-латимерія, «жива копалина»"
+  ],
   "neighbors": []
  },
  {
@@ -435,6 +491,11 @@
    "World's largest producer of cocoa beans for chocolate",
    "Has the world's largest church, the Basilica at Yamoussoukro",
    "Strong in football and athletics"
+  ],
+  "factsUk": [
+   "Найбільший у світі виробник какао-бобів для шоколаду",
+   "Має найбільший храм світу — базиліку в Ямусукро",
+   "Сильна у футболі та легкій атлетиці"
   ],
   "neighbors": [
    "BF",
@@ -473,6 +534,11 @@
    "Second-largest country in Africa",
    "The Congo Rainforest is home to bonobos and okapi",
    "The mighty Congo River flows through it"
+  ],
+  "factsUk": [
+   "Друга за площею країна Африки",
+   "У лісах Конго живуть бонобо й окапі",
+   "Через неї тече могутня річка Конго"
   ],
   "neighbors": [
    "AO",
@@ -516,6 +582,11 @@
    "Sits where the Red Sea meets the Indian Ocean",
    "Known for salt lakes and whale sharks"
   ],
+  "factsUk": [
+   "Озеро Ассаль — найнижча точка Африки",
+   "Лежить там, де Червоне море зустрічається з Індійським океаном",
+   "Відома солоними озерами й китовими акулами"
+  ],
   "neighbors": [
    "ER",
    "ET",
@@ -552,6 +623,12 @@
    "The Nile is the longest river and its lifeline",
    "Ancient pharaohs and hieroglyphic writing",
    "The Suez Canal links two seas"
+  ],
+  "factsUk": [
+   "Тут Великі піраміди й Сфінкс",
+   "Ніл — найдовша річка і її життєва артерія",
+   "Давні фараони й ієрогліфічне письмо",
+   "Суецький канал з'єднує два моря"
   ],
   "neighbors": [
    "IL",
@@ -590,6 +667,11 @@
    "Made up of a mainland and several islands",
    "Rich in oil"
   ],
+  "factsUk": [
+   "Одна з небагатьох іспаномовних країн Африки",
+   "Складається з материка й кількох островів",
+   "Багата на нафту"
+  ],
   "neighbors": [
    "CM",
    "GA"
@@ -624,6 +706,11 @@
    "Has Italian-style architecture in its capital Asmara",
    "Sits along the Red Sea coast",
    "Known for the Dahlak coral islands"
+  ],
+  "factsUk": [
+   "У столиці Асмарі — архітектура в італійському стилі",
+   "Лежить уздовж узбережжя Червоного моря",
+   "Відома кораловими островами Дахлак"
   ],
   "neighbors": [
    "DJ",
@@ -661,6 +748,11 @@
    "Famous for the colourful Umhlanga (Reed) Dance",
    "Renamed from Swaziland in 2018"
   ],
+  "factsUk": [
+   "Одна з останніх абсолютних монархій світу",
+   "Відома барвистим Танцем очерету (Умхланга)",
+   "У 2018 році перейменована зі Свазіленду"
+  ],
   "neighbors": [
    "MZ",
    "ZA"
@@ -696,6 +788,12 @@
    "Where the ancient human fossil 'Lucy' was found",
    "Birthplace of coffee",
    "Uses its own 13-month calendar"
+  ],
+  "factsUk": [
+   "Ніколи не була повністю колонізована європейцями",
+   "Тут знайшли давню скам'янілість людини «Люсі»",
+   "Батьківщина кави",
+   "Має власний 13-місячний календар"
   ],
   "neighbors": [
    "DJ",
@@ -736,6 +834,11 @@
    "Created 13 national parks to protect wildlife",
    "Forest elephants surf the waves at Loango beach"
   ],
+  "factsUk": [
+   "Майже на 90% вкрита тропічним лісом",
+   "Створила 13 національних парків для охорони природи",
+   "На пляжі Лоанго лісові слони виходять до хвиль"
+  ],
   "neighbors": [
    "CG",
    "CM",
@@ -772,6 +875,11 @@
    "Wraps like a finger around the Gambia River",
    "A great spot for birdwatching"
   ],
+  "factsUk": [
+   "Найменша країна на материковій Африці",
+   "Огортає, мов палець, річку Гамбія",
+   "Чудове місце для спостереження за птахами"
+  ],
   "neighbors": [
    "SN"
   ]
@@ -806,6 +914,12 @@
    "Famous for colourful kente cloth",
    "Lake Volta is one of the world's largest man-made lakes",
    "Known for gold and cocoa"
+  ],
+  "factsUk": [
+   "Перша країна Африки на південь від Сахари, що здобула незалежність",
+   "Відома барвистою тканиною кенте",
+   "Озеро Вольта — одне з найбільших штучних озер світу",
+   "Відома золотом і какао"
   ],
   "neighbors": [
    "BF",
@@ -842,6 +956,11 @@
    "Source of the Niger River",
    "Home to rare chimpanzees in the highlands",
    "Rich in bauxite, used to make aluminium"
+  ],
+  "factsUk": [
+   "Тут витік річки Нігер",
+   "У горах живуть рідкісні шимпанзе",
+   "Багата на боксити, з яких роблять алюміній"
   ],
   "neighbors": [
    "CI",
@@ -882,6 +1001,11 @@
    "Known for cashew nuts",
    "Many islands are sacred in local tradition"
   ],
+  "factsUk": [
+   "Відома островами Біжагош і морськими бегемотами",
+   "Відома горіхами кеш'ю",
+   "Багато островів вважаються священними"
+  ],
   "neighbors": [
    "GN",
    "SN"
@@ -917,6 +1041,12 @@
    "The Great Wildebeest Migration crosses its plains",
    "Top marathon and long-distance runners come from here",
    "The Great Rift Valley runs through it"
+  ],
+  "factsUk": [
+   "Відома сафарі й заповідником Масаї-Мара",
+   "Її рівнинами проходить Велика міграція антилоп гну",
+   "Звідси найкращі марафонці й бігуни на довгі дистанції",
+   "Через неї проходить Великий рифтовий розлом"
   ],
   "neighbors": [
    "ET",
@@ -956,6 +1086,11 @@
    "The entire country sits above 1,000 metres",
    "People wrap up in colourful Basotho blankets"
   ],
+  "factsUk": [
+   "Прозване «Королівством у небі» за висоту",
+   "Уся країна лежить вище 1000 метрів",
+   "Люди загортаються в барвисті ковдри басото"
+  ],
   "neighbors": [
    "ZA"
   ]
@@ -989,6 +1124,11 @@
    "Africa's oldest republic, founded in 1847",
    "Its capital Monrovia is named after a US president",
    "Covered in lush rainforest"
+  ],
+  "factsUk": [
+   "Найстаріша республіка Африки, заснована 1847 року",
+   "Столиця Монровія названа на честь президента США",
+   "Вкрита буйним тропічним лісом"
   ],
   "neighbors": [
    "CI",
@@ -1025,6 +1165,11 @@
    "Almost entirely covered by the Sahara Desert",
    "Has well-preserved Roman ruins at Leptis Magna",
    "Rich in oil"
+  ],
+  "factsUk": [
+   "Майже повністю вкрита пустелею Сахара",
+   "Має добре збережені римські руїни Лептіс-Магна",
+   "Багата на нафту"
   ],
   "neighbors": [
    "DZ",
@@ -1065,6 +1210,11 @@
    "Famous for lemurs and baobab trees",
    "The Avenue of the Baobabs is a stunning sight"
   ],
+  "factsUk": [
+   "Велетенський острів із тваринами, яких більше ніде немає",
+   "Відома лемурами й баобабами",
+   "Алея баобабів — приголомшливе видовище"
+  ],
   "neighbors": []
  },
  {
@@ -1096,6 +1246,11 @@
    "Nicknamed the 'Warm Heart of Africa'",
    "Lake Malawi is full of colourful cichlid fish",
    "One of Africa's largest lakes covers much of it"
+  ],
+  "factsUk": [
+   "Прозвана «Теплим серцем Африки»",
+   "Озеро Малаві повне барвистих риб-цихлід",
+   "Одне з найбільших озер Африки вкриває більшу її частину"
   ],
   "neighbors": [
    "MZ",
@@ -1132,6 +1287,11 @@
    "Home to the ancient city of Timbuktu",
    "The Great Mosque of Djenné is made of mud",
    "Once the rich Mali Empire of Mansa Musa"
+  ],
+  "factsUk": [
+   "Тут давнє місто Тімбукту",
+   "Велика мечеть Дженне збудована з глини",
+   "Колись багата імперія Малі Манса Муси"
   ],
   "neighbors": [
    "BF",
@@ -1173,6 +1333,11 @@
    "The 'iron ore train' is one of the longest in the world",
    "The Eye of the Sahara is visible from space"
   ],
+  "factsUk": [
+   "Здебільшого пустеля Сахара",
+   "«Залізорудний потяг» — один із найдовших у світі",
+   "«Око Сахари» видно з космосу"
+  ],
   "neighbors": [
    "DZ",
    "ML",
@@ -1209,6 +1374,11 @@
    "Was the only home of the extinct dodo bird",
    "Famous for beaches and coral reefs"
   ],
+  "factsUk": [
+   "Тропічний острів в Індійському океані",
+   "Був єдиним домом вимерлого птаха додо",
+   "Відомий пляжами й кораловими рифами"
+  ],
   "neighbors": []
  },
  {
@@ -1240,6 +1410,11 @@
    "Famous for the blue city of Chefchaouen and Marrakech markets",
    "The Sahara Desert meets the Atlas Mountains here",
    "Known for tagine cooking and mint tea"
+  ],
+  "factsUk": [
+   "Відома блакитним містом Шефшауен і ринками Марракеша",
+   "Тут пустеля Сахара зустрічається з горами Атлас",
+   "Відома стравою таджин і м'ятним чаєм"
   ],
   "neighbors": [
    "DZ",
@@ -1275,6 +1450,11 @@
    "Has a long, beautiful Indian Ocean coastline",
    "Its flag features an AK-47, hoe and book",
    "Famous for prawns and peri-peri flavours"
+  ],
+  "factsUk": [
+   "Має довге, гарне узбережжя Індійського океану",
+   "На її прапорі — автомат, мотика й книга",
+   "Відома креветками й приправою пірі-пірі"
   ],
   "neighbors": [
    "MW",
@@ -1315,6 +1495,11 @@
    "The Namib is one of the oldest deserts on Earth",
    "Desert-adapted elephants and lions live here"
   ],
+  "factsUk": [
+   "Тут найвищі піщані дюни світу в Соссусфлеї",
+   "Наміб — одна з найдавніших пустель на Землі",
+   "Тут живуть пристосовані до пустелі слони й леви"
+  ],
   "neighbors": [
    "AO",
    "BW",
@@ -1351,6 +1536,11 @@
    "Mostly Sahara Desert and very hot",
    "Home to the Tree of Ténéré, once the loneliest tree on Earth",
    "The Air Mountains hide ancient rock art"
+  ],
+  "factsUk": [
+   "Здебільшого пустеля Сахара й дуже спекотно",
+   "Тут було Дерево Тенере — колись найсамотніше дерево на Землі",
+   "У горах Аїр сховані давні наскельні малюнки"
   ],
   "neighbors": [
    "BF",
@@ -1393,6 +1583,12 @@
    "Famous for Afrobeats music",
    "Africa's biggest economy"
   ],
+  "factsUk": [
+   "Найбільш населена країна Африки",
+   "Нолівуд — одна з найбільших кіноіндустрій світу",
+   "Відома музикою афробітс",
+   "Найбільша економіка Африки"
+  ],
   "neighbors": [
    "BJ",
    "CM",
@@ -1429,6 +1625,11 @@
    "Covered in dense Congo rainforest",
    "Home to lowland gorillas at Nouabalé-Ndoki",
    "The Congo River forms much of its border"
+  ],
+  "factsUk": [
+   "Вкрита густим тропічним лісом Конго",
+   "У Нуабале-Ндокі живуть рівнинні горили",
+   "Річка Конго утворює велику частину кордону"
   ],
   "neighbors": [
    "AO",
@@ -1468,6 +1669,11 @@
    "Famous for trekking to see mountain gorillas",
    "One of the cleanest, greenest countries in Africa"
   ],
+  "factsUk": [
+   "Відома як «Країна тисячі пагорбів»",
+   "Відома походами до гірських горил",
+   "Одна з найчистіших, найзеленіших країн Африки"
+  ],
   "neighbors": [
    "BI",
    "CD",
@@ -1505,6 +1711,11 @@
    "Famous for high-quality cocoa",
    "Volcanic peaks rise straight out of the ocean"
   ],
+  "factsUk": [
+   "Крихітна острівна держава на екваторі",
+   "Відома високоякісним какао",
+   "Вулканічні шпилі здіймаються просто з океану"
+  ],
   "neighbors": []
  },
  {
@@ -1536,6 +1747,11 @@
    "Home to the colourful Lac Rose (Pink Lake)",
    "Famous for energetic mbalax music",
    "The westernmost point of mainland Africa"
+  ],
+  "factsUk": [
+   "Тут барвисте Рожеве озеро (Лак-Роз)",
+   "Відома енергійною музикою мбалах",
+   "Найзахідніша точка материкової Африки"
   ],
   "neighbors": [
    "GM",
@@ -1575,6 +1791,11 @@
    "Home to the giant Aldabra tortoise",
    "The rare Coco de Mer is the world's largest seed"
   ],
+  "factsUk": [
+   "Складаються зі 115 островів в Індійському океані",
+   "Тут велетенська альдабрська черепаха",
+   "Рідкісне коко-де-мер — найбільше насіння у світі"
+  ],
   "neighbors": []
  },
  {
@@ -1606,6 +1827,11 @@
    "Named 'Lion Mountains' by Portuguese sailors",
    "Has beautiful beaches near Freetown",
    "Known for diamonds"
+  ],
+  "factsUk": [
+   "Названа «Левовими горами» португальськими мореплавцями",
+   "Має гарні пляжі біля Фрітауна",
+   "Відома алмазами"
   ],
   "neighbors": [
    "GN",
@@ -1641,6 +1867,11 @@
    "Has the longest coastline on mainland Africa",
    "A land of nomadic herders and camels",
    "Famous for frankincense and myrrh"
+  ],
+  "factsUk": [
+   "Має найдовшу берегову лінію на материковій Африці",
+   "Край кочових скотарів і верблюдів",
+   "Відома ладаном і миррою"
   ],
   "neighbors": [
    "DJ",
@@ -1678,6 +1909,12 @@
    "Famous for Table Mountain and safari Big Five",
    "Nelson Mandela became its first Black president",
    "Home to many languages and cultures"
+  ],
+  "factsUk": [
+   "Має три столиці",
+   "Відома Столовою горою й «великою п'ятіркою» сафарі",
+   "Нельсон Мандела став її першим темношкірим президентом",
+   "Дім багатьох мов і культур"
   ],
   "neighbors": [
    "BW",
@@ -1718,6 +1955,11 @@
    "The Sudd is one of the largest wetlands on Earth",
    "Huge antelope migrations cross its plains"
   ],
+  "factsUk": [
+   "Наймолодша країна світу, постала 2011 року",
+   "Судд — одне з найбільших боліт на Землі",
+   "Її рівнинами проходять величезні міграції антилоп"
+  ],
   "neighbors": [
    "CD",
    "CF",
@@ -1756,6 +1998,11 @@
    "Has more ancient pyramids than Egypt",
    "Where the Blue and White Nile rivers meet",
    "The Nubian Desert covers much of it"
+  ],
+  "factsUk": [
+   "Має більше давніх пірамід, ніж Єгипет",
+   "Тут зливаються Блакитний і Білий Ніл",
+   "Нубійська пустеля вкриває більшу її частину"
   ],
   "neighbors": [
    "CF",
@@ -1798,6 +2045,12 @@
    "Zanzibar is a famous spice island",
    "Ngorongoro Crater is full of wildlife"
   ],
+  "factsUk": [
+   "Тут Кіліманджаро — найвища вершина Африки",
+   "У Серенгеті відбувається Велика міграція",
+   "Занзібар — відомий острів прянощів",
+   "Кратер Нгоронгоро повний дикої природи"
+  ],
   "neighbors": [
    "BI",
    "CD",
@@ -1839,6 +2092,11 @@
    "Known for the Koutammakou mud tower-houses",
    "Lake Togo is popular for water sports"
   ],
+  "factsUk": [
+   "Вузька країна з пляжами в облямівці пальм",
+   "Відома глиняними будинками-вежами Кутаммаку",
+   "Озеро Того популярне для водних видів спорту"
+  ],
   "neighbors": [
    "BF",
    "BJ",
@@ -1875,6 +2133,11 @@
    "Star Wars desert scenes were filmed here",
    "The Sahara meets Mediterranean beaches"
   ],
+  "factsUk": [
+   "Тут колись стояло давнє місто Карфаген",
+   "Тут знімали пустельні сцени «Зоряних воєн»",
+   "Сахара зустрічається із середземноморськими пляжами"
+  ],
   "neighbors": [
    "DZ",
    "LY"
@@ -1910,6 +2173,12 @@
    "Home to half the world's mountain gorillas",
    "The source of the Nile is at Lake Victoria",
    "Sits right on the Equator"
+  ],
+  "factsUk": [
+   "Звана «Перлиною Африки»",
+   "Тут живе половина гірських горил світу",
+   "Витік Нілу — біля озера Вікторія",
+   "Лежить просто на екваторі"
   ],
   "neighbors": [
    "CD",
@@ -1948,6 +2217,11 @@
    "Shares the mighty Victoria Falls",
    "The Zambezi River flows through it",
    "Famous for walking safaris"
+  ],
+  "factsUk": [
+   "Спільно володіє могутнім водоспадом Вікторія",
+   "Через неї тече річка Замбезі",
+   "Відома пішими сафарі"
   ],
   "neighbors": [
    "AO",
@@ -1990,6 +2264,11 @@
    "Named after Great Zimbabwe's stone ruins",
    "Home to Hwange's huge elephant herds"
   ],
+  "factsUk": [
+   "Спільно володіє громовим водоспадом Вікторія",
+   "Названа на честь кам'яних руїн Великого Зімбабве",
+   "Тут величезні стада слонів у Хванге"
+  ],
   "neighbors": [
    "BW",
    "MZ",
@@ -2026,6 +2305,11 @@
    "Sits on the ancient Silk Road trade route",
    "The towering Hindu Kush mountains run through it",
    "Famous for beautiful handwoven carpets"
+  ],
+  "factsUk": [
+   "Лежить на давньому Шовковому шляху",
+   "Через неї тягнуться високі гори Гіндукуш",
+   "Відома гарними ручними килимами"
   ],
   "neighbors": [
    "CN",
@@ -2066,6 +2350,11 @@
    "Home to the ancient Geghard monastery",
    "Mount Ararat is its national symbol"
   ],
+  "factsUk": [
+   "Одна з перших країн, що прийняла християнство",
+   "Тут давній монастир Гегард",
+   "Гора Арарат — її національний символ"
+  ],
   "neighbors": [
    "AZ",
    "GE",
@@ -2102,6 +2391,11 @@
    "Called the 'Land of Fire' for its natural gas flames",
    "Capital Baku has futuristic Flame Tower buildings",
    "Sits on the Caspian Sea"
+  ],
+  "factsUk": [
+   "Звана «Землею вогню» через природні язики полум'я",
+   "У столиці Баку є футуристичні «Полум'яні вежі»",
+   "Розташована на Каспійському морі"
   ],
   "neighbors": [
    "AM",
@@ -2141,6 +2435,11 @@
    "Home to the 400-year-old 'Tree of Life' in the desert",
    "Famous for natural pearls"
   ],
+  "factsUk": [
+   "Маленька острівна держава в Перській затоці",
+   "У пустелі росте 400-річне «Дерево життя»",
+   "Відома природними перлами"
+  ],
   "neighbors": []
  },
  {
@@ -2173,6 +2472,12 @@
    "Home to the Sundarbans, land of the Bengal tiger",
    "One of the world's most densely populated countries",
    "Famous for colourful rickshaws"
+  ],
+  "factsUk": [
+   "Пронизана сотнями річок",
+   "Тут Сундарбан — край бенгальського тигра",
+   "Одна з найгустіше заселених країн світу",
+   "Відома барвистими рикшами"
   ],
   "neighbors": [
    "IN",
@@ -2210,6 +2515,12 @@
    "Home to the cliffside Tiger's Nest monastery",
    "The thunder dragon is on its flag"
   ],
+  "factsUk": [
+   "Вимірює «валове національне щастя», а не лише гроші",
+   "Єдина у світі вуглецево-негативна країна",
+   "На скелі — монастир «Гніздо тигра»",
+   "На прапорі — дракон-громовержець"
+  ],
   "neighbors": [
    "CN",
    "IN"
@@ -2245,6 +2556,11 @@
    "Has a stunning golden-domed mosque",
    "Mostly covered in rainforest"
   ],
+  "factsUk": [
+   "Багате нафтове королівство на острові Борнео",
+   "Має розкішну мечеть із золотим куполом",
+   "Здебільшого вкрите тропічним лісом"
+  ],
   "neighbors": [
    "MY"
   ]
@@ -2278,6 +2594,11 @@
    "Home to the magnificent Angkor Wat temple",
    "Angkor is the largest religious monument on Earth",
    "The Tonlé Sap lake changes direction with the seasons"
+  ],
+  "factsUk": [
+   "Тут величний храм Анкор-Ват",
+   "Анкор — найбільша релігійна пам'ятка на Землі",
+   "Озеро Тонлесап змінює напрям течії із сезонами"
   ],
   "neighbors": [
    "LA",
@@ -2315,6 +2636,12 @@
    "Home to the Great Wall, visible for thousands of miles",
    "Invented paper, the compass and fireworks",
    "Giant pandas live in its bamboo forests"
+  ],
+  "factsUk": [
+   "Найбільш населена країна впродовж більшої частини історії",
+   "Тут Велика стіна, що тягнеться на тисячі кілометрів",
+   "Винайшла папір, компас і феєрверки",
+   "У її бамбукових лісах живуть великі панди"
   ],
   "neighbors": [
    "AF",
@@ -2363,6 +2690,11 @@
    "Said in myth to be the birthplace of Aphrodite",
    "Has one of the world's oldest wines, Commandaria"
   ],
+  "factsUk": [
+   "Острів у Середземному морі",
+   "За міфом — батьківщина Афродіти",
+   "Має одне з найдавніших вин світу — «Командарію»"
+  ],
   "neighbors": []
  },
  {
@@ -2394,6 +2726,11 @@
    "Known as the birthplace of wine, over 8,000 years ago",
    "The Caucasus Mountains tower over it",
    "Famous for cave cities like Vardzia"
+  ],
+  "factsUk": [
+   "Відома як батьківщина вина — понад 8000 років тому",
+   "Над нею височіють Кавказькі гори",
+   "Відома печерними містами, як-от Вардзіа"
   ],
   "neighbors": [
    "AM",
@@ -2432,6 +2769,12 @@
    "One of the world's most populous countries",
    "Birthplace of the numbers system and the game of chess",
    "Bollywood makes hundreds of films a year"
+  ],
+  "factsUk": [
+   "Тут біломармуровий Тадж-Махал",
+   "Одна з найбільш населених країн світу",
+   "Батьківщина системи чисел і гри в шахи",
+   "Боллівуд знімає сотні фільмів на рік"
   ],
   "neighbors": [
    "BD",
@@ -2473,6 +2816,12 @@
    "Sits on the volcanic 'Ring of Fire'",
    "Famous for orangutans in Borneo and Sumatra"
   ],
+  "factsUk": [
+   "Складається з понад 17 000 островів",
+   "Тут комодський варан — найбільша ящірка",
+   "Лежить на вулканічному «Вогняному кільці»",
+   "Відома орангутанами на Борнео й Суматрі"
+  ],
   "neighbors": [
    "MY",
    "PG",
@@ -2508,6 +2857,11 @@
    "Home to the ancient ruins of Persepolis",
    "Famous for exquisite Persian carpets",
    "Was the heart of the mighty Persian Empire"
+  ],
+  "factsUk": [
+   "Тут давні руїни Персеполя",
+   "Відома вишуканими перськими килимами",
+   "Була серцем могутньої Перської імперії"
   ],
   "neighbors": [
    "AF",
@@ -2549,6 +2903,11 @@
    "Where writing was invented in ancient Mesopotamia",
    "The Tigris and Euphrates rivers flow through it"
   ],
+  "factsUk": [
+   "Звана «колискою цивілізації»",
+   "У давній Месопотамії тут винайшли письмо",
+   "Через неї течуть Тигр і Євфрат"
+  ],
   "neighbors": [
    "IR",
    "JO",
@@ -2587,6 +2946,11 @@
    "Home to Jerusalem, holy to three religions",
    "The Dead Sea is so salty you float easily",
    "The Dead Sea is the lowest point on dry land"
+  ],
+  "factsUk": [
+   "Тут Єрусалим, священний для трьох релігій",
+   "Мертве море таке солоне, що легко тримає на воді",
+   "Мертве море — найнижча точка суходолу"
   ],
   "neighbors": [
    "EG",
@@ -2627,6 +2991,12 @@
    "Invented sushi, manga and many video games",
    "Has the world's oldest company still running"
   ],
+  "factsUk": [
+   "Ланцюг островів, відомий цвітінням сакури",
+   "Тут швидкісний поїзд і гора Фудзі",
+   "Винайшла суші, манґу й багато відеоігор",
+   "Має найстарішу компанію світу, що досі працює"
+  ],
   "neighbors": []
  },
  {
@@ -2658,6 +3028,11 @@
    "Home to Petra, a city carved into pink rock",
    "The Dead Sea lies on its border",
    "Wadi Rum's red desert looks like Mars"
+  ],
+  "factsUk": [
+   "Тут Петра — місто, вирізане в рожевій скелі",
+   "На її кордоні лежить Мертве море",
+   "Червона пустеля Ваді-Рам схожа на Марс"
   ],
   "neighbors": [
    "IL",
@@ -2697,6 +3072,11 @@
    "Has launched rockets from the Baikonur spaceport",
    "Wide grassy steppes stretch across it"
   ],
+  "factsUk": [
+   "Найбільша у світі країна без виходу до моря",
+   "Звідси запускають ракети з космодрому Байконур",
+   "Її вкривають широкі трав'янисті степи"
+  ],
   "neighbors": [
    "CN",
    "KG",
@@ -2735,6 +3115,11 @@
    "Famous for its tall Kuwait Towers",
    "One of the world's hottest places in summer"
   ],
+  "factsUk": [
+   "Маленька заможна країна на Перській затоці",
+   "Відома високими «Кувейтськими вежами»",
+   "Одне з найспекотніших місць світу влітку"
+  ],
   "neighbors": [
    "IQ",
    "SA"
@@ -2769,6 +3154,11 @@
    "A mountainous country with the huge Issyk-Kul lake",
    "Famous for yurts and nomadic horse culture",
    "Plays kok-boru, a horseback ball game"
+  ],
+  "factsUk": [
+   "Гірська країна з величезним озером Іссик-Куль",
+   "Відома юртами й кочовою кінною культурою",
+   "Грає в кок-бору — кінну гру з м'ячем"
   ],
   "neighbors": [
    "CN",
@@ -2806,6 +3196,11 @@
    "The only landlocked country in Southeast Asia",
    "Famous for thousands of Buddhist temples in Luang Prabang",
    "The Plain of Jars is full of mysterious stone jars"
+  ],
+  "factsUk": [
+   "Єдина країна Південно-Східної Азії без виходу до моря",
+   "Відома тисячами буддійських храмів у Луангпхабангу",
+   "Долина глеків повна загадкових кам'яних глеків"
   ],
   "neighbors": [
    "CN",
@@ -2845,6 +3240,11 @@
    "The cedar tree on its flag is a national symbol",
    "Beirut is one of the oldest cities in the world"
   ],
+  "factsUk": [
+   "Тут давньоримські храми в Баальбеку",
+   "Кедр на прапорі — національний символ",
+   "Бейрут — одне з найдавніших міст світу"
+  ],
   "neighbors": [
    "IL",
    "SY"
@@ -2879,6 +3279,11 @@
    "Home to the soaring Petronas Twin Towers",
    "Rainforests shelter orangutans and the giant rafflesia flower",
    "Split between the Asian mainland and Borneo"
+  ],
+  "factsUk": [
+   "Тут здіймаються вежі-близнюки Петронас",
+   "У лісах живуть орангутани й росте велетенська раффлезія",
+   "Розділена між материковою Азією та Борнео"
   ],
   "neighbors": [
    "BN",
@@ -2916,6 +3321,11 @@
    "The lowest and flattest country on Earth",
    "Famous for overwater bungalows and reefs"
   ],
+  "factsUk": [
+   "Складаються з близько 1200 коралових островів",
+   "Найнижча й найрівніша країна на Землі",
+   "Відомі бунгало над водою й рифами"
+  ],
   "neighbors": []
  },
  {
@@ -2947,6 +3357,11 @@
    "Home of the vast Gobi Desert",
    "Land of Genghis Khan and nomadic herders",
    "Has more horses than people in many areas"
+  ],
+  "factsUk": [
+   "Тут безкрая пустеля Гобі",
+   "Край Чингісхана й кочових скотарів",
+   "У багатьох місцях коней більше, ніж людей"
   ],
   "neighbors": [
    "CN",
@@ -2982,6 +3397,11 @@
    "Famous for the golden Shwedagon Pagoda",
    "Thousands of temples dot the plains of Bagan",
    "Inle Lake fishermen row with one leg"
+  ],
+  "factsUk": [
+   "Відома золотою пагодою Шведагон",
+   "Тисячі храмів усівають рівнини Баган",
+   "Рибалки на озері Інле веслують однією ногою"
   ],
   "neighbors": [
    "BD",
@@ -3021,6 +3441,11 @@
    "Birthplace of Buddha at Lumbini",
    "The only country with a non-rectangular flag"
   ],
+  "factsUk": [
+   "Тут Еверест — найвища вершина світу",
+   "У Лумбіні народився Будда",
+   "Єдина країна з непрямокутним прапором"
+  ],
   "neighbors": [
    "CN",
    "IN"
@@ -3055,6 +3480,11 @@
    "One of the most secretive countries in the world",
    "Has the world's largest stadium by capacity",
    "Mountainous with the sacred Mount Paektu"
+  ],
+  "factsUk": [
+   "Одна з найбільш закритих країн світу",
+   "Має найбільший за місткістю стадіон світу",
+   "Гориста, зі священною горою Пекту"
   ],
   "neighbors": [
    "CN",
@@ -3092,6 +3522,11 @@
    "Has dramatic fjord-like coastlines at Musandam",
    "Known for forts and traditional dhow boats"
   ],
+  "factsUk": [
+   "Відома деревами ладану в пустелі",
+   "Має мальовничі узбережжя, схожі на фіорди, у Мусандамі",
+   "Відома фортами й традиційними човнами доу"
+  ],
   "neighbors": [
    "AE",
    "SA",
@@ -3127,6 +3562,11 @@
    "Home to K2, the world's second-highest mountain",
    "The ancient Indus Valley civilisation began here",
    "The Karakoram Highway is one of the highest roads"
+  ],
+  "factsUk": [
+   "Тут К2 — друга за висотою гора світу",
+   "Тут зародилася давня цивілізація долини Інду",
+   "Каракорумське шосе — одна з найвисокогірніших доріг"
   ],
   "neighbors": [
    "AF",
@@ -3165,6 +3605,11 @@
    "Jericho is one of the oldest cities on Earth",
    "Famous for olive groves and embroidery"
   ],
+  "factsUk": [
+   "Включає історичне місто Віфлеєм",
+   "Єрихон — одне з найдавніших міст на Землі",
+   "Відома оливковими гаями й вишивкою"
+  ],
   "neighbors": [
    "EG",
    "IL",
@@ -3202,6 +3647,12 @@
    "The tarsier, a tiny big-eyed primate, lives here",
    "Has underground rivers and rice terraces"
   ],
+  "factsUk": [
+   "Складаються з понад 7000 островів",
+   "Тут знамениті Шоколадні пагорби",
+   "Тут живе довгоп'ят — крихітний великоокий примат",
+   "Має підземні річки й рисові тераси"
+  ],
   "neighbors": []
  },
  {
@@ -3233,6 +3684,11 @@
    "A small, very wealthy peninsula nation",
    "Hosted the 2022 football World Cup",
    "Has a futuristic skyline in Doha"
+  ],
+  "factsUk": [
+   "Маленька, дуже багата держава на півострові",
+   "Прийняла Чемпіонат світу з футболу 2022 року",
+   "Має футуристичний обрій у Досі"
   ],
   "neighbors": [
    "SA"
@@ -3268,6 +3724,12 @@
    "Most of it is the vast Arabian Desert",
    "Has the ancient rock tombs of Hegra",
    "One of the world's biggest oil producers"
+  ],
+  "factsUk": [
+   "Тут Мекка — найсвященніше місто ісламу",
+   "Більшу частину займає безкрая Аравійська пустеля",
+   "Має давні скельні гробниці Хегра",
+   "Один із найбільших видобувачів нафти у світі"
   ],
   "neighbors": [
    "AE",
@@ -3309,6 +3771,11 @@
    "Famous for the Marina Bay Sands and Gardens by the Bay",
    "One of the world's busiest ports"
   ],
+  "factsUk": [
+   "Чиста, сучасна острівна держава-місто",
+   "Відомий Marina Bay Sands і парком Gardens by the Bay",
+   "Один із найзавантаженіших портів світу"
+  ],
   "neighbors": []
  },
  {
@@ -3340,6 +3807,11 @@
    "Birthplace of K-pop and Taekwondo",
    "A leader in smartphones and technology",
    "Famous for kimchi and bibimbap food"
+  ],
+  "factsUk": [
+   "Батьківщина K-pop і тхеквондо",
+   "Лідер у смартфонах і технологіях",
+   "Відома стравами кімчі й пібімпап"
   ],
   "neighbors": [
    "KP"
@@ -3375,6 +3847,11 @@
    "Home to the ancient rock fortress of Sigiriya",
    "Elephants and leopards roam its parks"
   ],
+  "factsUk": [
+   "Острів у формі сльози, відомий чудовим чаєм",
+   "Тут давня скельна фортеця Сігірія",
+   "У її парках блукають слони й леопарди"
+  ],
   "neighbors": [
    "IN"
   ]
@@ -3408,6 +3885,11 @@
    "Home to Damascus, among the oldest cities on Earth",
    "Has the ancient desert ruins of Palmyra",
    "Famous for olive oil and soap from Aleppo"
+  ],
+  "factsUk": [
+   "Тут Дамаск — одне з найдавніших міст на Землі",
+   "Має давні пустельні руїни Пальміри",
+   "Відома оливковою олією й милом з Алеппо"
   ],
   "neighbors": [
    "IL",
@@ -3447,6 +3929,11 @@
    "Has the Pamir Highway, the 'Roof of the World'",
    "Built one of the world's tallest dams"
   ],
+  "factsUk": [
+   "Майже повністю вкрита високими горами",
+   "Має Памірський тракт — «Дах світу»",
+   "Побудувала одну з найвищих гребель світу"
+  ],
   "neighbors": [
    "AF",
    "CN",
@@ -3483,6 +3970,11 @@
    "Famous for golden Buddhist temples and street food",
    "The only Southeast Asian country never colonised",
    "Home to floating markets and elephants"
+  ],
+  "factsUk": [
+   "Відома золотими буддійськими храмами й вуличною їжею",
+   "Єдина країна Південно-Східної Азії, яку ніколи не колонізували",
+   "Тут плавучі ринки й слони"
   ],
   "neighbors": [
    "KH",
@@ -3521,6 +4013,11 @@
    "Has spectacular coral reefs for diving",
    "Famous for high-quality coffee"
   ],
+  "factsUk": [
+   "Одна з наймолодших країн Азії, незалежна з 2002 року",
+   "Має чудові коралові рифи для дайвінгу",
+   "Відома високоякісною кавою"
+  ],
   "neighbors": [
    "ID"
   ]
@@ -3555,6 +4052,12 @@
    "Istanbul straddles the Bosphorus strait",
    "Home to the fairy chimneys of Cappadocia",
    "The ancient city of Troy is here"
+  ],
+  "factsUk": [
+   "Лежить на двох континентах — Європі та Азії",
+   "Стамбул розкинувся над протокою Босфор",
+   "Тут «чарівні димарі» Каппадокії",
+   "Тут давнє місто Троя"
   ],
   "neighbors": [
    "AM",
@@ -3597,6 +4100,11 @@
    "Mostly covered by the Karakum Desert",
    "Famous for Akhal-Teke horses with a metallic shine"
   ],
+  "factsUk": [
+   "Тут «Брама пекла» — палаючий газовий кратер",
+   "Здебільшого вкрита пустелею Каракуми",
+   "Відома ахалтекінськими кіньми з металевим блиском"
+  ],
   "neighbors": [
    "AF",
    "IR",
@@ -3634,6 +4142,11 @@
    "Dubai has a palm-shaped artificial island",
    "Grew from desert villages into futuristic cities"
   ],
+  "factsUk": [
+   "Тут стоїть Бурдж-Халіфа — найвища будівля світу",
+   "У Дубаї є штучний острів у формі пальми",
+   "Виросла з пустельних селищ у футуристичні міста"
+  ],
   "neighbors": [
    "OM",
    "SA"
@@ -3668,6 +4181,11 @@
    "A jewel of the ancient Silk Road",
    "Famous for the blue-tiled city of Samarkand",
    "Home to grand mosques and madrasas"
+  ],
+  "factsUk": [
+   "Перлина давнього Шовкового шляху",
+   "Відома Самаркандом із блакитними кахлями",
+   "Тут величні мечеті й медресе"
   ],
   "neighbors": [
    "AF",
@@ -3707,6 +4225,11 @@
    "Home to pho noodle soup and rice terraces",
    "Has enormous cave systems like Son Doong"
   ],
+  "factsUk": [
+   "Відома вапняковими островами затоки Халонг",
+   "Тут суп фо з локшиною й рисові тераси",
+   "Має величезні печерні системи, як-от Шондонг"
+  ],
   "neighbors": [
    "CN",
    "KH",
@@ -3743,6 +4266,11 @@
    "The old city of Sana'a has gingerbread-like towers",
    "One of the oldest centres of human settlement"
   ],
+  "factsUk": [
+   "Тут острів Сокотра з деревами драконової крові, наче з іншої планети",
+   "У старому місті Сана — вежі, мов із пряників",
+   "Один із найдавніших осередків людських поселень"
+  ],
   "neighbors": [
    "OM",
    "SA"
@@ -3777,6 +4305,11 @@
    "Has over 170,000 old concrete bunkers",
    "Beautiful beaches along the Albanian Riviera",
    "People nod to say 'no' and shake heads for 'yes'"
+  ],
+  "factsUk": [
+   "Має понад 170 000 старих бетонних бункерів",
+   "Гарні пляжі вздовж Албанської Рив'єри",
+   "Тут кивають на «ні» і хитають головою на «так»"
   ],
   "neighbors": [
    "GR",
@@ -3814,6 +4347,11 @@
    "Has no airport and no army",
    "Famous for skiing and duty-free shopping"
   ],
+  "factsUk": [
+   "Крихітна країна високо в Піренейських горах",
+   "Не має ні аеропорту, ні армії",
+   "Відома лижами та безмитними покупками"
+  ],
   "neighbors": [
    "ES",
    "FR"
@@ -3848,6 +4386,11 @@
    "Birthplace of Mozart and the waltz",
    "Home to grand Alpine ski resorts",
    "Vienna is famous for palaces and cafés"
+  ],
+  "factsUk": [
+   "Батьківщина Моцарта й вальсу",
+   "Тут величні альпійські лижні курорти",
+   "Відень славиться палацами й кав'ярнями"
   ],
   "neighbors": [
    "CH",
@@ -3890,6 +4433,11 @@
    "Has grand Soviet-era avenues in Minsk",
    "Known as a land of lakes and forests"
   ],
+  "factsUk": [
+   "Тут давня Біловезька пуща й дикі зубри",
+   "У Мінську — широкі проспекти радянської доби",
+   "Відома як край озер і лісів"
+  ],
   "neighbors": [
    "LT",
    "LV",
@@ -3929,6 +4477,12 @@
    "Headquarters of the European Union in Brussels",
    "Birthplace of the comic hero Tintin"
   ],
+  "factsUk": [
+   "Відома шоколадом, вафлями й картоплею фрі",
+   "Має понад 1000 сортів пива",
+   "У Брюсселі — штаб-квартира Євросоюзу",
+   "Батьківщина коміксового героя Тінтіна"
+  ],
   "neighbors": [
    "DE",
    "FR",
@@ -3966,6 +4520,11 @@
    "Divers leap from the bridge into the river below",
    "Where East meets West in its old towns"
   ],
+  "factsUk": [
+   "Відома відбудованим мостом Старі-Мост у Мостарі",
+   "Сміливці стрибають із мосту в річку внизу",
+   "Де у старих містах Схід зустрічається із Заходом"
+  ],
   "neighbors": [
    "HR",
    "ME",
@@ -4001,6 +4560,11 @@
    "One of the world's biggest rose-oil producers",
    "Has some of the oldest gold treasure ever found",
    "Home to ancient Thracian tombs"
+  ],
+  "factsUk": [
+   "Один із найбільших виробників трояндової олії у світі",
+   "Тут знайшли один із найдавніших золотих скарбів",
+   "Тут давні фракійські гробниці"
   ],
   "neighbors": [
    "GR",
@@ -4041,6 +4605,12 @@
    "The Plitvice Lakes have stunning waterfalls",
    "The necktie was invented here"
   ],
+  "factsUk": [
+   "Відома обнесеним мурами містом Дубровник",
+   "Має понад тисячу островів в Адріатичному морі",
+   "На Плітвицьких озерах — приголомшливі водоспади",
+   "Тут винайшли краватку"
+  ],
   "neighbors": [
    "BA",
    "HU",
@@ -4078,6 +4648,11 @@
    "Prague's old town has a famous astronomical clock",
    "Castle-dotted country in central Europe",
    "Drinks the most beer per person in the world"
+  ],
+  "factsUk": [
+   "У старій Празі — знаменитий астрономічний годинник",
+   "Усіяна замками країна в центрі Європи",
+   "П'є найбільше пива на людину у світі"
   ],
   "neighbors": [
    "AT",
@@ -4117,6 +4692,12 @@
    "Often ranked among the happiest countries",
    "Famous for cycling and cosy 'hygge'"
   ],
+  "factsUk": [
+   "Батьківщина конструктора LEGO",
+   "Батьківщина казкаря Ганса Крістіана Андерсена",
+   "Часто серед найщасливіших країн",
+   "Відома велосипедами й затишком «гюґе»"
+  ],
   "neighbors": [
    "DE"
   ]
@@ -4150,6 +4731,11 @@
    "One of the most digital countries in the world",
    "You can vote online and start a company in minutes",
    "Covered in forests and over 2,000 islands"
+  ],
+  "factsUk": [
+   "Одна з найбільш цифрових країн світу",
+   "Тут голосують онлайн і реєструють фірму за хвилини",
+   "Вкрита лісами й має понад 2000 островів"
   ],
   "neighbors": [
    "LV",
@@ -4187,6 +4773,12 @@
    "Said to be the home of Santa Claus in Lapland",
    "Invented the sauna"
   ],
+  "factsUk": [
+   "«Країна тисячі озер» (насправді понад 180 000)",
+   "У її небі сяє північне сяйво",
+   "Кажуть, у Лапландії живе Санта-Клаус",
+   "Винайшла сауну"
+  ],
   "neighbors": [
    "NO",
    "RU",
@@ -4223,6 +4815,12 @@
    "The world's most visited country",
    "Famous for cheese, bread and fashion",
    "The Tour de France is a legendary bike race"
+  ],
+  "factsUk": [
+   "Тут Ейфелева вежа й музей Лувр",
+   "Найвідвідуваніша країна світу",
+   "Відома сиром, хлібом і модою",
+   "«Тур де Франс» — легендарна велогонка"
   ],
   "neighbors": [
    "AD",
@@ -4265,6 +4863,12 @@
    "Birthplace of the car and the printing press",
    "Oktoberfest is a giant festival in Munich",
    "A leader in science and engineering"
+  ],
+  "factsUk": [
+   "Відома казковими замками, як-от Нойшванштайн",
+   "Батьківщина автомобіля й друкарського верстата",
+   "Октоберфест — велетенське свято в Мюнхені",
+   "Лідер у науці й інженерії"
   ],
   "neighbors": [
    "AT",
@@ -4309,6 +4913,12 @@
    "Has thousands of beautiful islands",
    "Where Greek myths and gods began"
   ],
+  "factsUk": [
+   "Батьківщина демократії та Олімпійських ігор",
+   "Тут давній Акрополь в Афінах",
+   "Має тисячі гарних островів",
+   "Звідси походять грецькі міфи й боги"
+  ],
   "neighbors": [
    "AL",
    "BG",
@@ -4345,6 +4955,11 @@
    "Budapest is famous for its thermal bath houses",
    "Invented the Rubik's Cube",
    "The Danube River splits its capital in two"
+  ],
+  "factsUk": [
+   "Будапешт відомий термальними купальнями",
+   "Тут винайшли кубик Рубіка",
+   "Річка Дунай ділить столицю навпіл"
   ],
   "neighbors": [
    "AT",
@@ -4387,6 +5002,12 @@
    "Has no mosquitoes at all",
    "The northern lights dance overhead"
   ],
+  "factsUk": [
+   "Край вулканів, гейзерів і льодовиків",
+   "Майже повністю живиться чистою геотермальною енергією",
+   "Тут зовсім немає комарів",
+   "У небі танцює північне сяйво"
+  ],
   "neighbors": []
  },
  {
@@ -4419,6 +5040,12 @@
    "Famous for St Patrick's Day and Celtic music",
    "The Cliffs of Moher drop into the sea",
    "Home of folklore about leprechauns"
+  ],
+  "factsUk": [
+   "Прозвана «Смарагдовим островом» за зелені пагорби",
+   "Відома Днем святого Патрика й кельтською музикою",
+   "Скелі Могер стрімко спадають у море",
+   "Батьківщина легенд про лепреконів"
   ],
   "neighbors": [
    "GB"
@@ -4454,6 +5081,12 @@
    "Home to the Colosseum and the Leaning Tower of Pisa",
    "Invented pizza and pasta",
    "Venice is a city built on water"
+  ],
+  "factsUk": [
+   "За формою схожа на чобіт, що б'є по м'ячу",
+   "Тут Колізей і Пізанська похила вежа",
+   "Винайшла піцу й пасту",
+   "Венеція — місто, збудоване на воді"
   ],
   "neighbors": [
    "AT",
@@ -4494,6 +5127,11 @@
    "Half the country is covered in forest",
    "Famous for shimmering Baltic amber"
   ],
+  "factsUk": [
+   "У Ризі — приголомшливі будівлі в стилі модерн",
+   "Половина країни вкрита лісом",
+   "Відома мерехтливим балтійським бурштином"
+  ],
   "neighbors": [
    "BY",
    "EE",
@@ -4531,6 +5169,11 @@
    "Tucked in the Alps between Switzerland and Austria",
    "Makes more false teeth than almost anywhere"
   ],
+  "factsUk": [
+   "Одна з найменших країн світу",
+   "Затиснута в Альпах між Швейцарією та Австрією",
+   "Виробляє більше зубних протезів, ніж майже будь-де"
+  ],
   "neighbors": [
    "AT",
    "CH"
@@ -4565,6 +5208,11 @@
    "Home to the mysterious Hill of Crosses",
    "Was the first to declare independence from the USSR",
    "Famous for amber and basketball"
+  ],
+  "factsUk": [
+   "Тут загадкова Гора хрестів",
+   "Першою проголосила незалежність від СРСР",
+   "Відома бурштином і баскетболом"
   ],
   "neighbors": [
    "BY",
@@ -4603,6 +5251,11 @@
    "Has a fairy-tale capital built on cliffs",
    "Public transport is completely free"
   ],
+  "factsUk": [
+   "Одна з найбагатших країн світу",
+   "Має казкову столицю на скелях",
+   "Громадський транспорт повністю безкоштовний"
+  ],
   "neighbors": [
    "BE",
    "DE",
@@ -4639,6 +5292,11 @@
    "Has some of the world's oldest stone temples",
    "The tiny country speaks its own Maltese language"
   ],
+  "factsUk": [
+   "Сонячна острівна держава в Середземному морі",
+   "Має одні з найдавніших кам'яних храмів світу",
+   "Крихітна країна має власну мальтійську мову"
+  ],
   "neighbors": []
  },
  {
@@ -4670,6 +5328,11 @@
    "Has some of the world's largest underground wine cellars",
    "One of Europe's least-visited countries",
    "Famous for its vineyards and rolling hills"
+  ],
+  "factsUk": [
+   "Має одні з найбільших підземних винних льохів світу",
+   "Одна з найменш відвідуваних країн Європи",
+   "Відома виноградниками й пологими пагорбами"
   ],
   "neighbors": [
    "RO",
@@ -4706,6 +5369,11 @@
    "Famous for the glamorous Monaco Grand Prix",
    "Home to a royal palace and a famous casino"
   ],
+  "factsUk": [
+   "Друга за розміром найменша країна світу",
+   "Відома розкішним Гран-прі Монако",
+   "Тут королівський палац і знаменитий казино"
+  ],
   "neighbors": [
    "FR"
   ]
@@ -4739,6 +5407,11 @@
    "Its name means 'Black Mountain'",
    "Has dramatic fjord-like bays on the Adriatic",
    "Tiny but packed with mountains and beaches"
+  ],
+  "factsUk": [
+   "Її назва означає «Чорна гора»",
+   "Має мальовничі затоки, схожі на фіорди, на Адріатиці",
+   "Крихітна, але повна гір і пляжів"
   ],
   "neighbors": [
    "AL",
@@ -4778,6 +5451,12 @@
    "Amsterdam is crisscrossed by canals",
    "People are among the tallest in the world"
   ],
+  "factsUk": [
+   "Відома тюльпанами, вітряками й велосипедами",
+   "Велику частину землі відвоювали в моря",
+   "Амстердам пронизаний каналами",
+   "Люди — одні з найвищих у світі"
+  ],
   "neighbors": [
    "BE",
    "DE"
@@ -4812,6 +5491,11 @@
    "Home to ancient Lake Ohrid, one of Europe's oldest",
    "Mother Teresa was born in its capital Skopje",
    "A mountainous Balkan country"
+  ],
+  "factsUk": [
+   "Тут давнє Охридське озеро, одне з найстаріших у Європі",
+   "У столиці Скоп'є народилася Мати Тереза",
+   "Гірська балканська країна"
   ],
   "neighbors": [
    "AL",
@@ -4851,6 +5535,12 @@
    "Birthplace of Viking explorers",
    "A great place to see the northern lights"
   ],
+  "factsUk": [
+   "Відома глибокими, мальовничими фіордами",
+   "Влітку всю ніч світить північне сонце",
+   "Батьківщина вікінгів-мореплавців",
+   "Чудове місце, щоб побачити північне сяйво"
+  ],
   "neighbors": [
    "FI",
    "RU",
@@ -4886,6 +5576,11 @@
    "Home to the Wieliczka salt mine with carved chapels",
    "Birthplace of astronomer Copernicus and Marie Curie",
    "Has the ancient Białowieża Forest with bison"
+  ],
+  "factsUk": [
+   "Тут соляна шахта Велічка з вирізьбленими каплицями",
+   "Батьківщина астронома Коперника й Марії Кюрі",
+   "Має давню Біловезьку пущу із зубрами"
   ],
   "neighbors": [
    "BY",
@@ -4928,6 +5623,12 @@
    "Home of port wine and the soulful fado music",
    "Europe's westernmost mainland point"
   ],
+  "factsUk": [
+   "Відома барвистими кахлями азулежу",
+   "Звідси вирушали мореплавці, як-от Васко да Гама",
+   "Батьківщина портвейну й душевної музики фаду",
+   "Найзахідніша точка материкової Європи"
+  ],
   "neighbors": [
    "ES"
   ]
@@ -4961,6 +5662,11 @@
    "Home to Bran Castle, linked to the Dracula legend",
    "The Carpathian Mountains shelter brown bears and wolves",
    "Has Europe's largest population of brown bears"
+  ],
+  "factsUk": [
+   "Тут замок Бран, пов'язаний із легендою про Дракулу",
+   "У Карпатах живуть бурі ведмеді й вовки",
+   "Має найбільшу в Європі популяцію бурих ведмедів"
   ],
   "neighbors": [
    "BG",
@@ -5000,6 +5706,12 @@
    "Spans 11 time zones from Europe to Asia",
    "Home to the colourful St Basil's Cathedral",
    "Lake Baikal is the deepest lake on Earth"
+  ],
+  "factsUk": [
+   "Найбільша за площею країна світу",
+   "Простягається на 11 часових поясів від Європи до Азії",
+   "Тут барвистий собор Василя Блаженного",
+   "Озеро Байкал — найглибше озеро на Землі"
   ],
   "neighbors": [
    "AZ",
@@ -5048,6 +5760,11 @@
    "Tiny country perched on Mount Titano",
    "Completely surrounded by Italy"
   ],
+  "factsUk": [
+   "Одна з найстаріших республік світу",
+   "Крихітна країна на горі Монте-Тітано",
+   "Повністю оточена Італією"
+  ],
   "neighbors": [
    "IT"
   ]
@@ -5081,6 +5798,11 @@
    "Belgrade sits where two great rivers meet",
    "Famous for lively brass-band music festivals",
    "Inventor Nikola Tesla was Serbian"
+  ],
+  "factsUk": [
+   "Белград стоїть там, де зливаються дві великі річки",
+   "Відома жвавими фестивалями духової музики",
+   "Винахідник Нікола Тесла був сербом"
   ],
   "neighbors": [
    "BA",
@@ -5122,6 +5844,11 @@
    "The High Tatras mountains are great for hiking",
    "Bratislava sits right on the Danube"
   ],
+  "factsUk": [
+   "Має більше замків на людину, ніж майже будь-де",
+   "Високі Татри чудові для походів",
+   "Братислава стоїть просто на Дунаї"
+  ],
   "neighbors": [
    "AT",
    "CZ",
@@ -5159,6 +5886,11 @@
    "Home to the picture-perfect Lake Bled with an island church",
    "The letters L-O-V-E hide inside the name sLOVEnia",
    "Over half the country is covered in forest"
+  ],
+  "factsUk": [
+   "Тут мальовниче Бледське озеро з церквою на острові",
+   "У назві sLOVEnia сховані літери L-O-V-E (любов)",
+   "Понад половину країни вкрито лісом"
   ],
   "neighbors": [
    "AT",
@@ -5198,6 +5930,12 @@
    "The tomato-throwing Tomatina festival happens here",
    "Running of the bulls in Pamplona"
   ],
+  "factsUk": [
+   "Відома танцем фламенко й закусками тапас",
+   "Тут дивовижний храм Гауді — Саграда Фамілія",
+   "Тут проходить «помідорний» фестиваль Томатіна",
+   "Біг із биками в Памплоні"
+  ],
   "neighbors": [
    "AD",
    "FR",
@@ -5236,6 +5974,12 @@
    "Thousands of islands surround Stockholm",
    "The Nobel Prizes are awarded here"
   ],
+  "factsUk": [
+   "Батьківщина IKEA й гурту ABBA",
+   "Має крижаний готель, який щозими відбудовують наново",
+   "Тисячі островів оточують Стокгольм",
+   "Тут вручають Нобелівські премії"
+  ],
   "neighbors": [
    "FI",
    "NO"
@@ -5271,6 +6015,12 @@
    "The Alps include the iconic Matterhorn",
    "Stays neutral and doesn't take sides in wars",
    "Has four official languages"
+  ],
+  "factsUk": [
+   "Відома шоколадом, сиром і годинниками",
+   "В Альпах височіє знаменитий Маттергорн",
+   "Залишається нейтральною й не бере участі у війнах",
+   "Має чотири офіційні мови"
   ],
   "neighbors": [
    "AT",
@@ -5309,6 +6059,11 @@
    "The largest country entirely within Europe",
    "Known as the 'breadbasket' for its rich farmland",
    "Famous for golden-domed cathedrals in Kyiv"
+  ],
+  "factsUk": [
+   "Найбільша країна, що повністю лежить у Європі",
+   "Відома як «житниця» завдяки родючим землям",
+   "Відома золотоверхими соборами Києва"
   ],
   "neighbors": [
    "BY",
@@ -5351,6 +6106,12 @@
    "The first country to build railways and the Industrial Revolution",
    "Famous for red double-decker buses"
   ],
+  "factsUk": [
+   "Тут Біг-Бен і Букінгемський палац",
+   "Батьківщина Шекспіра й The Beatles",
+   "Перша країна із залізницями й промисловою революцією",
+   "Відома червоними двоповерховими автобусами"
+  ],
   "neighbors": [
    "IE"
   ]
@@ -5384,6 +6145,11 @@
    "The smallest country in the world",
    "Home of the Pope and the Catholic Church",
    "Houses Michelangelo's Sistine Chapel ceiling"
+  ],
+  "factsUk": [
+   "Найменша країна світу",
+   "Дім Папи Римського й Католицької церкви",
+   "Тут стеля Сікстинської капели роботи Мікеланджело"
   ],
   "neighbors": [
    "IT"
@@ -5419,6 +6185,11 @@
    "Twin islands in the Caribbean Sea",
    "Famous for sailing and coral reefs"
   ],
+  "factsUk": [
+   "Кажуть, тут пляж на кожен день року",
+   "Два острови-близнюки в Карибському морі",
+   "Відома вітрильним спортом і кораловими рифами"
+  ],
   "neighbors": []
  },
  {
@@ -5450,6 +6221,11 @@
    "Made up of around 700 islands and cays",
    "Famous for swimming pigs at Exuma",
    "Has the third-largest barrier reef in the world"
+  ],
+  "factsUk": [
+   "Складаються з близько 700 островів і рифів",
+   "Відомі свинками, що плавають, на Ексумі",
+   "Мають третій за величиною бар'єрний риф світу"
   ],
   "neighbors": []
  },
@@ -5483,6 +6259,11 @@
    "Famous for flying fish and friendly beaches",
    "Where rum was first made"
   ],
+  "factsUk": [
+   "Батьківщина співачки Ріанни",
+   "Відома летючою рибою й привітними пляжами",
+   "Тут уперше зробили ром"
+  ],
   "neighbors": []
  },
  {
@@ -5514,6 +6295,11 @@
    "Home to the Great Blue Hole, a giant ocean sinkhole",
    "Has the largest barrier reef in the Americas",
    "Full of ancient Maya temples in the jungle"
+  ],
+  "factsUk": [
+   "Тут Велика блакитна діра — гігантська морська лійка",
+   "Має найбільший бар'єрний риф в Америках",
+   "У джунглях повно давніх храмів мая"
   ],
   "neighbors": [
    "GT",
@@ -5551,6 +6337,12 @@
    "Famous for maple syrup and the Rocky Mountains",
    "Niagara Falls thunders on its border"
   ],
+  "factsUk": [
+   "Друга за площею країна світу",
+   "Має більше озер, ніж увесь інший світ разом",
+   "Відома кленовим сиропом і Скелястими горами",
+   "На кордоні гримить Ніагарський водоспад"
+  ],
   "neighbors": [
    "US"
   ]
@@ -5584,6 +6376,11 @@
    "Has no army and protects huge rainforests",
    "Packed with volcanoes, sloths and toucans",
    "A world leader in clean, green energy"
+  ],
+  "factsUk": [
+   "Не має армії й оберігає величезні тропічні ліси",
+   "Повна вулканів, лінивців і туканів",
+   "Світовий лідер із чистої, «зеленої» енергії"
   ],
   "neighbors": [
    "NI",
@@ -5620,6 +6417,11 @@
    "The largest island in the Caribbean",
    "Known for salsa music and cigars"
   ],
+  "factsUk": [
+   "Відома ретроавтомобілями 1950-х на вулицях",
+   "Найбільший острів Карибського моря",
+   "Відома музикою сальса й сигарами"
+  ],
   "neighbors": []
  },
  {
@@ -5652,6 +6454,11 @@
    "Has a boiling lake heated by a volcano",
    "Covered in lush rainforest and waterfalls"
   ],
+  "factsUk": [
+   "Прозвана «Островом природи»",
+   "Має кипляче озеро, нагріте вулканом",
+   "Вкрита буйними лісами й водоспадами"
+  ],
   "neighbors": []
  },
  {
@@ -5683,6 +6490,11 @@
    "Shares an island with Haiti",
    "Where Christopher Columbus first built a settlement",
    "Birthplace of merengue and bachata music"
+  ],
+  "factsUk": [
+   "Ділить острів із Гаїті",
+   "Тут Христофор Колумб заклав перше поселення",
+   "Батьківщина музики меренге й бачата"
   ],
   "neighbors": [
    "HT"
@@ -5717,6 +6529,11 @@
    "The smallest country in Central America",
    "Nicknamed the 'Land of Volcanoes'",
    "Famous for great surfing waves"
+  ],
+  "factsUk": [
+   "Найменша країна Центральної Америки",
+   "Прозвана «Землею вулканів»",
+   "Відома чудовими хвилями для серфінгу"
   ],
   "neighbors": [
    "GT",
@@ -5753,6 +6570,11 @@
    "Nutmeg even appears on its flag",
    "Has underwater sculpture parks for divers"
   ],
+  "factsUk": [
+   "Звана «Островом прянощів» через мускатний горіх",
+   "Мускатний горіх навіть є на її прапорі",
+   "Має підводні парки скульптур для дайверів"
+  ],
   "neighbors": []
  },
  {
@@ -5784,6 +6606,11 @@
    "Heart of the ancient Maya civilisation",
    "Home to the jungle pyramids of Tikal",
    "Has colourful markets and many volcanoes"
+  ],
+  "factsUk": [
+   "Серце давньої цивілізації мая",
+   "Тут піраміди Тікаль серед джунглів",
+   "Має барвисті ринки й багато вулканів"
   ],
   "neighbors": [
    "BZ",
@@ -5822,6 +6649,11 @@
    "Shares an island with the Dominican Republic",
    "Famous for vibrant folk art"
   ],
+  "factsUk": [
+   "Перша країна, заснована звільненими рабами",
+   "Ділить острів із Домініканською Республікою",
+   "Відома яскравим народним мистецтвом"
+  ],
   "neighbors": [
    "DO"
   ]
@@ -5855,6 +6687,11 @@
    "Home to the ancient Maya ruins of Copán",
    "Has rainforests and Caribbean coral reefs",
    "Once exported so many bananas it was called a 'banana republic'"
+  ],
+  "factsUk": [
+   "Тут давні руїни мая Копан",
+   "Має тропічні ліси й карибські коралові рифи",
+   "Колись вивозила стільки бананів, що її звали «банановою республікою»"
   ],
   "neighbors": [
    "GT",
@@ -5892,6 +6729,11 @@
    "Home of some of the world's fastest sprinters",
    "Famous for jerk cooking and blue mountains coffee"
   ],
+  "factsUk": [
+   "Батьківщина музики реггі й Боба Марлі",
+   "Батьківщина одних із найшвидших спринтерів світу",
+   "Відома стравами «джерк» і кавою з Блакитних гір"
+  ],
   "neighbors": []
  },
  {
@@ -5924,6 +6766,12 @@
    "Invented chocolate, corn and the calendar wheel",
    "Famous for the colourful Day of the Dead",
    "Millions of monarch butterflies winter here"
+  ],
+  "factsUk": [
+   "Тут давні піраміди мая й ацтеків",
+   "Подарувала світу шоколад, кукурудзу й календарне коло",
+   "Відома барвистим Днем мертвих",
+   "Тут зимують мільйони метеликів-монархів"
   ],
   "neighbors": [
    "BZ",
@@ -5961,6 +6809,11 @@
    "Famous for its many volcanoes and big lakes",
    "You can go 'volcano boarding' down Cerro Negro"
   ],
+  "factsUk": [
+   "Найбільша країна Центральної Америки",
+   "Відома численними вулканами й великими озерами",
+   "На Серро-Негро можна кататися «вулканбордом»"
+  ],
   "neighbors": [
    "CR",
    "HN"
@@ -5995,6 +6848,11 @@
    "Home to the Panama Canal linking two oceans",
    "Ships pass between the Atlantic and Pacific here",
    "Rainforests are full of colourful frogs and birds"
+  ],
+  "factsUk": [
+   "Тут Панамський канал, що з'єднує два океани",
+   "Тут кораблі проходять між Атлантикою й Тихим океаном",
+   "Ліси повні барвистих жаб і птахів"
   ],
   "neighbors": [
    "CO",
@@ -6031,6 +6889,11 @@
    "Two islands joined by Caribbean waters",
    "Has an old railway that once carried sugar cane"
   ],
+  "factsUk": [
+   "Найменша країна в Америках",
+   "Два острови, поєднані карибськими водами",
+   "Має стару залізницю, що колись возила цукрову тростину"
+  ],
   "neighbors": []
  },
  {
@@ -6062,6 +6925,11 @@
    "Famous for the twin Piton mountains rising from the sea",
    "Has a drive-in volcano with bubbling springs",
    "Lush rainforest covers much of the island"
+  ],
+  "factsUk": [
+   "Відома горами-близнюками Пітон, що здіймаються з моря",
+   "Має вулкан, до якого можна доїхати, з киплячими джерелами",
+   "Буйний ліс вкриває більшу частину острова"
   ],
   "neighbors": []
  },
@@ -6095,6 +6963,11 @@
    "Pirates of the Caribbean films were shot here",
    "Famous for sailing around the Grenadines"
   ],
+  "factsUk": [
+   "Ланцюг гарних карибських островів",
+   "Тут знімали «Піратів Карибського моря»",
+   "Відома вітрильними подорожами навколо Гренадин"
+  ],
   "neighbors": []
  },
  {
@@ -6126,6 +6999,11 @@
    "Birthplace of the steelpan drum and calypso",
    "Famous for one of the world's biggest Carnivals",
    "Has a lake made of natural pitch (tar)"
+  ],
+  "factsUk": [
+   "Батьківщина барабана стілпен і музики калипсо",
+   "Відома одним із найбільших карнавалів світу",
+   "Має озеро з природного асфальту (смоли)"
   ],
   "neighbors": []
  },
@@ -6159,6 +7037,12 @@
    "The first country to land people on the Moon",
    "Hollywood makes world-famous movies",
    "Has 50 states and many national parks"
+  ],
+  "factsUk": [
+   "Тут Статуя Свободи й Великий каньйон",
+   "Перша країна, що висадила людей на Місяці",
+   "Голлівуд знімає всесвітньо відомі фільми",
+   "Має 50 штатів і багато національних парків"
   ],
   "neighbors": [
    "CA",
@@ -6196,6 +7080,12 @@
    "Uluru is a giant red rock in the outback",
    "Both a country and a continent"
   ],
+  "factsUk": [
+   "Тут Великий Бар'єрний риф — найбільший кораловий риф",
+   "Кенгуру й коали живуть лише тут",
+   "Улуру — велетенська червона скеля серед пустелі",
+   "Водночас і країна, і континент"
+  ],
   "neighbors": []
  },
  {
@@ -6227,6 +7117,11 @@
    "Made up of more than 300 islands",
    "Famous for friendly people and coral reefs",
    "A top spot for surfing and diving"
+  ],
+  "factsUk": [
+   "Складається з понад 300 островів",
+   "Відома привітними людьми й кораловими рифами",
+   "Чудове місце для серфінгу й дайвінгу"
   ],
   "neighbors": []
  },
@@ -6260,6 +7155,11 @@
    "Spread across a huge area of the Pacific Ocean",
    "Sits right on the Equator and the date line"
   ],
+  "factsUk": [
+   "Одне з перших місць, що зустрічає новий день",
+   "Розкидана на величезній площі Тихого океану",
+   "Лежить просто на екваторі й лінії зміни дат"
+  ],
   "neighbors": []
  },
  {
@@ -6291,6 +7191,11 @@
    "A nation of low coral atolls in the Pacific",
    "Famous for traditional stick navigation charts",
    "Bikini Atoll is a UNESCO World Heritage site"
+  ],
+  "factsUk": [
+   "Держава з низьких коралових атолів у Тихому океані",
+   "Відома традиційними навігаційними картами з паличок",
+   "Атол Бікіні — об'єкт Світової спадщини ЮНЕСКО"
   ],
   "neighbors": []
  },
@@ -6324,6 +7229,11 @@
    "Home to the mysterious stone city of Nan Madol",
    "Surrounded by colourful coral reefs"
   ],
+  "factsUk": [
+   "Складається з понад 600 островів",
+   "Тут таємниче кам'яне місто Нан-Мадол",
+   "Оточена барвистими кораловими рифами"
+  ],
   "neighbors": []
  },
  {
@@ -6355,6 +7265,11 @@
    "The world's smallest island country",
    "You can drive around the whole island in 30 minutes",
    "Once one of the richest places thanks to phosphate"
+  ],
+  "factsUk": [
+   "Найменша острівна країна світу",
+   "Весь острів можна об'їхати за 30 хвилин",
+   "Колись одне з найбагатших місць завдяки фосфатам"
   ],
   "neighbors": []
  },
@@ -6389,6 +7304,12 @@
    "Has more sheep than people",
    "Maori culture and the haka are world famous"
   ],
+  "factsUk": [
+   "Відома як місце зйомок Середзем'я",
+   "Тут живе нелітаючий птах ківі",
+   "Овець більше, ніж людей",
+   "Культура маорі й танець хака відомі всьому світу"
+  ],
   "neighbors": []
  },
  {
@@ -6421,6 +7342,11 @@
    "Created the world's first shark sanctuary",
    "Has some of the best diving on Earth"
   ],
+  "factsUk": [
+   "Відома Озером медуз, повним нешкідливих медуз",
+   "Створила перший у світі заповідник для акул",
+   "Має один із найкращих дайвінгів на Землі"
+  ],
   "neighbors": []
  },
  {
@@ -6452,6 +7378,11 @@
    "One of the most culturally diverse countries on Earth",
    "Over 800 languages are spoken here",
    "Covered in rainforest with birds-of-paradise"
+  ],
+  "factsUk": [
+   "Одна з найбільш культурно різноманітних країн на Землі",
+   "Тут розмовляють понад 800 мовами",
+   "Вкрита лісами з райськими птахами"
   ],
   "neighbors": [
    "ID"
@@ -6487,6 +7418,11 @@
    "Famous for the To Sua ocean swimming hole",
    "Author Robert Louis Stevenson lived here"
   ],
+  "factsUk": [
+   "Серед останніх місць, що проводжають кожен день",
+   "Відома океанською купальнею То-Суа",
+   "Тут жив письменник Роберт Луїс Стівенсон"
+  ],
   "neighbors": []
  },
  {
@@ -6518,6 +7454,11 @@
    "A chain of nearly 1,000 islands",
    "A famous spot for World War II history and wreck diving",
    "Covered in tropical rainforest"
+  ],
+  "factsUk": [
+   "Ланцюг із майже 1000 островів",
+   "Відоме місце історії Другої світової війни й дайвінгу до затонулих кораблів",
+   "Вкриті тропічним лісом"
   ],
   "neighbors": []
  },
@@ -6551,6 +7492,11 @@
    "Still ruled by a king today",
    "Humpback whales come here to give birth"
   ],
+  "factsUk": [
+   "Єдина тихоокеанська острівна держава, яку ніколи не колонізували",
+   "Досі нею править король",
+   "Сюди припливають горбаті кити, щоб народити малят"
+  ],
   "neighbors": []
  },
  {
@@ -6582,6 +7528,11 @@
    "One of the smallest and lowest countries on Earth",
    "Earns money from its '.tv' internet address",
    "Just nine tiny coral islands"
+  ],
+  "factsUk": [
+   "Одна з найменших і найнижчих країн на Землі",
+   "Заробляє на своїй інтернет-адресі «.tv»",
+   "Лише дев'ять крихітних коралових островів"
   ],
   "neighbors": []
  },
@@ -6615,6 +7566,11 @@
    "People here are often ranked among the happiest",
    "Islanders invented land diving, the bungee's ancestor"
   ],
+  "factsUk": [
+   "На вулкані Ясур можна зазирнути в кипляче лавове озеро",
+   "Тутешніх людей часто називають серед найщасливіших",
+   "Острів'яни винайшли стрибки із землі — предка банджі"
+  ],
   "neighbors": []
  },
  {
@@ -6647,6 +7603,12 @@
    "Home to the thundering Iguazú Falls",
    "Famous for football star Lionel Messi",
    "Patagonia has glaciers and penguins"
+  ],
+  "factsUk": [
+   "Батьківщина танцю танго",
+   "Тут гримлять водоспади Ігуасу",
+   "Відома футбольною зіркою Ліонелем Мессі",
+   "У Патагонії є льодовики й пінгвіни"
   ],
   "neighbors": [
    "BO",
@@ -6686,6 +7648,11 @@
    "Has one of the highest capital cities on Earth",
    "Lake Titicaca is the highest navigable lake"
   ],
+  "factsUk": [
+   "Тут найбільший солончак світу — Салар-де-Уюні",
+   "Має одну з найвисокогірніших столиць на Землі",
+   "Озеро Тітікака — найвисокогірніше судноплавне озеро"
+  ],
   "neighbors": [
    "AR",
    "BR",
@@ -6724,6 +7691,12 @@
    "Most of the Amazon Rainforest is here",
    "Famous for the Rio Carnival and football",
    "Christ the Redeemer watches over Rio"
+  ],
+  "factsUk": [
+   "Найбільша країна Південної Америки",
+   "Тут більша частина амазонського лісу",
+   "Відома карнавалом у Ріо й футболом",
+   "Статуя Христа-Спасителя дивиться на Ріо"
   ],
   "neighbors": [
    "AR",
@@ -6768,6 +7741,12 @@
    "Easter Island's giant stone heads belong to Chile",
    "Great for stargazing in clear desert skies"
   ],
+  "factsUk": [
+   "Найдовша й найтонша країна світу",
+   "Тут Атакама — найсухіша пустеля на Землі",
+   "Велетенські кам'яні голови острова Пасхи належать Чилі",
+   "Чудове місце для спостереження за зорями"
+  ],
   "neighbors": [
    "AR",
    "BO",
@@ -6804,6 +7783,12 @@
    "Famous for delicious coffee",
    "Home to colourful festivals and the Amazon",
    "Has more bird species than any other country"
+  ],
+  "factsUk": [
+   "Найбільший у світі видобувач смарагдів",
+   "Відома смачною кавою",
+   "Тут барвисті фестивалі й Амазонія",
+   "Має більше видів птахів, ніж будь-яка країна"
   ],
   "neighbors": [
    "BR",
@@ -6843,6 +7828,11 @@
    "The Galápagos Islands inspired Darwin's ideas",
    "Giant tortoises and blue-footed boobies live there"
   ],
+  "factsUk": [
+   "Названа на честь екватора, що її перетинає",
+   "Галапагоські острови надихнули ідеї Дарвіна",
+   "Тут живуть гігантські черепахи й блакитноногі олуші"
+  ],
   "neighbors": [
    "CO",
    "PE"
@@ -6877,6 +7867,11 @@
    "The only English-speaking country in South America",
    "Home to Kaieteur, one of the world's tallest single-drop falls",
    "Covered in vast untouched rainforest"
+  ],
+  "factsUk": [
+   "Єдина англомовна країна Південної Америки",
+   "Тут Кайєтур — один із найвищих суцільних водоспадів світу",
+   "Вкрита величезними незайманими лісами"
   ],
   "neighbors": [
    "BR",
@@ -6914,6 +7909,11 @@
    "Shares the giant Itaipú hydroelectric dam",
    "Famous for ñandutí lace and harp music"
   ],
+  "factsUk": [
+   "Одна з лише двох країн Південної Америки без виходу до моря",
+   "Спільно володіє велетенською ГЕС Ітайпу",
+   "Відома мереживом ньяндуті й музикою арфи"
+  ],
   "neighbors": [
    "AR",
    "BO",
@@ -6949,6 +7949,11 @@
    "Home to the ancient Inca city of Machu Picchu",
    "The mysterious Nazca Lines are carved into its desert",
    "Potatoes were first grown here, in thousands of types"
+  ],
+  "factsUk": [
+   "Тут давнє місто інків Мачу-Пікчу",
+   "У її пустелі викарбувані загадкові лінії Наска",
+   "Тут уперше виростили картоплю — тисячі сортів"
   ],
   "neighbors": [
    "BO",
@@ -6988,6 +7993,11 @@
    "Almost entirely covered in rainforest",
    "A colourful mix of cultures and languages"
   ],
+  "factsUk": [
+   "Найменша країна Південної Америки",
+   "Майже повністю вкрита тропічним лісом",
+   "Барвисте поєднання культур і мов"
+  ],
   "neighbors": [
    "BR",
    "GY"
@@ -7023,6 +8033,11 @@
    "Football's first World Cup was held and won here",
    "Famous for beef, mate tea and long beaches"
   ],
+  "factsUk": [
+   "Одна з найпрогресивніших країн Південної Америки",
+   "Тут провели й виграли перший Чемпіонат світу з футболу",
+   "Відома яловичиною, чаєм мате й довгими пляжами"
+  ],
   "neighbors": [
    "AR",
    "BR"
@@ -7057,6 +8072,11 @@
    "Home to Angel Falls, the world's tallest waterfall",
    "Has Caribbean beaches and the high Andes",
    "Lightning storms strike almost nightly over Lake Maracaibo"
+  ],
+  "factsUk": [
+   "Тут водоспад Анхель — найвищий водоспад світу",
+   "Має карибські пляжі й високі Анди",
+   "Над озером Маракайбо майже щоночі б'ють блискавки"
   ],
   "neighbors": [
    "BR",

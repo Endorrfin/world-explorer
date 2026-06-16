@@ -29,6 +29,7 @@ export interface Country {
   peaceIndex: number | null; // GPI 2024, lower = safer
   // content
   knownFor: string[];
+  factsUk: string[]; // CHANGED: Phase 3 — Ukrainian "Known for" facts
   neighbors: string[]; // ISO-2 codes of land-bordering countries
 }
 
@@ -40,4 +41,4 @@ export type Continent =
   | "South America"
   | "Oceania";
 
-export type Tab = "map" | "explore" | "quiz" | "ukraine";
+export type Tab = "map" | "explore" | "quiz" | "ukraine" | "about";

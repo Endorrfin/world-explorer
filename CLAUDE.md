@@ -57,7 +57,8 @@ scripts/
   build_names_uk.mjs          Ukrainian country names: i18n-iso-countries → names_uk.json
 src/
   data/
-    facts.json                EDITABLE "Known for" facts, keyed by ISO-2
+    facts.json                EDITABLE "Known for" facts (English), keyed by ISO-2
+    facts_uk.json             EDITABLE "Known for" facts (Ukrainian), keyed by ISO-2
     countries.json            GENERATED app data — do not hand-edit
     shapes.json               GENERATED country outlines — do not hand-edit
     worldmap.json             GENERATED single-projection map (paths + continent boxes)
@@ -74,6 +75,7 @@ src/
     FindGame.tsx              "Where in the world?" game — click the country on the map
     Quiz.tsx                  6-mode quiz (incl. the map game) with scoring
     UkraineTab.tsx            Ukraine settlements tree (EN/UA toggle, lazy-loaded)
+    AboutTab.tsx              bilingual "About / Опис" page describing every feature
     Flag.tsx                  flag-icons wrapper
   lib/
     continents.ts             continent metadata (order, accent colour, emoji)
@@ -86,7 +88,7 @@ src/
 ### Data flow
 
 ```
-data.xlsx ──build_data.py──► countries.json  (facts.json merged in)
+data.xlsx ──build_data.py──► countries.json  (facts.json + facts_uk.json merged in)
 world-atlas TopoJSON ──build_shapes.mjs──► shapes.json
 App imports countries.json + shapes.json (static)
 ```
@@ -94,8 +96,14 @@ App imports countries.json + shapes.json (static)
 ## Data notes & gotchas
 
 - **Never hand-edit** `countries.json` or `shapes.json` — they are generated. To change
-  content: edit `data.xlsx` (figures) or `src/data/facts.json` (facts), then re-run
-  `npm run data`. To change outlines, edit `build_shapes.mjs` and run `npm run shapes`.
+  content: edit `data.xlsx` (figures), `src/data/facts.json` (English facts) or
+  `src/data/facts_uk.json` (Ukrainian facts), then re-run `npm run data`. To change
+  outlines, edit `build_shapes.mjs` and run `npm run shapes`.
+- **"Known for" facts are bilingual:** `facts.json` (EN) and `facts_uk.json` (UK) both
+  key 195 ISO-2 codes → arrays of 2–4 strings, merged into `countries.json` as `knownFor`
+  and `factsUk`. The detail panel shows `factsUk` when the language is Ukrainian and falls
+  back to English if a translation is missing. Keep the two files in sync (same keys,
+  same per-country count).
 - **Continents are derived from the sub-region, not the source's `region` column.** The
   spreadsheet wrongly labels every Caribbean state as "Oceania"; `continent_for()` in
   `build_data.py` fixes this. Result: Africa 54, Asia 48, Europe 44, North America 23,
@@ -162,6 +170,13 @@ App imports countries.json + shapes.json (static)
   (`nameUk` from `i18n-iso-countries` + overrides, `capitalUk` hand-curated, both merged into
   `countries.json`). Shown on tiles, the detail panel, map tooltips, the quiz (options +
   prompts) and search (matches both languages). Only the 630 "Known for" facts remain English.
+- **v1.11** — **Phase 3 i18n (complete bilingual content)**: all **630 "Known for" facts are
+  now translated** (`src/data/facts_uk.json`, merged into `countries.json` as `factsUk` by
+  `build_data.py`); the detail panel shows them when the language is Ukrainian (EN fallback if
+  a translation is missing). Also adds an **About / "Опис"** tab (`AboutTab.tsx`, route
+  `#/about`) — a bilingual page describing every feature (Map, Explore, country details, Quiz,
+  "Where in the world?", Ukraine, the EN/UA toggle, offline & open-source). The whole app —
+  UI, names, capitals **and** facts — is now fully bilingual.
 
 ## Possible improvements (roadmap)
 
@@ -197,7 +212,7 @@ App imports countries.json + shapes.json (static)
 - **PWA**: installable + offline service worker — ideal for tablets in classrooms.
 - **Accessibility**: full keyboard navigation, visible focus rings, ARIA labels,
   `prefers-reduced-motion`, contrast audit.
-- **i18n (remaining)**: UI + country names + capitals are bilingual (v1.9–v1.10). Last piece
-  is **Phase 3** — translate the **630 "Known for" facts** (add `src/data/facts_uk.json`, a
-  `factsUk` field merged in `build_data.py`, and show it via a `displayFacts(lang, c)` helper).
+- **i18n: DONE** — the app is fully bilingual: UI strings (v1.9), country names + capitals
+  (v1.10) and all 630 "Known for" facts (v1.11). Future translation work would only be new
+  content (e.g. additional facts) — keep `facts.json` and `facts_uk.json` in sync.
 - **Pronunciation audio** (TTS) for country and capital names.
