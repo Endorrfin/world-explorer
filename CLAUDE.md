@@ -59,8 +59,9 @@ src/
     CountryCard.tsx           tile: flag + name + capital + outline
     CountryDetail.tsx         detail panel (Identity / People / Economy / Land / Known for)
     CountryShape.tsx          renders an SVG silhouette from shapes.json
-    WorldMap.tsx              clickable geoEqualEarth world map (colour-by-continent + zoom)
-    Quiz.tsx                  5-mode quiz with scoring
+    WorldMap.tsx              clickable geoEqualEarth world map (pan/zoom, markers); reused by the game
+    FindGame.tsx              "Where in the world?" game — click the country on the map
+    Quiz.tsx                  6-mode quiz (incl. the map game) with scoring
     Flag.tsx                  flag-icons wrapper
   lib/
     continents.ts             continent metadata (order, accent colour, emoji)
@@ -123,6 +124,9 @@ App imports countries.json + shapes.json (static)
 - **v1.4** — real map navigation: **drag-to-pan**, **wheel/pinch zoom** (cursor-centred)
   and **double-click / double-tap to zoom in**, with clamping. Continent buttons, Locate
   and markers are unchanged; markers fade out once you zoom in.
+- **v1.5** — **"Where in the world?"** game (a Quiz mode): read a country name, click it on
+  the live map; green/red feedback, reveal-pulse on the answer, score over a round of 8.
+  Reuses `WorldMap` in game mode (`feedback` / `forceMarkers` / `initialZoom` props).
 
 ## Possible improvements (roadmap)
 
@@ -145,8 +149,6 @@ App imports countries.json + shapes.json (static)
 - Fill the **coverage gaps** (births/day, peace index) from a more complete source.
 
 ### Quiz
-- **"Where in the world?" mode** — show a country name; the child clicks it on the world
-  map (reuses the locate-pulse + markers from v1.3). Ties the Map and Quiz together.
 - **High scores / streaks** saved in `localStorage`; per-continent progress.
 - **Difficulty levels**, optional **timer**, and **hints**.
 - More modes: currency, language, "which country is bigger" (area), flag → capital.

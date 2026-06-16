@@ -16,8 +16,9 @@ deploys to GitHub Pages with no backend.
 - **Rich detail panel** — capital, population, GDP, per-person income, land &
   total area, density, median age, births per day, peace index, ISO/phone code,
   and **2–4 "Known for" facts** written for children.
-- **Quiz mode** — five games: *capital*, *country by flag*, *country by outline*,
-  *population* and *continent*, scoped to any continent, 10 questions with scoring.
+- **Quiz mode** — six games: *capital*, *country by flag*, *country by outline*,
+  *population*, *continent*, and **"Where in the world?"** (click the country on the live
+  map), scoped to any continent, with scoring.
 - **Search** by country or capital name.
 - **Shareable links** — the URL hash tracks the open continent/country
   (e.g. `#/explore/europe/FR`).

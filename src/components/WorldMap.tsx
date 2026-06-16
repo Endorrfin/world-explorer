@@ -42,18 +42,30 @@ function clampPos(b: Box): Box {
 
 const easeInOut = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 
+const FB: Record<string, { fill: string; stroke: string }> = {
+  correct: { fill: "#2f9e69", stroke: "#1e7a4f" },
+  wrong: { fill: "#d2544a", stroke: "#a83a32" },
+};
+const EMPTY_FEEDBACK: Record<string, "correct" | "wrong"> = {};
+
 export function WorldMap({
   countries,
   selectedIso,
   onSelect,
+  feedback = EMPTY_FEEDBACK,
+  forceMarkers = false,
+  initialZoom = "World",
 }: {
   countries: Country[];
   selectedIso: string | null;
   onSelect: (iso: string) => void;
+  feedback?: Record<string, "correct" | "wrong">;
+  forceMarkers?: boolean;
+  initialZoom?: Zoom;
 }) {
   const byIso = useMemo(() => new Map(countries.map((c) => [c.iso2, c])), [countries]);
 
-  const [active, setActive] = useState<Zoom | null>("World"); // highlighted button, or null when freely navigated
+  const [active, setActive] = useState<Zoom | null>(initialZoom); // highlighted button, or null when freely navigated
   const [vb, setVb] = useState<Box>(WORLD);
   const vbRef = useRef<Box>(vb);
   vbRef.current = vb;
@@ -119,6 +131,8 @@ export function WorldMap({
     if (selectedIso) {
       const c = byIso.get(selectedIso);
       if (c) flyTo(continentBox(c.continent), c.continent);
+    } else if (initialZoom !== "World") {
+      flyTo(continentBox(initialZoom), initialZoom);
     }
     mounted.current = true;
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -225,15 +239,16 @@ export function WorldMap({
         if (!country) return null;
         const meta = continentMeta(country.continent);
         const sel = iso === selectedIso;
+        const fb = feedback[iso];
         return (
           <path
             key={iso}
             d={d}
             className={`wmap__country${sel ? " wmap__country--sel" : ""}`}
-            fill={meta.color}
-            fillOpacity={sel ? 0.92 : 0.5}
-            stroke={sel ? meta.color : "#ffffff"}
-            strokeWidth={sel ? 1.4 : 0.5}
+            fill={fb ? FB[fb].fill : meta.color}
+            fillOpacity={fb ? 0.9 : sel ? 0.92 : 0.5}
+            stroke={fb ? FB[fb].stroke : sel ? meta.color : "#ffffff"}
+            strokeWidth={fb || sel ? 1.4 : 0.5}
             vectorEffect="non-scaling-stroke"
             tabIndex={0}
             role="button"
@@ -252,11 +267,11 @@ export function WorldMap({
           </path>
         );
       }),
-    [byIso, selectedIso, onSelect]
+    [byIso, selectedIso, onSelect, feedback]
   );
 
   const markerR = vb[2] * 0.0045;
-  const showMarkers = vb[2] > MAP.w * 0.5; // only while zoomed out
+  const showMarkers = forceMarkers || vb[2] > MAP.w * 0.5; // only while zoomed out
   const selCen = selectedIso ? MAP.cen[selectedIso] : null;
   const selMeta = selectedIso ? continentMeta(byIso.get(selectedIso)?.continent ?? "Africa") : null;
 
@@ -308,15 +323,16 @@ export function WorldMap({
                 if (!cen || !country) return null;
                 const meta = continentMeta(country.continent);
                 const sel = iso === selectedIso;
+                const fb = feedback[iso];
                 return (
                   <circle
                     key={iso}
                     cx={cen[0]}
                     cy={cen[1]}
-                    r={sel ? markerR * 1.4 : markerR}
+                    r={sel || fb ? markerR * 1.5 : markerR}
                     className="wmap__marker"
-                    fill={meta.color}
-                    stroke="#ffffff"
+                    fill={fb ? FB[fb].fill : meta.color}
+                    stroke={fb ? FB[fb].stroke : "#ffffff"}
                     strokeWidth={1}
                     vectorEffect="non-scaling-stroke"
                     tabIndex={0}

@@ -725,6 +725,97 @@ body {
   }
 }
 
+/* ------------------------------------------------------------- find game */
+.find {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.find__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  margin-bottom: 12px;
+}
+.find__prompt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.find__label {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.find__flag {
+  font-size: 1.8rem;
+  border-radius: 3px;
+}
+.find__name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.find__cont {
+  font-size: 0.78rem;
+  color: var(--muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px 10px;
+}
+.find__meta {
+  display: flex;
+  gap: 14px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.find__score {
+  font-weight: 700;
+  color: var(--text);
+}
+.find .wmap__svg {
+  max-height: calc(100vh - 320px);
+}
+.find__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+  min-height: 44px;
+  flex-wrap: wrap;
+}
+.find__verdict {
+  font-size: 0.98rem;
+  font-weight: 650;
+}
+.find__verdict--ok {
+  color: var(--good);
+}
+.find__verdict--no {
+  color: var(--bad);
+}
+.find__hint2 {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.find--result {
+  max-width: 640px;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
 /* ------------------------------------------------------------- responsive */
 @media (max-width: 1080px) {
   .layout {

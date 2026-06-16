@@ -4,8 +4,9 @@ import { CONTINENT_ORDER, CONTINENTS } from "../lib/continents";
 import { int } from "../lib/format";
 import { Flag } from "./Flag";
 import { CountryShape, hasShape } from "./CountryShape";
+import { FindGame } from "./FindGame";
 
-type Mode = "capital" | "flag" | "shape" | "population" | "continent";
+type Mode = "capital" | "flag" | "shape" | "population" | "continent" | "where";
 type Scope = Continent | "All";
 
 const ROUND = 10;
@@ -16,6 +17,7 @@ const MODES: { id: Mode; label: string; blurb: string }[] = [
   { id: "shape", label: "Guess the shape", blurb: "See an outline → pick the country" },
   { id: "population", label: "Guess the population", blurb: "See a country → pick how many people" },
   { id: "continent", label: "Guess the continent", blurb: "See a country → pick its continent" },
+  { id: "where", label: "Where in the world?", blurb: "Read a name → click the country on the map" },
 ];
 
 interface Question {
@@ -80,8 +82,13 @@ export function Quiz({ countries }: { countries: Country[] }) {
   const [idx, setIdx] = useState(0);
   const [score, setScore] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
+  const [playWhere, setPlayWhere] = useState(false);
 
   const start = () => {
+    if (mode === "where") {
+      setPlayWhere(true);
+      return;
+    }
     setRound(buildRound(countries, mode, scope));
     setIdx(0);
     setScore(0);
@@ -93,12 +100,16 @@ export function Quiz({ countries }: { countries: Country[] }) {
     []
   );
 
+  if (playWhere) {
+    return <FindGame countries={countries} scope={scope} onExit={() => setPlayWhere(false)} />;
+  }
+
   // ---- setup screen ----
   if (!round) {
     return (
       <div className="quiz quiz--setup">
         <h2 className="quiz__title">Quiz time! 🎯</h2>
-        <p className="quiz__lead">Pick a game and a region, then play 10 questions.</p>
+        <p className="quiz__lead">Pick a game and a region, then play a round.</p>
 
         <div className="quiz__group">
           <h3 className="quiz__group-title">Game</h3>
