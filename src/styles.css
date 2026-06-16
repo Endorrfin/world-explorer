@@ -208,7 +208,7 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 12px;
 }
 
@@ -263,16 +263,14 @@ body {
   font-weight: 650;
   font-size: 0.95rem;
   line-height: 1.2;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow-wrap: anywhere;
 }
 .card__capital {
   font-size: 0.8rem;
   color: var(--muted);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.25;
+  margin-top: 1px;
+  overflow-wrap: anywhere;
 }
 
 /* ------------------------------------------------------------- detail */
@@ -632,7 +630,11 @@ body {
 
 @media (max-width: 720px) {
   .topbar {
-    gap: 12px;
+    gap: 10px;
+    padding: 10px 14px;
+  }
+  .brand {
+    font-size: 1.05rem;
   }
   .search {
     order: 3;
@@ -662,7 +664,30 @@ body {
   .continent__name {
     flex: none;
   }
+  .main {
+    padding: 16px 14px 36px;
+  }
+  .main__title {
+    font-size: 1.2rem;
+  }
+  /* hybrid: full-width list rows on phones */
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .quiz-wrap {
+    padding: 18px 12px 48px;
+  }
+  .quiz {
+    padding: 20px;
+  }
   .quiz__options {
     grid-template-columns: 1fr;
+  }
+  .quiz__flag {
+    font-size: 5rem;
+  }
+  .quiz__shape-svg {
+    width: 150px;
+    height: 120px;
   }
 }
