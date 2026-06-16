@@ -14,6 +14,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { feature } from "topojson-client";
 import { geoAzimuthalEqualArea, geoCentroid, geoPath } from "d3-geo";
+import { reassignCrimeaToUkraine } from "./lib_crimea.mjs"; // CHANGED: Crimea -> Ukraine (UNGA 68/262)
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const req = (p) => JSON.parse(readFileSync(join(ROOT, p), "utf-8"));
@@ -29,6 +30,7 @@ const shapes = {};
 function addFrom(topoPath, pad) {
   const topo = req(topoPath);
   const fc = feature(topo, topo.objects.countries);
+  reassignCrimeaToUkraine(fc); // CHANGED: move Crimea out of Russia into Ukraine
   for (const feat of fc.features) {
     const iso2 = numToIso2.get(Number(feat.id));
     if (!iso2 || !wanted.has(iso2) || shapes[iso2]) continue;

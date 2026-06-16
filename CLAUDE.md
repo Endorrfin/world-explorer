@@ -52,6 +52,7 @@ scripts/
   build_data.py               data pipeline: xlsx → countries.json (cleans, fixes, joins, merges facts)
   build_shapes.mjs            country outlines: world-atlas TopoJSON → shapes.json
   build_worldmap.mjs          single-projection clickable map: TopoJSON → worldmap.json
+  lib_crimea.mjs              shared: reassign the Crimea polygon Russia → Ukraine (used by both above)
   build_neighbors.mjs         land-border lists: world-countries → neighbors.json
   build_ukraine_regions.mjs   Ukraine oblast map: amCharts geodata → ukraine_regions.json
   build_names_uk.mjs          Ukrainian country names: i18n-iso-countries → names_uk.json
@@ -116,6 +117,14 @@ App imports countries.json + shapes.json (static)
   this map resolution).
 - **Flags** use the offline `flag-icons` SVG set keyed by ISO-2 (not emoji, which don't
   render on Windows).
+- **Crimea is shown as Ukraine.** Natural Earth (and thus world-atlas) draws Crimea &
+  Sevastopol as de-facto Russian since v4.0; that is not their international status
+  (UN GA Resolution 68/262, 2014). `scripts/lib_crimea.mjs` moves the Crimea polygon out
+  of Russia's feature and into Ukraine's, in GeoJSON space, before projection — applied by
+  **both** `build_shapes.mjs` (tiles/detail outline) and `build_worldmap.mjs` (clickable
+  map). Detection is by interior anchor points (Simferopol/Yevpatoria/Kerch), so only the
+  Crimea polygon moves and Russia's mainland (incl. Taman) is untouched. Re-run
+  `npm run shapes` and `npm run worldmap` after touching the source data.
 - The four shape-generation packages (`world-atlas`, `topojson-client`, `d3-geo`,
   `world-countries`) are **devDependencies only** — the app ships the committed
   `shapes.json` and never imports them at runtime.
