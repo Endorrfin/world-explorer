@@ -37,10 +37,14 @@ export function CountryDetail({
   country,
   onClose,
   onLocate,
+  neighbors = [],
+  onSelectNeighbor,
 }: {
   country: Country | null;
   onClose: () => void;
   onLocate?: () => void;
+  neighbors?: Country[];
+  onSelectNeighbor?: (iso: string) => void;
 }) {
   if (!country) {
     return (
@@ -156,6 +160,29 @@ export function CountryDetail({
           />
           <Stat label="Share of world land" value={percent(country.areaWorldShare)} />
         </div>
+      </section>
+
+      <section className="detail__section">
+        <h3 className="detail__section-title">
+          🧭 Neighbours{neighbors.length > 0 ? ` (${neighbors.length})` : ""}
+        </h3>
+        {neighbors.length > 0 ? (
+          <div className="neighbors">
+            {neighbors.map((n) => (
+              <button
+                key={n.iso2}
+                type="button"
+                className="neighbor"
+                onClick={() => onSelectNeighbor?.(n.iso2)}
+              >
+                <Flag iso2={n.iso2} className="neighbor__flag" />
+                <span className="neighbor__name">{n.name}</span>
+              </button>
+            ))}
+          </div>
+        ) : (
+          <p className="detail__none">Island nation — no land borders.</p>
+        )}
       </section>
 
       <section className="detail__section">

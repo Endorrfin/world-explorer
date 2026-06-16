@@ -55,6 +55,7 @@ export function WorldMap({
   feedback = EMPTY_FEEDBACK,
   forceMarkers = false,
   initialZoom = "World",
+  showNeighbors = false,
 }: {
   countries: Country[];
   selectedIso: string | null;
@@ -62,8 +63,14 @@ export function WorldMap({
   feedback?: Record<string, "correct" | "wrong">;
   forceMarkers?: boolean;
   initialZoom?: Zoom;
+  showNeighbors?: boolean;
 }) {
   const byIso = useMemo(() => new Map(countries.map((c) => [c.iso2, c])), [countries]);
+
+  const neighborSet = useMemo(() => {
+    if (!showNeighbors || !selectedIso) return new Set<string>();
+    return new Set(byIso.get(selectedIso)?.neighbors ?? []);
+  }, [showNeighbors, selectedIso, byIso]);
 
   const [active, setActive] = useState<Zoom | null>(initialZoom); // highlighted button, or null when freely navigated
   const [vb, setVb] = useState<Box>(WORLD);
@@ -314,6 +321,25 @@ export function WorldMap({
         >
           <g className="wmap__land">{landEls}</g>
           {countryEls}
+
+          {neighborSet.size > 0 && (
+            <g className="wmap__nb" pointerEvents="none">
+              {[...neighborSet].map((iso) => {
+                const d = MAP.c[iso];
+                return d ? (
+                  <path
+                    key={iso}
+                    d={d}
+                    fill="none"
+                    stroke="#c2710a"
+                    strokeWidth={1.7}
+                    strokeLinejoin="round"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                ) : null;
+              })}
+            </g>
+          )}
 
           {showMarkers && (
             <g className="wmap__markers">

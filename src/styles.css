@@ -377,6 +377,40 @@ body {
   line-height: 1.35;
 }
 
+.neighbors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.neighbor {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  border-radius: 999px;
+  padding: 5px 12px 5px 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+.neighbor:hover {
+  border-color: var(--primary);
+  background: var(--primary-tint);
+}
+.neighbor__flag {
+  font-size: 1.05rem;
+  border-radius: 2px;
+}
+.neighbor__name {
+  font-weight: 600;
+}
+.detail__none {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
 .stats {
   display: grid;
   grid-template-columns: 1fr 1fr;

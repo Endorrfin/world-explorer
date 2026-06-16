@@ -26,6 +26,14 @@
    "Largest country in Africa by area",
    "Most of it is covered by the Sahara Desert",
    "Known for ancient Roman ruins like Timgad"
+  ],
+  "neighbors": [
+   "LY",
+   "MA",
+   "ML",
+   "MR",
+   "NE",
+   "TN"
   ]
  },
  {
@@ -55,6 +63,12 @@
    "Has giant sable antelopes found nowhere else",
    "The Kwanza is both its river and its money",
    "Rich in oil and diamonds"
+  ],
+  "neighbors": [
+   "CD",
+   "CG",
+   "NA",
+   "ZM"
   ]
  },
  {
@@ -84,6 +98,12 @@
    "Birthplace of the Vodun (voodoo) religion",
    "Home to the stilt village of Ganvié on a lake",
    "Once the powerful Kingdom of Dahomey"
+  ],
+  "neighbors": [
+   "BF",
+   "NE",
+   "NG",
+   "TG"
   ]
  },
  {
@@ -114,6 +134,12 @@
    "The Okavango Delta is a famous wildlife paradise",
    "Much of it is the Kalahari Desert",
    "One of the world's top diamond producers"
+  ],
+  "neighbors": [
+   "NA",
+   "ZA",
+   "ZM",
+   "ZW"
   ]
  },
  {
@@ -143,6 +169,14 @@
    "Its name means 'Land of Honest People'",
    "Famous for masks and the FESPACO film festival",
    "Most people farm cotton and millet"
+  ],
+  "neighbors": [
+   "BJ",
+   "CI",
+   "GH",
+   "ML",
+   "NE",
+   "TG"
   ]
  },
  {
@@ -172,6 +206,11 @@
    "One of the sources of the Nile River is here",
    "Famous for energetic royal drumming traditions",
    "One of the world's biggest producers of coffee for its size"
+  ],
+  "neighbors": [
+   "CD",
+   "RW",
+   "TZ"
   ]
  },
  {
@@ -201,7 +240,8 @@
    "A group of ten islands in the Atlantic Ocean",
    "Birthplace of soulful 'morna' music",
    "Famous for the singer Cesária Évora"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "CM",
@@ -230,6 +270,14 @@
    "Called 'Africa in miniature' for its variety",
    "Mount Cameroon is an active volcano",
    "Strong football (soccer) nation, the Indomitable Lions"
+  ],
+  "neighbors": [
+   "CF",
+   "CG",
+   "GA",
+   "GQ",
+   "NG",
+   "TD"
   ]
  },
  {
@@ -259,6 +307,14 @@
    "Covered in rainforest with forest elephants and gorillas",
    "Rich in diamonds and gold",
    "One of the least densely populated countries"
+  ],
+  "neighbors": [
+   "CD",
+   "CG",
+   "CM",
+   "SD",
+   "SS",
+   "TD"
   ]
  },
  {
@@ -288,6 +344,14 @@
    "Named after huge Lake Chad",
    "Home to the Ennedi Plateau with rock arches",
    "The Sahara covers its northern half"
+  ],
+  "neighbors": [
+   "CF",
+   "CM",
+   "LY",
+   "NE",
+   "NG",
+   "SD"
   ]
  },
  {
@@ -317,7 +381,8 @@
    "A group of volcanic islands in the Indian Ocean",
    "Called the 'Perfumed Isles' for its ylang-ylang flowers",
    "Home to the rare living-fossil coelacanth fish"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "CI",
@@ -346,6 +411,13 @@
    "World's largest producer of cocoa beans for chocolate",
    "Has the world's largest church, the Basilica at Yamoussoukro",
    "Strong in football and athletics"
+  ],
+  "neighbors": [
+   "BF",
+   "GH",
+   "GN",
+   "LR",
+   "ML"
   ]
  },
  {
@@ -375,6 +447,17 @@
    "Second-largest country in Africa",
    "The Congo Rainforest is home to bonobos and okapi",
    "The mighty Congo River flows through it"
+  ],
+  "neighbors": [
+   "AO",
+   "BI",
+   "CF",
+   "CG",
+   "RW",
+   "SS",
+   "TZ",
+   "UG",
+   "ZM"
   ]
  },
  {
@@ -404,6 +487,11 @@
    "Lake Assal is the lowest point in Africa",
    "Sits where the Red Sea meets the Indian Ocean",
    "Known for salt lakes and whale sharks"
+  ],
+  "neighbors": [
+   "ER",
+   "ET",
+   "SO"
   ]
  },
  {
@@ -434,6 +522,12 @@
    "The Nile is the longest river and its lifeline",
    "Ancient pharaohs and hieroglyphic writing",
    "The Suez Canal links two seas"
+  ],
+  "neighbors": [
+   "IL",
+   "LY",
+   "PS",
+   "SD"
   ]
  },
  {
@@ -463,6 +557,10 @@
    "One of the few Spanish-speaking countries in Africa",
    "Made up of a mainland and several islands",
    "Rich in oil"
+  ],
+  "neighbors": [
+   "CM",
+   "GA"
   ]
  },
  {
@@ -492,6 +590,11 @@
    "Has Italian-style architecture in its capital Asmara",
    "Sits along the Red Sea coast",
    "Known for the Dahlak coral islands"
+  ],
+  "neighbors": [
+   "DJ",
+   "ET",
+   "SD"
   ]
  },
  {
@@ -521,6 +624,10 @@
    "One of the world's last absolute monarchies",
    "Famous for the colourful Umhlanga (Reed) Dance",
    "Renamed from Swaziland in 2018"
+  ],
+  "neighbors": [
+   "MZ",
+   "ZA"
   ]
  },
  {
@@ -551,6 +658,14 @@
    "Where the ancient human fossil 'Lucy' was found",
    "Birthplace of coffee",
    "Uses its own 13-month calendar"
+  ],
+  "neighbors": [
+   "DJ",
+   "ER",
+   "KE",
+   "SD",
+   "SO",
+   "SS"
   ]
  },
  {
@@ -580,6 +695,11 @@
    "Almost 90% covered in rainforest",
    "Created 13 national parks to protect wildlife",
    "Forest elephants surf the waves at Loango beach"
+  ],
+  "neighbors": [
+   "CG",
+   "CM",
+   "GQ"
   ]
  },
  {
@@ -609,6 +729,9 @@
    "The smallest country on mainland Africa",
    "Wraps like a finger around the Gambia River",
    "A great spot for birdwatching"
+  ],
+  "neighbors": [
+   "SN"
   ]
  },
  {
@@ -639,6 +762,11 @@
    "Famous for colourful kente cloth",
    "Lake Volta is one of the world's largest man-made lakes",
    "Known for gold and cocoa"
+  ],
+  "neighbors": [
+   "BF",
+   "CI",
+   "TG"
   ]
  },
  {
@@ -668,6 +796,14 @@
    "Source of the Niger River",
    "Home to rare chimpanzees in the highlands",
    "Rich in bauxite, used to make aluminium"
+  ],
+  "neighbors": [
+   "CI",
+   "GW",
+   "LR",
+   "ML",
+   "SL",
+   "SN"
   ]
  },
  {
@@ -697,6 +833,10 @@
    "Famous for the Bijagós Islands and saltwater hippos",
    "Known for cashew nuts",
    "Many islands are sacred in local tradition"
+  ],
+  "neighbors": [
+   "GN",
+   "SN"
   ]
  },
  {
@@ -727,6 +867,13 @@
    "The Great Wildebeest Migration crosses its plains",
    "Top marathon and long-distance runners come from here",
    "The Great Rift Valley runs through it"
+  ],
+  "neighbors": [
+   "ET",
+   "SO",
+   "SS",
+   "TZ",
+   "UG"
   ]
  },
  {
@@ -756,6 +903,9 @@
    "Nicknamed the 'Kingdom in the Sky' for its height",
    "The entire country sits above 1,000 metres",
    "People wrap up in colourful Basotho blankets"
+  ],
+  "neighbors": [
+   "ZA"
   ]
  },
  {
@@ -785,6 +935,11 @@
    "Africa's oldest republic, founded in 1847",
    "Its capital Monrovia is named after a US president",
    "Covered in lush rainforest"
+  ],
+  "neighbors": [
+   "CI",
+   "GN",
+   "SL"
   ]
  },
  {
@@ -814,6 +969,14 @@
    "Almost entirely covered by the Sahara Desert",
    "Has well-preserved Roman ruins at Leptis Magna",
    "Rich in oil"
+  ],
+  "neighbors": [
+   "DZ",
+   "EG",
+   "NE",
+   "SD",
+   "TD",
+   "TN"
   ]
  },
  {
@@ -843,7 +1006,8 @@
    "A giant island with animals found nowhere else",
    "Famous for lemurs and baobab trees",
    "The Avenue of the Baobabs is a stunning sight"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "MW",
@@ -872,6 +1036,11 @@
    "Nicknamed the 'Warm Heart of Africa'",
    "Lake Malawi is full of colourful cichlid fish",
    "One of Africa's largest lakes covers much of it"
+  ],
+  "neighbors": [
+   "MZ",
+   "TZ",
+   "ZM"
   ]
  },
  {
@@ -901,6 +1070,15 @@
    "Home to the ancient city of Timbuktu",
    "The Great Mosque of Djenné is made of mud",
    "Once the rich Mali Empire of Mansa Musa"
+  ],
+  "neighbors": [
+   "BF",
+   "CI",
+   "DZ",
+   "GN",
+   "MR",
+   "NE",
+   "SN"
   ]
  },
  {
@@ -930,6 +1108,11 @@
    "Mostly Sahara Desert",
    "The 'iron ore train' is one of the longest in the world",
    "The Eye of the Sahara is visible from space"
+  ],
+  "neighbors": [
+   "DZ",
+   "ML",
+   "SN"
   ]
  },
  {
@@ -959,7 +1142,8 @@
    "A tropical island in the Indian Ocean",
    "Was the only home of the extinct dodo bird",
    "Famous for beaches and coral reefs"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "MA",
@@ -988,6 +1172,10 @@
    "Famous for the blue city of Chefchaouen and Marrakech markets",
    "The Sahara Desert meets the Atlas Mountains here",
    "Known for tagine cooking and mint tea"
+  ],
+  "neighbors": [
+   "DZ",
+   "ES"
   ]
  },
  {
@@ -1017,6 +1205,14 @@
    "Has a long, beautiful Indian Ocean coastline",
    "Its flag features an AK-47, hoe and book",
    "Famous for prawns and peri-peri flavours"
+  ],
+  "neighbors": [
+   "MW",
+   "SZ",
+   "TZ",
+   "ZA",
+   "ZM",
+   "ZW"
   ]
  },
  {
@@ -1046,6 +1242,12 @@
    "Home to the world's tallest sand dunes at Sossusvlei",
    "The Namib is one of the oldest deserts on Earth",
    "Desert-adapted elephants and lions live here"
+  ],
+  "neighbors": [
+   "AO",
+   "BW",
+   "ZA",
+   "ZM"
   ]
  },
  {
@@ -1075,6 +1277,15 @@
    "Mostly Sahara Desert and very hot",
    "Home to the Tree of Ténéré, once the loneliest tree on Earth",
    "The Air Mountains hide ancient rock art"
+  ],
+  "neighbors": [
+   "BF",
+   "BJ",
+   "DZ",
+   "LY",
+   "ML",
+   "NG",
+   "TD"
   ]
  },
  {
@@ -1105,6 +1316,12 @@
    "Nollywood is one of the world's biggest film industries",
    "Famous for Afrobeats music",
    "Africa's biggest economy"
+  ],
+  "neighbors": [
+   "BJ",
+   "CM",
+   "NE",
+   "TD"
   ]
  },
  {
@@ -1134,6 +1351,13 @@
    "Covered in dense Congo rainforest",
    "Home to lowland gorillas at Nouabalé-Ndoki",
    "The Congo River forms much of its border"
+  ],
+  "neighbors": [
+   "AO",
+   "CD",
+   "CF",
+   "CM",
+   "GA"
   ]
  },
  {
@@ -1163,6 +1387,12 @@
    "Known as the 'Land of a Thousand Hills'",
    "Famous for trekking to see mountain gorillas",
    "One of the cleanest, greenest countries in Africa"
+  ],
+  "neighbors": [
+   "BI",
+   "CD",
+   "TZ",
+   "UG"
   ]
  },
  {
@@ -1192,7 +1422,8 @@
    "Tiny island nation on the Equator",
    "Famous for high-quality cocoa",
    "Volcanic peaks rise straight out of the ocean"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "SN",
@@ -1221,6 +1452,13 @@
    "Home to the colourful Lac Rose (Pink Lake)",
    "Famous for energetic mbalax music",
    "The westernmost point of mainland Africa"
+  ],
+  "neighbors": [
+   "GM",
+   "GN",
+   "GW",
+   "ML",
+   "MR"
   ]
  },
  {
@@ -1250,7 +1488,8 @@
    "Made of 115 islands in the Indian Ocean",
    "Home to the giant Aldabra tortoise",
    "The rare Coco de Mer is the world's largest seed"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "SL",
@@ -1279,6 +1518,10 @@
    "Named 'Lion Mountains' by Portuguese sailors",
    "Has beautiful beaches near Freetown",
    "Known for diamonds"
+  ],
+  "neighbors": [
+   "GN",
+   "LR"
   ]
  },
  {
@@ -1308,6 +1551,11 @@
    "Has the longest coastline on mainland Africa",
    "A land of nomadic herders and camels",
    "Famous for frankincense and myrrh"
+  ],
+  "neighbors": [
+   "DJ",
+   "ET",
+   "KE"
   ]
  },
  {
@@ -1338,6 +1586,14 @@
    "Famous for Table Mountain and safari Big Five",
    "Nelson Mandela became its first Black president",
    "Home to many languages and cultures"
+  ],
+  "neighbors": [
+   "BW",
+   "LS",
+   "MZ",
+   "NA",
+   "SZ",
+   "ZW"
   ]
  },
  {
@@ -1367,6 +1623,14 @@
    "The world's youngest country, born in 2011",
    "The Sudd is one of the largest wetlands on Earth",
    "Huge antelope migrations cross its plains"
+  ],
+  "neighbors": [
+   "CD",
+   "CF",
+   "ET",
+   "KE",
+   "SD",
+   "UG"
   ]
  },
  {
@@ -1396,6 +1660,15 @@
    "Has more ancient pyramids than Egypt",
    "Where the Blue and White Nile rivers meet",
    "The Nubian Desert covers much of it"
+  ],
+  "neighbors": [
+   "CF",
+   "EG",
+   "ER",
+   "ET",
+   "LY",
+   "SS",
+   "TD"
   ]
  },
  {
@@ -1426,6 +1699,16 @@
    "The Serengeti hosts the Great Migration",
    "Zanzibar is a famous spice island",
    "Ngorongoro Crater is full of wildlife"
+  ],
+  "neighbors": [
+   "BI",
+   "CD",
+   "KE",
+   "MW",
+   "MZ",
+   "RW",
+   "UG",
+   "ZM"
   ]
  },
  {
@@ -1455,6 +1738,11 @@
    "A narrow country with palm-lined beaches",
    "Known for the Koutammakou mud tower-houses",
    "Lake Togo is popular for water sports"
+  ],
+  "neighbors": [
+   "BF",
+   "BJ",
+   "GH"
   ]
  },
  {
@@ -1484,6 +1772,10 @@
    "Where the ancient city of Carthage once stood",
    "Star Wars desert scenes were filmed here",
    "The Sahara meets Mediterranean beaches"
+  ],
+  "neighbors": [
+   "DZ",
+   "LY"
   ]
  },
  {
@@ -1514,6 +1806,13 @@
    "Home to half the world's mountain gorillas",
    "The source of the Nile is at Lake Victoria",
    "Sits right on the Equator"
+  ],
+  "neighbors": [
+   "CD",
+   "KE",
+   "RW",
+   "SS",
+   "TZ"
   ]
  },
  {
@@ -1543,6 +1842,16 @@
    "Shares the mighty Victoria Falls",
    "The Zambezi River flows through it",
    "Famous for walking safaris"
+  ],
+  "neighbors": [
+   "AO",
+   "BW",
+   "CD",
+   "MW",
+   "MZ",
+   "NA",
+   "TZ",
+   "ZW"
   ]
  },
  {
@@ -1572,6 +1881,12 @@
    "Shares thundering Victoria Falls",
    "Named after Great Zimbabwe's stone ruins",
    "Home to Hwange's huge elephant herds"
+  ],
+  "neighbors": [
+   "BW",
+   "MZ",
+   "ZA",
+   "ZM"
   ]
  },
  {
@@ -1601,6 +1916,14 @@
    "Sits on the ancient Silk Road trade route",
    "The towering Hindu Kush mountains run through it",
    "Famous for beautiful handwoven carpets"
+  ],
+  "neighbors": [
+   "CN",
+   "IR",
+   "PK",
+   "TJ",
+   "TM",
+   "UZ"
   ]
  },
  {
@@ -1630,6 +1953,12 @@
    "One of the first countries to adopt Christianity",
    "Home to the ancient Geghard monastery",
    "Mount Ararat is its national symbol"
+  ],
+  "neighbors": [
+   "AZ",
+   "GE",
+   "IR",
+   "TR"
   ]
  },
  {
@@ -1659,6 +1988,13 @@
    "Called the 'Land of Fire' for its natural gas flames",
    "Capital Baku has futuristic Flame Tower buildings",
    "Sits on the Caspian Sea"
+  ],
+  "neighbors": [
+   "AM",
+   "GE",
+   "IR",
+   "RU",
+   "TR"
   ]
  },
  {
@@ -1688,7 +2024,8 @@
    "A small island nation in the Persian Gulf",
    "Home to the 400-year-old 'Tree of Life' in the desert",
    "Famous for natural pearls"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "BD",
@@ -1718,6 +2055,10 @@
    "Home to the Sundarbans, land of the Bengal tiger",
    "One of the world's most densely populated countries",
    "Famous for colourful rickshaws"
+  ],
+  "neighbors": [
+   "IN",
+   "MM"
   ]
  },
  {
@@ -1748,6 +2089,10 @@
    "The only carbon-negative country in the world",
    "Home to the cliffside Tiger's Nest monastery",
    "The thunder dragon is on its flag"
+  ],
+  "neighbors": [
+   "CN",
+   "IN"
   ]
  },
  {
@@ -1777,6 +2122,9 @@
    "A wealthy oil kingdom on Borneo island",
    "Has a stunning golden-domed mosque",
    "Mostly covered in rainforest"
+  ],
+  "neighbors": [
+   "MY"
   ]
  },
  {
@@ -1806,6 +2154,11 @@
    "Home to the magnificent Angkor Wat temple",
    "Angkor is the largest religious monument on Earth",
    "The Tonlé Sap lake changes direction with the seasons"
+  ],
+  "neighbors": [
+   "LA",
+   "TH",
+   "VN"
   ]
  },
  {
@@ -1836,6 +2189,22 @@
    "Home to the Great Wall, visible for thousands of miles",
    "Invented paper, the compass and fireworks",
    "Giant pandas live in its bamboo forests"
+  ],
+  "neighbors": [
+   "AF",
+   "BT",
+   "IN",
+   "KG",
+   "KP",
+   "KZ",
+   "LA",
+   "MM",
+   "MN",
+   "NP",
+   "PK",
+   "RU",
+   "TJ",
+   "VN"
   ]
  },
  {
@@ -1865,7 +2234,8 @@
    "An island in the Mediterranean Sea",
    "Said in myth to be the birthplace of Aphrodite",
    "Has one of the world's oldest wines, Commandaria"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "GE",
@@ -1894,6 +2264,12 @@
    "Known as the birthplace of wine, over 8,000 years ago",
    "The Caucasus Mountains tower over it",
    "Famous for cave cities like Vardzia"
+  ],
+  "neighbors": [
+   "AM",
+   "AZ",
+   "RU",
+   "TR"
   ]
  },
  {
@@ -1924,6 +2300,14 @@
    "One of the world's most populous countries",
    "Birthplace of the numbers system and the game of chess",
    "Bollywood makes hundreds of films a year"
+  ],
+  "neighbors": [
+   "BD",
+   "BT",
+   "CN",
+   "MM",
+   "NP",
+   "PK"
   ]
  },
  {
@@ -1954,6 +2338,11 @@
    "Home to the Komodo dragon, the largest lizard",
    "Sits on the volcanic 'Ring of Fire'",
    "Famous for orangutans in Borneo and Sumatra"
+  ],
+  "neighbors": [
+   "MY",
+   "PG",
+   "TL"
   ]
  },
  {
@@ -1983,6 +2372,15 @@
    "Home to the ancient ruins of Persepolis",
    "Famous for exquisite Persian carpets",
    "Was the heart of the mighty Persian Empire"
+  ],
+  "neighbors": [
+   "AF",
+   "AM",
+   "AZ",
+   "IQ",
+   "PK",
+   "TM",
+   "TR"
   ]
  },
  {
@@ -2012,6 +2410,14 @@
    "Called the 'cradle of civilisation'",
    "Where writing was invented in ancient Mesopotamia",
    "The Tigris and Euphrates rivers flow through it"
+  ],
+  "neighbors": [
+   "IR",
+   "JO",
+   "KW",
+   "SA",
+   "SY",
+   "TR"
   ]
  },
  {
@@ -2041,6 +2447,13 @@
    "Home to Jerusalem, holy to three religions",
    "The Dead Sea is so salty you float easily",
    "The Dead Sea is the lowest point on dry land"
+  ],
+  "neighbors": [
+   "EG",
+   "JO",
+   "LB",
+   "PS",
+   "SY"
   ]
  },
  {
@@ -2071,7 +2484,8 @@
    "Home to the bullet train and Mount Fuji",
    "Invented sushi, manga and many video games",
    "Has the world's oldest company still running"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "JO",
@@ -2100,6 +2514,13 @@
    "Home to Petra, a city carved into pink rock",
    "The Dead Sea lies on its border",
    "Wadi Rum's red desert looks like Mars"
+  ],
+  "neighbors": [
+   "IL",
+   "IQ",
+   "PS",
+   "SA",
+   "SY"
   ]
  },
  {
@@ -2129,6 +2550,13 @@
    "The world's largest landlocked country",
    "Has launched rockets from the Baikonur spaceport",
    "Wide grassy steppes stretch across it"
+  ],
+  "neighbors": [
+   "CN",
+   "KG",
+   "RU",
+   "TM",
+   "UZ"
   ]
  },
  {
@@ -2158,6 +2586,10 @@
    "A small, wealthy country on the Persian Gulf",
    "Famous for its tall Kuwait Towers",
    "One of the world's hottest places in summer"
+  ],
+  "neighbors": [
+   "IQ",
+   "SA"
   ]
  },
  {
@@ -2187,6 +2619,12 @@
    "A mountainous country with the huge Issyk-Kul lake",
    "Famous for yurts and nomadic horse culture",
    "Plays kok-boru, a horseback ball game"
+  ],
+  "neighbors": [
+   "CN",
+   "KZ",
+   "TJ",
+   "UZ"
   ]
  },
  {
@@ -2216,6 +2654,13 @@
    "The only landlocked country in Southeast Asia",
    "Famous for thousands of Buddhist temples in Luang Prabang",
    "The Plain of Jars is full of mysterious stone jars"
+  ],
+  "neighbors": [
+   "CN",
+   "KH",
+   "MM",
+   "TH",
+   "VN"
   ]
  },
  {
@@ -2245,6 +2690,10 @@
    "Home to ancient Roman temples at Baalbek",
    "The cedar tree on its flag is a national symbol",
    "Beirut is one of the oldest cities in the world"
+  ],
+  "neighbors": [
+   "IL",
+   "SY"
   ]
  },
  {
@@ -2274,6 +2723,11 @@
    "Home to the soaring Petronas Twin Towers",
    "Rainforests shelter orangutans and the giant rafflesia flower",
    "Split between the Asian mainland and Borneo"
+  ],
+  "neighbors": [
+   "BN",
+   "ID",
+   "TH"
   ]
  },
  {
@@ -2303,7 +2757,8 @@
    "Made of about 1,200 coral islands",
    "The lowest and flattest country on Earth",
    "Famous for overwater bungalows and reefs"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "MN",
@@ -2332,6 +2787,10 @@
    "Home of the vast Gobi Desert",
    "Land of Genghis Khan and nomadic herders",
    "Has more horses than people in many areas"
+  ],
+  "neighbors": [
+   "CN",
+   "RU"
   ]
  },
  {
@@ -2361,6 +2820,13 @@
    "Famous for the golden Shwedagon Pagoda",
    "Thousands of temples dot the plains of Bagan",
    "Inle Lake fishermen row with one leg"
+  ],
+  "neighbors": [
+   "BD",
+   "CN",
+   "IN",
+   "LA",
+   "TH"
   ]
  },
  {
@@ -2390,6 +2856,10 @@
    "Home to Mount Everest, the world's highest peak",
    "Birthplace of Buddha at Lumbini",
    "The only country with a non-rectangular flag"
+  ],
+  "neighbors": [
+   "CN",
+   "IN"
   ]
  },
  {
@@ -2419,6 +2889,11 @@
    "One of the most secretive countries in the world",
    "Has the world's largest stadium by capacity",
    "Mountainous with the sacred Mount Paektu"
+  ],
+  "neighbors": [
+   "CN",
+   "KR",
+   "RU"
   ]
  },
  {
@@ -2448,6 +2923,11 @@
    "Famous for frankincense trees in the desert",
    "Has dramatic fjord-like coastlines at Musandam",
    "Known for forts and traditional dhow boats"
+  ],
+  "neighbors": [
+   "AE",
+   "SA",
+   "YE"
   ]
  },
  {
@@ -2477,6 +2957,12 @@
    "Home to K2, the world's second-highest mountain",
    "The ancient Indus Valley civilisation began here",
    "The Karakoram Highway is one of the highest roads"
+  ],
+  "neighbors": [
+   "AF",
+   "CN",
+   "IN",
+   "IR"
   ]
  },
  {
@@ -2506,6 +2992,11 @@
    "Includes the historic city of Bethlehem",
    "Jericho is one of the oldest cities on Earth",
    "Famous for olive groves and embroidery"
+  ],
+  "neighbors": [
+   "EG",
+   "IL",
+   "JO"
   ]
  },
  {
@@ -2536,7 +3027,8 @@
    "Home to the famous Chocolate Hills",
    "The tarsier, a tiny big-eyed primate, lives here",
    "Has underground rivers and rice terraces"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "QA",
@@ -2565,6 +3057,9 @@
    "A small, very wealthy peninsula nation",
    "Hosted the 2022 football World Cup",
    "Has a futuristic skyline in Doha"
+  ],
+  "neighbors": [
+   "SA"
   ]
  },
  {
@@ -2595,6 +3090,15 @@
    "Most of it is the vast Arabian Desert",
    "Has the ancient rock tombs of Hegra",
    "One of the world's biggest oil producers"
+  ],
+  "neighbors": [
+   "AE",
+   "IQ",
+   "JO",
+   "KW",
+   "OM",
+   "QA",
+   "YE"
   ]
  },
  {
@@ -2624,7 +3128,8 @@
    "A clean, modern island city-state",
    "Famous for the Marina Bay Sands and Gardens by the Bay",
    "One of the world's busiest ports"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "KR",
@@ -2653,6 +3158,9 @@
    "Birthplace of K-pop and Taekwondo",
    "A leader in smartphones and technology",
    "Famous for kimchi and bibimbap food"
+  ],
+  "neighbors": [
+   "KP"
   ]
  },
  {
@@ -2682,6 +3190,9 @@
    "A teardrop-shaped island known for fine tea",
    "Home to the ancient rock fortress of Sigiriya",
    "Elephants and leopards roam its parks"
+  ],
+  "neighbors": [
+   "IN"
   ]
  },
  {
@@ -2711,6 +3222,13 @@
    "Home to Damascus, among the oldest cities on Earth",
    "Has the ancient desert ruins of Palmyra",
    "Famous for olive oil and soap from Aleppo"
+  ],
+  "neighbors": [
+   "IL",
+   "IQ",
+   "JO",
+   "LB",
+   "TR"
   ]
  },
  {
@@ -2740,6 +3258,12 @@
    "Almost entirely covered by tall mountains",
    "Has the Pamir Highway, the 'Roof of the World'",
    "Built one of the world's tallest dams"
+  ],
+  "neighbors": [
+   "AF",
+   "CN",
+   "KG",
+   "UZ"
   ]
  },
  {
@@ -2769,6 +3293,12 @@
    "Famous for golden Buddhist temples and street food",
    "The only Southeast Asian country never colonised",
    "Home to floating markets and elephants"
+  ],
+  "neighbors": [
+   "KH",
+   "LA",
+   "MM",
+   "MY"
   ]
  },
  {
@@ -2798,6 +3328,9 @@
    "One of Asia's youngest countries, independent in 2002",
    "Has spectacular coral reefs for diving",
    "Famous for high-quality coffee"
+  ],
+  "neighbors": [
+   "ID"
   ]
  },
  {
@@ -2828,6 +3361,16 @@
    "Istanbul straddles the Bosphorus strait",
    "Home to the fairy chimneys of Cappadocia",
    "The ancient city of Troy is here"
+  ],
+  "neighbors": [
+   "AM",
+   "AZ",
+   "BG",
+   "GE",
+   "GR",
+   "IQ",
+   "IR",
+   "SY"
   ]
  },
  {
@@ -2857,6 +3400,12 @@
    "Home to the 'Door to Hell', a burning gas crater",
    "Mostly covered by the Karakum Desert",
    "Famous for Akhal-Teke horses with a metallic shine"
+  ],
+  "neighbors": [
+   "AF",
+   "IR",
+   "KZ",
+   "UZ"
   ]
  },
  {
@@ -2886,6 +3435,10 @@
    "Home to the Burj Khalifa, the world's tallest building",
    "Dubai has a palm-shaped artificial island",
    "Grew from desert villages into futuristic cities"
+  ],
+  "neighbors": [
+   "OM",
+   "SA"
   ]
  },
  {
@@ -2915,6 +3468,13 @@
    "A jewel of the ancient Silk Road",
    "Famous for the blue-tiled city of Samarkand",
    "Home to grand mosques and madrasas"
+  ],
+  "neighbors": [
+   "AF",
+   "KG",
+   "KZ",
+   "TJ",
+   "TM"
   ]
  },
  {
@@ -2944,6 +3504,11 @@
    "Famous for the limestone islands of Ha Long Bay",
    "Home to pho noodle soup and rice terraces",
    "Has enormous cave systems like Son Doong"
+  ],
+  "neighbors": [
+   "CN",
+   "KH",
+   "LA"
   ]
  },
  {
@@ -2973,6 +3538,10 @@
    "Home to Socotra island, full of alien-looking dragon's blood trees",
    "The old city of Sana'a has gingerbread-like towers",
    "One of the oldest centres of human settlement"
+  ],
+  "neighbors": [
+   "OM",
+   "SA"
   ]
  },
  {
@@ -3002,6 +3571,11 @@
    "Has over 170,000 old concrete bunkers",
    "Beautiful beaches along the Albanian Riviera",
    "People nod to say 'no' and shake heads for 'yes'"
+  ],
+  "neighbors": [
+   "GR",
+   "ME",
+   "MK"
   ]
  },
  {
@@ -3031,6 +3605,10 @@
    "A tiny country high in the Pyrenees mountains",
    "Has no airport and no army",
    "Famous for skiing and duty-free shopping"
+  ],
+  "neighbors": [
+   "ES",
+   "FR"
   ]
  },
  {
@@ -3060,6 +3638,16 @@
    "Birthplace of Mozart and the waltz",
    "Home to grand Alpine ski resorts",
    "Vienna is famous for palaces and cafés"
+  ],
+  "neighbors": [
+   "CH",
+   "CZ",
+   "DE",
+   "HU",
+   "IT",
+   "LI",
+   "SI",
+   "SK"
   ]
  },
  {
@@ -3089,6 +3677,13 @@
    "Home to ancient Białowieża Forest and wild bison",
    "Has grand Soviet-era avenues in Minsk",
    "Known as a land of lakes and forests"
+  ],
+  "neighbors": [
+   "LT",
+   "LV",
+   "PL",
+   "RU",
+   "UA"
   ]
  },
  {
@@ -3119,6 +3714,12 @@
    "Has more than 1,000 kinds of beer",
    "Headquarters of the European Union in Brussels",
    "Birthplace of the comic hero Tintin"
+  ],
+  "neighbors": [
+   "DE",
+   "FR",
+   "LU",
+   "NL"
   ]
  },
  {
@@ -3148,6 +3749,11 @@
    "Famous for the rebuilt Stari Most bridge in Mostar",
    "Divers leap from the bridge into the river below",
    "Where East meets West in its old towns"
+  ],
+  "neighbors": [
+   "HR",
+   "ME",
+   "RS"
   ]
  },
  {
@@ -3177,6 +3783,13 @@
    "One of the world's biggest rose-oil producers",
    "Has some of the oldest gold treasure ever found",
    "Home to ancient Thracian tombs"
+  ],
+  "neighbors": [
+   "GR",
+   "MK",
+   "RO",
+   "RS",
+   "TR"
   ]
  },
  {
@@ -3207,6 +3820,13 @@
    "Has over a thousand islands in the Adriatic Sea",
    "The Plitvice Lakes have stunning waterfalls",
    "The necktie was invented here"
+  ],
+  "neighbors": [
+   "BA",
+   "HU",
+   "ME",
+   "RS",
+   "SI"
   ]
  },
  {
@@ -3236,6 +3856,12 @@
    "Prague's old town has a famous astronomical clock",
    "Castle-dotted country in central Europe",
    "Drinks the most beer per person in the world"
+  ],
+  "neighbors": [
+   "AT",
+   "DE",
+   "PL",
+   "SK"
   ]
  },
  {
@@ -3266,6 +3892,9 @@
    "Home to fairy-tale writer Hans Christian Andersen",
    "Often ranked among the happiest countries",
    "Famous for cycling and cosy 'hygge'"
+  ],
+  "neighbors": [
+   "DE"
   ]
  },
  {
@@ -3295,6 +3924,10 @@
    "One of the most digital countries in the world",
    "You can vote online and start a company in minutes",
    "Covered in forests and over 2,000 islands"
+  ],
+  "neighbors": [
+   "LV",
+   "RU"
   ]
  },
  {
@@ -3325,6 +3958,11 @@
    "The northern lights glow in its skies",
    "Said to be the home of Santa Claus in Lapland",
    "Invented the sauna"
+  ],
+  "neighbors": [
+   "NO",
+   "RU",
+   "SE"
   ]
  },
  {
@@ -3355,6 +3993,16 @@
    "The world's most visited country",
    "Famous for cheese, bread and fashion",
    "The Tour de France is a legendary bike race"
+  ],
+  "neighbors": [
+   "AD",
+   "BE",
+   "CH",
+   "DE",
+   "ES",
+   "IT",
+   "LU",
+   "MC"
   ]
  },
  {
@@ -3385,6 +4033,17 @@
    "Birthplace of the car and the printing press",
    "Oktoberfest is a giant festival in Munich",
    "A leader in science and engineering"
+  ],
+  "neighbors": [
+   "AT",
+   "BE",
+   "CH",
+   "CZ",
+   "DK",
+   "FR",
+   "LU",
+   "NL",
+   "PL"
   ]
  },
  {
@@ -3415,6 +4074,12 @@
    "Home to the ancient Acropolis in Athens",
    "Has thousands of beautiful islands",
    "Where Greek myths and gods began"
+  ],
+  "neighbors": [
+   "AL",
+   "BG",
+   "MK",
+   "TR"
   ]
  },
  {
@@ -3444,6 +4109,15 @@
    "Budapest is famous for its thermal bath houses",
    "Invented the Rubik's Cube",
    "The Danube River splits its capital in two"
+  ],
+  "neighbors": [
+   "AT",
+   "HR",
+   "RO",
+   "RS",
+   "SI",
+   "SK",
+   "UA"
   ]
  },
  {
@@ -3474,7 +4148,8 @@
    "Powered almost entirely by clean geothermal energy",
    "Has no mosquitoes at all",
    "The northern lights dance overhead"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "IE",
@@ -3504,6 +4179,9 @@
    "Famous for St Patrick's Day and Celtic music",
    "The Cliffs of Moher drop into the sea",
    "Home of folklore about leprechauns"
+  ],
+  "neighbors": [
+   "GB"
   ]
  },
  {
@@ -3534,6 +4212,14 @@
    "Home to the Colosseum and the Leaning Tower of Pisa",
    "Invented pizza and pasta",
    "Venice is a city built on water"
+  ],
+  "neighbors": [
+   "AT",
+   "CH",
+   "FR",
+   "SI",
+   "SM",
+   "VA"
   ]
  },
  {
@@ -3563,6 +4249,12 @@
    "Riga has stunning Art Nouveau buildings",
    "Half the country is covered in forest",
    "Famous for shimmering Baltic amber"
+  ],
+  "neighbors": [
+   "BY",
+   "EE",
+   "LT",
+   "RU"
   ]
  },
  {
@@ -3592,6 +4284,10 @@
    "One of the world's smallest countries",
    "Tucked in the Alps between Switzerland and Austria",
    "Makes more false teeth than almost anywhere"
+  ],
+  "neighbors": [
+   "AT",
+   "CH"
   ]
  },
  {
@@ -3621,6 +4317,12 @@
    "Home to the mysterious Hill of Crosses",
    "Was the first to declare independence from the USSR",
    "Famous for amber and basketball"
+  ],
+  "neighbors": [
+   "BY",
+   "LV",
+   "PL",
+   "RU"
   ]
  },
  {
@@ -3650,6 +4352,11 @@
    "One of the world's richest countries",
    "Has a fairy-tale capital built on cliffs",
    "Public transport is completely free"
+  ],
+  "neighbors": [
+   "BE",
+   "DE",
+   "FR"
   ]
  },
  {
@@ -3679,7 +4386,8 @@
    "A sunny island nation in the Mediterranean",
    "Has some of the world's oldest stone temples",
    "The tiny country speaks its own Maltese language"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "MD",
@@ -3708,6 +4416,10 @@
    "Has some of the world's largest underground wine cellars",
    "One of Europe's least-visited countries",
    "Famous for its vineyards and rolling hills"
+  ],
+  "neighbors": [
+   "RO",
+   "UA"
   ]
  },
  {
@@ -3737,6 +4449,9 @@
    "The second-smallest country in the world",
    "Famous for the glamorous Monaco Grand Prix",
    "Home to a royal palace and a famous casino"
+  ],
+  "neighbors": [
+   "FR"
   ]
  },
  {
@@ -3766,6 +4481,12 @@
    "Its name means 'Black Mountain'",
    "Has dramatic fjord-like bays on the Adriatic",
    "Tiny but packed with mountains and beaches"
+  ],
+  "neighbors": [
+   "AL",
+   "BA",
+   "HR",
+   "RS"
   ]
  },
  {
@@ -3796,6 +4517,10 @@
    "Much of the land was reclaimed from the sea",
    "Amsterdam is crisscrossed by canals",
    "People are among the tallest in the world"
+  ],
+  "neighbors": [
+   "BE",
+   "DE"
   ]
  },
  {
@@ -3825,6 +4550,12 @@
    "Home to ancient Lake Ohrid, one of Europe's oldest",
    "Mother Teresa was born in its capital Skopje",
    "A mountainous Balkan country"
+  ],
+  "neighbors": [
+   "AL",
+   "BG",
+   "GR",
+   "RS"
   ]
  },
  {
@@ -3855,6 +4586,11 @@
    "The midnight sun shines all night in summer",
    "Birthplace of Viking explorers",
    "A great place to see the northern lights"
+  ],
+  "neighbors": [
+   "FI",
+   "RU",
+   "SE"
   ]
  },
  {
@@ -3884,6 +4620,15 @@
    "Home to the Wieliczka salt mine with carved chapels",
    "Birthplace of astronomer Copernicus and Marie Curie",
    "Has the ancient Białowieża Forest with bison"
+  ],
+  "neighbors": [
+   "BY",
+   "CZ",
+   "DE",
+   "LT",
+   "RU",
+   "SK",
+   "UA"
   ]
  },
  {
@@ -3914,6 +4659,9 @@
    "Sailors like Vasco da Gama set off from here",
    "Home of port wine and the soulful fado music",
    "Europe's westernmost mainland point"
+  ],
+  "neighbors": [
+   "ES"
   ]
  },
  {
@@ -3943,6 +4691,13 @@
    "Home to Bran Castle, linked to the Dracula legend",
    "The Carpathian Mountains shelter brown bears and wolves",
    "Has Europe's largest population of brown bears"
+  ],
+  "neighbors": [
+   "BG",
+   "HU",
+   "MD",
+   "RS",
+   "UA"
   ]
  },
  {
@@ -3973,6 +4728,22 @@
    "Spans 11 time zones from Europe to Asia",
    "Home to the colourful St Basil's Cathedral",
    "Lake Baikal is the deepest lake on Earth"
+  ],
+  "neighbors": [
+   "AZ",
+   "BY",
+   "CN",
+   "EE",
+   "FI",
+   "GE",
+   "KP",
+   "KZ",
+   "LT",
+   "LV",
+   "MN",
+   "NO",
+   "PL",
+   "UA"
   ]
  },
  {
@@ -4002,6 +4773,9 @@
    "One of the world's oldest republics",
    "Tiny country perched on Mount Titano",
    "Completely surrounded by Italy"
+  ],
+  "neighbors": [
+   "IT"
   ]
  },
  {
@@ -4031,6 +4805,15 @@
    "Belgrade sits where two great rivers meet",
    "Famous for lively brass-band music festivals",
    "Inventor Nikola Tesla was Serbian"
+  ],
+  "neighbors": [
+   "BA",
+   "BG",
+   "HR",
+   "HU",
+   "ME",
+   "MK",
+   "RO"
   ]
  },
  {
@@ -4060,6 +4843,13 @@
    "Has more castles per person than almost anywhere",
    "The High Tatras mountains are great for hiking",
    "Bratislava sits right on the Danube"
+  ],
+  "neighbors": [
+   "AT",
+   "CZ",
+   "HU",
+   "PL",
+   "UA"
   ]
  },
  {
@@ -4089,6 +4879,12 @@
    "Home to the picture-perfect Lake Bled with an island church",
    "The letters L-O-V-E hide inside the name sLOVEnia",
    "Over half the country is covered in forest"
+  ],
+  "neighbors": [
+   "AT",
+   "HR",
+   "HU",
+   "IT"
   ]
  },
  {
@@ -4119,6 +4915,12 @@
    "Home to Gaudí's amazing Sagrada Família church",
    "The tomato-throwing Tomatina festival happens here",
    "Running of the bulls in Pamplona"
+  ],
+  "neighbors": [
+   "AD",
+   "FR",
+   "MA",
+   "PT"
   ]
  },
  {
@@ -4149,6 +4951,10 @@
    "Has an ice hotel rebuilt every winter",
    "Thousands of islands surround Stockholm",
    "The Nobel Prizes are awarded here"
+  ],
+  "neighbors": [
+   "FI",
+   "NO"
   ]
  },
  {
@@ -4179,6 +4985,13 @@
    "The Alps include the iconic Matterhorn",
    "Stays neutral and doesn't take sides in wars",
    "Has four official languages"
+  ],
+  "neighbors": [
+   "AT",
+   "DE",
+   "FR",
+   "IT",
+   "LI"
   ]
  },
  {
@@ -4208,6 +5021,15 @@
    "The largest country entirely within Europe",
    "Known as the 'breadbasket' for its rich farmland",
    "Famous for golden-domed cathedrals in Kyiv"
+  ],
+  "neighbors": [
+   "BY",
+   "HU",
+   "MD",
+   "PL",
+   "RO",
+   "RU",
+   "SK"
   ]
  },
  {
@@ -4238,6 +5060,9 @@
    "Birthplace of Shakespeare and The Beatles",
    "The first country to build railways and the Industrial Revolution",
    "Famous for red double-decker buses"
+  ],
+  "neighbors": [
+   "IE"
   ]
  },
  {
@@ -4267,6 +5092,9 @@
    "The smallest country in the world",
    "Home of the Pope and the Catholic Church",
    "Houses Michelangelo's Sistine Chapel ceiling"
+  ],
+  "neighbors": [
+   "IT"
   ]
  },
  {
@@ -4296,7 +5124,8 @@
    "Said to have a different beach for every day of the year",
    "Twin islands in the Caribbean Sea",
    "Famous for sailing and coral reefs"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "BS",
@@ -4325,7 +5154,8 @@
    "Made up of around 700 islands and cays",
    "Famous for swimming pigs at Exuma",
    "Has the third-largest barrier reef in the world"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "BB",
@@ -4354,7 +5184,8 @@
    "Birthplace of singer Rihanna",
    "Famous for flying fish and friendly beaches",
    "Where rum was first made"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "BZ",
@@ -4383,6 +5214,10 @@
    "Home to the Great Blue Hole, a giant ocean sinkhole",
    "Has the largest barrier reef in the Americas",
    "Full of ancient Maya temples in the jungle"
+  ],
+  "neighbors": [
+   "GT",
+   "MX"
   ]
  },
  {
@@ -4413,6 +5248,9 @@
    "Has more lakes than the rest of the world combined",
    "Famous for maple syrup and the Rocky Mountains",
    "Niagara Falls thunders on its border"
+  ],
+  "neighbors": [
+   "US"
   ]
  },
  {
@@ -4442,6 +5280,10 @@
    "Has no army and protects huge rainforests",
    "Packed with volcanoes, sloths and toucans",
    "A world leader in clean, green energy"
+  ],
+  "neighbors": [
+   "NI",
+   "PA"
   ]
  },
  {
@@ -4471,7 +5313,8 @@
    "Famous for vintage 1950s cars on its streets",
    "The largest island in the Caribbean",
    "Known for salsa music and cigars"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "DM",
@@ -4500,7 +5343,8 @@
    "Nicknamed the 'Nature Island'",
    "Has a boiling lake heated by a volcano",
    "Covered in lush rainforest and waterfalls"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "DO",
@@ -4529,6 +5373,9 @@
    "Shares an island with Haiti",
    "Where Christopher Columbus first built a settlement",
    "Birthplace of merengue and bachata music"
+  ],
+  "neighbors": [
+   "HT"
   ]
  },
  {
@@ -4558,6 +5405,10 @@
    "The smallest country in Central America",
    "Nicknamed the 'Land of Volcanoes'",
    "Famous for great surfing waves"
+  ],
+  "neighbors": [
+   "GT",
+   "HN"
   ]
  },
  {
@@ -4587,7 +5438,8 @@
    "Called the 'Spice Isle' for its nutmeg",
    "Nutmeg even appears on its flag",
    "Has underwater sculpture parks for divers"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "GT",
@@ -4616,6 +5468,12 @@
    "Heart of the ancient Maya civilisation",
    "Home to the jungle pyramids of Tikal",
    "Has colourful markets and many volcanoes"
+  ],
+  "neighbors": [
+   "BZ",
+   "HN",
+   "MX",
+   "SV"
   ]
  },
  {
@@ -4645,6 +5503,9 @@
    "The first country to be founded by freed slaves",
    "Shares an island with the Dominican Republic",
    "Famous for vibrant folk art"
+  ],
+  "neighbors": [
+   "DO"
   ]
  },
  {
@@ -4674,6 +5535,11 @@
    "Home to the ancient Maya ruins of Copán",
    "Has rainforests and Caribbean coral reefs",
    "Once exported so many bananas it was called a 'banana republic'"
+  ],
+  "neighbors": [
+   "GT",
+   "NI",
+   "SV"
   ]
  },
  {
@@ -4703,7 +5569,8 @@
    "Birthplace of reggae music and Bob Marley",
    "Home of some of the world's fastest sprinters",
    "Famous for jerk cooking and blue mountains coffee"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "MX",
@@ -4733,6 +5600,11 @@
    "Invented chocolate, corn and the calendar wheel",
    "Famous for the colourful Day of the Dead",
    "Millions of monarch butterflies winter here"
+  ],
+  "neighbors": [
+   "BZ",
+   "GT",
+   "US"
   ]
  },
  {
@@ -4762,6 +5634,10 @@
    "The largest country in Central America",
    "Famous for its many volcanoes and big lakes",
    "You can go 'volcano boarding' down Cerro Negro"
+  ],
+  "neighbors": [
+   "CR",
+   "HN"
   ]
  },
  {
@@ -4791,6 +5667,10 @@
    "Home to the Panama Canal linking two oceans",
    "Ships pass between the Atlantic and Pacific here",
    "Rainforests are full of colourful frogs and birds"
+  ],
+  "neighbors": [
+   "CO",
+   "CR"
   ]
  },
  {
@@ -4820,7 +5700,8 @@
    "The smallest country in the Americas",
    "Two islands joined by Caribbean waters",
    "Has an old railway that once carried sugar cane"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "LC",
@@ -4849,7 +5730,8 @@
    "Famous for the twin Piton mountains rising from the sea",
    "Has a drive-in volcano with bubbling springs",
    "Lush rainforest covers much of the island"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "VC",
@@ -4878,7 +5760,8 @@
    "A chain of beautiful Caribbean islands",
    "Pirates of the Caribbean films were shot here",
    "Famous for sailing around the Grenadines"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "TT",
@@ -4907,7 +5790,8 @@
    "Birthplace of the steelpan drum and calypso",
    "Famous for one of the world's biggest Carnivals",
    "Has a lake made of natural pitch (tar)"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "US",
@@ -4937,6 +5821,10 @@
    "The first country to land people on the Moon",
    "Hollywood makes world-famous movies",
    "Has 50 states and many national parks"
+  ],
+  "neighbors": [
+   "CA",
+   "MX"
   ]
  },
  {
@@ -4967,7 +5855,8 @@
    "Kangaroos and koalas live only here",
    "Uluru is a giant red rock in the outback",
    "Both a country and a continent"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "FJ",
@@ -4996,7 +5885,8 @@
    "Made up of more than 300 islands",
    "Famous for friendly people and coral reefs",
    "A top spot for surfing and diving"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "KI",
@@ -5025,7 +5915,8 @@
    "One of the first places to greet each new day",
    "Spread across a huge area of the Pacific Ocean",
    "Sits right on the Equator and the date line"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "MH",
@@ -5054,7 +5945,8 @@
    "A nation of low coral atolls in the Pacific",
    "Famous for traditional stick navigation charts",
    "Bikini Atoll is a UNESCO World Heritage site"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "FM",
@@ -5083,7 +5975,8 @@
    "Made up of over 600 islands",
    "Home to the mysterious stone city of Nan Madol",
    "Surrounded by colourful coral reefs"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "NR",
@@ -5112,7 +6005,8 @@
    "The world's smallest island country",
    "You can drive around the whole island in 30 minutes",
    "Once one of the richest places thanks to phosphate"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "NZ",
@@ -5142,7 +6036,8 @@
    "Home to the flightless kiwi bird",
    "Has more sheep than people",
    "Maori culture and the haka are world famous"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "PW",
@@ -5171,7 +6066,8 @@
    "Famous for Jellyfish Lake, full of harmless jellyfish",
    "Created the world's first shark sanctuary",
    "Has some of the best diving on Earth"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "PG",
@@ -5200,6 +6096,9 @@
    "One of the most culturally diverse countries on Earth",
    "Over 800 languages are spoken here",
    "Covered in rainforest with birds-of-paradise"
+  ],
+  "neighbors": [
+   "ID"
   ]
  },
  {
@@ -5229,7 +6128,8 @@
    "Among the last places to see each day end",
    "Famous for the To Sua ocean swimming hole",
    "Author Robert Louis Stevenson lived here"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "SB",
@@ -5258,7 +6158,8 @@
    "A chain of nearly 1,000 islands",
    "A famous spot for World War II history and wreck diving",
    "Covered in tropical rainforest"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "TO",
@@ -5287,7 +6188,8 @@
    "The only Pacific island nation never colonised",
    "Still ruled by a king today",
    "Humpback whales come here to give birth"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "TV",
@@ -5316,7 +6218,8 @@
    "One of the smallest and lowest countries on Earth",
    "Earns money from its '.tv' internet address",
    "Just nine tiny coral islands"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "VU",
@@ -5345,7 +6248,8 @@
    "You can peer into a bubbling lava lake on Mount Yasur",
    "People here are often ranked among the happiest",
    "Islanders invented land diving, the bungee's ancestor"
-  ]
+  ],
+  "neighbors": []
  },
  {
   "iso2": "AR",
@@ -5375,6 +6279,13 @@
    "Home to the thundering Iguazú Falls",
    "Famous for football star Lionel Messi",
    "Patagonia has glaciers and penguins"
+  ],
+  "neighbors": [
+   "BO",
+   "BR",
+   "CL",
+   "PY",
+   "UY"
   ]
  },
  {
@@ -5404,6 +6315,13 @@
    "Home to the world's largest salt flat, Salar de Uyuni",
    "Has one of the highest capital cities on Earth",
    "Lake Titicaca is the highest navigable lake"
+  ],
+  "neighbors": [
+   "AR",
+   "BR",
+   "CL",
+   "PE",
+   "PY"
   ]
  },
  {
@@ -5434,6 +6352,17 @@
    "Most of the Amazon Rainforest is here",
    "Famous for the Rio Carnival and football",
    "Christ the Redeemer watches over Rio"
+  ],
+  "neighbors": [
+   "AR",
+   "BO",
+   "CO",
+   "GY",
+   "PE",
+   "PY",
+   "SR",
+   "UY",
+   "VE"
   ]
  },
  {
@@ -5464,6 +6393,11 @@
    "Home to the Atacama, the driest desert on Earth",
    "Easter Island's giant stone heads belong to Chile",
    "Great for stargazing in clear desert skies"
+  ],
+  "neighbors": [
+   "AR",
+   "BO",
+   "PE"
   ]
  },
  {
@@ -5494,6 +6428,13 @@
    "Famous for delicious coffee",
    "Home to colourful festivals and the Amazon",
    "Has more bird species than any other country"
+  ],
+  "neighbors": [
+   "BR",
+   "EC",
+   "PA",
+   "PE",
+   "VE"
   ]
  },
  {
@@ -5523,6 +6464,10 @@
    "Named after the Equator that crosses it",
    "The Galápagos Islands inspired Darwin's ideas",
    "Giant tortoises and blue-footed boobies live there"
+  ],
+  "neighbors": [
+   "CO",
+   "PE"
   ]
  },
  {
@@ -5552,6 +6497,11 @@
    "The only English-speaking country in South America",
    "Home to Kaieteur, one of the world's tallest single-drop falls",
    "Covered in vast untouched rainforest"
+  ],
+  "neighbors": [
+   "BR",
+   "SR",
+   "VE"
   ]
  },
  {
@@ -5581,6 +6531,11 @@
    "One of only two landlocked countries in South America",
    "Shares the giant Itaipú hydroelectric dam",
    "Famous for ñandutí lace and harp music"
+  ],
+  "neighbors": [
+   "AR",
+   "BO",
+   "BR"
   ]
  },
  {
@@ -5610,6 +6565,13 @@
    "Home to the ancient Inca city of Machu Picchu",
    "The mysterious Nazca Lines are carved into its desert",
    "Potatoes were first grown here, in thousands of types"
+  ],
+  "neighbors": [
+   "BO",
+   "BR",
+   "CL",
+   "CO",
+   "EC"
   ]
  },
  {
@@ -5639,6 +6601,10 @@
    "The smallest country in South America",
    "Almost entirely covered in rainforest",
    "A colourful mix of cultures and languages"
+  ],
+  "neighbors": [
+   "BR",
+   "GY"
   ]
  },
  {
@@ -5668,6 +6634,10 @@
    "One of the most progressive countries in South America",
    "Football's first World Cup was held and won here",
    "Famous for beef, mate tea and long beaches"
+  ],
+  "neighbors": [
+   "AR",
+   "BR"
   ]
  },
  {
@@ -5697,6 +6667,11 @@
    "Home to Angel Falls, the world's tallest waterfall",
    "Has Caribbean beaches and the high Andes",
    "Lightning storms strike almost nightly over Lake Maracaibo"
+  ],
+  "neighbors": [
+   "BR",
+   "CO",
+   "GY"
   ]
  }
 ]

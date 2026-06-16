@@ -79,6 +79,12 @@ export default function App() {
     [selectedIso]
   );
 
+  const byIso = useMemo(() => new Map(COUNTRIES.map((c) => [c.iso2, c])), []);
+  const neighbors = useMemo(
+    () => (selected?.neighbors ?? []).map((iso) => byIso.get(iso)).filter(Boolean) as Country[],
+    [selected, byIso]
+  );
+
   // keep the URL hash in sync (shareable deep links)
   useEffect(() => {
     writeHash({ tab, continent, iso: selectedIso });
@@ -153,8 +159,14 @@ export default function App() {
             countries={COUNTRIES}
             selectedIso={selectedIso}
             onSelect={(iso) => setSelectedIso(iso)}
+            showNeighbors
           />
-          <CountryDetail country={selected} onClose={() => setSelectedIso(null)} />
+          <CountryDetail
+            country={selected}
+            onClose={() => setSelectedIso(null)}
+            neighbors={neighbors}
+            onSelectNeighbor={(iso) => setSelectedIso(iso)}
+          />
         </div>
       )}
 
@@ -198,6 +210,8 @@ export default function App() {
             country={selected}
             onClose={() => setSelectedIso(null)}
             onLocate={() => setTab("map")}
+            neighbors={neighbors}
+            onSelectNeighbor={(iso) => setSelectedIso(iso)}
           />
         </div>
       )}

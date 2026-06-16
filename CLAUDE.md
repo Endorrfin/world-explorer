@@ -22,6 +22,7 @@ npm run preview    # serve the production build locally
 npm run data       # regenerate src/data/countries.json from data.xlsx (Python + openpyxl)
 npm run shapes     # regenerate src/data/shapes.json (country outlines) from Natural Earth
 npm run worldmap   # regenerate src/data/worldmap.json (single-projection clickable map)
+npm run neighbors  # regenerate src/data/neighbors.json (land borders) from world-countries
 ```
 
 Deploy is automatic: push to `main`, and `.github/workflows/deploy.yml` runs
@@ -48,12 +49,14 @@ scripts/
   build_data.py               data pipeline: xlsx → countries.json (cleans, fixes, joins, merges facts)
   build_shapes.mjs            country outlines: world-atlas TopoJSON → shapes.json
   build_worldmap.mjs          single-projection clickable map: TopoJSON → worldmap.json
+  build_neighbors.mjs         land-border lists: world-countries → neighbors.json
 src/
   data/
     facts.json                EDITABLE "Known for" facts, keyed by ISO-2
     countries.json            GENERATED app data — do not hand-edit
     shapes.json               GENERATED country outlines — do not hand-edit
     worldmap.json             GENERATED single-projection map (paths + continent boxes)
+    neighbors.json            GENERATED land-border lists (merged into countries.json)
   components/
     Sidebar.tsx               continent list with counts
     CountryCard.tsx           tile: flag + name + capital + outline
@@ -127,6 +130,9 @@ App imports countries.json + shapes.json (static)
 - **v1.5** — **"Where in the world?"** game (a Quiz mode): read a country name, click it on
   the live map; green/red feedback, reveal-pulse on the answer, score over a round of 8.
   Reuses `WorldMap` in game mode (`feedback` / `forceMarkers` / `initialZoom` props).
+- **v1.6** — **neighbour highlighting**: selecting a country outlines its land neighbours on
+  the map (`showNeighbors`) and lists them (clickable) in the detail panel. Borders come from
+  `world-countries` via `build_neighbors.mjs`; islands show "no land borders".
 
 ## Possible improvements (roadmap)
 
@@ -143,7 +149,7 @@ App imports countries.json + shapes.json (static)
 
 ### Content / data
 - Add fields kids enjoy: **languages, currency, time zone, calling code already shown,
-  national animal, neighbouring countries, area/population rank, flag meaning**.
+  national animal, area/population rank, flag meaning**.
 - **Landmark photos** in the detail panel (would require bundling/licensing images).
 - A **"data as of" date** and source notes; refresh figures (currently 2023–2025 mix).
 - Fill the **coverage gaps** (births/day, peace index) from a more complete source.

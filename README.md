@@ -9,13 +9,14 @@ deploys to GitHub Pages with no backend.
 
 ## Features
 
-- **Clickable world map** — a real geoEqualEarth map: click a country for its details, or
-  zoom to any continent. (The default tab.)
+- **Clickable world map** — a real geoEqualEarth map: click a country for its details (its
+  land neighbours get highlighted), drag to pan and scroll/pinch to zoom, or jump to any
+  continent. (The default tab.)
 - **Explore by continent** — sidebar with all six continents and country counts.
 - **Country tiles** — flag, name, capital and a small country outline; click for details.
 - **Rich detail panel** — capital, population, GDP, per-person income, land &
   total area, density, median age, births per day, peace index, ISO/phone code,
-  and **2–4 "Known for" facts** written for children.
+  **clickable neighbouring countries**, and **2–4 "Known for" facts** written for children.
 - **Quiz mode** — six games: *capital*, *country by flag*, *country by outline*,
   *population*, *continent*, and **"Where in the world?"** (click the country on the live
   map), scoped to any continent, with scoring.

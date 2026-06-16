@@ -27,6 +27,7 @@ export interface Country {
   peaceIndex: number | null; // GPI 2024, lower = safer
   // content
   knownFor: string[];
+  neighbors: string[]; // ISO-2 codes of land-bordering countries
 }
 
 export type Continent =

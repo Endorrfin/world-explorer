@@ -19,6 +19,7 @@ import openpyxl
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 XLSX = os.path.join(ROOT, "data.xlsx")
 FACTS = os.path.join(ROOT, "src", "data", "facts.json")
+NEIGHBORS = os.path.join(ROOT, "src", "data", "neighbors.json")
 OUT = os.path.join(ROOT, "src", "data", "countries.json")
 
 # ---------------------------------------------------------------- helpers
@@ -134,6 +135,11 @@ if os.path.exists(FACTS):
     with open(FACTS, encoding="utf-8") as f:
         facts = json.load(f)
 
+neighbors = {}
+if os.path.exists(NEIGHBORS):
+    with open(NEIGHBORS, encoding="utf-8") as f:
+        neighbors = json.load(f)
+
 # ---------------------------------------------------------------- build
 countries = []
 main = rows_of("Сountries")   # NB: sheet title uses a Cyrillic 'С'
@@ -178,6 +184,7 @@ for r in main:
         "peaceIndex": num(gpi_row[4]) if gpi_row else None,        # GPI 2024 (lower = safer)
         # content
         "knownFor": facts.get(iso2, []),
+        "neighbors": neighbors.get(iso2, []),
     })
 
 countries.sort(key=lambda c: (c["continent"], c["name"]))
