@@ -120,6 +120,9 @@ App imports countries.json + shapes.json (static)
   island/micro states (incl. Tuvalu, which has no shape at this resolution), a **"Locate
   on map"** button (Explore → Map) that flies to the country's continent and **pulses**
   it, plus projected centroids for all 195 (`cen` in worldmap.json).
+- **v1.4** — real map navigation: **drag-to-pan**, **wheel/pinch zoom** (cursor-centred)
+  and **double-click / double-tap to zoom in**, with clamping. Continent buttons, Locate
+  and markers are unchanged; markers fade out once you zoom in.
 
 ## Possible improvements (roadmap)
 
@@ -130,9 +133,9 @@ App imports countries.json + shapes.json (static)
   and capitals ("Sri Jayawardenapura Kotte") are currently truncated; let them wrap or
   use roomier tiles.
 - **Dark-mode toggle** and a **larger-text mode** for younger readers.
-- **Map polish (remaining)** — free **pan + wheel/pinch zoom** (drag-to-pan), **double-click
-  / double-tap to zoom**, and optional **on-map country labels**. (Animated zoom, island
-  markers and the locate-pulse landed in v1.3.)
+- **Map polish (remaining)** — optional **on-map country labels** (names of larger
+  countries when zoomed in). Animated zoom, markers, locate-pulse and free pan/pinch/
+  double-click zoom are done (v1.3–v1.4).
 
 ### Content / data
 - Add fields kids enjoy: **languages, currency, time zone, calling code already shown,

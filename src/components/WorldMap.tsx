@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import mapData from "../data/worldmap.json";
 import type { Continent, Country } from "../types";
 import { CONTINENTS, continentMeta } from "../lib/continents";
@@ -18,6 +18,8 @@ type Zoom = Continent | "World";
 type Box = [number, number, number, number];
 
 const WORLD: Box = [0, 0, MAP.w, MAP.h];
+const MINW = 90; // most zoomed-in (smallest viewBox width)
+const MAXW = MAP.w; // world view
 
 function continentBox(z: Zoom): Box {
   if (z === "World") return WORLD;
@@ -27,6 +29,15 @@ function continentBox(z: Zoom): Box {
   const px = w * 0.14;
   const py = h * 0.14;
   return [x - px, y - py, w + px * 2, h + py * 2];
+}
+
+function clampPos(b: Box): Box {
+  const [, , w, h] = b;
+  const ox = MAP.w * 0.08;
+  const oy = MAP.h * 0.08;
+  const x = Math.min(MAP.w + ox - w, Math.max(-ox, b[0]));
+  const y = Math.min(MAP.h + oy - h, Math.max(-oy, b[1]));
+  return [x, y, w, h];
 }
 
 const easeInOut = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
@@ -42,22 +53,29 @@ export function WorldMap({
 }) {
   const byIso = useMemo(() => new Map(countries.map((c) => [c.iso2, c])), [countries]);
 
-  const [zoom, setZoom] = useState<Zoom>(() => {
-    const c = selectedIso ? byIso.get(selectedIso) : null;
-    return c ? c.continent : "World";
-  });
-  const [vb, setVb] = useState<Box>(WORLD); // animated viewBox; mounts at world then flies in
+  const [active, setActive] = useState<Zoom | null>("World"); // highlighted button, or null when freely navigated
+  const [vb, setVb] = useState<Box>(WORLD);
   const vbRef = useRef<Box>(vb);
   vbRef.current = vb;
-  const raf = useRef<number | undefined>(undefined);
 
-  // smoothly tween the viewBox whenever the zoom target changes
-  useEffect(() => {
-    const target = continentBox(zoom);
+  const svgRef = useRef<SVGSVGElement | null>(null);
+  const raf = useRef<number | undefined>(undefined);
+  const pointers = useRef<Map<number, { x: number; y: number }>>(new Map());
+  const panLast = useRef<{ x: number; y: number } | null>(null);
+  const pinchPrev = useRef<number | null>(null);
+  const mounted = useRef(false);
+
+  const stopAnim = () => {
+    if (raf.current) cancelAnimationFrame(raf.current);
+  };
+
+  // animated fly-to a target box (continent buttons, Locate, deep links)
+  const flyTo = useCallback((target: Box, activeName: Zoom | null) => {
+    stopAnim();
+    setActive(activeName);
     const start = vbRef.current;
     const t0 = performance.now();
     const dur = 550;
-    if (raf.current) cancelAnimationFrame(raf.current);
     const step = (now: number) => {
       const t = Math.min(1, (now - t0) / dur);
       const e = easeInOut(t);
@@ -70,26 +88,119 @@ export function WorldMap({
       if (t < 1) raf.current = requestAnimationFrame(step);
     };
     raf.current = requestAnimationFrame(step);
-    return () => {
-      if (raf.current) cancelAnimationFrame(raf.current);
-    };
-  }, [zoom]);
+  }, []);
 
-  // "find on map": if a freshly selected country is outside the current view, fly to its continent
+  // screen → user (viewBox) coordinates, honouring preserveAspectRatio
+  const userPoint = useCallback((clientX: number, clientY: number): [number, number] => {
+    const ctm = svgRef.current?.getScreenCTM();
+    if (!ctm) return [0, 0];
+    return [(clientX - ctm.e) / ctm.a, (clientY - ctm.f) / ctm.d];
+  }, []);
+
+  // zoom by a factor around a user-space point (wheel / pinch / double-click)
+  const zoomAt = useCallback((factor: number, ux: number, uy: number) => {
+    stopAnim();
+    setActive(null);
+    setVb((prev) => {
+      let nw = prev[2] * factor;
+      nw = Math.min(MAXW, Math.max(MINW, nw));
+      const s = nw / prev[2];
+      const nh = prev[3] * s;
+      const nx = ux - (ux - prev[0]) * s;
+      const ny = uy - (uy - prev[1]) * s;
+      return clampPos([nx, ny, nw, nh]);
+    });
+  }, []);
+
+  // fly to the selected country's continent on open (Locate / deep link)
   useEffect(() => {
-    if (!selectedIso) return;
+    if (selectedIso) {
+      const c = byIso.get(selectedIso);
+      if (c) flyTo(continentBox(c.continent), c.continent);
+    }
+    mounted.current = true;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // later: if a freshly selected country is off-screen, fly to its continent
+  useEffect(() => {
+    if (!mounted.current || !selectedIso) return;
+    const c = byIso.get(selectedIso);
     const cen = MAP.cen[selectedIso];
-    const country = byIso.get(selectedIso);
-    if (!cen || !country) return;
+    if (!c || !cen) return;
     const [x, y, w, h] = vbRef.current;
     const inside = cen[0] >= x && cen[0] <= x + w && cen[1] >= y && cen[1] <= y + h;
-    if (!inside) setZoom(country.continent);
-  }, [selectedIso, byIso]);
+    if (!inside) flyTo(continentBox(c.continent), c.continent);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedIso]);
 
-  const landEls = useMemo(
-    () => MAP.land.map((d, i) => <path key={i} d={d} />),
-    []
-  );
+  // wheel zoom needs a non-passive listener to preventDefault page scroll
+  useEffect(() => {
+    const svg = svgRef.current;
+    if (!svg) return;
+    const onWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      const [ux, uy] = userPoint(e.clientX, e.clientY);
+      zoomAt(e.deltaY > 0 ? 1.12 : 0.89, ux, uy);
+    };
+    svg.addEventListener("wheel", onWheel, { passive: false });
+    return () => svg.removeEventListener("wheel", onWheel);
+  }, [userPoint, zoomAt]);
+
+  const onPointerDown = (e: React.PointerEvent<SVGSVGElement>) => {
+    svgRef.current?.setPointerCapture(e.pointerId);
+    pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (pointers.current.size === 1) panLast.current = { x: e.clientX, y: e.clientY };
+    else if (pointers.current.size === 2) {
+      const p = [...pointers.current.values()];
+      pinchPrev.current = Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y);
+      panLast.current = null;
+    }
+  };
+
+  const onPointerMove = (e: React.PointerEvent<SVGSVGElement>) => {
+    if (!pointers.current.has(e.pointerId)) return;
+    pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (pointers.current.size === 1 && panLast.current) {
+      const ctm = svgRef.current?.getScreenCTM();
+      if (!ctm) return;
+      const dx = (e.clientX - panLast.current.x) / ctm.a;
+      const dy = (e.clientY - panLast.current.y) / ctm.d;
+      if (dx === 0 && dy === 0) return;
+      stopAnim();
+      setActive(null);
+      panLast.current = { x: e.clientX, y: e.clientY };
+      setVb((prev) => clampPos([prev[0] - dx, prev[1] - dy, prev[2], prev[3]]));
+    } else if (pointers.current.size === 2) {
+      const p = [...pointers.current.values()];
+      const d = Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y);
+      const mx = (p[0].x + p[1].x) / 2;
+      const my = (p[0].y + p[1].y) / 2;
+      if (pinchPrev.current && d > 0) {
+        const [ux, uy] = userPoint(mx, my);
+        zoomAt(pinchPrev.current / d, ux, uy);
+      }
+      pinchPrev.current = d;
+    }
+  };
+
+  const endPointer = (e: React.PointerEvent<SVGSVGElement>) => {
+    pointers.current.delete(e.pointerId);
+    if (pointers.current.size < 2) pinchPrev.current = null;
+    if (pointers.current.size === 1) {
+      const p = [...pointers.current.values()][0];
+      panLast.current = { x: p.x, y: p.y };
+    } else if (pointers.current.size === 0) {
+      panLast.current = null;
+    }
+  };
+
+  const onDoubleClick = (e: React.MouseEvent<SVGSVGElement>) => {
+    const [ux, uy] = userPoint(e.clientX, e.clientY);
+    zoomAt(0.55, ux, uy);
+  };
+
+  const landEls = useMemo(() => MAP.land.map((d, i) => <path key={i} d={d} />), []);
 
   const countryEls = useMemo(
     () =>
@@ -126,8 +237,8 @@ export function WorldMap({
     [byIso, selectedIso, onSelect]
   );
 
-  // markers stay a constant size on screen; hidden for the continent you've zoomed into
   const markerR = vb[2] * 0.0045;
+  const showMarkers = vb[2] > MAP.w * 0.5; // only while zoomed out
   const selCen = selectedIso ? MAP.cen[selectedIso] : null;
   const selMeta = selectedIso ? continentMeta(byIso.get(selectedIso)?.continent ?? "Africa") : null;
 
@@ -136,8 +247,8 @@ export function WorldMap({
       <div className="wmap__zooms" role="group" aria-label="Zoom to continent">
         <button
           type="button"
-          className={`wmap__zoom${zoom === "World" ? " wmap__zoom--on" : ""}`}
-          onClick={() => setZoom("World")}
+          className={`wmap__zoom${active === "World" ? " wmap__zoom--on" : ""}`}
+          onClick={() => flyTo(WORLD, "World")}
         >
           🌍 World
         </button>
@@ -145,9 +256,9 @@ export function WorldMap({
           <button
             key={c.name}
             type="button"
-            className={`wmap__zoom${zoom === c.name ? " wmap__zoom--on" : ""}`}
-            style={zoom === c.name ? { borderColor: c.color, background: c.tint } : undefined}
-            onClick={() => setZoom(c.name)}
+            className={`wmap__zoom${active === c.name ? " wmap__zoom--on" : ""}`}
+            style={active === c.name ? { borderColor: c.color, background: c.tint } : undefined}
+            onClick={() => flyTo(continentBox(c.name), c.name)}
           >
             {c.emoji} {c.name}
           </button>
@@ -156,50 +267,57 @@ export function WorldMap({
 
       <div className="wmap__frame">
         <svg
+          ref={svgRef}
           className="wmap__svg"
           viewBox={vb.map((n) => Math.round(n * 10) / 10).join(" ")}
           preserveAspectRatio="xMidYMid meet"
           role="img"
-          aria-label="Clickable world map — choose a country"
+          aria-label="Clickable world map — drag to pan, scroll to zoom, click a country"
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={endPointer}
+          onPointerCancel={endPointer}
+          onDoubleClick={onDoubleClick}
         >
           <g className="wmap__land">{landEls}</g>
           {countryEls}
 
-          <g className="wmap__markers">
-            {MAP.small.map((iso) => {
-              const cen = MAP.cen[iso];
-              const country = byIso.get(iso);
-              if (!cen || !country) return null;
-              if (zoom !== "World" && zoom === country.continent) return null; // big enough when zoomed in
-              const meta = continentMeta(country.continent);
-              const sel = iso === selectedIso;
-              return (
-                <circle
-                  key={iso}
-                  cx={cen[0]}
-                  cy={cen[1]}
-                  r={sel ? markerR * 1.4 : markerR}
-                  className="wmap__marker"
-                  fill={meta.color}
-                  stroke="#ffffff"
-                  strokeWidth={1}
-                  vectorEffect="non-scaling-stroke"
-                  tabIndex={0}
-                  role="button"
-                  aria-label={country.name}
-                  onClick={() => onSelect(iso)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault();
-                      onSelect(iso);
-                    }
-                  }}
-                >
-                  <title>{country.name}</title>
-                </circle>
-              );
-            })}
-          </g>
+          {showMarkers && (
+            <g className="wmap__markers">
+              {MAP.small.map((iso) => {
+                const cen = MAP.cen[iso];
+                const country = byIso.get(iso);
+                if (!cen || !country) return null;
+                const meta = continentMeta(country.continent);
+                const sel = iso === selectedIso;
+                return (
+                  <circle
+                    key={iso}
+                    cx={cen[0]}
+                    cy={cen[1]}
+                    r={sel ? markerR * 1.4 : markerR}
+                    className="wmap__marker"
+                    fill={meta.color}
+                    stroke="#ffffff"
+                    strokeWidth={1}
+                    vectorEffect="non-scaling-stroke"
+                    tabIndex={0}
+                    role="button"
+                    aria-label={country.name}
+                    onClick={() => onSelect(iso)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        onSelect(iso);
+                      }
+                    }}
+                  >
+                    <title>{country.name}</title>
+                  </circle>
+                );
+              })}
+            </g>
+          )}
 
           {selCen && selMeta && (
             <circle
@@ -215,6 +333,8 @@ export function WorldMap({
           )}
         </svg>
       </div>
+
+      <p className="wmap__hint">Drag to pan · scroll or pinch to zoom · double-click to zoom in</p>
     </div>
   );
 }

@@ -651,6 +651,17 @@ body {
   height: auto;
   max-height: calc(100vh - 220px);
   display: block;
+  cursor: grab;
+  touch-action: none;
+}
+.wmap__svg:active {
+  cursor: grabbing;
+}
+.wmap__hint {
+  margin: 8px 2px 0;
+  font-size: 0.75rem;
+  color: var(--muted-2);
+  text-align: center;
 }
 .wmap__land path {
   fill: #d7dde6;
