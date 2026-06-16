@@ -5,8 +5,9 @@ Guidance for anyone (human or AI) working in this repository.
 ## What this is
 
 **World Explorer** — a static, kid-friendly interactive map for learning the
-world's **195 countries**: continents, capitals, flags, key figures, "known for"
-facts, country outlines, and a quiz.
+world's **195 countries** — continents, capitals, flags, key figures, "known for"
+facts, country outlines, a clickable world map and quizzes, plus an in-depth
+**Ukraine** tab. Fully bilingual (English / Ukrainian).
 
 - **Live:** https://endorrfin.github.io/world-explorer/
 - **Stack:** Vite + React 18 + TypeScript. No backend, no runtime fetches.
@@ -33,21 +34,29 @@ set to **GitHub Actions** (Settings → Pages).
 ## Architecture
 
 - **Single-page app** with hash routing: `#/map/<ISO2>`, `#/explore/<continent>/<ISO2>`,
-  `#/quiz` and `#/ukraine` (Map is the default landing tab). No router library — routing is a small
-  custom layer in `src/App.tsx`.
+  `#/quiz`, `#/ukraine` and `#/about` (Map is the default landing tab). No router library —
+  routing is a small custom layer in `src/App.tsx`.
 - **All data is static JSON** imported at build time. The app fetches nothing at runtime,
   so it works offline and under any sub-path.
-- **Layout:** top bar (brand, Map/Explore/Quiz/Ukraine tabs, search). Explore shows a sidebar
+- **Layout:** top bar (brand, Map/Explore/Quiz/Ukraine/About tabs, search, EN/UA toggle). Explore shows a sidebar
   (continents) → grid of country tiles → detail panel; Map and Quiz are separate tabs that
   share the same detail panel.
 - **`vite base` is `'./'`** (relative) + hash routing, so the site works under any
   GitHub Pages project sub-path **without config changes**.
+- **Static assets must resolve relatively.** Reference public assets in `index.html` with a
+  root path (`/favicon.svg`) and let Vite rewrite it to `./favicon.svg` at build — an absolute
+  `/favicon.svg` would break under the `/world-explorer/` sub-path. The tab icon is an inline
+  SVG globe at `public/favicon.svg` (plus a `theme-color` meta); `public/.nojekyll` stops Pages
+  from running Jekyll.
 
 ### Key files
 
 ```
 data.xlsx                     source spreadsheet (the origin of all figures)
+index.html                    app shell: title, description, favicon link, theme-color
 public/ukraine_{eng,ua}.json  Ukraine settlement hierarchy (lazy-loaded at runtime)
+public/favicon.svg            inline SVG globe favicon (referenced from index.html)
+public/.nojekyll              tells GitHub Pages to skip Jekyll processing
 scripts/
   build_data.py               data pipeline: xlsx → countries.json (cleans, fixes, joins, merges facts)
   build_shapes.mjs            country outlines: world-atlas TopoJSON → shapes.json
@@ -186,6 +195,12 @@ App imports countries.json + shapes.json (static)
   `#/about`) — a bilingual page describing every feature (Map, Explore, country details, Quiz,
   "Where in the world?", Ukraine, the EN/UA toggle, offline & open-source). The whole app —
   UI, names, capitals **and** facts — is now fully bilingual.
+- **v1.12** — **Crimea shown as Ukraine** (UN GA Res 68/262): `scripts/lib_crimea.mjs` moves
+  the Crimea polygon out of Russia and into Ukraine in both the tile/detail outlines
+  (`build_shapes.mjs`) and the clickable world map (`build_worldmap.mjs`) — see Data notes.
+  Plus polish: a **contact block** in the About tab (`krupka.ua@gmail.com`), a reword of the
+  "Where in the world?" game line, and a new **SVG globe favicon** (`public/favicon.svg`) with
+  a `theme-color` meta.
 
 ## Possible improvements (roadmap)
 
@@ -225,3 +240,32 @@ App imports countries.json + shapes.json (static)
   (v1.10) and all 630 "Known for" facts (v1.11). Future translation work would only be new
   content (e.g. additional facts) — keep `facts.json` and `facts_uk.json` in sync.
 - **Pronunciation audio** (TTS) for country and capital names.
+
+## Known limitations & concerns
+
+Carry these forward — they are the open risks/trade-offs as of v1.12.
+
+- **Crimea seam (cosmetic).** Reassigning the Crimea polygon (`lib_crimea.mjs`) can leave a
+  hairline gap along the Perekop isthmus between mainland Ukraine and Crimea; invisible at
+  tile/world-map scale. A truly seamless join would need a polygon **union** of the two rings
+  (e.g. `polygon-clipping`/`martinez`). Also consider asserting the helper returns `1`
+  (exactly one polygon moved) inside the builders, to fail loudly if a future Natural Earth
+  release renames/splits/merges the Crimea polygon and the anchor-point detection drifts.
+- **Favicon is SVG-only.** Renders in all current desktop browsers and Safari 16.4+. For very
+  old browsers and the iOS home-screen icon, add a rasterised `favicon.ico` and a PNG
+  `apple-touch-icon` (180×180) next to `favicon.svg`.
+- **Bundle size** is dominated by `flag-icons` (~430 KB CSS shipping all ~260 flags; ~89 KB
+  gzip). App JS is ~606 KB / ~200 KB gzip. Subsetting the flag CSS to the 195 used flags is
+  the biggest easy win (see Quality / tech).
+- **Building off linux-x64** (e.g. a local Apple-silicon sandbox) can hit npm's optional-
+  dependency bug for Rollup's native binary (`Cannot find module @rollup/rollup-*`); work
+  around with `npm i @rollup/rollup-<platform> --no-save`. **GitHub Actions CI is unaffected** —
+  a fresh `npm ci` on linux-x64 installs the right binary, so deploys build cleanly.
+- **Keep `facts.json` and `facts_uk.json` in sync** — identical 195 keys and the same
+  per-country count; `build_data.py` merges both into `countries.json` (`knownFor` / `factsUk`).
+- **Data freshness.** Figures are a 2023–2025 mix with no on-screen "data as of" date; coverage
+  gaps persist (births/day 99/195, peace index 160/195, GDP-per-capita ~178/195, outlines
+  194/195 — Tuvalu has no shape at this resolution).
+- **No automated tests yet.** There's no CI guard on the data pipeline (counts, continent map,
+  required-field nulls), the i18n key parity, or the built site — regressions are caught only
+  by `npm run build` (tsc) and manual checks.
