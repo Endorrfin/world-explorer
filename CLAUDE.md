@@ -36,8 +36,9 @@ set to **GitHub Actions** (Settings → Pages).
   custom layer in `src/App.tsx`.
 - **All data is static JSON** imported at build time. The app fetches nothing at runtime,
   so it works offline and under any sub-path.
-- **Layout:** top bar (brand, Explore/Quiz tabs, search) → sidebar (continents) →
-  main grid of country tiles → detail panel. The quiz is a separate tab.
+- **Layout:** top bar (brand, Map/Explore/Quiz tabs, search). Explore shows a sidebar
+  (continents) → grid of country tiles → detail panel; Map and Quiz are separate tabs that
+  share the same detail panel.
 - **`vite base` is `'./'`** (relative) + hash routing, so the site works under any
   GitHub Pages project sub-path **without config changes**.
 
@@ -60,7 +61,7 @@ src/
   components/
     Sidebar.tsx               continent list with counts
     CountryCard.tsx           tile: flag + name + capital + outline
-    CountryDetail.tsx         detail panel (Identity / People / Economy / Land / Known for)
+    CountryDetail.tsx         detail panel (People / Economy / Land / Neighbours / Known for)
     CountryShape.tsx          renders an SVG silhouette from shapes.json
     WorldMap.tsx              clickable geoEqualEarth world map (pan/zoom, markers); reused by the game
     FindGame.tsx              "Where in the world?" game — click the country on the map

@@ -1,132 +1,224 @@
 # 🌍 World Explorer
 
-An interactive map for learning **countries, capitals, flags, facts and figures**
-with kids. Pick a continent on the left, browse the country tiles, click one to
-open its full profile, or jump into the **Quiz** to test what you've learned.
+An interactive map for learning the world's **195 countries** with kids — capitals,
+flags, key figures, country outlines, "known for" facts, land neighbours, and a quiz.
 
-Built as a static **Vite + React + TypeScript** site — it runs locally and
-deploys to GitHub Pages with no backend.
+**Live:** https://endorrfin.github.io/world-explorer/
+**Stack:** Vite + React 18 + TypeScript · static, no backend · deployed to GitHub Pages.
 
-## Features
+**Language / Мова:** [English](#-english) · [Українська](#-українська)
 
-- **Clickable world map** — a real geoEqualEarth map: click a country for its details (its
-  land neighbours get highlighted), drag to pan and scroll/pinch to zoom, or jump to any
-  continent. (The default tab.)
-- **Explore by continent** — sidebar with all six continents and country counts.
-- **Country tiles** — flag, name, capital and a small country outline; click for details.
-- **Rich detail panel** — capital, population, GDP, per-person income, land &
-  total area, density, median age, births per day, peace index, ISO/phone code,
-  **clickable neighbouring countries**, and **2–4 "Known for" facts** written for children.
-- **Quiz mode** — six games: *capital*, *country by flag*, *country by outline*,
-  *population*, *continent*, and **"Where in the world?"** (click the country on the live
-  map), scoped to any continent, with scoring.
-- **Search** by country or capital name.
-- **Shareable links** — the URL hash tracks the open continent/country
-  (e.g. `#/explore/europe/FR`).
-- **Offline-friendly** — flags use the bundled `flag-icons` SVG set, not emoji.
+---
 
-## Run locally
+## 🇬🇧 English
+
+World Explorer is a static, kid-friendly web app. It runs fully offline (all data is
+bundled JSON, flags are local SVGs) and deploys to GitHub Pages with no server. The app
+has three tabs — **Map**, **Explore** and **Quiz** — that share one country detail panel.
+
+### Features
+
+1. **Interactive world map.** A real `geoEqualEarth` projection of all 195 countries,
+   coloured by continent. **Drag** to pan, **scroll or pinch** to zoom (centred on the
+   cursor), **double-click / double-tap** to zoom in, or jump straight to a continent with
+   the zoom buttons (animated, eased fly-to). Tiny island and micro-states get **clickable
+   dot-markers** so they're reachable at world scale (including Tuvalu). Click any country
+   to open its details.
+
+2. **Rich country details.** A panel for every country with: capital, population (2025)
+   and world share, density, median age, fertility rate, urban %, births per day, GDP and
+   GDP per person, land & total area and world land share, the Global Peace Index, ISO-2
+   and phone codes — plus **2–4 short, kid-friendly "Known for" facts** (landmarks, nature,
+   culture). Missing figures show as "—".
+
+3. **Neighbour highlighting.** Selecting a country **outlines its land neighbours** on the
+   map (the selected country is filled; neighbours get an amber outline) and lists them in
+   the panel under **"Neighbours (N)"** with a count. Each neighbour is **clickable** to hop
+   straight to it. Island nations show "no land borders".
+
+4. **Locate on map.** In the Explore detail panel, a **"Locate on map"** button flies the
+   map to the country's continent and **pulses** it — answering "where in the world is this?".
+
+5. **Explore by continent.** A sidebar lists the six continents with **live counts**; the
+   main area shows clickable **tiles** (flag + name + capital + a small country outline).
+   Long names and capitals wrap fully — nothing is truncated.
+
+6. **Search.** Filter the tiles by **country or capital** name as you type.
+
+7. **Quiz — six games.** Guess the **capital**, the **country by flag**, the **country by
+   outline**, the **population**, the **continent**, and **"Where in the world?"** — each
+   scoped to any continent, with scoring.
+
+8. **"Where in the world?" game.** Read a country name and **click it on the real map**.
+   Correct → green; wrong → your pick turns red and the answer is revealed in green with a
+   pulse. A round is 8 questions with a final score.
+
+9. **Works offline.** No backend and no runtime fetches — all data is committed static
+   JSON, and flags use the bundled `flag-icons` SVG set (so they render on every OS).
+
+10. **Responsive.** Adapts to phones: the country tiles become full-width list rows, the
+    detail panel slides in as an overlay, and the quiz options stack to one column.
+
+11. **Shareable deep links.** The URL hash tracks the open tab / continent / country
+    (e.g. `#/map/FR`, `#/explore/europe/FR`, `#/quiz`), so links restore the same view.
+
+### Run locally
 
 Requires Node 22+.
 
 ```bash
 npm install
 npm run dev        # http://localhost:5173
+npm run build      # type-check + production build → dist/
+npm run preview    # serve the production build
 ```
 
-Build and preview the production bundle:
+> It's a bundled app, so opening `dist/index.html` straight off disk won't work
+> (browsers block module scripts over `file://`). Use `npm run dev`, `npm run preview`,
+> or host the `dist/` folder.
+
+### How the data works
+
+The country figures come from `data.xlsx`. Generator scripts turn the sources into the
+static JSON the app reads (run only when you change the inputs):
 
 ```bash
-npm run build
-npm run preview
+npm run data       # data.xlsx → src/data/countries.json (cleans, fixes, merges facts + neighbours)
+npm run shapes     # Natural Earth → src/data/shapes.json (per-country tile outlines)
+npm run worldmap   # Natural Earth → src/data/worldmap.json (single-projection clickable map)
+npm run neighbors  # world-countries → src/data/neighbors.json (land borders)
 ```
 
-> Note: because it's a bundled app, opening `dist/index.html` directly from the
-> file system won't work (browsers block module scripts over `file://`).
-> Use `npm run dev`, `npm run preview`, or host the `dist/` folder.
+- Edit **`src/data/facts.json`** (keyed by ISO-2) to change the "Known for" facts, then
+  re-run `npm run data`.
+- The pipeline **fixes source bugs** (the spreadsheet labels every Caribbean state as
+  "Oceania"; capitals like `Jakarta[9]` and Nauru/`Yaren` are corrected).
+- Coverage gaps shown as "—": births/day 99/195, peace index 160/195, GDP-per-capita 17
+  small states, outlines 194/195 (Tuvalu).
 
-## The data
+### Deploy to GitHub Pages
 
-All figures come from `data.xlsx` (population 2025, GDP 2023, areas, peace index,
-etc.). A Python script cleans and joins the sheets into the JSON the app reads:
+Push to `main`; the included GitHub Actions workflow runs `npm ci && npm run build` and
+publishes `dist/`. In **Settings → Pages**, set **Source = GitHub Actions**. The Vite
+`base` is `'./'` and routing is hash-based, so the site works under any project sub-path.
 
-```bash
-npm run data       # = python3 scripts/build_data.py
-```
-
-`scripts/build_data.py`:
-
-- filters to the **195 UN states** (193 members + observers),
-- **fixes the source's continent bug** (it labels every Caribbean state as
-  "Oceania") by deriving the continent from the correct sub-region,
-- normalises messy numbers and percentages,
-- joins the auxiliary sheets (births/day, fertility, median age, peace index,
-  total area) by country name,
-- merges the hand-written facts, and
-- writes `src/data/countries.json`.
-
-### Country shapes
-
-The tile outlines come from `src/data/shapes.json` (ISO-2 → SVG path), generated
-from Natural Earth data by `scripts/build_shapes.mjs`:
-
-```bash
-npm run shapes     # = node scripts/build_shapes.mjs
-```
-
-It covers 194/195 countries; Tuvalu is too small to render at this map
-resolution and simply shows no outline.
-
-### World map
-
-The `Map` tab reads `src/data/worldmap.json` — all 195 countries projected into one
-shared geoEqualEarth space, plus a per-continent zoom box — generated by
-`scripts/build_worldmap.mjs`:
-
-```bash
-npm run worldmap
-```
-
-### Editing the facts
-
-The "Known for" facts live in **`src/data/facts.json`**, keyed by 2-letter ISO
-code (e.g. `"FR": ["Home to the Eiffel Tower…", …]`). Edit the text there and
-re-run `npm run data` to regenerate `countries.json`.
-
-### Data coverage caveats
-
-- **Births per day** is only published for the top ~100 countries, so it shows
-  for 99/195 and is hidden (—) for the rest.
-- **Peace index (GPI 2024)** covers 160/195; small states are omitted in the
-  source.
-- **Country outlines** cover 194/195 (Tuvalu is too small at this resolution).
-
-## Deploy to GitHub Pages
-
-1. Push this folder to a GitHub repo (default branch `main`).
-2. In **Settings → Pages**, set **Source = GitHub Actions**.
-3. The included workflow (`.github/workflows/deploy.yml`) builds and publishes
-   on every push.
-
-The Vite `base` is set to `./` (relative) and routing is hash-based, so the site
-works under any project sub-path (`https://<user>.github.io/<repo>/`) without
-extra configuration.
-
-## Project structure
+### Project structure
 
 ```
 data.xlsx                 source spreadsheet
-scripts/
-  build_data.py           data pipeline (xlsx -> countries.json)
-  build_shapes.mjs        country outlines (TopoJSON -> shapes.json)
-  build_worldmap.mjs      single-projection clickable map (TopoJSON -> worldmap.json)
+scripts/                  data generators (build_data.py, build_shapes/worldmap/neighbors.mjs)
 src/
-  data/
-    facts.json            editable "Known for" facts (by ISO code)
-    countries.json        generated app data — do not edit by hand
-    shapes.json           generated country outlines — do not edit by hand
-    worldmap.json         generated single-projection clickable map
-  components/             WorldMap, Sidebar, CountryCard, CountryDetail, CountryShape, Quiz, Flag
-  lib/                    continents meta + number formatting
+  data/                   generated JSON (countries, shapes, worldmap, neighbors) + editable facts.json
+  components/             WorldMap, FindGame, Sidebar, CountryCard, CountryDetail, CountryShape, Quiz, Flag
+  lib/                    continents metadata + number formatting
   App.tsx                 layout, search, tabs, hash routing
+```
+
+---
+
+## 🇺🇦 Українська
+
+World Explorer — це статичний вебзастосунок для вивчення географії з дітьми. Працює
+повністю офлайн (усі дані — вбудований JSON, прапори — локальні SVG) і деплоїться на
+GitHub Pages без сервера. Має три вкладки — **Map**, **Explore** і **Quiz**, які
+ділять спільну панель деталей країни.
+
+### Можливості (Features)
+
+1. **Інтерактивна карта світу.** Справжня проєкція `geoEqualEarth` усіх 195 країн,
+   розфарбованих за континентами. **Перетягуй** для панорамування, **колесо або щипок** —
+   зум (до точки під курсором), **подвійний клік/тап** — наближення, або одразу перейди до
+   континенту кнопками (плавний анімований приліт). Крихітні острівні та мікродержави
+   мають **клікабельні маркери-крапки**, щоб їх можна було дістати на масштабі світу
+   (зокрема Тувалу). Клік по країні відкриває її деталі.
+
+2. **Детальна інформація про країну.** Панель для кожної країни: столиця, населення
+   (2025) і частка у світі, густота, медіанний вік, народжуваність, % міського населення,
+   народжень на день, ВВП і ВВП на людину, площа суші й загальна площа та частка світу,
+   Глобальний індекс миру, коди ISO-2 і телефонний — плюс **2–4 короткі дитячі факти
+   "Known for"** (пам'ятки, природа, культура). Відсутні цифри показані як "—".
+
+3. **Підсвітка сусідів.** При виборі країни її **сухопутні сусіди обводяться** на карті
+   (вибрана країна зафарбована, сусіди — бурштиновий контур) і перелічені в панелі під
+   **"Neighbours (N)"** з лічильником. Кожен сусід **клікабельний** — переходиш одразу до
+   нього. Острівні держави показують "no land borders".
+
+4. **Locate on map.** У панелі деталей вкладки Explore кнопка **"Locate on map"**
+   перелітає до континенту країни і **пульсує** нею — відповідь на питання «а де це?».
+
+5. **Огляд за континентами.** Бічна панель перелічує шість континентів із **лічильниками**;
+   у головній області — клікабельні **плитки** (прапор + назва + столиця + контур країни).
+   Довгі назви й столиці переносяться повністю — нічого не обрізається.
+
+6. **Пошук.** Фільтрування плиток за назвою **країни або столиці** під час набору.
+
+7. **Квіз — шість ігор.** Вгадай **столицю**, **країну за прапором**, **країну за
+   контуром**, **населення**, **континент** і **"Where in the world?"** — з вибором
+   регіону та підрахунком очок.
+
+8. **Гра "Where in the world?".** Читаєш назву країни і **клікаєш її на справжній карті**.
+   Влучив → зелений; промах → твій вибір червоний, а правильна підсвічується зеленим із
+   пульсом. Раунд — 8 питань із фінальним рахунком.
+
+9. **Працює офлайн.** Без сервера й без запитів під час роботи — усі дані вбудовані як
+   статичний JSON, а прапори беруться з локального набору `flag-icons` (рендеряться на
+   будь-якій ОС).
+
+10. **Адаптивність.** Підлаштовується під телефони: плитки країн стають рядками на всю
+    ширину, панель деталей висувається оверлеєм, опції квізу — в одну колонку.
+
+11. **Посилання, якими можна ділитися.** Хеш URL зберігає відкриту вкладку / континент /
+    країну (напр. `#/map/FR`, `#/explore/europe/FR`, `#/quiz`) — посилання відновлює той
+    самий вигляд.
+
+### Запуск локально
+
+Потрібен Node 22+.
+
+```bash
+npm install
+npm run dev        # http://localhost:5173
+npm run build      # перевірка типів + продакшн-білд → dist/
+npm run preview    # віддати продакшн-білд
+```
+
+> Це зібраний застосунок, тож відкрити `dist/index.html` напряму з диска не вийде
+> (браузери блокують модульні скрипти через `file://`). Використовуй `npm run dev`,
+> `npm run preview` або хостинг теки `dist/`.
+
+### Як працюють дані
+
+Цифри по країнах беруться з `data.xlsx`. Скрипти-генератори перетворюють джерела на
+статичний JSON, який читає застосунок (запускати лише при зміні вхідних даних):
+
+```bash
+npm run data       # data.xlsx → src/data/countries.json (чистить, виправляє, додає факти + сусідів)
+npm run shapes     # Natural Earth → src/data/shapes.json (контури країн для плиток)
+npm run worldmap   # Natural Earth → src/data/worldmap.json (єдина проєкція клікабельної карти)
+npm run neighbors  # world-countries → src/data/neighbors.json (сухопутні кордони)
+```
+
+- Редагуй **`src/data/facts.json`** (ключ — ISO-2), щоб змінити факти "Known for", потім
+  перезапусти `npm run data`.
+- Пайплайн **виправляє помилки джерела** (таблиця позначає всі країни Карибів як "Oceania";
+  столиці на кшталт `Jakarta[9]` і Науру/`Yaren` виправлено).
+- Прогалини в даних показані як "—": народжень/день 99/195, індекс миру 160/195, ВВП на
+  людину для 17 малих держав, контури 194/195 (Тувалу).
+
+### Деплой на GitHub Pages
+
+Запуш у `main`; доданий воркфлоу GitHub Actions виконає `npm ci && npm run build` і
+опублікує `dist/`. У **Settings → Pages** постав **Source = GitHub Actions**. Vite `base`
+дорівнює `'./'`, а маршрутизація — на хешах, тож сайт працює під будь-яким під-шляхом.
+
+### Структура проєкту
+
+```
+data.xlsx                 вихідна таблиця
+scripts/                  генератори даних (build_data.py, build_shapes/worldmap/neighbors.mjs)
+src/
+  data/                   згенерований JSON (countries, shapes, worldmap, neighbors) + редагований facts.json
+  components/             WorldMap, FindGame, Sidebar, CountryCard, CountryDetail, CountryShape, Quiz, Flag
+  lib/                    метадані континентів + форматування чисел
+  App.tsx                 розкладка, пошук, вкладки, маршрутизація на хешах
 ```
