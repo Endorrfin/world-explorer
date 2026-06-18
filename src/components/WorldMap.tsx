@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import mapData from "../data/worldmap.json";
 import type { Continent, Country } from "../types";
 import { CONTINENTS, continentMeta } from "../lib/continents";
-import { continentLabel, displayName, useLang, useT } from "../lib/i18n";
+import { continentLabel, displayName, useLang, useT, type StringKey } from "../lib/i18n"; // CHANGED: StringKey
 
 interface MapData {
   w: number;
@@ -49,6 +49,30 @@ const FB: Record<string, { fill: string; stroke: string }> = {
 };
 const EMPTY_FEEDBACK: Record<string, "correct" | "wrong"> = {};
 
+// CHANGED: heatmap layer support
+type HeatLayerId = "population" | "gdp" | "area" | "births";
+type HeatLayer = HeatLayerId | null;
+const HEAT_LAYERS: HeatLayerId[] = ["population", "gdp", "area", "births"];
+
+interface HeatConfig {
+  getter: (c: Country) => number | null;
+  hue: number;
+  log: boolean;
+  labelKey: StringKey;
+}
+const HEAT_CONFIGS: Record<HeatLayerId, HeatConfig> = {
+  population: { getter: (c) => c.population, hue: 210, log: true, labelKey: "heat.population" },
+  gdp: { getter: (c) => c.gdpPerCapita, hue: 140, log: true, labelKey: "heat.gdp" },
+  area: { getter: (c) => c.landAreaKm2, hue: 25, log: true, labelKey: "heat.area" },
+  births: { getter: (c) => c.birthsPerDay, hue: 290, log: false, labelKey: "heat.births" },
+};
+
+function heatColor(t: number, hue: number): string {
+  const l = Math.round(85 - 60 * t); // 85% (light) → 25% (dark)
+  const s = Math.round(30 + 60 * t); // 30% → 90%
+  return `hsl(${hue},${s}%,${l}%)`;
+}
+
 export function WorldMap({
   countries,
   selectedIso,
@@ -69,6 +93,7 @@ export function WorldMap({
   const byIso = useMemo(() => new Map(countries.map((c) => [c.iso2, c])), [countries]);
   const t = useT();
   const { lang } = useLang();
+  const [heatLayer, setHeatLayer] = useState<HeatLayer>(null); // CHANGED: heatmap state
 
   const neighborSet = useMemo(() => {
     if (!showNeighbors || !selectedIso) return new Set<string>();
@@ -240,6 +265,19 @@ export function WorldMap({
     zoomAt(0.55, ux, uy);
   };
 
+  // CHANGED: heatmap metadata — min/max per layer
+  const heatMeta = useMemo(() => {
+    if (!heatLayer) return null;
+    const cfg = HEAT_CONFIGS[heatLayer];
+    const vals = countries
+      .map((c) => cfg.getter(c))
+      .filter((v): v is number => v != null && v > 0);
+    if (!vals.length) return null;
+    const mn = Math.min(...vals);
+    const mx = Math.max(...vals);
+    return { cfg, min: mn, max: mx };
+  }, [heatLayer, countries]);
+
   const landEls = useMemo(() => MAP.land.map((d, i) => <path key={i} d={d} />), []);
 
   const countryEls = useMemo(
@@ -250,13 +288,42 @@ export function WorldMap({
         const meta = continentMeta(country.continent);
         const sel = iso === selectedIso;
         const fb = feedback[iso];
+
+        // CHANGED: heatmap fill logic
+        let fill: string;
+        let fillOpacity: number;
+        if (fb) {
+          fill = FB[fb].fill;
+          fillOpacity = 0.9;
+        } else if (heatMeta) {
+          const raw = heatMeta.cfg.getter(country);
+          if (raw == null || raw <= 0) {
+            fill = "#bbbbbb";
+            fillOpacity = sel ? 0.9 : 0.65;
+          } else {
+            let norm: number;
+            if (heatMeta.cfg.log) {
+              const mn = Math.max(1, heatMeta.min);
+              const mx = Math.max(1, heatMeta.max);
+              norm = mn >= mx ? 0 : (Math.log(raw) - Math.log(mn)) / (Math.log(mx) - Math.log(mn));
+            } else {
+              norm = heatMeta.min >= heatMeta.max ? 0 : (raw - heatMeta.min) / (heatMeta.max - heatMeta.min);
+            }
+            fill = heatColor(Math.min(1, Math.max(0, norm)), heatMeta.cfg.hue);
+            fillOpacity = sel ? 1 : 0.88;
+          }
+        } else {
+          fill = meta.color;
+          fillOpacity = sel ? 0.92 : 0.5;
+        }
+
         return (
           <path
             key={iso}
             d={d}
             className={`wmap__country${sel ? " wmap__country--sel" : ""}`}
-            fill={fb ? FB[fb].fill : meta.color}
-            fillOpacity={fb ? 0.9 : sel ? 0.92 : 0.5}
+            fill={fill}
+            fillOpacity={fillOpacity}
             stroke={fb ? FB[fb].stroke : sel ? meta.color : "#ffffff"}
             strokeWidth={fb || sel ? 1.4 : 0.5}
             vectorEffect="non-scaling-stroke"
@@ -277,7 +344,7 @@ export function WorldMap({
           </path>
         );
       }),
-    [byIso, selectedIso, onSelect, feedback, lang]
+    [byIso, selectedIso, onSelect, feedback, lang, heatMeta] // CHANGED: added heatMeta
   );
 
   const markerR = vb[2] * 0.0045;
@@ -304,6 +371,27 @@ export function WorldMap({
             onClick={() => flyTo(continentBox(c.name), c.name)}
           >
             {c.emoji} {continentLabel(lang, c.name)}
+          </button>
+        ))}
+      </div>
+
+      {/* CHANGED: heatmap layer toggle buttons */}
+      <div className="wmap__heat-controls" role="group" aria-label="Data overlay">
+        <button
+          type="button"
+          className={`wmap__heat-btn${heatLayer === null ? " wmap__heat-btn--on" : ""}`}
+          onClick={() => setHeatLayer(null)}
+        >
+          {t("heat.default")}
+        </button>
+        {HEAT_LAYERS.map((key) => (
+          <button
+            key={key}
+            type="button"
+            className={`wmap__heat-btn wmap__heat-btn--${key}${heatLayer === key ? " wmap__heat-btn--on" : ""}`}
+            onClick={() => setHeatLayer(heatLayer === key ? null : key)}
+          >
+            {t(HEAT_CONFIGS[key].labelKey)}
           </button>
         ))}
       </div>
@@ -340,6 +428,31 @@ export function WorldMap({
                     vectorEffect="non-scaling-stroke"
                   />
                 ) : null;
+              })}
+            </g>
+          )}
+
+          {/* CHANGED: neighbor centroid lines */}
+          {showNeighbors && selectedIso && neighborSet.size > 0 && MAP.cen[selectedIso] && (
+            <g className="wmap__nb-lines" pointerEvents="none">
+              {[...neighborSet].map((iso) => {
+                const nCen = MAP.cen[iso];
+                const sCen = MAP.cen[selectedIso];
+                if (!nCen || !sCen) return null;
+                return (
+                  <line
+                    key={`nbline-${iso}`}
+                    x1={sCen[0]}
+                    y1={sCen[1]}
+                    x2={nCen[0]}
+                    y2={nCen[1]}
+                    stroke="#c2710a"
+                    strokeWidth={0.8}
+                    strokeDasharray="3 2"
+                    vectorEffect="non-scaling-stroke"
+                    opacity={0.6}
+                  />
+                );
               })}
             </g>
           )}
@@ -398,6 +511,20 @@ export function WorldMap({
           )}
         </svg>
       </div>
+
+      {/* CHANGED: heatmap legend */}
+      {heatMeta && (
+        <div className="wmap__legend">
+          <span className="wmap__legend-lo">{t("heat.less")}</span>
+          <div
+            className="wmap__legend-bar"
+            style={{
+              background: `linear-gradient(to right, ${heatColor(0, heatMeta.cfg.hue)}, ${heatColor(1, heatMeta.cfg.hue)})`,
+            }}
+          />
+          <span className="wmap__legend-hi">{t("heat.more")}</span>
+        </div>
+      )}
 
       <p className="wmap__hint">{t("map.hint")}</p>
     </div>

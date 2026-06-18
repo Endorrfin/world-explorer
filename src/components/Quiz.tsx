@@ -16,12 +16,14 @@ import { CountryShape, hasShape } from "./CountryShape";
 import { FindGame } from "./FindGame";
 import { FlagMatchGame } from "./FlagMatchGame"; // CHANGED
 import { UkraineQuiz } from "./UkraineQuiz"; // CHANGED
+import { CompareGame } from "./CompareGame"; // CHANGED
+import { SortGame } from "./SortGame"; // CHANGED
 
-type Mode = "capital" | "flag" | "shape" | "population" | "continent" | "where" | "match"; // CHANGED
+type Mode = "capital" | "flag" | "shape" | "population" | "continent" | "where" | "match" | "compare" | "sort"; // CHANGED
 type Scope = Continent | "All";
 
 const ROUND = 10;
-const WORLD_MODE_IDS: Mode[] = ["capital", "flag", "shape", "population", "continent", "where", "match"]; // CHANGED
+const WORLD_MODE_IDS: Mode[] = ["capital", "flag", "shape", "population", "continent", "where", "match", "compare", "sort"]; // CHANGED
 const MODE_IDS = WORLD_MODE_IDS; // alias kept for existing code
 
 interface Question {
@@ -91,6 +93,10 @@ export function Quiz({ countries }: { countries: Country[] }) {
   const [playWhere, setPlayWhere] = useState(false);
   const [playMatch, setPlayMatch] = useState(false); // CHANGED
   const [playUa, setPlayUa] = useState(false); // CHANGED
+  const [playCompare, setPlayCompare] = useState(false); // CHANGED
+  const [playSort, setPlaySort] = useState(false); // CHANGED
+  const [mistakes, setMistakes] = useState<{ q: Question; picked: string }[]>([]); // CHANGED
+  const [showMistakes, setShowMistakes] = useState(false); // CHANGED
 
   const start = () => {
     if (mode === "where") {
@@ -101,10 +107,14 @@ export function Quiz({ countries }: { countries: Country[] }) {
       setPlayMatch(true); // CHANGED
       return; // CHANGED
     } // CHANGED
+    if (mode === "compare") { setPlayCompare(true); return; } // CHANGED
+    if (mode === "sort") { setPlaySort(true); return; } // CHANGED
     setRound(buildRound(countries, mode, scope, lang));
     setIdx(0);
     setScore(0);
     setPicked(null);
+    setMistakes([]); // CHANGED
+    setShowMistakes(false); // CHANGED
   };
 
   const scopes: Scope[] = useMemo(() => ["All", ...CONTINENTS.map((c) => c.name)], []);
@@ -118,6 +128,12 @@ export function Quiz({ countries }: { countries: Country[] }) {
   } // CHANGED
   if (playUa) { // CHANGED
     return <UkraineQuiz onExit={() => setPlayUa(false)} />; // CHANGED
+  } // CHANGED
+  if (playCompare) { // CHANGED
+    return <CompareGame countries={countries} scope={scope} onExit={() => setPlayCompare(false)} />; // CHANGED
+  } // CHANGED
+  if (playSort) { // CHANGED
+    return <SortGame countries={countries} scope={scope} onExit={() => setPlaySort(false)} />; // CHANGED
   } // CHANGED
 
   // ---- setup ----
@@ -178,6 +194,10 @@ export function Quiz({ countries }: { countries: Country[] }) {
   // ---- results ----
   if (idx >= round.length) {
     const pct = Math.round((score / round.length) * 100);
+    // CHANGED: helper to display answer value correctly per mode
+    const displayVal = (val: string) =>
+      mode === "continent" ? continentLabel(lang, val as Continent) : val;
+
     return (
       <div className="quiz quiz--result">
         <h2 className="quiz__title">{t(cheerKey(pct))}</h2>
@@ -192,6 +212,37 @@ export function Quiz({ countries }: { countries: Country[] }) {
             {t("quiz.changeGame")}
           </button>
         </div>
+
+        {/* CHANGED: error zones */}
+        {mistakes.length > 0 && (
+          <>
+            <button
+              type="button"
+              className="quiz__mistakes-toggle"
+              onClick={() => setShowMistakes((v) => !v)}
+            >
+              {showMistakes ? "▲" : "▼"} {t("quiz.reviewMistakes")} ({mistakes.length})
+            </button>
+            {showMistakes && (
+              <div className="quiz__mistakes">
+                {mistakes.map(({ q: mq, picked: mp }, i) => (
+                  <div key={i} className="quiz__mistake">
+                    <Flag iso2={mq.country.iso2} className="quiz__mistake-flag" />
+                    <div className="quiz__mistake-info">
+                      <div className="quiz__mistake-country">
+                        {displayName(lang, mq.country)}
+                      </div>
+                      <div className="quiz__mistake-answers">
+                        <span className="quiz__mistake-wrong">✗ {t("quiz.yourAnswer")}: {displayVal(mp)}</span>
+                        <span className="quiz__mistake-right">✓ {t("quiz.rightAnswer")}: {displayVal(mq.answer)}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </>
+        )}
       </div>
     );
   }
@@ -203,7 +254,11 @@ export function Quiz({ countries }: { countries: Country[] }) {
   const pick = (opt: string) => {
     if (answered) return;
     setPicked(opt);
-    if (opt === q.answer) setScore((s) => s + 1);
+    if (opt === q.answer) {
+      setScore((s) => s + 1);
+    } else {
+      setMistakes((m) => [...m, { q, picked: opt }]); // CHANGED: track wrong answers
+    }
   };
   const next = () => {
     setPicked(null);

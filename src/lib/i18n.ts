@@ -117,6 +117,37 @@ const en = {
   "find.wrong": "Not quite — you picked {x}. {t} is in green.",
   "find.sea": "the sea",
   "find.hint": "Tap {x} on the map. Zoom in if it's tiny.",
+
+  // CHANGED: compare game
+  "mode.compare": "Who's bigger?",
+  "mode.compare.b": "Two countries — pick the larger. Play until wrong!",
+  "compare.streak": "Streak",
+  "compare.prompt.pop": "Which country has more people?",
+  "compare.prompt.area": "Which country is larger by area?",
+  "compare.correct": "Correct answer:",
+
+  // CHANGED: sort game
+  "mode.sort": "Sort by size",
+  "mode.sort.b": "4 countries — click from smallest to largest",
+  "sort.prompt.pop": "Click in order: smallest → largest population",
+  "sort.prompt.area": "Click in order: smallest → largest area",
+  "sort.check": "Check →",
+  "sort.next": "Next →",
+
+  // CHANGED: error zones
+  "quiz.mistakes": "Mistakes: {n}",
+  "quiz.reviewMistakes": "Review mistakes",
+  "quiz.yourAnswer": "You chose",
+  "quiz.rightAnswer": "Correct",
+
+  // CHANGED: heatmap
+  "heat.default": "Default",
+  "heat.population": "Population",
+  "heat.gdp": "GDP / capita",
+  "heat.area": "Land area",
+  "heat.births": "Births / day",
+  "heat.less": "Low",
+  "heat.more": "High",
 };
 
 const uk: Record<keyof typeof en, string> = {
@@ -232,6 +263,37 @@ const uk: Record<keyof typeof en, string> = {
   "find.wrong": "Майже — ти обрав {x}. {t} підсвічена зеленим.",
   "find.sea": "море",
   "find.hint": "Натисни {x} на карті. Наблизь, якщо вона дрібна.",
+
+  // CHANGED: compare game
+  "mode.compare": "Хто більший?",
+  "mode.compare.b": "Дві країни — обери більшу. Граєш до першої помилки!",
+  "compare.streak": "Серія",
+  "compare.prompt.pop": "Яка країна більш населена?",
+  "compare.prompt.area": "Яка країна більша за площею?",
+  "compare.correct": "Правильна відповідь:",
+
+  // CHANGED: sort game
+  "mode.sort": "Сортування",
+  "mode.sort.b": "4 країни — клікни від найменшої до найбільшої",
+  "sort.prompt.pop": "Клікни по порядку: найменше → найбільше населення",
+  "sort.prompt.area": "Клікни по порядку: найменша → найбільша площа",
+  "sort.check": "Перевірити →",
+  "sort.next": "Далі →",
+
+  // CHANGED: error zones
+  "quiz.mistakes": "Помилки: {n}",
+  "quiz.reviewMistakes": "Переглянути помилки",
+  "quiz.yourAnswer": "Ваша відповідь",
+  "quiz.rightAnswer": "Правильно",
+
+  // CHANGED: heatmap
+  "heat.default": "Стандарт",
+  "heat.population": "Населення",
+  "heat.gdp": "ВВП на особу",
+  "heat.area": "Площа суші",
+  "heat.births": "Народжень на день",
+  "heat.less": "Менше",
+  "heat.more": "Більше",
 };
 
 export type StringKey = keyof typeof en;

@@ -45,8 +45,8 @@ const EN: Content = {
     },
     {
       icon: "🎯",
-      title: "Quiz — eight games", // CHANGED
-      body: "Guess the capital, the country by its flag, the country by its outline, the population, the continent, 'Where in the world?', and now 'Match the flags' (connect 4 flags to 4 countries). Plus a dedicated Ukraine Quiz with three games: find the oblast on the map, guess the administrative centre, and name the oblast from a fun fact.", // CHANGED
+      title: "Quiz — twelve games", // CHANGED
+      body: "Nine world games: guess the capital, country by flag, country by outline, population, continent, 'Where in the world?', 'Match the flags', 'Sort by size' (rank 4 countries smallest to largest), and 'Who's bigger?' (pick the larger country — play until wrong!). Plus a Ukraine Quiz with three games: find the oblast on the map, guess the administrative centre, and name the oblast from a fun fact.", // CHANGED
     },
     {
       icon: "🌍",
@@ -102,8 +102,8 @@ const UK: Content = {
     },
     {
       icon: "🎯",
-      title: "Квіз — вісім ігор", // CHANGED
-      body: "Вгадай столицю, країну за прапором, країну за контуром, населення, континент, «Де у світі?» і «Підбери прапори» (з'єднай 4 прапори з 4 країнами). Плюс окремий Квіз про Україну з трьома іграми: знайди область на карті, вгадай адміністративний центр та назви область за цікавим фактом.", // CHANGED
+      title: "Квіз — дванадцять ігор", // CHANGED
+      body: "Дев'ять світових ігор: вгадай столицю, країну за прапором, країну за контуром, населення, континент, «Де у світі?», «Підбери прапори», «Сортування за розміром» (розстав 4 країни від найменшої до найбільшої) та «Хто більший?» (обери більшу країну — граєш до першої помилки!). Плюс Квіз про Україну з трьома іграми: знайди область на карті, вгадай адміністративний центр та назви область за цікавим фактом.", // CHANGED
     },
     {
       icon: "🌍",

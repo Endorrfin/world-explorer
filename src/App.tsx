@@ -6,6 +6,8 @@ import {
   LangContext,
   continentLabel,
   detectLang,
+  displayCapital,
+  displayName,
   localeOf,
   translate,
   type Lang,
@@ -64,6 +66,7 @@ export default function App() {
   const [continent, setContinent] = useState<ContinentFilter>(initial.continent);
   const [selectedIso, setSelectedIso] = useState<string | null>(initial.iso);
   const [query, setQuery] = useState("");
+  const [searchFocused, setSearchFocused] = useState(false); // CHANGED: for dropdown
   const [lang, setLang] = useState<Lang>(detectLang());
 
   setLocale(localeOf(lang)); // keep number formatting in sync (idempotent)
@@ -104,6 +107,19 @@ export default function App() {
     () => COUNTRIES.find((c) => c.iso2 === selectedIso) ?? null,
     [selectedIso]
   );
+
+  // CHANGED: global search suggestions (map tab dropdown, all continents)
+  const suggestions = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return [];
+    return COUNTRIES.filter(
+      (c) =>
+        c.name.toLowerCase().includes(q) ||
+        c.capital.toLowerCase().includes(q) ||
+        c.nameUk.toLowerCase().includes(q) ||
+        c.capitalUk.toLowerCase().includes(q)
+    ).slice(0, 8);
+  }, [query]);
 
   const byIso = useMemo(() => new Map(COUNTRIES.map((c) => [c.iso2, c])), []);
   const neighbors = useMemo(
@@ -175,11 +191,10 @@ export default function App() {
             </button>
           </nav>
 
-          {tab === "explore" && (
+          {/* CHANGED: search is global — visible on map + explore tabs */}
+          {(tab === "map" || tab === "explore") && (
             <div className="search">
-              <span className="search__icon" aria-hidden>
-                🔎
-              </span>
+              <span className="search__icon" aria-hidden>🔎</span>
               <input
                 className="search__input"
                 type="search"
@@ -187,8 +202,9 @@ export default function App() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 aria-label={t("search.placeholder")}
+                onFocus={() => setSearchFocused(true)}
+                onBlur={() => setTimeout(() => setSearchFocused(false), 200)}
               />
-              {/* CHANGED: explicit clear button, visible only when query is non-empty */}
               {query && (
                 <button
                   type="button"
@@ -198,6 +214,28 @@ export default function App() {
                 >
                   ✕
                 </button>
+              )}
+              {/* CHANGED: dropdown suggestions for map tab */}
+              {tab === "map" && searchFocused && suggestions.length > 0 && (
+                <div className="search__dropdown">
+                  {suggestions.map((c) => (
+                    <button
+                      key={c.iso2}
+                      type="button"
+                      className="search__suggestion"
+                      onMouseDown={(e) => e.preventDefault()}
+                      onClick={() => {
+                        setSelectedIso(c.iso2);
+                        setQuery("");
+                        setSearchFocused(false);
+                      }}
+                    >
+                      <span className={`fi fi-${c.iso2.toLowerCase()} search__suggestion-flag`} />
+                      <span>{displayName(lang, c)}</span>
+                      <span className="search__suggestion-cap">{displayCapital(lang, c)}</span>
+                    </button>
+                  ))}
+                </div>
               )}
             </div>
           )}
