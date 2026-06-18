@@ -188,6 +188,17 @@ export default function App() {
                 onChange={(e) => setQuery(e.target.value)}
                 aria-label={t("search.placeholder")}
               />
+              {/* CHANGED: explicit clear button, visible only when query is non-empty */}
+              {query && (
+                <button
+                  type="button"
+                  className="search__clear"
+                  onClick={() => setQuery("")}
+                  aria-label="Clear search"
+                >
+                  ✕
+                </button>
+              )}
             </div>
           )}
 
@@ -211,6 +222,8 @@ export default function App() {
 
         {tab === "map" && (
           <div className={`maplayout${selected ? " maplayout--detail-open" : ""}`}>
+            {/* CHANGED: mobile backdrop closes panel on tap */}
+            {selected && <div className="detail-backdrop" onClick={() => setSelectedIso(null)} aria-hidden />}
             <WorldMap
               countries={COUNTRIES}
               selectedIso={selectedIso}
@@ -228,6 +241,8 @@ export default function App() {
 
         {tab === "explore" && (
           <div className={`layout${selected ? " layout--detail-open" : ""}`}>
+            {/* CHANGED: mobile backdrop */}
+            {selected && <div className="detail-backdrop" onClick={() => setSelectedIso(null)} aria-hidden />}
             <Sidebar
               counts={counts}
               total={COUNTRIES.length}

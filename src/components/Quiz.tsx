@@ -14,12 +14,15 @@ import {
 import { Flag } from "./Flag";
 import { CountryShape, hasShape } from "./CountryShape";
 import { FindGame } from "./FindGame";
+import { FlagMatchGame } from "./FlagMatchGame"; // CHANGED
+import { UkraineQuiz } from "./UkraineQuiz"; // CHANGED
 
-type Mode = "capital" | "flag" | "shape" | "population" | "continent" | "where";
+type Mode = "capital" | "flag" | "shape" | "population" | "continent" | "where" | "match"; // CHANGED
 type Scope = Continent | "All";
 
 const ROUND = 10;
-const MODE_IDS: Mode[] = ["capital", "flag", "shape", "population", "continent", "where"];
+const WORLD_MODE_IDS: Mode[] = ["capital", "flag", "shape", "population", "continent", "where", "match"]; // CHANGED
+const MODE_IDS = WORLD_MODE_IDS; // alias kept for existing code
 
 interface Question {
   country: Country;
@@ -86,12 +89,18 @@ export function Quiz({ countries }: { countries: Country[] }) {
   const [score, setScore] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
   const [playWhere, setPlayWhere] = useState(false);
+  const [playMatch, setPlayMatch] = useState(false); // CHANGED
+  const [playUa, setPlayUa] = useState(false); // CHANGED
 
   const start = () => {
     if (mode === "where") {
       setPlayWhere(true);
       return;
     }
+    if (mode === "match") { // CHANGED
+      setPlayMatch(true); // CHANGED
+      return; // CHANGED
+    } // CHANGED
     setRound(buildRound(countries, mode, scope, lang));
     setIdx(0);
     setScore(0);
@@ -104,6 +113,12 @@ export function Quiz({ countries }: { countries: Country[] }) {
   if (playWhere) {
     return <FindGame countries={countries} scope={scope} onExit={() => setPlayWhere(false)} />;
   }
+  if (playMatch) { // CHANGED
+    return <FlagMatchGame countries={countries} scope={scope} onExit={() => setPlayMatch(false)} />; // CHANGED
+  } // CHANGED
+  if (playUa) { // CHANGED
+    return <UkraineQuiz onExit={() => setPlayUa(false)} />; // CHANGED
+  } // CHANGED
 
   // ---- setup ----
   if (!round) {
@@ -148,6 +163,14 @@ export function Quiz({ countries }: { countries: Country[] }) {
         <button type="button" className="btn btn--primary quiz__start" onClick={start}>
           {t("quiz.start")}
         </button>
+
+        <div className="quiz__group" style={{ marginTop: 28 }}> {/* CHANGED */}
+          <h3 className="quiz__group-title">{t("quiz.ukraine")}</h3> {/* CHANGED */}
+          <button type="button" className="mode-card" onClick={() => setPlayUa(true)}> {/* CHANGED */}
+            <span className="mode-card__label">{t("quiz.ukraine.label")}</span> {/* CHANGED */}
+            <span className="mode-card__blurb">{t("quiz.ukraine.blurb")}</span> {/* CHANGED */}
+          </button> {/* CHANGED */}
+        </div> {/* CHANGED */}
       </div>
     );
   }

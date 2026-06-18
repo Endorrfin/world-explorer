@@ -94,6 +94,18 @@ const en = {
   "mode.continent.b": "See a country → pick its continent",
   "mode.where": "Where in the world?",
   "mode.where.b": "Read a name → click the country on the map",
+  "mode.match": "Match the flags", // CHANGED
+  "mode.match.b": "4 flags, 4 countries — connect each pair", // CHANGED
+
+  "match.group": "Set {i} / {n}", // CHANGED
+  "match.prompt": "Click a flag, then its country", // CHANGED
+  "match.hintFlag": "Pick a flag to start", // CHANGED
+  "match.hintName": "Now pick the matching country", // CHANGED
+  "match.next": "Next set →", // CHANGED
+
+  "quiz.ukraine": "Ukraine 🇺🇦", // CHANGED
+  "quiz.ukraine.label": "Ukraine Quiz 🇺🇦", // CHANGED
+  "quiz.ukraine.blurb": "Oblasts, capitals, fun facts — 3 games", // CHANGED
 
   "cheer.perfect": "Perfect! 🏆",
   "cheer.great": "Great job! 🎉",
@@ -197,6 +209,18 @@ const uk: Record<keyof typeof en, string> = {
   "mode.continent.b": "Бачиш країну → обери її континент",
   "mode.where": "Де у світі?",
   "mode.where.b": "Читай назву → клікни країну на карті",
+  "mode.match": "Підбери прапори", // CHANGED
+  "mode.match.b": "4 прапори, 4 країни — з'єднай кожну пару", // CHANGED
+
+  "match.group": "Набір {i} / {n}", // CHANGED
+  "match.prompt": "Клікни прапор, потім країну", // CHANGED
+  "match.hintFlag": "Обери прапор, щоб почати", // CHANGED
+  "match.hintName": "Тепер обери відповідну країну", // CHANGED
+  "match.next": "Наступний набір →", // CHANGED
+
+  "quiz.ukraine": "Україна 🇺🇦", // CHANGED
+  "quiz.ukraine.label": "Квіз про Україну 🇺🇦", // CHANGED
+  "quiz.ukraine.blurb": "Області, центри, цікаві факти — 3 гри", // CHANGED
 
   "cheer.perfect": "Ідеально! 🏆",
   "cheer.great": "Чудово! 🎉",

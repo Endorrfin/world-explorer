@@ -1,3 +1,4 @@
+import { useEffect } from "react"; // CHANGED
 import type { Country } from "../types";
 import { continentMeta } from "../lib/continents";
 import { continentLabel, displayCapital, displayName, useLang, useT } from "../lib/i18n";
@@ -49,6 +50,14 @@ export function CountryDetail({
 }) {
   const t = useT();
   const { lang } = useLang();
+
+  // CHANGED: close panel on Escape key
+  useEffect(() => {
+    if (!country) return;
+    const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    document.addEventListener("keydown", handler);
+    return () => document.removeEventListener("keydown", handler);
+  }, [country, onClose]);
 
   if (!country) {
     return (

@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { useLang } from "../lib/i18n";
 
 interface Section {
@@ -5,12 +6,18 @@ interface Section {
   title: string;
   body: string;
 }
+interface Source {
+  label: string;
+  url: string;
+}
 interface Content {
   title: string;
   intro: string;
   sections: Section[];
   footer: string;
-  contactPrompt: string; // CHANGED: feedback/contact block
+  sourcesTitle: string; // CHANGED: data source links
+  sources: Source[]; // CHANGED: data source links
+  contactPrompt: string;
   contactLabel: string;
 }
 
@@ -38,8 +45,8 @@ const EN: Content = {
     },
     {
       icon: "🎯",
-      title: "Quiz — six games",
-      body: "Guess the capital, the country by its flag, the country by its outline, the population, the continent, and 'Where in the world?'. Pick any region, then play a round with scoring and instant green/red feedback.",
+      title: "Quiz — eight games", // CHANGED
+      body: "Guess the capital, the country by its flag, the country by its outline, the population, the continent, 'Where in the world?', and now 'Match the flags' (connect 4 flags to 4 countries). Plus a dedicated Ukraine Quiz with three games: find the oblast on the map, guess the administrative centre, and name the oblast from a fun fact.", // CHANGED
     },
     {
       icon: "🌍",
@@ -64,6 +71,11 @@ const EN: Content = {
   ],
   footer:
     "Data from public sources (population 2025, GDP 2023). Flags: flag-icons. Country outlines & world map: Natural Earth. Ukraine oblasts: amCharts geodata. Settlement figures: 2001 census.",
+  sourcesTitle: "Primary sources", // CHANGED
+  sources: [ // CHANGED
+    { label: "Worldometers (country data)", url: "https://www.worldometers.info/" },
+    { label: "State Statistics of Ukraine", url: "https://www.lv.ukrstat.gov.ua/dem/piramid/all.php" },
+  ],
   contactPrompt: "Spotted a mistake, or have an idea to make it better? I'd love to hear from you.",
   contactLabel: "Write",
 };
@@ -90,8 +102,8 @@ const UK: Content = {
     },
     {
       icon: "🎯",
-      title: "Квіз — шість ігор",
-      body: "Вгадай столицю, країну за прапором, країну за контуром, населення, континент і «Де у світі?». Обери регіон і зіграй раунд із підрахунком балів та миттєвим зелено-червоним зворотним зв'язком.",
+      title: "Квіз — вісім ігор", // CHANGED
+      body: "Вгадай столицю, країну за прапором, країну за контуром, населення, континент, «Де у світі?» і «Підбери прапори» (з'єднай 4 прапори з 4 країнами). Плюс окремий Квіз про Україну з трьома іграми: знайди область на карті, вгадай адміністративний центр та назви область за цікавим фактом.", // CHANGED
     },
     {
       icon: "🌍",
@@ -116,6 +128,11 @@ const UK: Content = {
   ],
   footer:
     "Дані з відкритих джерел (населення 2025, ВВП 2023). Прапори: flag-icons. Контури країн і карта світу: Natural Earth. Області України: геодані amCharts. Населення пунктів: перепис 2001 року.",
+  sourcesTitle: "Первинні джерела", // CHANGED
+  sources: [ // CHANGED
+    { label: "Worldometers (дані про країни)", url: "https://www.worldometers.info/" },
+    { label: "Держстат України", url: "https://www.lv.ukrstat.gov.ua/dem/piramid/all.php" },
+  ],
   contactPrompt: "Знайшли неточність або маєте ідею, як зробити краще? Буду радий почути.",
   contactLabel: "Написати",
 };
@@ -144,7 +161,24 @@ export function AboutTab() {
           {EMAIL}
         </a>
       </p>
-      <p className="about__footer">{c.footer}</p>
+      <p className="about__footer">
+        {c.footer}
+        {" — "}
+        {c.sourcesTitle}:{" "}
+        {c.sources.map((s, i) => ( // CHANGED: render source links
+          <Fragment key={s.url}>
+            {i > 0 && ", "}
+            <a
+              href={s.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="about__source-link"
+            >
+              {s.label}
+            </a>
+          </Fragment>
+        ))}
+      </p>
     </div>
   );
 }

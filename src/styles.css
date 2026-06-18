@@ -143,6 +143,19 @@ body {
   width: 100%;
   color: var(--text);
 }
+.search__clear { /* CHANGED */
+  border: 0;
+  background: transparent;
+  color: var(--muted-2);
+  cursor: pointer;
+  padding: 0 2px;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.search__clear:hover {
+  color: var(--text);
+}
 
 /* ------------------------------------------------------------- layout */
 .layout {
@@ -295,6 +308,25 @@ body {
   line-height: 1.25;
   margin-top: 1px;
   overflow-wrap: anywhere;
+}
+
+/* CHANGED: mobile detail backdrop */
+.detail-backdrop {
+  display: none;
+}
+@media (max-width: 1080px) {
+  .detail-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(16, 24, 40, 0.35);
+    z-index: 39;
+    animation: fadeIn 0.18s ease;
+  }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 /* ------------------------------------------------------------- detail */
@@ -495,6 +527,7 @@ body {
 }
 .quiz__modes {
   display: grid;
+  grid-template-columns: 1fr 1fr; /* CHANGED: 2-column grid for mode cards */
   gap: 10px;
 }
 .mode-card {
@@ -659,6 +692,81 @@ body {
   display: flex;
   gap: 12px;
   justify-content: center;
+}
+
+/* ------------------------------------------------------------- flag match game */ /* CHANGED */
+.quiz--match .quiz__prompt-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.match-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.match-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.match-flag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px;
+  background: var(--surface);
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s;
+  min-height: 64px;
+}
+.match-flag:hover:not(:disabled) {
+  border-color: var(--primary);
+}
+.match-flag--selected {
+  border-color: var(--primary);
+  background: var(--primary-tint);
+}
+.match-flag--correct {
+  border-color: var(--good);
+  background: var(--good-tint);
+  cursor: default;
+}
+.match-flag--wrong {
+  border-color: var(--bad);
+  background: var(--bad-tint);
+}
+.match-flag__img {
+  font-size: 3.2rem;
+  border-radius: 4px;
+}
+.match-name {
+  border: 2px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 14px 10px;
+  background: var(--surface);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.12s, background 0.12s;
+  min-height: 64px;
+}
+.match-name:not(:disabled):hover {
+  border-color: var(--primary);
+  background: var(--primary-tint);
+}
+.match-name:disabled:not(.match-name--correct) {
+  cursor: default;
+  opacity: 0.6;
+}
+.match-name--correct {
+  border-color: var(--good);
+  background: var(--good-tint);
+  color: var(--good);
+  cursor: default;
 }
 
 /* ------------------------------------------------------------- world map */
@@ -872,6 +980,46 @@ body {
   border-radius: 18px;
   box-shadow: var(--shadow);
   padding: 28px;
+}
+
+/* ------------------------------------------------------------- ukraine quiz map */ /* CHANGED */
+.quiz--ua-map {
+  max-width: 800px;
+}
+.ua-map-wrap {
+  position: relative;
+}
+.ua-map-tooltip {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  pointer-events: none;
+  z-index: 5;
+  white-space: nowrap;
+  box-shadow: var(--shadow);
+}
+.ua-mapsvg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.ua-region {
+  fill: #c8d8e8;
+  stroke: #ffffff;
+  stroke-width: 0.8;
+  vector-effect: non-scaling-stroke;
+  cursor: pointer;
+  transition: fill 0.1s;
+}
+.ua-region:hover {
+  fill: #a8c0d8;
 }
 
 /* ------------------------------------------------------------- ukraine tab */
@@ -1173,6 +1321,13 @@ body {
   font-size: 0.82rem;
   line-height: 1.5;
 }
+.about__source-link { /* CHANGED */
+  color: var(--primary);
+  text-decoration: none;
+}
+.about__source-link:hover {
+  text-decoration: underline;
+}
 
 /* ------------------------------------------------------------- responsive */
 @media (max-width: 1080px) {
@@ -1264,6 +1419,9 @@ body {
   .quiz__options {
     grid-template-columns: 1fr;
   }
+  .quiz__modes { /* CHANGED */
+    grid-template-columns: 1fr; /* CHANGED */
+  } /* CHANGED */
   .quiz__flag {
     font-size: 5rem;
   }
