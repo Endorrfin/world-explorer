@@ -9,6 +9,7 @@ const en = {
   "tab.explore": "Explore",
   "tab.quiz": "Quiz",
   "tab.ukraine": "Ukraine",
+  "tab.records": "Records", // CHANGED
   "tab.about": "About",
   "search.placeholder": "Search country or capital…",
   "main.all": "All countries",
@@ -148,6 +149,11 @@ const en = {
   "heat.births": "Births / day",
   "heat.less": "Low",
   "heat.more": "High",
+  // national symbols // CHANGED
+  "detail.symbols": "🐾 National symbols", // CHANGED
+  "stat.animal": "National animal", // CHANGED
+  "stat.plant": "National plant", // CHANGED
+  "stat.dish": "National dish", // CHANGED
 };
 
 const uk: Record<keyof typeof en, string> = {
@@ -155,6 +161,7 @@ const uk: Record<keyof typeof en, string> = {
   "tab.explore": "Огляд",
   "tab.quiz": "Квіз",
   "tab.ukraine": "Україна",
+  "tab.records": "Рекорди", // CHANGED
   "tab.about": "Опис",
   "search.placeholder": "Пошук країни або столиці…",
   "main.all": "Усі країни",
@@ -294,6 +301,11 @@ const uk: Record<keyof typeof en, string> = {
   "heat.births": "Народжень на день",
   "heat.less": "Менше",
   "heat.more": "Більше",
+  // national symbols // CHANGED
+  "detail.symbols": "🐾 Національні символи", // CHANGED
+  "stat.animal": "Національна тварина", // CHANGED
+  "stat.plant": "Національна рослина", // CHANGED
+  "stat.dish": "Національна страва", // CHANGED
 };
 
 export type StringKey = keyof typeof en;

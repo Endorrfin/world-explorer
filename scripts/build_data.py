@@ -23,6 +23,8 @@ FACTS_UK = os.path.join(ROOT, "src", "data", "facts_uk.json")  # CHANGED: Phase 
 NEIGHBORS = os.path.join(ROOT, "src", "data", "neighbors.json")
 NAMES_UK = os.path.join(ROOT, "src", "data", "names_uk.json")
 CAPITALS_UK = os.path.join(ROOT, "src", "data", "capitals_uk.json")
+SYMBOLS = os.path.join(ROOT, "src", "data", "symbols.json")       # CHANGED
+SYMBOLS_UK = os.path.join(ROOT, "src", "data", "symbols_uk.json") # CHANGED
 OUT = os.path.join(ROOT, "src", "data", "countries.json")
 
 # ---------------------------------------------------------------- helpers
@@ -158,6 +160,16 @@ if os.path.exists(CAPITALS_UK):
     with open(CAPITALS_UK, encoding="utf-8") as f:
         capitals_uk = json.load(f)
 
+symbols = {}    # CHANGED
+if os.path.exists(SYMBOLS):
+    with open(SYMBOLS, encoding="utf-8") as f:
+        symbols = json.load(f)
+
+symbols_uk = {}  # CHANGED
+if os.path.exists(SYMBOLS_UK):
+    with open(SYMBOLS_UK, encoding="utf-8") as f:
+        symbols_uk = json.load(f)
+
 # ---------------------------------------------------------------- build
 countries = []
 main = rows_of("Сountries")   # NB: sheet title uses a Cyrillic 'С'
@@ -205,6 +217,13 @@ for r in main:
         # content
         "knownFor": facts.get(iso2, []),
         "factsUk": facts_uk.get(iso2, []),        # CHANGED: Phase 3 UA facts
+        # national symbols                         # CHANGED
+        "animal":   symbols.get(iso2, {}).get("animal"),    # CHANGED
+        "plant":    symbols.get(iso2, {}).get("plant"),     # CHANGED
+        "dish":     symbols.get(iso2, {}).get("dish"),      # CHANGED
+        "animalUk": symbols_uk.get(iso2, {}).get("animal"), # CHANGED
+        "plantUk":  symbols_uk.get(iso2, {}).get("plant"),  # CHANGED
+        "dishUk":   symbols_uk.get(iso2, {}).get("dish"),   # CHANGED
         "neighbors": neighbors.get(iso2, []),
     })
 
@@ -225,6 +244,7 @@ have_births = sum(1 for c in countries if c["birthsPerDay"] is not None)
 have_gpi = sum(1 for c in countries if c["peaceIndex"] is not None)
 have_facts = sum(1 for c in countries if c["knownFor"])
 have_facts_uk = sum(1 for c in countries if c["factsUk"])  # CHANGED: Phase 3 coverage
+have_symbols  = sum(1 for c in countries if c["animal"])   # CHANGED: symbols coverage
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
 with open(OUT, "w", encoding="utf-8") as f:
@@ -232,4 +252,4 @@ with open(OUT, "w", encoding="utf-8") as f:
 
 print(f"wrote {len(countries)} countries -> {os.path.relpath(OUT, ROOT)}")
 print("by continent:", dict(sorted(by_cont.items())))
-print(f"coverage: births/day={have_births}/195  peaceIndex={have_gpi}/195  knownFor={have_facts}/195  factsUk={have_facts_uk}/195")
+print(f"coverage: births/day={have_births}/195  peaceIndex={have_gpi}/195  knownFor={have_facts}/195  factsUk={have_facts_uk}/195  symbols={have_symbols}/195")  # CHANGED
