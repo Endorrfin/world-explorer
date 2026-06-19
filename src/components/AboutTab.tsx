@@ -41,7 +41,7 @@ const EN: Content = {
     {
       icon: "📋",
       title: "Country details",
-      body: "For every country: capital, population and world share, density, median age, fertility, urban %, births per day, GDP and income per person, land & total area, the Global Peace Index, ISO and phone codes, clickable land neighbours, and 2–4 short 'Known for' facts written for children.",
+      body: "For every country: capital, population and world share, density, median age, fertility, urban %, births per day, GDP and income per person, land & total area, the Global Peace Index, ISO and phone codes, clickable land neighbours, 2–4 'Known for' facts, and the national animal, plant and dish — all written for children.",
     },
     {
       icon: "🎯",
@@ -52,6 +52,11 @@ const EN: Content = {
       icon: "🌍",
       title: "Where in the world?",
       body: "Read a country's name and click it on the real map. Correct answers turn green; a wrong pick turns red and the right country is revealed with a pulse. A round is eight questions.",
+    },
+    {
+      icon: "🏆",
+      title: "World Records",
+      body: "A dedicated Records tab with 30+ world record cards — computed live from country data (largest, smallest, most populous, richest, most peaceful…) plus hardcoded geographic facts (highest mountain, longest river, most chernozem, most active volcanoes and more). Fully bilingual.",
     },
     {
       icon: "🇺🇦",
@@ -98,7 +103,7 @@ const UK: Content = {
     {
       icon: "📋",
       title: "Деталі країни",
-      body: "Для кожної країни: столиця, населення і частка у світі, густота, медіанний вік, народжуваність, % міського населення, народжень на день, ВВП і дохід на людину, площа суші й загальна, Глобальний індекс миру, коди ISO і телефонний, клікабельні сусіди та 2–4 короткі факти «Відома чим», написані для дітей.",
+      body: "Для кожної країни: столиця, населення і частка у світі, густота, медіанний вік, народжуваність, % міського населення, народжень на день, ВВП і дохід на людину, площа суші й загальна, Глобальний індекс миру, коди ISO і телефонний, клікабельні сусіди, 2–4 факти «Відома чим» та національні тварина, рослина і страва — усе для дітей.",
     },
     {
       icon: "🎯",
@@ -109,6 +114,11 @@ const UK: Content = {
       icon: "🌍",
       title: "Де у світі?",
       body: "Читаєш назву країни і клікаєш її на справжній карті. Правильна відповідь стає зеленою; помилковий вибір — червоним, а правильна країна підсвічується з пульсом. Раунд — вісім питань.",
+    },
+    {
+      icon: "🏆",
+      title: "Рекорди світу",
+      body: "Окрема вкладка «Рекорди» з 30+ картками світових рекордів — обраховуються наживо з даних (найбільша, найменша, найбільш населена, найбагатша, наймирніша…) плюс географічні факти (найвища гора, найдовша ріка, найбільше чорнозему, найбільше вулканів тощо). Повністю двомовна.",
     },
     {
       icon: "🇺🇦",

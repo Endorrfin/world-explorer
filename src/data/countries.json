@@ -34,6 +34,12 @@
    "Більшу частину вкриває пустеля Сахара",
    "Відома давньоримськими руїнами, як-от Тімгад"
   ],
+  "animal": "Fennec fox",
+  "plant": "Broom",
+  "dish": "Couscous",
+  "animalUk": "Фенек",
+  "plantUk": "Дрік",
+  "dishUk": "Кускус",
   "neighbors": [
    "LY",
    "MA",
@@ -78,6 +84,12 @@
    "Кванза — це і річка, і її гроші",
    "Багата на нафту й алмази"
   ],
+  "animal": "Giant sable antelope",
+  "plant": "Welwitschia",
+  "dish": "Muamba de Galinha",
+  "animalUk": "Гігантська соболева антилопа",
+  "plantUk": "Вельвічія",
+  "dishUk": "Муамба де Галінья",
   "neighbors": [
    "CD",
    "CG",
@@ -120,6 +132,12 @@
    "На озері стоїть пальове село Ганв'є",
    "Колись могутнє королівство Дагомея"
   ],
+  "animal": "Leopard",
+  "plant": "Oil palm",
+  "dish": "Kuli-kuli",
+  "animalUk": "Леопард",
+  "plantUk": "Олійна пальма",
+  "dishUk": "Кулі-кулі",
   "neighbors": [
    "BF",
    "NE",
@@ -164,6 +182,12 @@
    "Більшу частину займає пустеля Калахарі",
    "Один із найбільших видобувачів алмазів у світі"
   ],
+  "animal": "Zebra",
+  "plant": "Mokolwane palm",
+  "dish": "Seswaa",
+  "animalUk": "Зебра",
+  "plantUk": "Пальма моколвейн",
+  "dishUk": "Сесва",
   "neighbors": [
    "NA",
    "ZA",
@@ -206,6 +230,12 @@
    "Відома масками й кінофестивалем FESPACO",
    "Більшість людей вирощує бавовну й просо"
   ],
+  "animal": "Stallion",
+  "plant": "Rosewood",
+  "dish": "Riz gras",
+  "animalUk": "Жеребець",
+  "plantUk": "Рожеве дерево",
+  "dishUk": "Рі гра",
   "neighbors": [
    "BJ",
    "CI",
@@ -250,6 +280,12 @@
    "Відома енергійними королівськими барабанами",
    "Як на свій розмір — один із найбільших виробників кави"
   ],
+  "animal": "Lion",
+  "plant": "Sorghum",
+  "dish": "Boko boko harees",
+  "animalUk": "Лев",
+  "plantUk": "Сорго",
+  "dishUk": "Боко боко харіс",
   "neighbors": [
    "CD",
    "RW",
@@ -291,6 +327,12 @@
    "Батьківщина душевної музики «морна»",
    "Відома співачкою Сезарією Еворою"
   ],
+  "animal": "Loggerhead turtle",
+  "plant": "Dragon tree",
+  "dish": "Cachupa",
+  "animalUk": "Каретта-каретта",
+  "plantUk": "Драконове дерево",
+  "dishUk": "Кашупа",
   "neighbors": []
  },
  {
@@ -328,6 +370,12 @@
    "Гора Камерун — діючий вулкан",
    "Сильна футбольна нація — «Незламні леви»"
   ],
+  "animal": "Lion",
+  "plant": "Coffee plant",
+  "dish": "Ndolé",
+  "animalUk": "Лев",
+  "plantUk": "Кавове дерево",
+  "dishUk": "Ндоле",
   "neighbors": [
    "CF",
    "CG",
@@ -372,6 +420,12 @@
    "Багата на алмази й золото",
    "Одна з найменш заселених країн"
   ],
+  "animal": "Elephant",
+  "plant": "Cotton tree",
+  "dish": "Gozo",
+  "animalUk": "Слон",
+  "plantUk": "Бавовникове дерево",
+  "dishUk": "Гозо",
   "neighbors": [
    "CD",
    "CG",
@@ -416,6 +470,12 @@
    "Тут плато Еннеді з кам'яними арками",
    "Сахара вкриває її північну половину"
   ],
+  "animal": "Arabian horse",
+  "plant": "Acacia",
+  "dish": "Daraba",
+  "animalUk": "Аравійський кінь",
+  "plantUk": "Акація",
+  "dishUk": "Дараба",
   "neighbors": [
    "CF",
    "CM",
@@ -460,6 +520,12 @@
    "Звані «Запашними островами» через квіти іланг-ілангу",
    "Тут живе рідкісна риба-латимерія, «жива копалина»"
   ],
+  "animal": "Coelacanth",
+  "plant": "Ylang-ylang",
+  "dish": "Langouste à la vanille",
+  "animalUk": "Латимерія",
+  "plantUk": "Іланг-іланг",
+  "dishUk": "Омар у ванілі",
   "neighbors": []
  },
  {
@@ -497,6 +563,12 @@
    "Має найбільший храм світу — базиліку в Ямусукро",
    "Сильна у футболі та легкій атлетиці"
   ],
+  "animal": "Elephant",
+  "plant": "Oil palm",
+  "dish": "Attiéké",
+  "animalUk": "Слон",
+  "plantUk": "Олійна пальма",
+  "dishUk": "Аттієке",
   "neighbors": [
    "BF",
    "GH",
@@ -540,6 +612,12 @@
    "У лісах Конго живуть бонобо й окапі",
    "Через неї тече могутня річка Конго"
   ],
+  "animal": "Okapi",
+  "plant": "African oil palm",
+  "dish": "Saka-saka",
+  "animalUk": "Окапі",
+  "plantUk": "Олійна пальма",
+  "dishUk": "Сака-сака",
   "neighbors": [
    "AO",
    "BI",
@@ -587,6 +665,12 @@
    "Лежить там, де Червоне море зустрічається з Індійським океаном",
    "Відома солоними озерами й китовими акулами"
   ],
+  "animal": "Djibouti francolin",
+  "plant": "Dragon tree",
+  "dish": "Skoudehkaris",
+  "animalUk": "Джибутійський турач",
+  "plantUk": "Драконове дерево",
+  "dishUk": "Скудехкаріс",
   "neighbors": [
    "ER",
    "ET",
@@ -630,6 +714,12 @@
    "Давні фараони й ієрогліфічне письмо",
    "Суецький канал з'єднує два моря"
   ],
+  "animal": "Steppe eagle",
+  "plant": "Lotus",
+  "dish": "Ful medames",
+  "animalUk": "Степовий орел",
+  "plantUk": "Лотос",
+  "dishUk": "Фул мадамес",
   "neighbors": [
    "IL",
    "LY",
@@ -672,6 +762,12 @@
    "Складається з материка й кількох островів",
    "Багата на нафту"
   ],
+  "animal": "Elephant",
+  "plant": "Ceiba tree",
+  "dish": "Succotash",
+  "animalUk": "Слон",
+  "plantUk": "Дерево сейба",
+  "dishUk": "Сукоташ",
   "neighbors": [
    "CM",
    "GA"
@@ -712,6 +808,12 @@
    "Лежить уздовж узбережжя Червоного моря",
    "Відома кораловими островами Дахлак"
   ],
+  "animal": "Arabian camel",
+  "plant": "Olive tree",
+  "dish": "Injera",
+  "animalUk": "Аравійський верблюд",
+  "plantUk": "Оливкове дерево",
+  "dishUk": "Ін'єра",
   "neighbors": [
    "DJ",
    "ET",
@@ -753,6 +855,12 @@
    "Відома барвистим Танцем очерету (Умхланга)",
    "У 2018 році перейменована зі Свазіленду"
   ],
+  "animal": "Purple-crested turaco",
+  "plant": "Sugarcane",
+  "dish": "Incwancwa",
+  "animalUk": "Фіолетовочубий тюрако",
+  "plantUk": "Цукрова тростина",
+  "dishUk": "Інцванцва",
   "neighbors": [
    "MZ",
    "ZA"
@@ -795,6 +903,12 @@
    "Батьківщина кави",
    "Має власний 13-місячний календар"
   ],
+  "animal": "Lion",
+  "plant": "Calla lily",
+  "dish": "Injera with doro wat",
+  "animalUk": "Лев",
+  "plantUk": "Кала-лілея",
+  "dishUk": "Ін'єра з куркою доро",
   "neighbors": [
    "DJ",
    "ER",
@@ -839,6 +953,12 @@
    "Створила 13 національних парків для охорони природи",
    "На пляжі Лоанго лісові слони виходять до хвиль"
   ],
+  "animal": "Black panther",
+  "plant": "Okoumé tree",
+  "dish": "Nyembwe chicken",
+  "animalUk": "Чорна пантера",
+  "plantUk": "Дерево окуме",
+  "dishUk": "Курка ньємбве",
   "neighbors": [
    "CG",
    "CM",
@@ -880,6 +1000,12 @@
    "Огортає, мов палець, річку Гамбія",
    "Чудове місце для спостереження за птахами"
   ],
+  "animal": "Spotted hyena",
+  "plant": "Kapok tree",
+  "dish": "Benachin",
+  "animalUk": "Плямиста гієна",
+  "plantUk": "Хлопкове дерево",
+  "dishUk": "Бенашін",
   "neighbors": [
    "SN"
   ]
@@ -921,6 +1047,12 @@
    "Озеро Вольта — одне з найбільших штучних озер світу",
    "Відома золотом і какао"
   ],
+  "animal": "Golden eagle",
+  "plant": "Cocoa tree",
+  "dish": "Fufu",
+  "animalUk": "Золотий орел",
+  "plantUk": "Дерево какао",
+  "dishUk": "Фуфу",
   "neighbors": [
    "BF",
    "CI",
@@ -962,6 +1094,12 @@
    "У горах живуть рідкісні шимпанзе",
    "Багата на боксити, з яких роблять алюміній"
   ],
+  "animal": "Elephant",
+  "plant": "Coffee plant",
+  "dish": "Sauce arachide",
+  "animalUk": "Слон",
+  "plantUk": "Кавове дерево",
+  "dishUk": "Арахісовий соус",
   "neighbors": [
    "CI",
    "GW",
@@ -1006,6 +1144,12 @@
    "Відома горіхами кеш'ю",
    "Багато островів вважаються священними"
   ],
+  "animal": "Roan antelope",
+  "plant": "Mango tree",
+  "dish": "Caldo mancarra",
+  "animalUk": "Кобрина антилопа",
+  "plantUk": "Дерево манго",
+  "dishUk": "Кальдо манкарра",
   "neighbors": [
    "GN",
    "SN"
@@ -1048,6 +1192,12 @@
    "Звідси найкращі марафонці й бігуни на довгі дистанції",
    "Через неї проходить Великий рифтовий розлом"
   ],
+  "animal": "Lion",
+  "plant": "Nandi flame tree",
+  "dish": "Ugali",
+  "animalUk": "Лев",
+  "plantUk": "Нанді вогняне дерево",
+  "dishUk": "Угалі",
   "neighbors": [
    "ET",
    "SO",
@@ -1091,6 +1241,12 @@
    "Уся країна лежить вище 1000 метрів",
    "Люди загортаються в барвисті ковдри басото"
   ],
+  "animal": "Basotho pony",
+  "plant": "Spiral aloe",
+  "dish": "Pap",
+  "animalUk": "Басутський поні",
+  "plantUk": "Спіральне алое",
+  "dishUk": "Пап",
   "neighbors": [
    "ZA"
   ]
@@ -1130,6 +1286,12 @@
    "Столиця Монровія названа на честь президента США",
    "Вкрита буйним тропічним лісом"
   ],
+  "animal": "Pygmy hippopotamus",
+  "plant": "Pepper tree",
+  "dish": "Palm butter soup",
+  "animalUk": "Карликовий бегемот",
+  "plantUk": "Перцеве дерево",
+  "dishUk": "Суп з олійної пальми",
   "neighbors": [
    "CI",
    "GN",
@@ -1171,6 +1333,12 @@
    "Має добре збережені римські руїни Лептіс-Магна",
    "Багата на нафту"
   ],
+  "animal": "Arabian eagle",
+  "plant": "Oleander",
+  "dish": "Couscous",
+  "animalUk": "Аравійський орел",
+  "plantUk": "Олеандр",
+  "dishUk": "Кускус",
   "neighbors": [
    "DZ",
    "EG",
@@ -1215,6 +1383,12 @@
    "Відома лемурами й баобабами",
    "Алея баобабів — приголомшливе видовище"
   ],
+  "animal": "Ring-tailed lemur",
+  "plant": "Traveller's palm",
+  "dish": "Romazava",
+  "animalUk": "Кільцехвостий лемур",
+  "plantUk": "Пальма мандрівника",
+  "dishUk": "Ромазава",
   "neighbors": []
  },
  {
@@ -1252,6 +1426,12 @@
    "Озеро Малаві повне барвистих риб-цихлід",
    "Одне з найбільших озер Африки вкриває більшу її частину"
   ],
+  "animal": "African fish eagle",
+  "plant": "Mulanje cedar",
+  "dish": "Nsima",
+  "animalUk": "Африканський рибалочник",
+  "plantUk": "Кедр Муланже",
+  "dishUk": "Нсіма",
   "neighbors": [
    "MZ",
    "TZ",
@@ -1293,6 +1473,12 @@
    "Велика мечеть Дженне збудована з глини",
    "Колись багата імперія Малі Манса Муси"
   ],
+  "animal": "Hippopotamus",
+  "plant": "Shea tree",
+  "dish": "Tô",
+  "animalUk": "Бегемот",
+  "plantUk": "Дерево шеа",
+  "dishUk": "То",
   "neighbors": [
    "BF",
    "CI",
@@ -1338,6 +1524,12 @@
    "«Залізорудний потяг» — один із найдовших у світі",
    "«Око Сахари» видно з космосу"
   ],
+  "animal": "Addax",
+  "plant": "Date palm",
+  "dish": "Thiéboudienne",
+  "animalUk": "Адакс",
+  "plantUk": "Фінікова пальма",
+  "dishUk": "Тьєбудієн",
   "neighbors": [
    "DZ",
    "ML",
@@ -1379,6 +1571,12 @@
    "Був єдиним домом вимерлого птаха додо",
    "Відомий пляжами й кораловими рифами"
   ],
+  "animal": "Dodo (historical)",
+  "plant": "Trochetia boutoniana",
+  "dish": "Dholl puri",
+  "animalUk": "Дронт (нині вимер)",
+  "plantUk": "Трохеція Бутона",
+  "dishUk": "Дхол пурі",
   "neighbors": []
  },
  {
@@ -1416,6 +1614,12 @@
    "Тут пустеля Сахара зустрічається з горами Атлас",
    "Відома стравою таджин і м'ятним чаєм"
   ],
+  "animal": "Barbary lion",
+  "plant": "Argan tree",
+  "dish": "Tagine",
+  "animalUk": "Берберійський лев",
+  "plantUk": "Аргановане дерево",
+  "dishUk": "Таджин",
   "neighbors": [
    "DZ",
    "ES"
@@ -1456,6 +1660,12 @@
    "На її прапорі — автомат, мотика й книга",
    "Відома креветками й приправою пірі-пірі"
   ],
+  "animal": "African elephant",
+  "plant": "Flame lily",
+  "dish": "Matapa",
+  "animalUk": "Африканський слон",
+  "plantUk": "Вогняна лілія",
+  "dishUk": "Матапа",
   "neighbors": [
    "MW",
    "SZ",
@@ -1500,6 +1710,12 @@
    "Наміб — одна з найдавніших пустель на Землі",
    "Тут живуть пристосовані до пустелі слони й леви"
   ],
+  "animal": "Oryx",
+  "plant": "Kokerboom",
+  "dish": "Potjiekos",
+  "animalUk": "Орикс",
+  "plantUk": "Колчанне дерево",
+  "dishUk": "Потйєкос",
   "neighbors": [
    "AO",
    "BW",
@@ -1542,6 +1758,12 @@
    "Тут було Дерево Тенере — колись найсамотніше дерево на Землі",
    "У горах Аїр сховані давні наскельні малюнки"
   ],
+  "animal": "Addax",
+  "plant": "Desert date",
+  "dish": "Djerma stew",
+  "animalUk": "Адакс",
+  "plantUk": "Пустельний фінік",
+  "dishUk": "Страви Джерма",
   "neighbors": [
    "BF",
    "BJ",
@@ -1589,6 +1811,12 @@
    "Відома музикою афробітс",
    "Найбільша економіка Африки"
   ],
+  "animal": "Eagle",
+  "plant": "Costus afer",
+  "dish": "Egusi soup",
+  "animalUk": "Орел",
+  "plantUk": "Костус африканський",
+  "dishUk": "Суп з насіння гарбуза",
   "neighbors": [
    "BJ",
    "CM",
@@ -1631,6 +1859,12 @@
    "У Нуабале-Ндокі живуть рівнинні горили",
    "Річка Конго утворює велику частину кордону"
   ],
+  "animal": "Elephant",
+  "plant": "Banana tree",
+  "dish": "Moambe chicken",
+  "animalUk": "Слон",
+  "plantUk": "Бананове дерево",
+  "dishUk": "Курка мвамбе",
   "neighbors": [
    "AO",
    "CD",
@@ -1674,6 +1908,12 @@
    "Відома походами до гірських горил",
    "Одна з найчистіших, найзеленіших країн Африки"
   ],
+  "animal": "Nile crocodile",
+  "plant": "Inshuti flower",
+  "dish": "Isombe",
+  "animalUk": "Нільський крокодил",
+  "plantUk": "Квітка іншуті",
+  "dishUk": "Ізомбе",
   "neighbors": [
    "BI",
    "CD",
@@ -1716,6 +1956,12 @@
    "Відома високоякісним какао",
    "Вулканічні шпилі здіймаються просто з океану"
   ],
+  "animal": "São Tomé green ibis",
+  "plant": "Cocoa tree",
+  "dish": "Calulu",
+  "animalUk": "Зелений ібіс Сан-Томе",
+  "plantUk": "Дерево какао",
+  "dishUk": "Калулу",
   "neighbors": []
  },
  {
@@ -1753,6 +1999,12 @@
    "Відома енергійною музикою мбалах",
    "Найзахідніша точка материкової Африки"
   ],
+  "animal": "Lion",
+  "plant": "Baobab",
+  "dish": "Thiéboudienne",
+  "animalUk": "Лев",
+  "plantUk": "Баобаб",
+  "dishUk": "Тьєбудієн",
   "neighbors": [
    "GM",
    "GN",
@@ -1796,6 +2048,12 @@
    "Тут велетенська альдабрська черепаха",
    "Рідкісне коко-де-мер — найбільше насіння у світі"
   ],
+  "animal": "Aldabra giant tortoise",
+  "plant": "Coco de mer",
+  "dish": "Grilled fish",
+  "animalUk": "Гігантська черепаха альдабра",
+  "plantUk": "Коко де мер",
+  "dishUk": "Смажена риба",
   "neighbors": []
  },
  {
@@ -1833,6 +2091,12 @@
    "Має гарні пляжі біля Фрітауна",
    "Відома алмазами"
   ],
+  "animal": "Lion",
+  "plant": "Oil palm",
+  "dish": "Groundnut soup",
+  "animalUk": "Лев",
+  "plantUk": "Олійна пальма",
+  "dishUk": "Арахісовий суп",
   "neighbors": [
    "GN",
    "LR"
@@ -1873,6 +2137,12 @@
    "Край кочових скотарів і верблюдів",
    "Відома ладаном і миррою"
   ],
+  "animal": "Leopard",
+  "plant": "Frankincense tree",
+  "dish": "Canjeero",
+  "animalUk": "Леопард",
+  "plantUk": "Ладанне дерево",
+  "dishUk": "Канджеро",
   "neighbors": [
    "DJ",
    "ET",
@@ -1916,6 +2186,12 @@
    "Нельсон Мандела став її першим темношкірим президентом",
    "Дім багатьох мов і культур"
   ],
+  "animal": "Springbok",
+  "plant": "King protea",
+  "dish": "Braai",
+  "animalUk": "Спрингбок",
+  "plantUk": "Королівська протея",
+  "dishUk": "Браай",
   "neighbors": [
    "BW",
    "LS",
@@ -1960,6 +2236,12 @@
    "Судд — одне з найбільших боліт на Землі",
    "Її рівнинами проходять величезні міграції антилоп"
   ],
+  "animal": "Shoebill stork",
+  "plant": "Teak tree",
+  "dish": "Ful medames",
+  "animalUk": "Шолохвіст",
+  "plantUk": "Тикове дерево",
+  "dishUk": "Фул мадамес",
   "neighbors": [
    "CD",
    "CF",
@@ -2004,6 +2286,12 @@
    "Тут зливаються Блакитний і Білий Ніл",
    "Нубійська пустеля вкриває більшу її частину"
   ],
+  "animal": "Secretary bird",
+  "plant": "Date palm",
+  "dish": "Ful medames",
+  "animalUk": "Птах-секретар",
+  "plantUk": "Фінікова пальма",
+  "dishUk": "Фул мадамес",
   "neighbors": [
    "CF",
    "EG",
@@ -2051,6 +2339,12 @@
    "Занзібар — відомий острів прянощів",
    "Кратер Нгоронгоро повний дикої природи"
   ],
+  "animal": "Giraffe",
+  "plant": "Clove tree",
+  "dish": "Ugali",
+  "animalUk": "Жираф",
+  "plantUk": "Гвоздичне дерево",
+  "dishUk": "Угалі",
   "neighbors": [
    "BI",
    "CD",
@@ -2097,6 +2391,12 @@
    "Відома глиняними будинками-вежами Кутаммаку",
    "Озеро Того популярне для водних видів спорту"
   ],
+  "animal": "Dove",
+  "plant": "Oil palm",
+  "dish": "Akoumé",
+  "animalUk": "Голуб",
+  "plantUk": "Олійна пальма",
+  "dishUk": "Акуме",
   "neighbors": [
    "BF",
    "BJ",
@@ -2138,6 +2438,12 @@
    "Тут знімали пустельні сцени «Зоряних воєн»",
    "Сахара зустрічається із середземноморськими пляжами"
   ],
+  "animal": "Sand gazelle",
+  "plant": "Olive tree",
+  "dish": "Couscous",
+  "animalUk": "Пісочна газель",
+  "plantUk": "Оливкове дерево",
+  "dishUk": "Кускус",
   "neighbors": [
    "DZ",
    "LY"
@@ -2180,6 +2486,12 @@
    "Витік Нілу — біля озера Вікторія",
    "Лежить просто на екваторі"
   ],
+  "animal": "Grey crowned crane",
+  "plant": "Coffee plant",
+  "dish": "Matooke",
+  "animalUk": "Сірий чубатий журавель",
+  "plantUk": "Кавове дерево",
+  "dishUk": "Матоке",
   "neighbors": [
    "CD",
    "KE",
@@ -2223,6 +2535,12 @@
    "Через неї тече річка Замбезі",
    "Відома пішими сафарі"
   ],
+  "animal": "African fish eagle",
+  "plant": "Flame lily",
+  "dish": "Nshima",
+  "animalUk": "Африканський рибалочник",
+  "plantUk": "Вогняна лілія",
+  "dishUk": "Нші",
   "neighbors": [
    "AO",
    "BW",
@@ -2269,6 +2587,12 @@
    "Названа на честь кам'яних руїн Великого Зімбабве",
    "Тут величезні стада слонів у Хванге"
   ],
+  "animal": "Sable antelope",
+  "plant": "Flame lily",
+  "dish": "Sadza",
+  "animalUk": "Соболева антилопа",
+  "plantUk": "Вогняна лілія",
+  "dishUk": "Садза",
   "neighbors": [
    "BW",
    "MZ",
@@ -2311,6 +2635,12 @@
    "Через неї тягнуться високі гори Гіндукуш",
    "Відома гарними ручними килимами"
   ],
+  "animal": "Snow leopard",
+  "plant": "Tulip",
+  "dish": "Kabuli palau",
+  "animalUk": "Сніговий барс",
+  "plantUk": "Тюльпан",
+  "dishUk": "Кабулі палав",
   "neighbors": [
    "CN",
    "IR",
@@ -2355,6 +2685,12 @@
    "Тут давній монастир Гегард",
    "Гора Арарат — її національний символ"
   ],
+  "animal": "Golden eagle",
+  "plant": "Apricot tree",
+  "dish": "Harissa",
+  "animalUk": "Золотий орел",
+  "plantUk": "Абрикосове дерево",
+  "dishUk": "Хариса",
   "neighbors": [
    "AZ",
    "GE",
@@ -2397,6 +2733,12 @@
    "У столиці Баку є футуристичні «Полум'яні вежі»",
    "Розташована на Каспійському морі"
   ],
+  "animal": "Karabakh horse",
+  "plant": "Pomegranate",
+  "dish": "Plov",
+  "animalUk": "Карабаський кінь",
+  "plantUk": "Гранат",
+  "dishUk": "Плов",
   "neighbors": [
    "AM",
    "GE",
@@ -2440,6 +2782,12 @@
    "У пустелі росте 400-річне «Дерево життя»",
    "Відома природними перлами"
   ],
+  "animal": "Arabian oryx",
+  "plant": "Date palm",
+  "dish": "Machboos",
+  "animalUk": "Аравійський орикс",
+  "plantUk": "Фінікова пальма",
+  "dishUk": "Махбус",
   "neighbors": []
  },
  {
@@ -2479,6 +2827,12 @@
    "Одна з найгустіше заселених країн світу",
    "Відома барвистими рикшами"
   ],
+  "animal": "Royal Bengal tiger",
+  "plant": "Water lily",
+  "dish": "Hilsa fish curry",
+  "animalUk": "Бенгальський тигр",
+  "plantUk": "Водяна лілія",
+  "dishUk": "Хілса карі",
   "neighbors": [
    "IN",
    "MM"
@@ -2521,6 +2875,12 @@
    "На скелі — монастир «Гніздо тигра»",
    "На прапорі — дракон-громовержець"
   ],
+  "animal": "Takin",
+  "plant": "Himalayan poppy",
+  "dish": "Ema datshi",
+  "animalUk": "Такін",
+  "plantUk": "Гімалайський мак",
+  "dishUk": "Єма датші",
   "neighbors": [
    "CN",
    "IN"
@@ -2561,6 +2921,12 @@
    "Має розкішну мечеть із золотим куполом",
    "Здебільшого вкрите тропічним лісом"
   ],
+  "animal": "Proboscis monkey",
+  "plant": "Simpor",
+  "dish": "Ambuyat",
+  "animalUk": "Носач",
+  "plantUk": "Сімпор",
+  "dishUk": "Амбуят",
   "neighbors": [
    "MY"
   ]
@@ -2600,6 +2966,12 @@
    "Анкор — найбільша релігійна пам'ятка на Землі",
    "Озеро Тонлесап змінює напрям течії із сезонами"
   ],
+  "animal": "Kouprey",
+  "plant": "Rumdul flower",
+  "dish": "Amok",
+  "animalUk": "Купрей",
+  "plantUk": "Квітка румдул",
+  "dishUk": "Амок",
   "neighbors": [
    "LA",
    "TH",
@@ -2643,6 +3015,12 @@
    "Винайшла папір, компас і феєрверки",
    "У її бамбукових лісах живуть великі панди"
   ],
+  "animal": "Giant panda",
+  "plant": "Plum blossom",
+  "dish": "Peking duck",
+  "animalUk": "Велика панда",
+  "plantUk": "Цвіт сливи",
+  "dishUk": "Качка по-пекінськи",
   "neighbors": [
    "AF",
    "BT",
@@ -2695,6 +3073,12 @@
    "За міфом — батьківщина Афродіти",
    "Має одне з найдавніших вин світу — «Командарію»"
   ],
+  "animal": "Moufflon",
+  "plant": "Cyprus cedar",
+  "dish": "Halloumi",
+  "animalUk": "Муфлон",
+  "plantUk": "Кіпрський кедр",
+  "dishUk": "Халумі",
   "neighbors": []
  },
  {
@@ -2732,6 +3116,12 @@
    "Над нею височіють Кавказькі гори",
    "Відома печерними містами, як-от Вардзіа"
   ],
+  "animal": "Caucasian leopard",
+  "plant": "Grapevine",
+  "dish": "Khachapuri",
+  "animalUk": "Кавказький леопард",
+  "plantUk": "Виноградна лоза",
+  "dishUk": "Хачапурі",
   "neighbors": [
    "AM",
    "AZ",
@@ -2776,6 +3166,12 @@
    "Батьківщина системи чисел і гри в шахи",
    "Боллівуд знімає сотні фільмів на рік"
   ],
+  "animal": "Bengal tiger",
+  "plant": "Lotus",
+  "dish": "Khichdi",
+  "animalUk": "Бенгальський тигр",
+  "plantUk": "Лотос",
+  "dishUk": "Кхічді",
   "neighbors": [
    "BD",
    "BT",
@@ -2822,6 +3218,12 @@
    "Лежить на вулканічному «Вогняному кільці»",
    "Відома орангутанами на Борнео й Суматрі"
   ],
+  "animal": "Komodo dragon",
+  "plant": "Jasmine",
+  "dish": "Nasi goreng",
+  "animalUk": "Комодський варан",
+  "plantUk": "Жасмін",
+  "dishUk": "Насі-горенг",
   "neighbors": [
    "MY",
    "PG",
@@ -2863,6 +3265,12 @@
    "Відома вишуканими перськими килимами",
    "Була серцем могутньої Перської імперії"
   ],
+  "animal": "Persian leopard",
+  "plant": "Persian rose",
+  "dish": "Chelo kabab",
+  "animalUk": "Перський леопард",
+  "plantUk": "Перська троянда",
+  "dishUk": "Чело-кебаб",
   "neighbors": [
    "AF",
    "AM",
@@ -2908,6 +3316,12 @@
    "У давній Месопотамії тут винайшли письмо",
    "Через неї течуть Тигр і Євфрат"
   ],
+  "animal": "Chukar partridge",
+  "plant": "Date palm",
+  "dish": "Masgouf",
+  "animalUk": "Куріпка чукар",
+  "plantUk": "Фінікова пальма",
+  "dishUk": "Мазгуф",
   "neighbors": [
    "IR",
    "JO",
@@ -2952,6 +3366,12 @@
    "Мертве море таке солоне, що легко тримає на воді",
    "Мертве море — найнижча точка суходолу"
   ],
+  "animal": "Mountain gazelle",
+  "plant": "Cyclamen",
+  "dish": "Hummus",
+  "animalUk": "Гірська газель",
+  "plantUk": "Цикламен",
+  "dishUk": "Хумус",
   "neighbors": [
    "EG",
    "JO",
@@ -2997,6 +3417,12 @@
    "Винайшла суші, манґу й багато відеоігор",
    "Має найстарішу компанію світу, що досі працює"
   ],
+  "animal": "Japanese macaque",
+  "plant": "Cherry blossom",
+  "dish": "Ramen",
+  "animalUk": "Японський макак",
+  "plantUk": "Сакура",
+  "dishUk": "Рамен",
   "neighbors": []
  },
  {
@@ -3034,6 +3460,12 @@
    "На її кордоні лежить Мертве море",
    "Червона пустеля Ваді-Рам схожа на Марс"
   ],
+  "animal": "Arabian oryx",
+  "plant": "Black iris",
+  "dish": "Mansaf",
+  "animalUk": "Аравійський орикс",
+  "plantUk": "Чорний ірис",
+  "dishUk": "Мансаф",
   "neighbors": [
    "IL",
    "IQ",
@@ -3077,6 +3509,12 @@
    "Звідси запускають ракети з космодрому Байконур",
    "Її вкривають широкі трав'янисті степи"
   ],
+  "animal": "Snow leopard",
+  "plant": "Saksaul",
+  "dish": "Beshbarmak",
+  "animalUk": "Сніговий барс",
+  "plantUk": "Саксаул",
+  "dishUk": "Бешбармак",
   "neighbors": [
    "CN",
    "KG",
@@ -3120,6 +3558,12 @@
    "Відома високими «Кувейтськими вежами»",
    "Одне з найспекотніших місць світу влітку"
   ],
+  "animal": "Falcon",
+  "plant": "Arfaj",
+  "dish": "Machboos",
+  "animalUk": "Сокіл",
+  "plantUk": "Арфадж",
+  "dishUk": "Махбус",
   "neighbors": [
    "IQ",
    "SA"
@@ -3160,6 +3604,12 @@
    "Відома юртами й кочовою кінною культурою",
    "Грає в кок-бору — кінну гру з м'ячем"
   ],
+  "animal": "Snow leopard",
+  "plant": "Absinthe wormwood",
+  "dish": "Beshbarmak",
+  "animalUk": "Сніговий барс",
+  "plantUk": "Гіркий полин",
+  "dishUk": "Бешбармак",
   "neighbors": [
    "CN",
    "KZ",
@@ -3202,6 +3652,12 @@
    "Відома тисячами буддійських храмів у Луангпхабангу",
    "Долина глеків повна загадкових кам'яних глеків"
   ],
+  "animal": "Asian elephant",
+  "plant": "Dok Champa",
+  "dish": "Laap",
+  "animalUk": "Азіатський слон",
+  "plantUk": "Квітка чампа",
+  "dishUk": "Лаап",
   "neighbors": [
    "CN",
    "KH",
@@ -3245,6 +3701,12 @@
    "Кедр на прапорі — національний символ",
    "Бейрут — одне з найдавніших міст світу"
   ],
+  "animal": "Striped hyena",
+  "plant": "Cedar of Lebanon",
+  "dish": "Kibbeh",
+  "animalUk": "Смугаста гієна",
+  "plantUk": "Ліванський кедр",
+  "dishUk": "Кіббе",
   "neighbors": [
    "IL",
    "SY"
@@ -3285,6 +3747,12 @@
    "У лісах живуть орангутани й росте велетенська раффлезія",
    "Розділена між материковою Азією та Борнео"
   ],
+  "animal": "Malayan tiger",
+  "plant": "Hibiscus",
+  "dish": "Nasi lemak",
+  "animalUk": "Малайський тигр",
+  "plantUk": "Гібіскус",
+  "dishUk": "Насі лемак",
   "neighbors": [
    "BN",
    "ID",
@@ -3326,6 +3794,12 @@
    "Найнижча й найрівніша країна на Землі",
    "Відомі бунгало над водою й рифами"
   ],
+  "animal": "Yellowfin tuna",
+  "plant": "Coconut palm",
+  "dish": "Garudhiya",
+  "animalUk": "Жовтоперий тунець",
+  "plantUk": "Кокосова пальма",
+  "dishUk": "Гарудія",
   "neighbors": []
  },
  {
@@ -3363,6 +3837,12 @@
    "Край Чингісхана й кочових скотарів",
    "У багатьох місцях коней більше, ніж людей"
   ],
+  "animal": "Takhi horse",
+  "plant": "Soyombo flower",
+  "dish": "Khorkhog",
+  "animalUk": "Дикий кінь такхі",
+  "plantUk": "Квітка соємбо",
+  "dishUk": "Хорхог",
   "neighbors": [
    "CN",
    "RU"
@@ -3403,6 +3883,12 @@
    "Тисячі храмів усівають рівнини Баган",
    "Рибалки на озері Інле веслують однією ногою"
   ],
+  "animal": "Green peafowl",
+  "plant": "Padauk",
+  "dish": "Mohinga",
+  "animalUk": "Зелений павич",
+  "plantUk": "Падаук",
+  "dishUk": "Мохінга",
   "neighbors": [
    "BD",
    "CN",
@@ -3446,6 +3932,12 @@
    "У Лумбіні народився Будда",
    "Єдина країна з непрямокутним прапором"
   ],
+  "animal": "Cow",
+  "plant": "Rhododendron",
+  "dish": "Dal bhat",
+  "animalUk": "Корова",
+  "plantUk": "Рododendron",
+  "dishUk": "Дал бат",
   "neighbors": [
    "CN",
    "IN"
@@ -3486,6 +3978,12 @@
    "Має найбільший за місткістю стадіон світу",
    "Гориста, зі священною горою Пекту"
   ],
+  "animal": "Chollima",
+  "plant": "Magnolia",
+  "dish": "Sinsollo",
+  "animalUk": "Чолліма",
+  "plantUk": "Магнолія",
+  "dishUk": "Сінсолло",
   "neighbors": [
    "CN",
    "KR",
@@ -3527,6 +4025,12 @@
    "Має мальовничі узбережжя, схожі на фіорди, у Мусандамі",
    "Відома фортами й традиційними човнами доу"
   ],
+  "animal": "Arabian oryx",
+  "plant": "Frankincense tree",
+  "dish": "Shuwa",
+  "animalUk": "Аравійський орикс",
+  "plantUk": "Ладанне дерево",
+  "dishUk": "Шуа",
   "neighbors": [
    "AE",
    "SA",
@@ -3568,6 +4072,12 @@
    "Тут зародилася давня цивілізація долини Інду",
    "Каракорумське шосе — одна з найвисокогірніших доріг"
   ],
+  "animal": "Markhor",
+  "plant": "Jasmine",
+  "dish": "Biryani",
+  "animalUk": "Маркхор",
+  "plantUk": "Жасмін",
+  "dishUk": "Біряні",
   "neighbors": [
    "AF",
    "CN",
@@ -3610,6 +4120,12 @@
    "Єрихон — одне з найдавніших міст на Землі",
    "Відома оливковими гаями й вишивкою"
   ],
+  "animal": "Palestine sunbird",
+  "plant": "Olive tree",
+  "dish": "Musakhan",
+  "animalUk": "Палестинська нектарниця",
+  "plantUk": "Оливкове дерево",
+  "dishUk": "Мусахан",
   "neighbors": [
    "EG",
    "IL",
@@ -3653,6 +4169,12 @@
    "Тут живе довгоп'ят — крихітний великоокий примат",
    "Має підземні річки й рисові тераси"
   ],
+  "animal": "Philippine eagle",
+  "plant": "Sampaguita",
+  "dish": "Adobo",
+  "animalUk": "Філіппінський орел",
+  "plantUk": "Сампагіта",
+  "dishUk": "Адобо",
   "neighbors": []
  },
  {
@@ -3690,6 +4212,12 @@
    "Прийняла Чемпіонат світу з футболу 2022 року",
    "Має футуристичний обрій у Досі"
   ],
+  "animal": "Arabian oryx",
+  "plant": "Sidder tree",
+  "dish": "Machboos",
+  "animalUk": "Аравійський орикс",
+  "plantUk": "Сідерське дерево",
+  "dishUk": "Махбус",
   "neighbors": [
    "SA"
   ]
@@ -3731,6 +4259,12 @@
    "Має давні скельні гробниці Хегра",
    "Один із найбільших видобувачів нафти у світі"
   ],
+  "animal": "Arabian oryx",
+  "plant": "Date palm",
+  "dish": "Kabsa",
+  "animalUk": "Аравійський орикс",
+  "plantUk": "Фінікова пальма",
+  "dishUk": "Кабса",
   "neighbors": [
    "AE",
    "IQ",
@@ -3776,6 +4310,12 @@
    "Відомий Marina Bay Sands і парком Gardens by the Bay",
    "Один із найзавантаженіших портів світу"
   ],
+  "animal": "Lion",
+  "plant": "Vanda Miss Joaquim",
+  "dish": "Chicken rice",
+  "animalUk": "Лев",
+  "plantUk": "Ванда Міс Хоакін",
+  "dishUk": "Курка по-сінгапурськи",
   "neighbors": []
  },
  {
@@ -3813,6 +4353,12 @@
    "Лідер у смартфонах і технологіях",
    "Відома стравами кімчі й пібімпап"
   ],
+  "animal": "Siberian tiger",
+  "plant": "Hibiscus",
+  "dish": "Kimchi",
+  "animalUk": "Сибірський тигр",
+  "plantUk": "Гібіскус",
+  "dishUk": "Кімчі",
   "neighbors": [
    "KP"
   ]
@@ -3852,6 +4398,12 @@
    "Тут давня скельна фортеця Сігірія",
    "У її парках блукають слони й леопарди"
   ],
+  "animal": "Sri Lanka junglefowl",
+  "plant": "Blue lotus",
+  "dish": "Rice and curry",
+  "animalUk": "Цейлонська джунглева курка",
+  "plantUk": "Блакитний лотос",
+  "dishUk": "Рис з каррі",
   "neighbors": [
    "IN"
   ]
@@ -3891,6 +4443,12 @@
    "Має давні пустельні руїни Пальміри",
    "Відома оливковою олією й милом з Алеппо"
   ],
+  "animal": "Arabian eagle",
+  "plant": "Jasmine",
+  "dish": "Kibbeh",
+  "animalUk": "Аравійський орел",
+  "plantUk": "Жасмін",
+  "dishUk": "Кіббе",
   "neighbors": [
    "IL",
    "IQ",
@@ -3934,6 +4492,12 @@
    "Має Памірський тракт — «Дах світу»",
    "Побудувала одну з найвищих гребель світу"
   ],
+  "animal": "Snow leopard",
+  "plant": "Pomegranate",
+  "dish": "Osh",
+  "animalUk": "Сніговий барс",
+  "plantUk": "Гранат",
+  "dishUk": "Ош",
   "neighbors": [
    "AF",
    "CN",
@@ -3976,6 +4540,12 @@
    "Єдина країна Південно-Східної Азії, яку ніколи не колонізували",
    "Тут плавучі ринки й слони"
   ],
+  "animal": "Asian elephant",
+  "plant": "Ratchaphruek",
+  "dish": "Pad Thai",
+  "animalUk": "Азіатський слон",
+  "plantUk": "Ратчапруек",
+  "dishUk": "Пад-Тай",
   "neighbors": [
    "KH",
    "LA",
@@ -4018,6 +4588,12 @@
    "Має чудові коралові рифи для дайвінгу",
    "Відома високоякісною кавою"
   ],
+  "animal": "Saltwater crocodile",
+  "plant": "Sandalwood",
+  "dish": "Ikan saboko",
+  "animalUk": "Гребінчастий крокодил",
+  "plantUk": "Сандалове дерево",
+  "dishUk": "Ікан сабоко",
   "neighbors": [
    "ID"
   ]
@@ -4059,6 +4635,12 @@
    "Тут «чарівні димарі» Каппадокії",
    "Тут давнє місто Троя"
   ],
+  "animal": "Grey wolf",
+  "plant": "Tulip",
+  "dish": "Döner kebab",
+  "animalUk": "Сірий вовк",
+  "plantUk": "Тюльпан",
+  "dishUk": "Дьонер-кебаб",
   "neighbors": [
    "AM",
    "AZ",
@@ -4105,6 +4687,12 @@
    "Здебільшого вкрита пустелею Каракуми",
    "Відома ахалтекінськими кіньми з металевим блиском"
   ],
+  "animal": "Akhal-Teke horse",
+  "plant": "Seyr tree",
+  "dish": "Plov",
+  "animalUk": "Ахалтекінський кінь",
+  "plantUk": "Полин сейр",
+  "dishUk": "Плов",
   "neighbors": [
    "AF",
    "IR",
@@ -4147,6 +4735,12 @@
    "У Дубаї є штучний острів у формі пальми",
    "Виросла з пустельних селищ у футуристичні міста"
   ],
+  "animal": "Peregrine falcon",
+  "plant": "Date palm",
+  "dish": "Harees",
+  "animalUk": "Сапсан",
+  "plantUk": "Фінікова пальма",
+  "dishUk": "Харіс",
   "neighbors": [
    "OM",
    "SA"
@@ -4187,6 +4781,12 @@
    "Відома Самаркандом із блакитними кахлями",
    "Тут величні мечеті й медресе"
   ],
+  "animal": "Snow leopard",
+  "plant": "White poplar",
+  "dish": "Plov",
+  "animalUk": "Сніговий барс",
+  "plantUk": "Біла тополя",
+  "dishUk": "Плов",
   "neighbors": [
    "AF",
    "KG",
@@ -4230,6 +4830,12 @@
    "Тут суп фо з локшиною й рисові тераси",
    "Має величезні печерні системи, як-от Шондонг"
   ],
+  "animal": "Water buffalo",
+  "plant": "Lotus",
+  "dish": "Phở",
+  "animalUk": "Водяний буйвіл",
+  "plantUk": "Лотос",
+  "dishUk": "Фо",
   "neighbors": [
    "CN",
    "KH",
@@ -4271,6 +4877,12 @@
    "У старому місті Сана — вежі, мов із пряників",
    "Один із найдавніших осередків людських поселень"
   ],
+  "animal": "Arabian leopard",
+  "plant": "Coffee plant",
+  "dish": "Saltah",
+  "animalUk": "Аравійський леопард",
+  "plantUk": "Кавове дерево",
+  "dishUk": "Салта",
   "neighbors": [
    "OM",
    "SA"
@@ -4311,6 +4923,12 @@
    "Гарні пляжі вздовж Албанської Рив'єри",
    "Тут кивають на «ні» і хитають головою на «так»"
   ],
+  "animal": "Golden eagle",
+  "plant": "Olive",
+  "dish": "Tavë kosi",
+  "animalUk": "Золотий орел",
+  "plantUk": "Оливкове дерево",
+  "dishUk": "Тавє косі",
   "neighbors": [
    "GR",
    "ME",
@@ -4352,6 +4970,12 @@
    "Не має ні аеропорту, ні армії",
    "Відома лижами та безмитними покупками"
   ],
+  "animal": "Pyrenean chamois",
+  "plant": "Gran Valira lily",
+  "dish": "Escudella",
+  "animalUk": "Піренейська серна",
+  "plantUk": "Ліліяграновалір",
+  "dishUk": "Ескуделья",
   "neighbors": [
    "ES",
    "FR"
@@ -4392,6 +5016,12 @@
    "Тут величні альпійські лижні курорти",
    "Відень славиться палацами й кав'ярнями"
   ],
+  "animal": "Barn swallow",
+  "plant": "Edelweiss",
+  "dish": "Wiener Schnitzel",
+  "animalUk": "Міська ластівка",
+  "plantUk": "Едельвейс",
+  "dishUk": "Вінерський шніцель",
   "neighbors": [
    "CH",
    "CZ",
@@ -4438,6 +5068,12 @@
    "У Мінську — широкі проспекти радянської доби",
    "Відома як край озер і лісів"
   ],
+  "animal": "European bison",
+  "plant": "Flax",
+  "dish": "Draniki",
+  "animalUk": "Зубр",
+  "plantUk": "Льон",
+  "dishUk": "Деруни",
   "neighbors": [
    "LT",
    "LV",
@@ -4483,6 +5119,12 @@
    "У Брюсселі — штаб-квартира Євросоюзу",
    "Батьківщина коміксового героя Тінтіна"
   ],
+  "animal": "Lion",
+  "plant": "Red poppy",
+  "dish": "Moules-frites",
+  "animalUk": "Лев",
+  "plantUk": "Червоний мак",
+  "dishUk": "Мідії з картоплею фрі",
   "neighbors": [
    "DE",
    "FR",
@@ -4525,6 +5167,12 @@
    "Сміливці стрибають із мосту в річку внизу",
    "Де у старих містах Схід зустрічається із Заходом"
   ],
+  "animal": "Brown bear",
+  "plant": "Bosnian lily",
+  "dish": "Bosanski lonac",
+  "animalUk": "Бурий ведмідь",
+  "plantUk": "Боснійська лілія",
+  "dishUk": "Боснійський лонац",
   "neighbors": [
    "HR",
    "ME",
@@ -4566,6 +5214,12 @@
    "Тут знайшли один із найдавніших золотих скарбів",
    "Тут давні фракійські гробниці"
   ],
+  "animal": "Balkan chamois",
+  "plant": "Rose",
+  "dish": "Banitsa",
+  "animalUk": "Балканська серна",
+  "plantUk": "Троянда",
+  "dishUk": "Баниця",
   "neighbors": [
    "GR",
    "MK",
@@ -4611,6 +5265,12 @@
    "На Плітвицьких озерах — приголомшливі водоспади",
    "Тут винайшли краватку"
   ],
+  "animal": "Pine marten",
+  "plant": "Iris croatica",
+  "dish": "Peka",
+  "animalUk": "Кам'яна куниця",
+  "plantUk": "Хорватський ірис",
+  "dishUk": "Пека",
   "neighbors": [
    "BA",
    "HU",
@@ -4654,6 +5314,12 @@
    "Усіяна замками країна в центрі Європи",
    "П'є найбільше пива на людину у світі"
   ],
+  "animal": "Double-tailed lion",
+  "plant": "Linden tree",
+  "dish": "Svíčková",
+  "animalUk": "Двохвостий лев",
+  "plantUk": "Липа",
+  "dishUk": "Свічкова",
   "neighbors": [
    "AT",
    "DE",
@@ -4698,6 +5364,12 @@
    "Часто серед найщасливіших країн",
    "Відома велосипедами й затишком «гюґе»"
   ],
+  "animal": "Mute swan",
+  "plant": "Marguerite daisy",
+  "dish": "Smørrebrød",
+  "animalUk": "Лебідь-шипун",
+  "plantUk": "Маргаритка",
+  "dishUk": "Смерреброд",
   "neighbors": [
    "DE"
   ]
@@ -4737,6 +5409,12 @@
    "Тут голосують онлайн і реєструють фірму за хвилини",
    "Вкрита лісами й має понад 2000 островів"
   ],
+  "animal": "Barn swallow",
+  "plant": "Cornflower",
+  "dish": "Black bread",
+  "animalUk": "Сільська ластівка",
+  "plantUk": "Волошка",
+  "dishUk": "Чорний хліб",
   "neighbors": [
    "LV",
    "RU"
@@ -4779,6 +5457,12 @@
    "Кажуть, у Лапландії живе Санта-Клаус",
    "Винайшла сауну"
   ],
+  "animal": "Whooper swan",
+  "plant": "Lily of the valley",
+  "dish": "Karjalanpiirakka",
+  "animalUk": "Лебідь-кликун",
+  "plantUk": "Конвалія",
+  "dishUk": "Карельський пиріжок",
   "neighbors": [
    "NO",
    "RU",
@@ -4822,6 +5506,12 @@
    "Відома сиром, хлібом і модою",
    "«Тур де Франс» — легендарна велогонка"
   ],
+  "animal": "Gallic rooster",
+  "plant": "Iris",
+  "dish": "Pot-au-feu",
+  "animalUk": "Галльський півень",
+  "plantUk": "Ірис",
+  "dishUk": "Пот-о-фе",
   "neighbors": [
    "AD",
    "BE",
@@ -4870,6 +5560,12 @@
    "Октоберфест — велетенське свято в Мюнхені",
    "Лідер у науці й інженерії"
   ],
+  "animal": "Federal eagle",
+  "plant": "Cornflower",
+  "dish": "Sauerbraten",
+  "animalUk": "Федеральний орел",
+  "plantUk": "Волошка",
+  "dishUk": "Зауербратен",
   "neighbors": [
    "AT",
    "BE",
@@ -4919,6 +5615,12 @@
    "Має тисячі гарних островів",
    "Звідси походять грецькі міфи й боги"
   ],
+  "animal": "Little owl",
+  "plant": "Olive",
+  "dish": "Moussaka",
+  "animalUk": "Маленька сова",
+  "plantUk": "Оливкове дерево",
+  "dishUk": "Мусака",
   "neighbors": [
    "AL",
    "BG",
@@ -4961,6 +5663,12 @@
    "Тут винайшли кубик Рубіка",
    "Річка Дунай ділить столицю навпіл"
   ],
+  "animal": "Turul",
+  "plant": "Tulip",
+  "dish": "Gulyás",
+  "animalUk": "Турул",
+  "plantUk": "Тюльпан",
+  "dishUk": "Гуляш",
   "neighbors": [
    "AT",
    "HR",
@@ -5008,6 +5716,12 @@
    "Тут зовсім немає комарів",
    "У небі танцює північне сяйво"
   ],
+  "animal": "Gyrfalcon",
+  "plant": "Mountain avens",
+  "dish": "Skyr with cream",
+  "animalUk": "Кречет",
+  "plantUk": "Дріада восьмипелюсткова",
+  "dishUk": "Скір з вершками",
   "neighbors": []
  },
  {
@@ -5047,6 +5761,12 @@
    "Скелі Могер стрімко спадають у море",
    "Батьківщина легенд про лепреконів"
   ],
+  "animal": "Red deer",
+  "plant": "Shamrock",
+  "dish": "Irish stew",
+  "animalUk": "Благородний олень",
+  "plantUk": "Конюшина",
+  "dishUk": "Ірландське рагу",
   "neighbors": [
    "GB"
   ]
@@ -5088,6 +5808,12 @@
    "Винайшла піцу й пасту",
    "Венеція — місто, збудоване на воді"
   ],
+  "animal": "Italian wolf",
+  "plant": "Olive",
+  "dish": "Pizza Margherita",
+  "animalUk": "Апеннінський вовк",
+  "plantUk": "Оливкове дерево",
+  "dishUk": "Піца Маргарита",
   "neighbors": [
    "AT",
    "CH",
@@ -5132,6 +5858,12 @@
    "Половина країни вкрита лісом",
    "Відома мерехтливим балтійським бурштином"
   ],
+  "animal": "White wagtail",
+  "plant": "Daisy",
+  "dish": "Grey peas with bacon",
+  "animalUk": "Біла плиска",
+  "plantUk": "Ромашка",
+  "dishUk": "Копчений горох з беконом",
   "neighbors": [
    "BY",
    "EE",
@@ -5174,6 +5906,12 @@
    "Затиснута в Альпах між Швейцарією та Австрією",
    "Виробляє більше зубних протезів, ніж майже будь-де"
   ],
+  "animal": "Brown trout",
+  "plant": "Oak",
+  "dish": "Käsknöpfle",
+  "animalUk": "Струмкова форель",
+  "plantUk": "Дуб",
+  "dishUk": "Кеснепфле",
   "neighbors": [
    "AT",
    "CH"
@@ -5214,6 +5952,12 @@
    "Першою проголосила незалежність від СРСР",
    "Відома бурштином і баскетболом"
   ],
+  "animal": "White stork",
+  "plant": "Rue",
+  "dish": "Cepelinai",
+  "animalUk": "Білий лелека",
+  "plantUk": "Рута",
+  "dishUk": "Цепеліни",
   "neighbors": [
    "BY",
    "LV",
@@ -5256,6 +6000,12 @@
    "Має казкову столицю на скелях",
    "Громадський транспорт повністю безкоштовний"
   ],
+  "animal": "Red lion",
+  "plant": "Moselle rose",
+  "dish": "Judd mat Gaardebounen",
+  "animalUk": "Червоний лев",
+  "plantUk": "Троянда Мозелю",
+  "dishUk": "Юдд з горохом",
   "neighbors": [
    "BE",
    "DE",
@@ -5297,6 +6047,12 @@
    "Має одні з найдавніших кам'яних храмів світу",
    "Крихітна країна має власну мальтійську мову"
   ],
+  "animal": "Maltese falcon",
+  "plant": "Maltese centaury",
+  "dish": "Stuffat tal-Fenek",
+  "animalUk": "Мальтійський сокіл",
+  "plantUk": "Центаурея мальтійська",
+  "dishUk": "Тушкований кролик",
   "neighbors": []
  },
  {
@@ -5334,6 +6090,12 @@
    "Одна з найменш відвідуваних країн Європи",
    "Відома виноградниками й пологими пагорбами"
   ],
+  "animal": "Aurochs",
+  "plant": "Stefanesti vine",
+  "dish": "Mămăligă",
+  "animalUk": "Тур",
+  "plantUk": "Виноград Стефанешти",
+  "dishUk": "Мамалига",
   "neighbors": [
    "RO",
    "UA"
@@ -5374,6 +6136,12 @@
    "Відома розкішним Гран-прі Монако",
    "Тут королівський палац і знаменитий казино"
   ],
+  "animal": "Hedgehog",
+  "plant": "Carnation",
+  "dish": "Barbajuan",
+  "animalUk": "Їжак",
+  "plantUk": "Гвоздика",
+  "dishUk": "Барбажуан",
   "neighbors": [
    "FR"
   ]
@@ -5413,6 +6181,12 @@
    "Має мальовничі затоки, схожі на фіорди, на Адріатиці",
    "Крихітна, але повна гір і пляжів"
   ],
+  "animal": "Golden eagle",
+  "plant": "Sweet olive",
+  "dish": "Kacamak",
+  "animalUk": "Золотий орел",
+  "plantUk": "Маслина",
+  "dishUk": "Качамак",
   "neighbors": [
    "AL",
    "BA",
@@ -5457,6 +6231,12 @@
    "Амстердам пронизаний каналами",
    "Люди — одні з найвищих у світі"
   ],
+  "animal": "Lion",
+  "plant": "Tulip",
+  "dish": "Stamppot",
+  "animalUk": "Лев",
+  "plantUk": "Тюльпан",
+  "dishUk": "Штампот",
   "neighbors": [
    "BE",
    "DE"
@@ -5497,6 +6277,12 @@
    "У столиці Скоп'є народилася Мати Тереза",
    "Гірська балканська країна"
   ],
+  "animal": "Lynx",
+  "plant": "Red poppy",
+  "dish": "Tavče gravče",
+  "animalUk": "Рись",
+  "plantUk": "Червоний мак",
+  "dishUk": "Тавче гравче",
   "neighbors": [
    "AL",
    "BG",
@@ -5541,6 +6327,12 @@
    "Батьківщина вікінгів-мореплавців",
    "Чудове місце, щоб побачити північне сяйво"
   ],
+  "animal": "Lion",
+  "plant": "Purple heather",
+  "dish": "Fårikål",
+  "animalUk": "Лев",
+  "plantUk": "Верес звичайний",
+  "dishUk": "Фаріколь",
   "neighbors": [
    "FI",
    "RU",
@@ -5582,6 +6374,12 @@
    "Батьківщина астронома Коперника й Марії Кюрі",
    "Має давню Біловезьку пущу із зубрами"
   ],
+  "animal": "White-tailed eagle",
+  "plant": "Corn poppy",
+  "dish": "Bigos",
+  "animalUk": "Орлан-білохвіст",
+  "plantUk": "Волошка",
+  "dishUk": "Бігос",
   "neighbors": [
    "BY",
    "CZ",
@@ -5629,6 +6427,12 @@
    "Батьківщина портвейну й душевної музики фаду",
    "Найзахідніша точка материкової Європи"
   ],
+  "animal": "Iberian wolf",
+  "plant": "Lavender",
+  "dish": "Bacalhau",
+  "animalUk": "Іберійський вовк",
+  "plantUk": "Лаванда",
+  "dishUk": "Бакаляу",
   "neighbors": [
    "ES"
   ]
@@ -5668,6 +6472,12 @@
    "У Карпатах живуть бурі ведмеді й вовки",
    "Має найбільшу в Європі популяцію бурих ведмедів"
   ],
+  "animal": "Lynx",
+  "plant": "Dog rose",
+  "dish": "Sarmale",
+  "animalUk": "Рись",
+  "plantUk": "Шипшина",
+  "dishUk": "Сармале",
   "neighbors": [
    "BG",
    "HU",
@@ -5713,6 +6523,12 @@
    "Тут барвистий собор Василя Блаженного",
    "Озеро Байкал — найглибше озеро на Землі"
   ],
+  "animal": "Russian brown bear",
+  "plant": "Chamomile",
+  "dish": "Borscht",
+  "animalUk": "Бурий ведмідь",
+  "plantUk": "Ромашка",
+  "dishUk": "Борщ",
   "neighbors": [
    "AZ",
    "BY",
@@ -5765,6 +6581,12 @@
    "Крихітна країна на горі Монте-Тітано",
    "Повністю оточена Італією"
   ],
+  "animal": "Brown trout",
+  "plant": "Star of Bethlehem",
+  "dish": "Piadina",
+  "animalUk": "Струмкова форель",
+  "plantUk": "Зірка Віфлеєму",
+  "dishUk": "П'ядіна",
   "neighbors": [
    "IT"
   ]
@@ -5804,6 +6626,12 @@
    "Відома жвавими фестивалями духової музики",
    "Винахідник Нікола Тесла був сербом"
   ],
+  "animal": "White eagle",
+  "plant": "Hops",
+  "dish": "Sarma",
+  "animalUk": "Білий орел",
+  "plantUk": "Хміль",
+  "dishUk": "Сарма",
   "neighbors": [
    "BA",
    "BG",
@@ -5849,6 +6677,12 @@
    "Високі Татри чудові для походів",
    "Братислава стоїть просто на Дунаї"
   ],
+  "animal": "Tatra chamois",
+  "plant": "Lime tree",
+  "dish": "Bryndzové halušky",
+  "animalUk": "Татрянська серна",
+  "plantUk": "Липа",
+  "dishUk": "Брундзові галушки",
   "neighbors": [
    "AT",
    "CZ",
@@ -5892,6 +6726,12 @@
    "У назві sLOVEnia сховані літери L-O-V-E (любов)",
    "Понад половину країни вкрито лісом"
   ],
+  "animal": "Proteus",
+  "plant": "Red carnation",
+  "dish": "Kranjska klobasa",
+  "animalUk": "Протей",
+  "plantUk": "Червона гвоздика",
+  "dishUk": "Крайнська ковбаса",
   "neighbors": [
    "AT",
    "HR",
@@ -5936,6 +6776,12 @@
    "Тут проходить «помідорний» фестиваль Томатіна",
    "Біг із биками в Памплоні"
   ],
+  "animal": "Bull",
+  "plant": "Carnation",
+  "dish": "Paella",
+  "animalUk": "Бик",
+  "plantUk": "Гвоздика",
+  "dishUk": "Паелья",
   "neighbors": [
    "AD",
    "FR",
@@ -5980,6 +6826,12 @@
    "Тисячі островів оточують Стокгольм",
    "Тут вручають Нобелівські премії"
   ],
+  "animal": "Eurasian elk",
+  "plant": "Linnaea",
+  "dish": "Köttbullar",
+  "animalUk": "Лось",
+  "plantUk": "Ліннея",
+  "dishUk": "Фрикадельки",
   "neighbors": [
    "FI",
    "NO"
@@ -6022,6 +6874,12 @@
    "Залишається нейтральною й не бере участі у війнах",
    "Має чотири офіційні мови"
   ],
+  "animal": "Marmot",
+  "plant": "Edelweiss",
+  "dish": "Fondue",
+  "animalUk": "Альпійський бабак",
+  "plantUk": "Едельвейс",
+  "dishUk": "Фондю",
   "neighbors": [
    "AT",
    "DE",
@@ -6065,6 +6923,12 @@
    "Відома як «житниця» завдяки родючим землям",
    "Відома золотоверхими соборами Києва"
   ],
+  "animal": "White stork",
+  "plant": "Sunflower",
+  "dish": "Borscht",
+  "animalUk": "Білий лелека",
+  "plantUk": "Соняшник",
+  "dishUk": "Борщ",
   "neighbors": [
    "BY",
    "HU",
@@ -6112,6 +6976,12 @@
    "Перша країна із залізницями й промисловою революцією",
    "Відома червоними двоповерховими автобусами"
   ],
+  "animal": "Lion",
+  "plant": "Tudor rose",
+  "dish": "Chicken tikka masala",
+  "animalUk": "Лев",
+  "plantUk": "Тюдорська троянда",
+  "dishUk": "Курка тіка масала",
   "neighbors": [
    "IE"
   ]
@@ -6151,6 +7021,12 @@
    "Дім Папи Римського й Католицької церкви",
    "Тут стеля Сікстинської капели роботи Мікеланджело"
   ],
+  "animal": "Roman eagle",
+  "plant": "White lily",
+  "dish": "Saltimbocca",
+  "animalUk": "Римський орел",
+  "plantUk": "Біла лілія",
+  "dishUk": "Сальтімбокка",
   "neighbors": [
    "IT"
   ]
@@ -6190,6 +7066,12 @@
    "Два острови-близнюки в Карибському морі",
    "Відома вітрильним спортом і кораловими рифами"
   ],
+  "animal": "Magnificent frigatebird",
+  "plant": "Agave",
+  "dish": "Fungie and pepperpot",
+  "animalUk": "Великий фрегат",
+  "plantUk": "Агава",
+  "dishUk": "Фанджі з перцевим горщиком",
   "neighbors": []
  },
  {
@@ -6227,6 +7109,12 @@
    "Відомі свинками, що плавають, на Ексумі",
    "Мають третій за величиною бар'єрний риф світу"
   ],
+  "animal": "Flamingo",
+  "plant": "Yellow elder",
+  "dish": "Cracked conch",
+  "animalUk": "Рожевий фламінго",
+  "plantUk": "Жовта бузина",
+  "dishUk": "Смажений равлик-трубач",
   "neighbors": []
  },
  {
@@ -6264,6 +7152,12 @@
    "Відома летючою рибою й привітними пляжами",
    "Тут уперше зробили ром"
   ],
+  "animal": "Pelican",
+  "plant": "Pride of Barbados",
+  "dish": "Cou-cou and flying fish",
+  "animalUk": "Пелікан",
+  "plantUk": "Краса Барбадосу",
+  "dishUk": "Ку-ку з летючою рибою",
   "neighbors": []
  },
  {
@@ -6301,6 +7195,12 @@
    "Має найбільший бар'єрний риф в Америках",
    "У джунглях повно давніх храмів мая"
   ],
+  "animal": "Baird's tapir",
+  "plant": "Black orchid",
+  "dish": "Rice and beans",
+  "animalUk": "Тапір Байрда",
+  "plantUk": "Чорна орхідея",
+  "dishUk": "Рис з квасолею",
   "neighbors": [
    "GT",
    "MX"
@@ -6343,6 +7243,12 @@
    "Відома кленовим сиропом і Скелястими горами",
    "На кордоні гримить Ніагарський водоспад"
   ],
+  "animal": "Beaver",
+  "plant": "Sugar maple",
+  "dish": "Poutine",
+  "animalUk": "Бобер",
+  "plantUk": "Цукровий клен",
+  "dishUk": "Путін",
   "neighbors": [
    "US"
   ]
@@ -6382,6 +7288,12 @@
    "Повна вулканів, лінивців і туканів",
    "Світовий лідер із чистої, «зеленої» енергії"
   ],
+  "animal": "Clay-coloured thrush",
+  "plant": "Purple orchid",
+  "dish": "Gallo pinto",
+  "animalUk": "Строкатодзьоб",
+  "plantUk": "Фіолетова орхідея",
+  "dishUk": "Гало пінто",
   "neighbors": [
    "NI",
    "PA"
@@ -6422,6 +7334,12 @@
    "Найбільший острів Карибського моря",
    "Відома музикою сальса й сигарами"
   ],
+  "animal": "Cuban trogon",
+  "plant": "White mariposa",
+  "dish": "Ropa vieja",
+  "animalUk": "Кубинський трогон",
+  "plantUk": "Біла маріпоса",
+  "dishUk": "Ропа вієха",
   "neighbors": []
  },
  {
@@ -6459,6 +7377,12 @@
    "Має кипляче озеро, нагріте вулканом",
    "Вкрита буйними лісами й водоспадами"
   ],
+  "animal": "Sisserou parrot",
+  "plant": "Bwa Kwaib",
+  "dish": "Callaloo",
+  "animalUk": "Папуга сісеру",
+  "plantUk": "Бва-кваїб",
+  "dishUk": "Каллалу",
   "neighbors": []
  },
  {
@@ -6496,6 +7420,12 @@
    "Тут Христофор Колумб заклав перше поселення",
    "Батьківщина музики меренге й бачата"
   ],
+  "animal": "Palmchat",
+  "plant": "Bayahibe rose",
+  "dish": "La Bandera",
+  "animalUk": "Пальмовий чатак",
+  "plantUk": "Троянда байяхіби",
+  "dishUk": "Ла Бандера",
   "neighbors": [
    "HT"
   ]
@@ -6535,6 +7465,12 @@
    "Прозвана «Землею вулканів»",
    "Відома чудовими хвилями для серфінгу"
   ],
+  "animal": "Turquoise-browed motmot",
+  "plant": "Izote",
+  "dish": "Pupusas",
+  "animalUk": "Бірюзовочолий мотмот",
+  "plantUk": "Ізоте",
+  "dishUk": "Пупуси",
   "neighbors": [
    "GT",
    "HN"
@@ -6575,6 +7511,12 @@
    "Мускатний горіх навіть є на її прапорі",
    "Має підводні парки скульптур для дайверів"
   ],
+  "animal": "Grenada dove",
+  "plant": "Bougainvillea",
+  "dish": "Oil down",
+  "animalUk": "Гренадський голуб",
+  "plantUk": "Бугенвілея",
+  "dishUk": "Олл-даун",
   "neighbors": []
  },
  {
@@ -6612,6 +7554,12 @@
    "Тут піраміди Тікаль серед джунглів",
    "Має барвисті ринки й багато вулканів"
   ],
+  "animal": "Quetzal",
+  "plant": "White nun orchid",
+  "dish": "Pepián",
+  "animalUk": "Кетсаль",
+  "plantUk": "Орхідея біла черниця",
+  "dishUk": "Пепіан",
   "neighbors": [
    "BZ",
    "HN",
@@ -6654,6 +7602,12 @@
    "Ділить острів із Домініканською Республікою",
    "Відома яскравим народним мистецтвом"
   ],
+  "animal": "Hispaniolan trogon",
+  "plant": "Amourette",
+  "dish": "Griot",
+  "animalUk": "Гаїтянський трогон",
+  "plantUk": "Амурет",
+  "dishUk": "Гріо",
   "neighbors": [
    "DO"
   ]
@@ -6693,6 +7647,12 @@
    "Має тропічні ліси й карибські коралові рифи",
    "Колись вивозила стільки бананів, що її звали «банановою республікою»"
   ],
+  "animal": "Scarlet macaw",
+  "plant": "Orchid",
+  "dish": "Baleadas",
+  "animalUk": "Шарлатова макава",
+  "plantUk": "Орхідея",
+  "dishUk": "Балеадас",
   "neighbors": [
    "GT",
    "NI",
@@ -6734,6 +7694,12 @@
    "Батьківщина одних із найшвидших спринтерів світу",
    "Відома стравами «джерк» і кавою з Блакитних гір"
   ],
+  "animal": "Doctor bird",
+  "plant": "Lignum vitae",
+  "dish": "Ackee and saltfish",
+  "animalUk": "Пурпурна юла",
+  "plantUk": "Гуаякове дерево",
+  "dishUk": "Акі з солоною тріскою",
   "neighbors": []
  },
  {
@@ -6773,6 +7739,12 @@
    "Відома барвистим Днем мертвих",
    "Тут зимують мільйони метеликів-монархів"
   ],
+  "animal": "Golden eagle",
+  "plant": "Dahlia",
+  "dish": "Tacos",
+  "animalUk": "Золотий орел",
+  "plantUk": "Жоржина",
+  "dishUk": "Тако",
   "neighbors": [
    "BZ",
    "GT",
@@ -6814,6 +7786,12 @@
    "Відома численними вулканами й великими озерами",
    "На Серро-Негро можна кататися «вулканбордом»"
   ],
+  "animal": "Turquoise-browed motmot",
+  "plant": "Sacuanjoche",
+  "dish": "Gallo pinto",
+  "animalUk": "Мотмот",
+  "plantUk": "Сакуанхоче",
+  "dishUk": "Гало пінто",
   "neighbors": [
    "CR",
    "HN"
@@ -6854,6 +7832,12 @@
    "Тут кораблі проходять між Атлантикою й Тихим океаном",
    "Ліси повні барвистих жаб і птахів"
   ],
+  "animal": "Harpy eagle",
+  "plant": "Holy Ghost orchid",
+  "dish": "Sancocho",
+  "animalUk": "Гарпія",
+  "plantUk": "Орхідея Святого Духа",
+  "dishUk": "Санкочо",
   "neighbors": [
    "CO",
    "CR"
@@ -6894,6 +7878,12 @@
    "Два острови, поєднані карибськими водами",
    "Має стару залізницю, що колись возила цукрову тростину"
   ],
+  "animal": "Brown pelican",
+  "plant": "Poinciana",
+  "dish": "Stewed saltfish",
+  "animalUk": "Бурий пелікан",
+  "plantUk": "Пуансетія",
+  "dishUk": "Тушкована солона риба",
   "neighbors": []
  },
  {
@@ -6931,6 +7921,12 @@
    "Має вулкан, до якого можна доїхати, з киплячими джерелами",
    "Буйний ліс вкриває більшу частину острова"
   ],
+  "animal": "Saint Lucia parrot",
+  "plant": "Marguerite",
+  "dish": "Green fig and saltfish",
+  "animalUk": "Папуга Сент-Лусії",
+  "plantUk": "Маргаритка",
+  "dishUk": "Зелений інжир з тріскою",
   "neighbors": []
  },
  {
@@ -6968,6 +7964,12 @@
    "Тут знімали «Піратів Карибського моря»",
    "Відома вітрильними подорожами навколо Гренадин"
   ],
+  "animal": "Saint Vincent parrot",
+  "plant": "Soufrière tree",
+  "dish": "Roasted breadfruit",
+  "animalUk": "Папуга Сент-Вінсента",
+  "plantUk": "Дерево суфрієр",
+  "dishUk": "Смажене хлібне дерево",
   "neighbors": []
  },
  {
@@ -7005,6 +8007,12 @@
    "Відома одним із найбільших карнавалів світу",
    "Має озеро з природного асфальту (смоли)"
   ],
+  "animal": "Scarlet ibis",
+  "plant": "Chaconia",
+  "dish": "Doubles",
+  "animalUk": "Алий ібіс",
+  "plantUk": "Чаконія",
+  "dishUk": "Даблс",
   "neighbors": []
  },
  {
@@ -7044,6 +8052,12 @@
    "Голлівуд знімає всесвітньо відомі фільми",
    "Має 50 штатів і багато національних парків"
   ],
+  "animal": "Bald eagle",
+  "plant": "Oak",
+  "dish": "Apple pie",
+  "animalUk": "Білоголовий орлан",
+  "plantUk": "Дуб",
+  "dishUk": "Яблучний пиріг",
   "neighbors": [
    "CA",
    "MX"
@@ -7086,6 +8100,12 @@
    "Улуру — велетенська червона скеля серед пустелі",
    "Водночас і країна, і континент"
   ],
+  "animal": "Red kangaroo",
+  "plant": "Golden wattle",
+  "dish": "Meat pie",
+  "animalUk": "Рудий кенгуру",
+  "plantUk": "Золота акація",
+  "dishUk": "М'ясний пиріг",
   "neighbors": []
  },
  {
@@ -7123,6 +8143,12 @@
    "Відома привітними людьми й кораловими рифами",
    "Чудове місце для серфінгу й дайвінгу"
   ],
+  "animal": "Collared lory",
+  "plant": "Tagimoucia",
+  "dish": "Kokoda",
+  "animalUk": "Пістряволорі",
+  "plantUk": "Квітка тагімоуція",
+  "dishUk": "Кокода",
   "neighbors": []
  },
  {
@@ -7160,6 +8186,12 @@
    "Розкидана на величезній площі Тихого океану",
    "Лежить просто на екваторі й лінії зміни дат"
   ],
+  "animal": "Frigate bird",
+  "plant": "Babai",
+  "dish": "Palusami",
+  "animalUk": "Фрегат",
+  "plantUk": "Бабай",
+  "dishUk": "Палусамі",
   "neighbors": []
  },
  {
@@ -7197,6 +8229,12 @@
    "Відома традиційними навігаційними картами з паличок",
    "Атол Бікіні — об'єкт Світової спадщини ЮНЕСКО"
   ],
+  "animal": "Frigate bird",
+  "plant": "Iu",
+  "dish": "Coconut crab",
+  "animalUk": "Фрегат",
+  "plantUk": "Йю",
+  "dishUk": "Кокосовий краб",
   "neighbors": []
  },
  {
@@ -7234,6 +8272,12 @@
    "Тут таємниче кам'яне місто Нан-Мадол",
    "Оточена барвистими кораловими рифами"
   ],
+  "animal": "Micronesian pigeon",
+  "plant": "Ylang-ylang",
+  "dish": "Sakau",
+  "animalUk": "Мікронезійський голуб",
+  "plantUk": "Іланг-іланг",
+  "dishUk": "Сакау",
   "neighbors": []
  },
  {
@@ -7271,6 +8315,12 @@
    "Весь острів можна об'їхати за 30 хвилин",
    "Колись одне з найбагатших місць завдяки фосфатам"
   ],
+  "animal": "Frigate bird",
+  "plant": "Calophyllum inophyllum",
+  "dish": "Coconut fish",
+  "animalUk": "Фрегат",
+  "plantUk": "Каллофілум",
+  "dishUk": "Кокосова риба",
   "neighbors": []
  },
  {
@@ -7310,6 +8360,12 @@
    "Овець більше, ніж людей",
    "Культура маорі й танець хака відомі всьому світу"
   ],
+  "animal": "Kiwi",
+  "plant": "Silver fern",
+  "dish": "Hangi",
+  "animalUk": "Ківі",
+  "plantUk": "Срібна папороть",
+  "dishUk": "Хангі",
   "neighbors": []
  },
  {
@@ -7347,6 +8403,12 @@
    "Створила перший у світі заповідник для акул",
    "Має один із найкращих дайвінгів на Землі"
   ],
+  "animal": "Dugong",
+  "plant": "Plumeria",
+  "dish": "Taro",
+  "animalUk": "Дюгонь",
+  "plantUk": "Плюмерія",
+  "dishUk": "Таро",
   "neighbors": []
  },
  {
@@ -7384,6 +8446,12 @@
    "Тут розмовляють понад 800 мовами",
    "Вкрита лісами з райськими птахами"
   ],
+  "animal": "Raggiana bird-of-paradise",
+  "plant": "Lakatoi orchid",
+  "dish": "Mumu",
+  "animalUk": "Птах раю рагіана",
+  "plantUk": "Орхідея лакатої",
+  "dishUk": "Муму",
   "neighbors": [
    "ID"
   ]
@@ -7423,6 +8491,12 @@
    "Відома океанською купальнею То-Суа",
    "Тут жив письменник Роберт Луїс Стівенсон"
   ],
+  "animal": "Tooth-billed pigeon",
+  "plant": "Teuila",
+  "dish": "Palusami",
+  "animalUk": "Зубчастий голуб",
+  "plantUk": "Квітка тейла",
+  "dishUk": "Палусамі",
   "neighbors": []
  },
  {
@@ -7460,6 +8534,12 @@
    "Відоме місце історії Другої світової війни й дайвінгу до затонулих кораблів",
    "Вкриті тропічним лісом"
   ],
+  "animal": "Frigate bird",
+  "plant": "Canarium",
+  "dish": "Roasted yam",
+  "animalUk": "Фрегат",
+  "plantUk": "Канаріум",
+  "dishUk": "Смажений ямс",
   "neighbors": []
  },
  {
@@ -7497,6 +8577,12 @@
    "Досі нею править король",
    "Сюди припливають горбаті кити, щоб народити малят"
   ],
+  "animal": "Tongan ground dove",
+  "plant": "Heilala",
+  "dish": "Otai",
+  "animalUk": "Тонганський наземний голуб",
+  "plantUk": "Хейлала",
+  "dishUk": "Отай",
   "neighbors": []
  },
  {
@@ -7534,6 +8620,12 @@
    "Заробляє на своїй інтернет-адресі «.tv»",
    "Лише дев'ять крихітних коралових островів"
   ],
+  "animal": "Frigate bird",
+  "plant": "Pukaraga",
+  "dish": "Pulaka",
+  "animalUk": "Фрегат",
+  "plantUk": "Пукарага",
+  "dishUk": "Пулака",
   "neighbors": []
  },
  {
@@ -7571,6 +8663,12 @@
    "Тутешніх людей часто називають серед найщасливіших",
    "Острів'яни винайшли стрибки із землі — предка банджі"
   ],
+  "animal": "Coconut crab",
+  "plant": "Namele fern",
+  "dish": "Lap lap",
+  "animalUk": "Кокосовий краб",
+  "plantUk": "Папороть намеле",
+  "dishUk": "Лап-лап",
   "neighbors": []
  },
  {
@@ -7610,6 +8708,12 @@
    "Відома футбольною зіркою Ліонелем Мессі",
    "У Патагонії є льодовики й пінгвіни"
   ],
+  "animal": "Puma",
+  "plant": "Ceibo flower",
+  "dish": "Asado",
+  "animalUk": "Пума",
+  "plantUk": "Квітка цейба",
+  "dishUk": "Асадо",
   "neighbors": [
    "BO",
    "BR",
@@ -7653,6 +8757,12 @@
    "Має одну з найвисокогірніших столиць на Землі",
    "Озеро Тітікака — найвисокогірніше судноплавне озеро"
   ],
+  "animal": "Llama",
+  "plant": "Patujú flower",
+  "dish": "Salteñas",
+  "animalUk": "Лама",
+  "plantUk": "Квітка патуху",
+  "dishUk": "Сальтеньяс",
   "neighbors": [
    "AR",
    "BR",
@@ -7698,6 +8808,12 @@
    "Відома карнавалом у Ріо й футболом",
    "Статуя Христа-Спасителя дивиться на Ріо"
   ],
+  "animal": "Jaguar",
+  "plant": "Cattleya orchid",
+  "dish": "Feijoada",
+  "animalUk": "Ягуар",
+  "plantUk": "Орхідея каттлея",
+  "dishUk": "Фейжоада",
   "neighbors": [
    "AR",
    "BO",
@@ -7747,6 +8863,12 @@
    "Велетенські кам'яні голови острова Пасхи належать Чилі",
    "Чудове місце для спостереження за зорями"
   ],
+  "animal": "Andean condor",
+  "plant": "Chilean bellflower",
+  "dish": "Cazuela",
+  "animalUk": "Андійський кондор",
+  "plantUk": "Чилійський дзвіночок",
+  "dishUk": "Касуела",
   "neighbors": [
    "AR",
    "BO",
@@ -7790,6 +8912,12 @@
    "Тут барвисті фестивалі й Амазонія",
    "Має більше видів птахів, ніж будь-яка країна"
   ],
+  "animal": "Andean condor",
+  "plant": "Christmas orchid",
+  "dish": "Bandeja paisa",
+  "animalUk": "Андійський кондор",
+  "plantUk": "Орхідея різдвяна",
+  "dishUk": "Бандеха паїса",
   "neighbors": [
    "BR",
    "EC",
@@ -7833,6 +8961,12 @@
    "Галапагоські острови надихнули ідеї Дарвіна",
    "Тут живуть гігантські черепахи й блакитноногі олуші"
   ],
+  "animal": "Andean condor",
+  "plant": "Rose",
+  "dish": "Ceviche",
+  "animalUk": "Андійський кондор",
+  "plantUk": "Троянда",
+  "dishUk": "Севіче",
   "neighbors": [
    "CO",
    "PE"
@@ -7873,6 +9007,12 @@
    "Тут Кайєтур — один із найвищих суцільних водоспадів світу",
    "Вкрита величезними незайманими лісами"
   ],
+  "animal": "Jaguar",
+  "plant": "Victoria amazonica",
+  "dish": "Pepperpot",
+  "animalUk": "Ягуар",
+  "plantUk": "Вікторія амазонська",
+  "dishUk": "Пепер-пот",
   "neighbors": [
    "BR",
    "SR",
@@ -7914,6 +9054,12 @@
    "Спільно володіє велетенською ГЕС Ітайпу",
    "Відома мереживом ньяндуті й музикою арфи"
   ],
+  "animal": "Pampas fox",
+  "plant": "Mburucuyá",
+  "dish": "Sopa paraguaya",
+  "animalUk": "Пампасна лисиця",
+  "plantUk": "Мбуруку",
+  "dishUk": "Сопа парагвайська",
   "neighbors": [
    "AR",
    "BO",
@@ -7955,6 +9101,12 @@
    "У її пустелі викарбувані загадкові лінії Наска",
    "Тут уперше виростили картоплю — тисячі сортів"
   ],
+  "animal": "Andean condor",
+  "plant": "Cantuta",
+  "dish": "Ceviche",
+  "animalUk": "Андійський кондор",
+  "plantUk": "Кантута",
+  "dishUk": "Севіче",
   "neighbors": [
    "BO",
    "BR",
@@ -7998,6 +9150,12 @@
    "Майже повністю вкрита тропічним лісом",
    "Барвисте поєднання культур і мов"
   ],
+  "animal": "Jaguar",
+  "plant": "Faya lobi flower",
+  "dish": "Pom",
+  "animalUk": "Ягуар",
+  "plantUk": "Квітка фаялобі",
+  "dishUk": "Пом",
   "neighbors": [
    "BR",
    "GY"
@@ -8038,6 +9196,12 @@
    "Тут провели й виграли перший Чемпіонат світу з футболу",
    "Відома яловичиною, чаєм мате й довгими пляжами"
   ],
+  "animal": "Southern lapwing",
+  "plant": "Ceibo flower",
+  "dish": "Asado",
+  "animalUk": "Чайок південний",
+  "plantUk": "Квітка цейба",
+  "dishUk": "Асадо",
   "neighbors": [
    "AR",
    "BR"
@@ -8078,6 +9242,12 @@
    "Має карибські пляжі й високі Анди",
    "Над озером Маракайбо майже щоночі б'ють блискавки"
   ],
+  "animal": "Troupial",
+  "plant": "Cattleya orchid",
+  "dish": "Pabellón criollo",
+  "animalUk": "Трупіал",
+  "plantUk": "Орхідея каттлея",
+  "dishUk": "Павільон кріоло",
   "neighbors": [
    "BR",
    "CO",

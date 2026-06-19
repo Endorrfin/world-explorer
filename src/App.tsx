@@ -19,6 +19,7 @@ import { CountryDetail } from "./components/CountryDetail";
 import { WorldMap } from "./components/WorldMap";
 import { Quiz } from "./components/Quiz";
 import { UkraineTab } from "./components/UkraineTab";
+import { RecordsTab } from "./components/RecordsTab"; // CHANGED
 import { AboutTab } from "./components/AboutTab";
 
 const COUNTRIES = rawData as unknown as Country[];
@@ -38,6 +39,7 @@ function parseHash(): HashState {
   const [tab, a, b] = h.split("/");
   if (tab === "quiz") return { tab: "quiz", continent: "All", iso: null };
   if (tab === "ukraine") return { tab: "ukraine", continent: "All", iso: null };
+  if (tab === "records") return { tab: "records", continent: "All", iso: null }; // CHANGED
   if (tab === "about") return { tab: "about", continent: "All", iso: null };
   if (tab === "map") return { tab: "map", continent: "All", iso: a ? a.toUpperCase() : null };
   if (tab === "explore") {
@@ -146,12 +148,16 @@ export default function App() {
     <LangContext.Provider value={{ lang, setLang }}>
       <div className="app">
         <header className="topbar">
-          <div className="brand">
-            <span className="brand__globe" aria-hidden>
-              🌍
-            </span>
+          {/* CHANGED: brand click → home/map */}
+          <button
+            type="button"
+            className="brand"
+            onClick={() => { setTab("map"); setSelectedIso(null); }}
+            aria-label="Home"
+          >
+            <span className="brand__globe" aria-hidden>🌍</span>
             <span className="brand__name">World Explorer</span>
-          </div>
+          </button>
 
           <nav className="tabs" aria-label="Sections">
             <button
@@ -181,6 +187,13 @@ export default function App() {
               type="button"
             >
               🇺🇦 {t("tab.ukraine")}
+            </button>
+            <button
+              className={`tab${tab === "records" ? " tab--active" : ""}`}
+              onClick={() => setTab("records")}
+              type="button"
+            >
+              {t("tab.records")}
             </button>
             <button
               className={`tab${tab === "about" ? " tab--active" : ""}`}
@@ -341,12 +354,32 @@ export default function App() {
           </div>
         )}
 
+        {/* CHANGED: Records tab */}
+        {tab === "records" && (
+          <div className="records-wrap">
+            <RecordsTab countries={COUNTRIES} />
+          </div>
+        )}
+
         {tab === "about" && (
           <div className="about-wrap">
             <AboutTab />
           </div>
         )}
       </div>
+
+      {/* CHANGED: footer */}
+      <footer className="app-footer">
+        <a
+          href="https://www.linkedin.com/in/vasyl-krupka/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="app-footer__link"
+        >
+          Vasyl Krupka
+        </a>
+        {" · Senior Fullstack Engineer · Ukraine 🇺🇦"}
+      </footer>
     </LangContext.Provider>
   );
 }

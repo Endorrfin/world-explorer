@@ -79,6 +79,11 @@ export function CountryDetail({
   // CHANGED: Phase 3 — show UA facts when language is Ukrainian, fall back to EN if missing
   const facts = lang === "uk" && country.factsUk.length > 0 ? country.factsUk : country.knownFor;
 
+  // CHANGED: pick localised symbol strings or fall back to EN
+  const animalStr = (lang === "uk" ? country.animalUk : country.animal) ?? country.animal ?? null;
+  const plantStr  = (lang === "uk" ? country.plantUk  : country.plant)  ?? country.plant  ?? null;
+  const dishStr   = (lang === "uk" ? country.dishUk   : country.dish)   ?? country.dish   ?? null;
+
   return (
     <aside className="detail">
       <button type="button" className="detail__close" onClick={onClose} aria-label="Close">
@@ -121,6 +126,18 @@ export function CountryDetail({
               </li>
             ))}
           </ul>
+        </section>
+      )}
+
+      {/* CHANGED: national symbols section */}
+      {(animalStr || plantStr || dishStr) && (
+        <section className="detail__section">
+          <h3 className="detail__section-title">{t("detail.symbols")}</h3>
+          <div className="stats">
+            {animalStr && <Stat label={t("stat.animal")} value={animalStr} />}
+            {plantStr  && <Stat label={t("stat.plant")}  value={plantStr}  />}
+            {dishStr   && <Stat label={t("stat.dish")}   value={dishStr}   />}
+          </div>
         </section>
       )}
 

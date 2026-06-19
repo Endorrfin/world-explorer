@@ -1,0 +1,977 @@
+{
+  "AD": {
+    "animal": "Pyrenean chamois",
+    "plant": "Gran Valira lily",
+    "dish": "Escudella"
+  },
+  "AE": {
+    "animal": "Peregrine falcon",
+    "plant": "Date palm",
+    "dish": "Harees"
+  },
+  "AF": {
+    "animal": "Snow leopard",
+    "plant": "Tulip",
+    "dish": "Kabuli palau"
+  },
+  "AG": {
+    "animal": "Magnificent frigatebird",
+    "plant": "Agave",
+    "dish": "Fungie and pepperpot"
+  },
+  "AL": {
+    "animal": "Golden eagle",
+    "plant": "Olive",
+    "dish": "Tavë kosi"
+  },
+  "AM": {
+    "animal": "Golden eagle",
+    "plant": "Apricot tree",
+    "dish": "Harissa"
+  },
+  "AO": {
+    "animal": "Giant sable antelope",
+    "plant": "Welwitschia",
+    "dish": "Muamba de Galinha"
+  },
+  "AR": {
+    "animal": "Puma",
+    "plant": "Ceibo flower",
+    "dish": "Asado"
+  },
+  "AT": {
+    "animal": "Barn swallow",
+    "plant": "Edelweiss",
+    "dish": "Wiener Schnitzel"
+  },
+  "AU": {
+    "animal": "Red kangaroo",
+    "plant": "Golden wattle",
+    "dish": "Meat pie"
+  },
+  "AZ": {
+    "animal": "Karabakh horse",
+    "plant": "Pomegranate",
+    "dish": "Plov"
+  },
+  "BA": {
+    "animal": "Brown bear",
+    "plant": "Bosnian lily",
+    "dish": "Bosanski lonac"
+  },
+  "BB": {
+    "animal": "Pelican",
+    "plant": "Pride of Barbados",
+    "dish": "Cou-cou and flying fish"
+  },
+  "BD": {
+    "animal": "Royal Bengal tiger",
+    "plant": "Water lily",
+    "dish": "Hilsa fish curry"
+  },
+  "BE": {
+    "animal": "Lion",
+    "plant": "Red poppy",
+    "dish": "Moules-frites"
+  },
+  "BF": {
+    "animal": "Stallion",
+    "plant": "Rosewood",
+    "dish": "Riz gras"
+  },
+  "BG": {
+    "animal": "Balkan chamois",
+    "plant": "Rose",
+    "dish": "Banitsa"
+  },
+  "BH": {
+    "animal": "Arabian oryx",
+    "plant": "Date palm",
+    "dish": "Machboos"
+  },
+  "BI": {
+    "animal": "Lion",
+    "plant": "Sorghum",
+    "dish": "Boko boko harees"
+  },
+  "BJ": {
+    "animal": "Leopard",
+    "plant": "Oil palm",
+    "dish": "Kuli-kuli"
+  },
+  "BN": {
+    "animal": "Proboscis monkey",
+    "plant": "Simpor",
+    "dish": "Ambuyat"
+  },
+  "BO": {
+    "animal": "Llama",
+    "plant": "Patujú flower",
+    "dish": "Salteñas"
+  },
+  "BR": {
+    "animal": "Jaguar",
+    "plant": "Cattleya orchid",
+    "dish": "Feijoada"
+  },
+  "BS": {
+    "animal": "Flamingo",
+    "plant": "Yellow elder",
+    "dish": "Cracked conch"
+  },
+  "BT": {
+    "animal": "Takin",
+    "plant": "Himalayan poppy",
+    "dish": "Ema datshi"
+  },
+  "BW": {
+    "animal": "Zebra",
+    "plant": "Mokolwane palm",
+    "dish": "Seswaa"
+  },
+  "BY": {
+    "animal": "European bison",
+    "plant": "Flax",
+    "dish": "Draniki"
+  },
+  "BZ": {
+    "animal": "Baird's tapir",
+    "plant": "Black orchid",
+    "dish": "Rice and beans"
+  },
+  "CA": {
+    "animal": "Beaver",
+    "plant": "Sugar maple",
+    "dish": "Poutine"
+  },
+  "CD": {
+    "animal": "Okapi",
+    "plant": "African oil palm",
+    "dish": "Saka-saka"
+  },
+  "CF": {
+    "animal": "Elephant",
+    "plant": "Cotton tree",
+    "dish": "Gozo"
+  },
+  "CG": {
+    "animal": "Elephant",
+    "plant": "Banana tree",
+    "dish": "Moambe chicken"
+  },
+  "CH": {
+    "animal": "Marmot",
+    "plant": "Edelweiss",
+    "dish": "Fondue"
+  },
+  "CI": {
+    "animal": "Elephant",
+    "plant": "Oil palm",
+    "dish": "Attiéké"
+  },
+  "CL": {
+    "animal": "Andean condor",
+    "plant": "Chilean bellflower",
+    "dish": "Cazuela"
+  },
+  "CM": {
+    "animal": "Lion",
+    "plant": "Coffee plant",
+    "dish": "Ndolé"
+  },
+  "CN": {
+    "animal": "Giant panda",
+    "plant": "Plum blossom",
+    "dish": "Peking duck"
+  },
+  "CO": {
+    "animal": "Andean condor",
+    "plant": "Christmas orchid",
+    "dish": "Bandeja paisa"
+  },
+  "CR": {
+    "animal": "Clay-coloured thrush",
+    "plant": "Purple orchid",
+    "dish": "Gallo pinto"
+  },
+  "CU": {
+    "animal": "Cuban trogon",
+    "plant": "White mariposa",
+    "dish": "Ropa vieja"
+  },
+  "CV": {
+    "animal": "Loggerhead turtle",
+    "plant": "Dragon tree",
+    "dish": "Cachupa"
+  },
+  "CY": {
+    "animal": "Moufflon",
+    "plant": "Cyprus cedar",
+    "dish": "Halloumi"
+  },
+  "CZ": {
+    "animal": "Double-tailed lion",
+    "plant": "Linden tree",
+    "dish": "Svíčková"
+  },
+  "DE": {
+    "animal": "Federal eagle",
+    "plant": "Cornflower",
+    "dish": "Sauerbraten"
+  },
+  "DJ": {
+    "animal": "Djibouti francolin",
+    "plant": "Dragon tree",
+    "dish": "Skoudehkaris"
+  },
+  "DK": {
+    "animal": "Mute swan",
+    "plant": "Marguerite daisy",
+    "dish": "Smørrebrød"
+  },
+  "DM": {
+    "animal": "Sisserou parrot",
+    "plant": "Bwa Kwaib",
+    "dish": "Callaloo"
+  },
+  "DO": {
+    "animal": "Palmchat",
+    "plant": "Bayahibe rose",
+    "dish": "La Bandera"
+  },
+  "DZ": {
+    "animal": "Fennec fox",
+    "plant": "Broom",
+    "dish": "Couscous"
+  },
+  "EC": {
+    "animal": "Andean condor",
+    "plant": "Rose",
+    "dish": "Ceviche"
+  },
+  "EE": {
+    "animal": "Barn swallow",
+    "plant": "Cornflower",
+    "dish": "Black bread"
+  },
+  "EG": {
+    "animal": "Steppe eagle",
+    "plant": "Lotus",
+    "dish": "Ful medames"
+  },
+  "ER": {
+    "animal": "Arabian camel",
+    "plant": "Olive tree",
+    "dish": "Injera"
+  },
+  "ES": {
+    "animal": "Bull",
+    "plant": "Carnation",
+    "dish": "Paella"
+  },
+  "ET": {
+    "animal": "Lion",
+    "plant": "Calla lily",
+    "dish": "Injera with doro wat"
+  },
+  "FI": {
+    "animal": "Whooper swan",
+    "plant": "Lily of the valley",
+    "dish": "Karjalanpiirakka"
+  },
+  "FJ": {
+    "animal": "Collared lory",
+    "plant": "Tagimoucia",
+    "dish": "Kokoda"
+  },
+  "FM": {
+    "animal": "Micronesian pigeon",
+    "plant": "Ylang-ylang",
+    "dish": "Sakau"
+  },
+  "FR": {
+    "animal": "Gallic rooster",
+    "plant": "Iris",
+    "dish": "Pot-au-feu"
+  },
+  "GA": {
+    "animal": "Black panther",
+    "plant": "Okoumé tree",
+    "dish": "Nyembwe chicken"
+  },
+  "GB": {
+    "animal": "Lion",
+    "plant": "Tudor rose",
+    "dish": "Chicken tikka masala"
+  },
+  "GD": {
+    "animal": "Grenada dove",
+    "plant": "Bougainvillea",
+    "dish": "Oil down"
+  },
+  "GE": {
+    "animal": "Caucasian leopard",
+    "plant": "Grapevine",
+    "dish": "Khachapuri"
+  },
+  "GH": {
+    "animal": "Golden eagle",
+    "plant": "Cocoa tree",
+    "dish": "Fufu"
+  },
+  "GM": {
+    "animal": "Spotted hyena",
+    "plant": "Kapok tree",
+    "dish": "Benachin"
+  },
+  "GN": {
+    "animal": "Elephant",
+    "plant": "Coffee plant",
+    "dish": "Sauce arachide"
+  },
+  "GQ": {
+    "animal": "Elephant",
+    "plant": "Ceiba tree",
+    "dish": "Succotash"
+  },
+  "GR": {
+    "animal": "Little owl",
+    "plant": "Olive",
+    "dish": "Moussaka"
+  },
+  "GT": {
+    "animal": "Quetzal",
+    "plant": "White nun orchid",
+    "dish": "Pepián"
+  },
+  "GW": {
+    "animal": "Roan antelope",
+    "plant": "Mango tree",
+    "dish": "Caldo mancarra"
+  },
+  "GY": {
+    "animal": "Jaguar",
+    "plant": "Victoria amazonica",
+    "dish": "Pepperpot"
+  },
+  "HN": {
+    "animal": "Scarlet macaw",
+    "plant": "Orchid",
+    "dish": "Baleadas"
+  },
+  "HR": {
+    "animal": "Pine marten",
+    "plant": "Iris croatica",
+    "dish": "Peka"
+  },
+  "HT": {
+    "animal": "Hispaniolan trogon",
+    "plant": "Amourette",
+    "dish": "Griot"
+  },
+  "HU": {
+    "animal": "Turul",
+    "plant": "Tulip",
+    "dish": "Gulyás"
+  },
+  "ID": {
+    "animal": "Komodo dragon",
+    "plant": "Jasmine",
+    "dish": "Nasi goreng"
+  },
+  "IE": {
+    "animal": "Red deer",
+    "plant": "Shamrock",
+    "dish": "Irish stew"
+  },
+  "IL": {
+    "animal": "Mountain gazelle",
+    "plant": "Cyclamen",
+    "dish": "Hummus"
+  },
+  "IN": {
+    "animal": "Bengal tiger",
+    "plant": "Lotus",
+    "dish": "Khichdi"
+  },
+  "IQ": {
+    "animal": "Chukar partridge",
+    "plant": "Date palm",
+    "dish": "Masgouf"
+  },
+  "IR": {
+    "animal": "Persian leopard",
+    "plant": "Persian rose",
+    "dish": "Chelo kabab"
+  },
+  "IS": {
+    "animal": "Gyrfalcon",
+    "plant": "Mountain avens",
+    "dish": "Skyr with cream"
+  },
+  "IT": {
+    "animal": "Italian wolf",
+    "plant": "Olive",
+    "dish": "Pizza Margherita"
+  },
+  "JM": {
+    "animal": "Doctor bird",
+    "plant": "Lignum vitae",
+    "dish": "Ackee and saltfish"
+  },
+  "JO": {
+    "animal": "Arabian oryx",
+    "plant": "Black iris",
+    "dish": "Mansaf"
+  },
+  "JP": {
+    "animal": "Japanese macaque",
+    "plant": "Cherry blossom",
+    "dish": "Ramen"
+  },
+  "KE": {
+    "animal": "Lion",
+    "plant": "Nandi flame tree",
+    "dish": "Ugali"
+  },
+  "KG": {
+    "animal": "Snow leopard",
+    "plant": "Absinthe wormwood",
+    "dish": "Beshbarmak"
+  },
+  "KH": {
+    "animal": "Kouprey",
+    "plant": "Rumdul flower",
+    "dish": "Amok"
+  },
+  "KI": {
+    "animal": "Frigate bird",
+    "plant": "Babai",
+    "dish": "Palusami"
+  },
+  "KM": {
+    "animal": "Coelacanth",
+    "plant": "Ylang-ylang",
+    "dish": "Langouste à la vanille"
+  },
+  "KN": {
+    "animal": "Brown pelican",
+    "plant": "Poinciana",
+    "dish": "Stewed saltfish"
+  },
+  "KP": {
+    "animal": "Chollima",
+    "plant": "Magnolia",
+    "dish": "Sinsollo"
+  },
+  "KR": {
+    "animal": "Siberian tiger",
+    "plant": "Hibiscus",
+    "dish": "Kimchi"
+  },
+  "KW": {
+    "animal": "Falcon",
+    "plant": "Arfaj",
+    "dish": "Machboos"
+  },
+  "KZ": {
+    "animal": "Snow leopard",
+    "plant": "Saksaul",
+    "dish": "Beshbarmak"
+  },
+  "LA": {
+    "animal": "Asian elephant",
+    "plant": "Dok Champa",
+    "dish": "Laap"
+  },
+  "LB": {
+    "animal": "Striped hyena",
+    "plant": "Cedar of Lebanon",
+    "dish": "Kibbeh"
+  },
+  "LC": {
+    "animal": "Saint Lucia parrot",
+    "plant": "Marguerite",
+    "dish": "Green fig and saltfish"
+  },
+  "LI": {
+    "animal": "Brown trout",
+    "plant": "Oak",
+    "dish": "Käsknöpfle"
+  },
+  "LK": {
+    "animal": "Sri Lanka junglefowl",
+    "plant": "Blue lotus",
+    "dish": "Rice and curry"
+  },
+  "LR": {
+    "animal": "Pygmy hippopotamus",
+    "plant": "Pepper tree",
+    "dish": "Palm butter soup"
+  },
+  "LS": {
+    "animal": "Basotho pony",
+    "plant": "Spiral aloe",
+    "dish": "Pap"
+  },
+  "LT": {
+    "animal": "White stork",
+    "plant": "Rue",
+    "dish": "Cepelinai"
+  },
+  "LU": {
+    "animal": "Red lion",
+    "plant": "Moselle rose",
+    "dish": "Judd mat Gaardebounen"
+  },
+  "LV": {
+    "animal": "White wagtail",
+    "plant": "Daisy",
+    "dish": "Grey peas with bacon"
+  },
+  "LY": {
+    "animal": "Arabian eagle",
+    "plant": "Oleander",
+    "dish": "Couscous"
+  },
+  "MA": {
+    "animal": "Barbary lion",
+    "plant": "Argan tree",
+    "dish": "Tagine"
+  },
+  "MC": {
+    "animal": "Hedgehog",
+    "plant": "Carnation",
+    "dish": "Barbajuan"
+  },
+  "MD": {
+    "animal": "Aurochs",
+    "plant": "Stefanesti vine",
+    "dish": "Mămăligă"
+  },
+  "ME": {
+    "animal": "Golden eagle",
+    "plant": "Sweet olive",
+    "dish": "Kacamak"
+  },
+  "MG": {
+    "animal": "Ring-tailed lemur",
+    "plant": "Traveller's palm",
+    "dish": "Romazava"
+  },
+  "MH": {
+    "animal": "Frigate bird",
+    "plant": "Iu",
+    "dish": "Coconut crab"
+  },
+  "MK": {
+    "animal": "Lynx",
+    "plant": "Red poppy",
+    "dish": "Tavče gravče"
+  },
+  "ML": {
+    "animal": "Hippopotamus",
+    "plant": "Shea tree",
+    "dish": "Tô"
+  },
+  "MM": {
+    "animal": "Green peafowl",
+    "plant": "Padauk",
+    "dish": "Mohinga"
+  },
+  "MN": {
+    "animal": "Takhi horse",
+    "plant": "Soyombo flower",
+    "dish": "Khorkhog"
+  },
+  "MR": {
+    "animal": "Addax",
+    "plant": "Date palm",
+    "dish": "Thiéboudienne"
+  },
+  "MT": {
+    "animal": "Maltese falcon",
+    "plant": "Maltese centaury",
+    "dish": "Stuffat tal-Fenek"
+  },
+  "MU": {
+    "animal": "Dodo (historical)",
+    "plant": "Trochetia boutoniana",
+    "dish": "Dholl puri"
+  },
+  "MV": {
+    "animal": "Yellowfin tuna",
+    "plant": "Coconut palm",
+    "dish": "Garudhiya"
+  },
+  "MW": {
+    "animal": "African fish eagle",
+    "plant": "Mulanje cedar",
+    "dish": "Nsima"
+  },
+  "MX": {
+    "animal": "Golden eagle",
+    "plant": "Dahlia",
+    "dish": "Tacos"
+  },
+  "MY": {
+    "animal": "Malayan tiger",
+    "plant": "Hibiscus",
+    "dish": "Nasi lemak"
+  },
+  "MZ": {
+    "animal": "African elephant",
+    "plant": "Flame lily",
+    "dish": "Matapa"
+  },
+  "NA": {
+    "animal": "Oryx",
+    "plant": "Kokerboom",
+    "dish": "Potjiekos"
+  },
+  "NE": {
+    "animal": "Addax",
+    "plant": "Desert date",
+    "dish": "Djerma stew"
+  },
+  "NG": {
+    "animal": "Eagle",
+    "plant": "Costus afer",
+    "dish": "Egusi soup"
+  },
+  "NI": {
+    "animal": "Turquoise-browed motmot",
+    "plant": "Sacuanjoche",
+    "dish": "Gallo pinto"
+  },
+  "NL": {
+    "animal": "Lion",
+    "plant": "Tulip",
+    "dish": "Stamppot"
+  },
+  "NO": {
+    "animal": "Lion",
+    "plant": "Purple heather",
+    "dish": "Fårikål"
+  },
+  "NP": {
+    "animal": "Cow",
+    "plant": "Rhododendron",
+    "dish": "Dal bhat"
+  },
+  "NR": {
+    "animal": "Frigate bird",
+    "plant": "Calophyllum inophyllum",
+    "dish": "Coconut fish"
+  },
+  "NZ": {
+    "animal": "Kiwi",
+    "plant": "Silver fern",
+    "dish": "Hangi"
+  },
+  "OM": {
+    "animal": "Arabian oryx",
+    "plant": "Frankincense tree",
+    "dish": "Shuwa"
+  },
+  "PA": {
+    "animal": "Harpy eagle",
+    "plant": "Holy Ghost orchid",
+    "dish": "Sancocho"
+  },
+  "PE": {
+    "animal": "Andean condor",
+    "plant": "Cantuta",
+    "dish": "Ceviche"
+  },
+  "PG": {
+    "animal": "Raggiana bird-of-paradise",
+    "plant": "Lakatoi orchid",
+    "dish": "Mumu"
+  },
+  "PH": {
+    "animal": "Philippine eagle",
+    "plant": "Sampaguita",
+    "dish": "Adobo"
+  },
+  "PK": {
+    "animal": "Markhor",
+    "plant": "Jasmine",
+    "dish": "Biryani"
+  },
+  "PL": {
+    "animal": "White-tailed eagle",
+    "plant": "Corn poppy",
+    "dish": "Bigos"
+  },
+  "PS": {
+    "animal": "Palestine sunbird",
+    "plant": "Olive tree",
+    "dish": "Musakhan"
+  },
+  "PT": {
+    "animal": "Iberian wolf",
+    "plant": "Lavender",
+    "dish": "Bacalhau"
+  },
+  "PW": {
+    "animal": "Dugong",
+    "plant": "Plumeria",
+    "dish": "Taro"
+  },
+  "PY": {
+    "animal": "Pampas fox",
+    "plant": "Mburucuyá",
+    "dish": "Sopa paraguaya"
+  },
+  "QA": {
+    "animal": "Arabian oryx",
+    "plant": "Sidder tree",
+    "dish": "Machboos"
+  },
+  "RO": {
+    "animal": "Lynx",
+    "plant": "Dog rose",
+    "dish": "Sarmale"
+  },
+  "RS": {
+    "animal": "White eagle",
+    "plant": "Hops",
+    "dish": "Sarma"
+  },
+  "RU": {
+    "animal": "Russian brown bear",
+    "plant": "Chamomile",
+    "dish": "Borscht"
+  },
+  "RW": {
+    "animal": "Nile crocodile",
+    "plant": "Inshuti flower",
+    "dish": "Isombe"
+  },
+  "SA": {
+    "animal": "Arabian oryx",
+    "plant": "Date palm",
+    "dish": "Kabsa"
+  },
+  "SB": {
+    "animal": "Frigate bird",
+    "plant": "Canarium",
+    "dish": "Roasted yam"
+  },
+  "SC": {
+    "animal": "Aldabra giant tortoise",
+    "plant": "Coco de mer",
+    "dish": "Grilled fish"
+  },
+  "SD": {
+    "animal": "Secretary bird",
+    "plant": "Date palm",
+    "dish": "Ful medames"
+  },
+  "SE": {
+    "animal": "Eurasian elk",
+    "plant": "Linnaea",
+    "dish": "Köttbullar"
+  },
+  "SG": {
+    "animal": "Lion",
+    "plant": "Vanda Miss Joaquim",
+    "dish": "Chicken rice"
+  },
+  "SI": {
+    "animal": "Proteus",
+    "plant": "Red carnation",
+    "dish": "Kranjska klobasa"
+  },
+  "SK": {
+    "animal": "Tatra chamois",
+    "plant": "Lime tree",
+    "dish": "Bryndzové halušky"
+  },
+  "SL": {
+    "animal": "Lion",
+    "plant": "Oil palm",
+    "dish": "Groundnut soup"
+  },
+  "SM": {
+    "animal": "Brown trout",
+    "plant": "Star of Bethlehem",
+    "dish": "Piadina"
+  },
+  "SN": {
+    "animal": "Lion",
+    "plant": "Baobab",
+    "dish": "Thiéboudienne"
+  },
+  "SO": {
+    "animal": "Leopard",
+    "plant": "Frankincense tree",
+    "dish": "Canjeero"
+  },
+  "SR": {
+    "animal": "Jaguar",
+    "plant": "Faya lobi flower",
+    "dish": "Pom"
+  },
+  "SS": {
+    "animal": "Shoebill stork",
+    "plant": "Teak tree",
+    "dish": "Ful medames"
+  },
+  "ST": {
+    "animal": "São Tomé green ibis",
+    "plant": "Cocoa tree",
+    "dish": "Calulu"
+  },
+  "SV": {
+    "animal": "Turquoise-browed motmot",
+    "plant": "Izote",
+    "dish": "Pupusas"
+  },
+  "SY": {
+    "animal": "Arabian eagle",
+    "plant": "Jasmine",
+    "dish": "Kibbeh"
+  },
+  "SZ": {
+    "animal": "Purple-crested turaco",
+    "plant": "Sugarcane",
+    "dish": "Incwancwa"
+  },
+  "TD": {
+    "animal": "Arabian horse",
+    "plant": "Acacia",
+    "dish": "Daraba"
+  },
+  "TG": {
+    "animal": "Dove",
+    "plant": "Oil palm",
+    "dish": "Akoumé"
+  },
+  "TH": {
+    "animal": "Asian elephant",
+    "plant": "Ratchaphruek",
+    "dish": "Pad Thai"
+  },
+  "TJ": {
+    "animal": "Snow leopard",
+    "plant": "Pomegranate",
+    "dish": "Osh"
+  },
+  "TL": {
+    "animal": "Saltwater crocodile",
+    "plant": "Sandalwood",
+    "dish": "Ikan saboko"
+  },
+  "TM": {
+    "animal": "Akhal-Teke horse",
+    "plant": "Seyr tree",
+    "dish": "Plov"
+  },
+  "TN": {
+    "animal": "Sand gazelle",
+    "plant": "Olive tree",
+    "dish": "Couscous"
+  },
+  "TO": {
+    "animal": "Tongan ground dove",
+    "plant": "Heilala",
+    "dish": "Otai"
+  },
+  "TR": {
+    "animal": "Grey wolf",
+    "plant": "Tulip",
+    "dish": "Döner kebab"
+  },
+  "TT": {
+    "animal": "Scarlet ibis",
+    "plant": "Chaconia",
+    "dish": "Doubles"
+  },
+  "TV": {
+    "animal": "Frigate bird",
+    "plant": "Pukaraga",
+    "dish": "Pulaka"
+  },
+  "TZ": {
+    "animal": "Giraffe",
+    "plant": "Clove tree",
+    "dish": "Ugali"
+  },
+  "UA": {
+    "animal": "White stork",
+    "plant": "Sunflower",
+    "dish": "Borscht"
+  },
+  "UG": {
+    "animal": "Grey crowned crane",
+    "plant": "Coffee plant",
+    "dish": "Matooke"
+  },
+  "US": {
+    "animal": "Bald eagle",
+    "plant": "Oak",
+    "dish": "Apple pie"
+  },
+  "UY": {
+    "animal": "Southern lapwing",
+    "plant": "Ceibo flower",
+    "dish": "Asado"
+  },
+  "UZ": {
+    "animal": "Snow leopard",
+    "plant": "White poplar",
+    "dish": "Plov"
+  },
+  "VA": {
+    "animal": "Roman eagle",
+    "plant": "White lily",
+    "dish": "Saltimbocca"
+  },
+  "VC": {
+    "animal": "Saint Vincent parrot",
+    "plant": "Soufrière tree",
+    "dish": "Roasted breadfruit"
+  },
+  "VE": {
+    "animal": "Troupial",
+    "plant": "Cattleya orchid",
+    "dish": "Pabellón criollo"
+  },
+  "VN": {
+    "animal": "Water buffalo",
+    "plant": "Lotus",
+    "dish": "Phở"
+  },
+  "VU": {
+    "animal": "Coconut crab",
+    "plant": "Namele fern",
+    "dish": "Lap lap"
+  },
+  "WS": {
+    "animal": "Tooth-billed pigeon",
+    "plant": "Teuila",
+    "dish": "Palusami"
+  },
+  "YE": {
+    "animal": "Arabian leopard",
+    "plant": "Coffee plant",
+    "dish": "Saltah"
+  },
+  "ZA": {
+    "animal": "Springbok",
+    "plant": "King protea",
+    "dish": "Braai"
+  },
+  "ZM": {
+    "animal": "African fish eagle",
+    "plant": "Flame lily",
+    "dish": "Nshima"
+  },
+  "ZW": {
+    "animal": "Sable antelope",
+    "plant": "Flame lily",
+    "dish": "Sadza"
+  }
+}

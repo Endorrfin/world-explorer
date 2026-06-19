@@ -269,3 +269,35 @@ Carry these forward — they are the open risks/trade-offs as of v1.12.
 - **No automated tests yet.** There's no CI guard on the data pipeline (counts, continent map,
   required-field nulls), the i18n key parity, or the built site — regressions are caught only
   by `npm run build` (tsc) and manual checks.
+
+## Commits & branches
+
+**Always suggest a branch name and commit message at the end of every session.**
+
+### Branch naming
+
+```
+feat/<short-slug>       # new feature or screen
+fix/<short-slug>        # bug fix
+chore/<short-slug>      # refactor, deps, tooling, data-only
+```
+
+Examples: `feat/records-tab`, `fix/footer-overflow`, `chore/symbols-data`
+
+Use lowercase kebab-case, ≤ 40 chars total. Work on `main` only for trivial one-liners; branch for anything touching ≥ 2 files.
+
+### Commit message
+
+Follow **Conventional Commits** (`<type>(<scope>): <subject>`):
+
+```
+feat(records): world record cards tab with 30+ entries
+fix(layout): footer always visible — add overflow:hidden to body
+chore(data): national symbols for all 195 countries (EN + UA)
+```
+
+- `type`: `feat` | `fix` | `chore` | `docs` | `style` | `refactor` | `perf`
+- `scope`: the area changed (records, quiz, map, data, i18n, layout, a11y …)
+- `subject`: imperative mood, ≤ 72 chars, no trailing period
+
+For a multi-feature session use a grouped commit or one commit per feature, whichever keeps the log readable.

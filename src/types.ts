@@ -30,6 +30,13 @@ export interface Country {
   // content
   knownFor: string[];
   factsUk: string[]; // CHANGED: Phase 3 — Ukrainian "Known for" facts
+  // national symbols // CHANGED
+  animal: string | null; // CHANGED
+  plant: string | null; // CHANGED
+  dish: string | null; // CHANGED
+  animalUk: string | null; // CHANGED
+  plantUk: string | null; // CHANGED
+  dishUk: string | null; // CHANGED
   neighbors: string[]; // ISO-2 codes of land-bordering countries
 }
 
@@ -41,4 +48,4 @@ export type Continent =
   | "South America"
   | "Oceania";
 
-export type Tab = "map" | "explore" | "quiz" | "ukraine" | "about";
+export type Tab = "map" | "explore" | "quiz" | "ukraine" | "records" | "about"; // CHANGED
