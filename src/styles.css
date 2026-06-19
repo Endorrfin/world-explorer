@@ -31,7 +31,6 @@ body,
 #root {
   height: 100%;
   margin: 0;
-  overflow: hidden; /* CHANGED: prevent body scroll — all scrolling is inside content areas */
 }
 
 body {
@@ -1901,23 +1900,4 @@ body {
   .records__grid {
     grid-template-columns: 1fr 1fr;
   }
-}
-
-/* ===================== App footer ===================== */
-.app-footer {
-  flex-shrink: 0;
-  text-align: center;
-  padding: 8px 16px;
-  font-size: 0.78rem;
-  color: var(--muted);
-  border-top: 1px solid var(--border);
-  background: var(--surface);
-}
-.app-footer__link {
-  color: var(--primary);
-  font-weight: 600;
-  text-decoration: none;
-}
-.app-footer__link:hover {
-  text-decoration: underline;
 }

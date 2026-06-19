@@ -368,18 +368,6 @@ export default function App() {
         )}
       </div>
 
-      {/* CHANGED: footer */}
-      <footer className="app-footer">
-        <a
-          href="https://www.linkedin.com/in/vasyl-krupka/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="app-footer__link"
-        >
-          Vasyl Krupka
-        </a>
-        {" · Senior Fullstack Engineer · Ukraine 🇺🇦"}
-      </footer>
     </LangContext.Provider>
   );
 }
