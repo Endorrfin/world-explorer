@@ -39,7 +39,6 @@ function parseHash(): HashState {
   const [tab, a, b] = h.split("/");
   if (tab === "quiz") return { tab: "quiz", continent: "All", iso: null };
   if (tab === "ukraine") return { tab: "ukraine", continent: "All", iso: null };
-  if (tab === "records") return { tab: "records", continent: "All", iso: null }; // CHANGED
   if (tab === "about") return { tab: "about", continent: "All", iso: null };
   if (tab === "map") return { tab: "map", continent: "All", iso: a ? a.toUpperCase() : null };
   if (tab === "explore") {
@@ -189,13 +188,6 @@ export default function App() {
               🇺🇦 {t("tab.ukraine")}
             </button>
             <button
-              className={`tab${tab === "records" ? " tab--active" : ""}`}
-              onClick={() => setTab("records")}
-              type="button"
-            >
-              {t("tab.records")}
-            </button>
-            <button
               className={`tab${tab === "about" ? " tab--active" : ""}`}
               onClick={() => setTab("about")}
               type="button"
@@ -330,6 +322,11 @@ export default function App() {
                   ))}
                 </div>
               )}
+
+              {/* CHANGED: World Records section below country grid */}
+              <div className="explore-records">
+                <RecordsTab countries={COUNTRIES} />
+              </div>
             </main>
 
             <CountryDetail
@@ -351,13 +348,6 @@ export default function App() {
         {tab === "ukraine" && (
           <div className="uk-wrap">
             <UkraineTab />
-          </div>
-        )}
-
-        {/* CHANGED: Records tab */}
-        {tab === "records" && (
-          <div className="records-wrap">
-            <RecordsTab countries={COUNTRIES} />
           </div>
         )}
 

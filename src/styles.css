@@ -1894,10 +1894,53 @@ body {
   color: var(--primary);
   font-weight: 600;
   margin-top: 2px;
+  overflow-wrap: break-word; /* CHANGED */
 }
 
 @media (max-width: 520px) {
   .records__grid {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/* ===================== CHANGED: mobile improvements ===================== */
+
+/* Nav: single scrollable row — no wrapping */
+@media (max-width: 720px) {
+  .tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+
+  /* Map continent-zoom buttons: single scrollable row */
+  .wmap__zooms {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .wmap__zooms::-webkit-scrollbar { display: none; }
+
+  /* Heatmap controls: single scrollable row */
+  .wmap__heat-controls {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .wmap__heat-controls::-webkit-scrollbar { display: none; }
+}
+
+/* World Records section embedded inside Explore main */
+.explore-records {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 2px solid var(--border);
+}
+.explore-records .records {
+  max-width: none;
+  margin: 0;
 }

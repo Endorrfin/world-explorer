@@ -48,4 +48,4 @@ export type Continent =
   | "South America"
   | "Oceania";
 
-export type Tab = "map" | "explore" | "quiz" | "ukraine" | "records" | "about"; // CHANGED
+export type Tab = "map" | "explore" | "quiz" | "ukraine" | "about"; // CHANGED
