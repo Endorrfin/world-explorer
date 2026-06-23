@@ -8,3 +8,8 @@ arhive/
 .vscode/*
 !.vscode/extensions.json
 arhive/
+
+# LinkedIn share-asset generator: keep the .py generators, ignore generated media & cache
+scripts/linkedin/__pycache__/
+scripts/linkedin/*.png
+scripts/linkedin/*.mp4
