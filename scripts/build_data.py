@@ -92,6 +92,13 @@ CAPITAL_FIX = {
     "NR": "Yaren",  # Nauru has no official capital; Yaren is the de-facto seat
 }
 
+# CHANGED: Fix land areas the source rounds down to 0 km² for micro-states (km²).
+# Without this, the "Smallest country" record wrongly shows Monaco (1 km²) because
+# Vatican City rounds to 0 and is filtered out. 0.44 km² = 44 hectares (official).
+AREA_FIX = {
+    "VA": 0.44,  # Vatican City — the world's smallest country
+}
+
 def clean_capital(iso2, raw):
     if iso2 in CAPITAL_FIX:
         return CAPITAL_FIX[iso2]
@@ -209,7 +216,7 @@ for r in main:
         "gdpPerCapita": to_int(r[14]),             # USD, 2023
         "gdpWorldShare": num(r[15]),               # fraction
         # land
-        "landAreaKm2": to_int(r[11]),
+        "landAreaKm2": AREA_FIX.get(iso2, to_int(r[11])),  # CHANGED: honor AREA_FIX (Vatican rounds to 0)
         "totalAreaKm2": to_int(area_row[4]) if area_row else None,
         "areaWorldShare": num(area_row[8]) if area_row else None,   # fraction
         # extras
