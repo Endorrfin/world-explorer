@@ -1,7 +1,8 @@
 # 🌍 World Explorer
 
-An interactive map for learning the world's **195 countries** with kids — capitals,
-flags, key figures, country outlines, "known for" facts, land neighbours, and a quiz.
+An interactive, fully bilingual (EN/UA) map for learning the world's **195 countries**
+with kids — capitals, flags, key figures, country outlines, "known for" facts, national
+symbols, land neighbours, 10 quiz games, 34 world records and an in-depth Ukraine tab.
 
 **Live:** https://endorrfin.github.io/world-explorer/
 **Stack:** Vite + React 18 + TypeScript · static, no backend · deployed to GitHub Pages.
@@ -14,7 +15,8 @@ flags, key figures, country outlines, "known for" facts, land neighbours, and a 
 
 World Explorer is a static, kid-friendly web app. It runs fully offline (all data is
 bundled JSON, flags are local SVGs) and deploys to GitHub Pages with no server. The app
-has three tabs — **Map**, **Explore** and **Quiz** — that share one country detail panel.
+has five tabs — **Map**, **Explore**, **Quiz**, **Ukraine** and **About** — that share one
+country detail panel; "🏆 World Records" sits at the bottom of Explore.
 
 ### Features
 
@@ -29,7 +31,7 @@ has three tabs — **Map**, **Explore** and **Quiz** — that share one country 
    and world share, density, median age, fertility rate, urban %, births per day, GDP and
    GDP per person, land & total area and world land share, the Global Peace Index, ISO-2
    and phone codes — plus **2–4 short, kid-friendly "Known for" facts** (landmarks, nature,
-   culture). Missing figures show as "—".
+   culture) and **national symbols** (animal · plant · dish). Missing figures show as "—".
 
 3. **Neighbour highlighting.** Selecting a country **outlines its land neighbours** on the
    map (the selected country is filled; neighbours get an amber outline) and lists them in
@@ -41,13 +43,15 @@ has three tabs — **Map**, **Explore** and **Quiz** — that share one country 
 
 5. **Explore by continent.** A sidebar lists the six continents with **live counts**; the
    main area shows clickable **tiles** (flag + name + capital + a small country outline).
-   Long names and capitals wrap fully — nothing is truncated.
+   Long names and capitals wrap fully — nothing is truncated. Below the grid is **🏆 World
+   Records** — 34 cards (14 computed live + 20 geographic facts).
 
 6. **Search.** Filter the tiles by **country or capital** name as you type.
 
-7. **Quiz — six games.** Guess the **capital**, the **country by flag**, the **country by
-   outline**, the **population**, the **continent**, and **"Where in the world?"** — each
-   scoped to any continent, with scoring.
+7. **Quiz — ten games.** Guess the **capital**, **country by flag**, **country by outline**,
+   **population**, **continent**, **"Where in the world?"**, **"Match the flags"**,
+   **"Who's bigger?"** and **"Sort by size"** — each scoped to any continent, with scoring —
+   plus a dedicated **3-in-1 Ukraine quiz** (oblast map, regional centres, fun facts).
 
 8. **"Where in the world?" game.** Read a country name and **click it on the real map**.
    Correct → green; wrong → your pick turns red and the answer is revealed in green with a
@@ -67,9 +71,10 @@ has three tabs — **Map**, **Explore** and **Quiz** — that share one country 
     Settlement tree (29,582 places, 2001-census population) with settlement search. The large
     data loads only when the tab is opened.
 
-13. **Bilingual (English / Ukrainian).** A global EN/UA toggle (auto-detected from the
-    browser, saved): the whole interface, continent names, country **names and capitals**, and
-    number formatting switch language. (The "Known for" facts are still English.)
+13. **Fully bilingual (English / Ukrainian).** A global EN/UA toggle (auto-detected from the
+    browser, saved): the entire interface, continent names, country **names, capitals, all
+    "known for" facts and national symbols** switch language, with locale-aware number
+    formatting. Crimea is shown as Ukraine (UN GA Res. 68/262).
 
 ### Run locally
 
@@ -118,7 +123,7 @@ data.xlsx                 source spreadsheet
 scripts/                  data generators (build_data.py, build_shapes/worldmap/neighbors.mjs)
 src/
   data/                   generated JSON (countries, shapes, worldmap, neighbors) + editable facts.json
-  components/             WorldMap, FindGame, Sidebar, CountryCard, CountryDetail, CountryShape, Quiz, Flag
+  components/             WorldMap, Quiz (+ FindGame/FlagMatch/Compare/Sort/UkraineQuiz), RecordsTab, Ukraine/About tabs, CountryDetail, Flag …
   lib/                    continents metadata + number formatting
   App.tsx                 layout, search, tabs, hash routing
 ```
@@ -129,8 +134,8 @@ src/
 
 World Explorer — це статичний вебзастосунок для вивчення географії з дітьми. Працює
 повністю офлайн (усі дані — вбудований JSON, прапори — локальні SVG) і деплоїться на
-GitHub Pages без сервера. Має три вкладки — **Map**, **Explore** і **Quiz**, які
-ділять спільну панель деталей країни.
+GitHub Pages без сервера. Має п'ять вкладок — **Map**, **Explore**, **Quiz**, **Ukraine** і
+**About**, які ділять спільну панель деталей країни; «🏆 World Records» — унизу вкладки Explore.
 
 ### Можливості (Features)
 
@@ -145,7 +150,8 @@ GitHub Pages без сервера. Має три вкладки — **Map**, **
    (2025) і частка у світі, густота, медіанний вік, народжуваність, % міського населення,
    народжень на день, ВВП і ВВП на людину, площа суші й загальна площа та частка світу,
    Глобальний індекс миру, коди ISO-2 і телефонний — плюс **2–4 короткі дитячі факти
-   "Known for"** (пам'ятки, природа, культура). Відсутні цифри показані як "—".
+   "Known for"** (пам'ятки, природа, культура) і **національні символи** (тварина · рослина ·
+   страва). Відсутні цифри показані як "—".
 
 3. **Підсвітка сусідів.** При виборі країни її **сухопутні сусіди обводяться** на карті
    (вибрана країна зафарбована, сусіди — бурштиновий контур) і перелічені в панелі під
@@ -157,13 +163,15 @@ GitHub Pages без сервера. Має три вкладки — **Map**, **
 
 5. **Огляд за континентами.** Бічна панель перелічує шість континентів із **лічильниками**;
    у головній області — клікабельні **плитки** (прапор + назва + столиця + контур країни).
-   Довгі назви й столиці переносяться повністю — нічого не обрізається.
+   Довгі назви й столиці переносяться повністю — нічого не обрізається. Під сіткою —
+   **🏆 World Records**: 34 картки (14 обчислених наживо + 20 географічних фактів).
 
 6. **Пошук.** Фільтрування плиток за назвою **країни або столиці** під час набору.
 
-7. **Квіз — шість ігор.** Вгадай **столицю**, **країну за прапором**, **країну за
-   контуром**, **населення**, **континент** і **"Where in the world?"** — з вибором
-   регіону та підрахунком очок.
+7. **Квіз — десять ігор.** Вгадай **столицю**, **країну за прапором**, **країну за
+   контуром**, **населення**, **континент**, **"Where in the world?"**, **«Підбери прапори»**,
+   **«Хто більший?»** і **«Сортування за розміром»** — з вибором регіону та підрахунком
+   очок — плюс окремий **квіз про Україну** (карта областей, центри, цікаві факти).
 
 8. **Гра "Where in the world?".** Читаєш назву країни і **клікаєш її на справжній карті**.
    Влучив → зелений; промах → твій вибір червоний, а правильна підсвічується зеленим із
@@ -185,9 +193,10 @@ GitHub Pages без сервера. Має три вкладки — **Map**, **
     пункт (29 582 пункти, перепис 2001) з пошуком. Великі дані вантажаться лише при відкритті
     вкладки.
 
-13. **Двомовність (English / Українська).** Глобальний перемикач EN/UA (визначається за
-    браузером і зберігається): увесь інтерфейс, назви континентів, **назви країн і столиці**
-    та формат чисел змінюють мову. (Факти «Known for» поки англійською.)
+13. **Повна двомовність (English / Українська).** Глобальний перемикач EN/UA (визначається за
+    браузером і зберігається): увесь інтерфейс, назви континентів, **назви країн, столиці, усі
+    факти «known for» і національні символи** змінюють мову, з урахуванням локалі для чисел.
+    Крим показано як Україну (Резолюція ГА ООН 68/262).
 
 ### Запуск локально
 
@@ -236,7 +245,7 @@ data.xlsx                 вихідна таблиця
 scripts/                  генератори даних (build_data.py, build_shapes/worldmap/neighbors.mjs)
 src/
   data/                   згенерований JSON (countries, shapes, worldmap, neighbors) + редагований facts.json
-  components/             WorldMap, FindGame, Sidebar, CountryCard, CountryDetail, CountryShape, Quiz, Flag
+  components/             WorldMap, Quiz (+ FindGame/FlagMatch/Compare/Sort/UkraineQuiz), RecordsTab, Ukraine/About tabs, CountryDetail, Flag …
   lib/                    метадані континентів + форматування чисел
   App.tsx                 розкладка, пошук, вкладки, маршрутизація на хешах
 ```
