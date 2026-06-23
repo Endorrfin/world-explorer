@@ -127,8 +127,8 @@ const STATIC_DEFS: StaticDef[] = [
     titleEn: "Most official languages",
     titleUk: "Найбільше офіційних мов",
     iso: "ZA",
-    valueEn: "11 official languages",
-    valueUk: "11 офіційних мов",
+    valueEn: "12 official languages", // CHANGED: 11 → 12 (sign language added 2023)
+    valueUk: "12 офіційних мов", // CHANGED: 11 → 12
   },
   {
     emoji: "🌋",
@@ -151,8 +151,8 @@ const STATIC_DEFS: StaticDef[] = [
     titleEn: "Most UNESCO World Heritage Sites",
     titleUk: "Найбільше об'єктів ЮНЕСКО",
     iso: "IT",
-    valueEn: "58 UNESCO sites",
-    valueUk: "58 об'єктів ЮНЕСКО",
+    valueEn: "61 UNESCO sites", // CHANGED: 58 → 61 (current total, most of any country)
+    valueUk: "61 об'єкт ЮНЕСКО", // CHANGED: 58 → 61
   },
   {
     emoji: "🧳",
