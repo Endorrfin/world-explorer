@@ -1944,3 +1944,51 @@ body {
   max-width: none;
   margin: 0;
 }
+
+/* ===================== CHANGED: fixed author footer ===================== */
+.app-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 36px;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.77rem;
+  color: var(--muted);
+  z-index: 15;
+  padding: 0 20px;
+  white-space: nowrap;
+}
+.app-footer__sep {
+  color: var(--border-strong);
+}
+.app-footer__link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+.app-footer__link:hover {
+  text-decoration: underline;
+}
+@media (max-width: 480px) {
+  .app-footer__role { display: none; }
+  .app-footer { gap: 7px; font-size: 0.71rem; }
+}
+
+/* Bottom clearance so fixed footer never covers content */
+.main        { padding-bottom: 76px; }
+.quiz-wrap   { padding-bottom: 96px; }
+.uk-wrap     { padding-bottom: 84px; }
+.about-wrap  { padding-bottom: 92px; }
+.wmap        { padding-bottom: 60px; }
+@media (max-width: 720px) {
+  .main      { padding-bottom: 72px; }
+  .quiz-wrap { padding-bottom: 84px; }
+  .uk-wrap   { padding-bottom: 76px; }
+  .wmap      { padding-bottom: 56px; }
+}

@@ -356,6 +356,24 @@ export default function App() {
             <AboutTab />
           </div>
         )}
+
+        {/* CHANGED: fixed author footer */}
+        <footer className="app-footer">
+          <span className="app-footer__name">Vasyl Krupka</span>
+          <span className="app-footer__sep" aria-hidden>·</span>
+          <span className="app-footer__role">Senior Fullstack Engineer</span>
+          <span className="app-footer__sep" aria-hidden>·</span>
+          <span>Ukraine 🇺🇦</span>
+          <span className="app-footer__sep" aria-hidden>·</span>
+          <a
+            href="https://www.linkedin.com/in/vasyl-krupka/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="app-footer__link"
+          >
+            LinkedIn ↗
+          </a>
+        </footer>
       </div>
 
     </LangContext.Provider>
